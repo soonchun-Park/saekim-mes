@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base target="_top">
+<style>
+:root{--bg:#f5f6f8;--card:#fff;--text:#1b1f24;--muted:#6b7380;--line:#e3e6ea;--accent:#2457d6;--warn:#b54708;--warn-bg:#fff4e5;--bad:#b42318;--bad-bg:#fdecea;--ok:#067647;--ok-bg:#e8f6ee}
+@media (prefers-color-scheme:dark){:root{--bg:#121417;--card:#1b1e23;--text:#e8eaed;--muted:#9aa3ad;--line:#2c3138;--accent:#7aa2ff;--warn:#fdb022;--warn-bg:#3a2a0d;--bad:#f97066;--bad-bg:#3d1714;--ok:#47cd89;--ok-bg:#0f2e1f}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif}
+header{position:sticky;top:0;z-index:2;background:var(--card);border-bottom:1px solid var(--line);padding:12px 16px 0}
+h1{margin:0;font-size:17px}
+.meta{color:var(--muted);font-size:12px;margin:2px 0 8px}
+.stale{color:var(--warn);font-weight:600}
+nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav button{border:0;background:none;color:var(--muted);font:inherit;font-weight:600;padding:8px 12px;border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap}
+nav button[aria-selected=true]{color:var(--accent);border-color:var(--accent)}
+main{max-width:960px;margin:0 auto;padding:16px}
+.search{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text);font:inherit;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-bottom:16px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.stat .v{font-size:22px;font-weight:700}
+.stat .l{color:var(--muted);font-size:12px}
+.stat.alert .v{color:var(--bad)}
+h2{font-size:14px;color:var(--muted);margin:20px 0 8px}
+.list{display:flex;flex-direction:column;gap:8px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.row{display:flex;justify-content:space-between;gap:8px;align-items:baseline;flex-wrap:wrap}
+.title{font-weight:600}
+.sub{color:var(--muted);font-size:13px}
+.money{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.tag{display:inline-block;font-size:12px;padding:1px 8px;border-radius:999px;background:var(--line);color:var(--text);margin-left:4px}
+.tag.bad{background:var(--bad-bg);color:var(--bad)}.tag.warn{background:var(--warn-bg);color:var(--warn)}.tag.ok{background:var(--ok-bg);color:var(--ok)}
+.empty,.notice{color:var(--muted);text-align:center;padding:24px 8px}
+.error{background:var(--bad-bg);color:var(--bad);border-radius:10px;padding:12px}
+details summary{cursor:pointer;color:var(--muted);font-size:13px;margin-top:4px}
+button.refresh{float:right;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:8px;padding:4px 10px;font:inherit;font-size:13px;cursor:pointer}
+</style>
+</head>
+<body>
+<header>
+  <button class="refresh" id="refresh" type="button">새로고침</button>
+  <h1>새김 MES 조회</h1>
+  <div class="meta" id="meta">불러오는 중…</div>
+  <nav role="tablist" id="tabs">
+    <button role="tab" data-tab="summary" aria-selected="true">요약</button>
+    <button role="tab" data-tab="schedule">납기·일정</button>
+    <button role="tab" data-tab="orders">수주</button>
+    <button role="tab" data-tab="money">미수·청구</button>
+    <button role="tab" data-tab="quotes">견적</button>
+  </nav>
+</header>
+<main>
+  <input class="search" id="search" type="search" placeholder="거래처, 견적번호, 품목, 도면 검색">
+  <div id="view"><div class="notice">불러오는 중…</div></div>
+</main>
+<script>
+var data = null, tab = 'summary', query = '';
+var won = function (n) { return (Number(n) || 0).toLocaleString('ko-KR') + '원'; };
+function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+function tag(text, kind) { return el('span', 'tag' + (kind ? ' ' + kind : ''), text); }
+function matches(obj) {
+  if (!query) return true;
+  return JSON.stringify(obj).toLowerCase().indexOf(query) >= 0;
+}
+function itemsText(items) { return (items || []).map(function (i) { return i.name + (i.drawing ? ' (' + i.drawing + ')' : '') + ' ×' + i.quantity; }).join(', '); }
+
+function load() {
+  document.getElementById('meta').textContent = '불러오는 중…';
+  if (!window.google || !google.script) return;
+  google.script.run
+    .withSuccessHandler(function (text) { data = JSON.parse(text); render(); })
+    .withFailureHandler(function (err) { var v = document.getElementById('view'); v.innerHTML = ''; v.appendChild(el('div', 'error', err && err.message ? err.message : String(err))); document.getElementById('meta').textContent = '불러오지 못했습니다'; })
+    .getView();
+}
+
+function renderMeta() {
+  var m = document.getElementById('meta'); m.innerHTML = '';
+  var ageMin = Math.round((Date.now() - new Date(data.generatedAt).getTime()) / 60000);
+  m.appendChild(document.createTextNode('읽기 전용 · ' + data.generatedAtKst + ' 기준 (사무실 PC 저장 자료) '));
+  if (ageMin > 120) m.appendChild(el('span', 'stale', '· ' + Math.round(ageMin / 60) + '시간 전 자료입니다. 사무실 PC가 꺼져 있을 수 있어요.'));
+}
+
+function stat(label, value, alert) { var s = el('div', 'stat' + (alert ? ' alert' : '')); s.appendChild(el('div', 'v', value)); s.appendChild(el('div', 'l', label)); return s; }
+function group(id) { for (var i = 0; i < data.workflow.length; i++) if (data.workflow[i].id === id) return data.workflow[i]; return { count: 0, rows: [], label: id, unit: '' }; }
+
+function rowsList(rows) {
+  var list = el('div', 'list'), shown = 0;
+  rows.filter(matches).forEach(function (r) {
+    shown++;
+    var it = el('div', 'item'), top = el('div', 'row');
+    top.appendChild(el('span', 'title', r.customer + ' · ' + r.label));
+    if (r.date) top.appendChild(el('span', 'sub', r.date));
+    it.appendChild(top); it.appendChild(el('div', 'sub', r.status)); list.appendChild(it);
+  });
+  if (!shown) list.appendChild(el('div', 'empty', '해당 기록이 없습니다.'));
+  return list;
+}
+
+var views = {
+  summary: function (v) {
+    var t = data.totals, g = el('div', 'grid');
+    g.appendChild(stat('납기 경과 수주', group('overdue').count + '건', group('overdue').count > 0));
+    g.appendChild(stat('7일 이내 납기', group('upcoming').count + '건'));
+    g.appendChild(stat('진행 중 수주', group('orders').count + '건'));
+    g.appendChild(stat('수주 전환 대기 견적', group('quotes').count + '건'));
+    g.appendChild(stat('미수금', won(t.receivableAmount), t.receivableAmount > 0));
+    g.appendChild(stat('미청구', won(t.unbilledAmount)));
+    v.appendChild(g);
+    data.workflow.forEach(function (w) {
+      if (!w.count) return;
+      var d = el('details'); d.appendChild(el('summary', null, w.label + ' · ' + w.count + ' ' + w.unit));
+      d.appendChild(rowsList(w.rows)); v.appendChild(d);
+    });
+  },
+  schedule: function (v) {
+    var list = el('div', 'list'), shown = 0;
+    data.schedule.filter(matches).forEach(function (s) {
+      shown++;
+      var it = el('div', 'item'), top = el('div', 'row'), left = el('span', 'title', s.label);
+      top.appendChild(left); var right = el('span', 'sub', s.date); top.appendChild(right);
+      it.appendChild(top); var sub = el('div', 'sub', s.type + ' · ' + s.status); if (s.overdue) sub.appendChild(tag('기한 경과', 'bad')); it.appendChild(sub);
+      list.appendChild(it);
+    });
+    if (!shown) list.appendChild(el('div', 'empty', '예정된 일정이 없습니다.'));
+    v.appendChild(list);
+  },
+  orders: function (v) {
+    var list = el('div', 'list'), shown = 0;
+    data.orders.filter(function (o) { return !o.canceled; }).filter(matches).forEach(function (o) {
+      shown++;
+      var it = el('div', 'item'), top = el('div', 'row'), name = el('span', 'title', o.customer);
+      if (o.deliveryComplete) name.appendChild(tag('납품 완료', 'ok')); else if (o.due && o.due < data.today) name.appendChild(tag('납기 경과', 'bad'));
+      top.appendChild(name); top.appendChild(el('span', 'money', won(o.sale)));
+      it.appendChild(top);
+      it.appendChild(el('div', 'sub', (o.number || '') + ' · 납기 ' + (o.due || '미정') + ' · 납품 ' + o.delivered + ' / ' + o.quantity + '개'));
+      it.appendChild(el('div', 'sub', itemsText(o.items)));
+      list.appendChild(it);
+    });
+    if (!shown) list.appendChild(el('div', 'empty', '수주가 없습니다.'));
+    v.appendChild(list);
+  },
+  money: function (v) {
+    var t = data.totals, g = el('div', 'grid');
+    g.appendChild(stat('계약 금액', won(t.contractAmount)));
+    g.appendChild(stat('청구 금액', won(t.billedAmount)));
+    g.appendChild(stat('입금 금액', won(t.paidAmount)));
+    g.appendChild(stat('미수금', won(t.receivableAmount), t.receivableAmount > 0));
+    g.appendChild(stat('미청구', won(t.unbilledAmount)));
+    v.appendChild(g);
+    v.appendChild(el('h2', null, '미수금 또는 미청구가 남은 수주'));
+    var list = el('div', 'list'), shown = 0;
+    data.orders.filter(function (o) { return !o.canceled && (o.balance > 0 || o.unbilled > 0); }).filter(matches).forEach(function (o) {
+      shown++;
+      var it = el('div', 'item'), top = el('div', 'row');
+      top.appendChild(el('span', 'title', o.customer + (o.number ? ' · ' + o.number : '')));
+      top.appendChild(el('span', 'money', '미수 ' + won(o.balance)));
+      it.appendChild(top);
+      it.appendChild(el('div', 'sub', '계약 ' + won(o.sale) + ' · 청구 ' + won(o.billed) + ' · 입금 ' + won(o.paid) + ' · 미청구 ' + won(o.unbilled)));
+      list.appendChild(it);
+    });
+    if (!shown) list.appendChild(el('div', 'empty', '남은 미수·미청구가 없습니다.'));
+    v.appendChild(list);
+  },
+  quotes: function (v) {
+    var list = el('div', 'list'), shown = 0;
+    data.quotes.filter(matches).forEach(function (q) {
+      shown++;
+      var it = el('div', 'item'), top = el('div', 'row'), name = el('span', 'title', q.customer);
+      if (q.canceled) name.appendChild(tag('취소')); else if (q.converted) name.appendChild(tag('수주 전환', 'ok')); else if (q.superseded) name.appendChild(tag('개정됨')); else name.appendChild(tag('대기', 'warn'));
+      top.appendChild(name); top.appendChild(el('span', 'money', won(q.total)));
+      it.appendChild(top);
+      it.appendChild(el('div', 'sub', (q.number || '번호 없음') + ' · V' + q.version + ' · 견적일 ' + (q.date || '-') + ' · 납기 ' + (q.due || '-')));
+      it.appendChild(el('div', 'sub', itemsText(q.items)));
+      list.appendChild(it);
+    });
+    if (!shown) list.appendChild(el('div', 'empty', '견적이 없습니다.'));
+    v.appendChild(list);
+  }
+};
+
+function render() {
+  if (!data) return;
+  renderMeta();
+  var v = document.getElementById('view'); v.innerHTML = '';
+  views[tab](v);
+}
+
+document.getElementById('tabs').addEventListener('click', function (e) {
+  var b = e.target.closest('button[data-tab]'); if (!b) return;
+  tab = b.dataset.tab;
+  document.querySelectorAll('#tabs button').forEach(function (x) { x.setAttribute('aria-selected', x === b ? 'true' : 'false'); });
+  render();
+});
+document.getElementById('search').addEventListener('input', function (e) { query = e.target.value.trim().toLowerCase(); render(); });
+document.getElementById('refresh').addEventListener('click', load);
+load();
+</script>
+</body>
+</html>

@@ -102,3 +102,11 @@ test('외부 접속 Host 미설정 시 로컬 주소만 허용',async()=>withSer
  const code=await new Promise((resolve,reject)=>{const req=http.request({host:'127.0.0.1',port,path:'/api/state',headers:{Host:'mes.example.test'}},res=>{res.resume();resolve(res.statusCode);});req.on('error',reject);req.end();});
  assert.equal(code,403);
 },{publicHosts:[]}));
+test('외부 조회 요약 자료는 수주·견적·미수를 담고 계좌·감사기록·요청키는 넣지 않음',()=>{
+ const {fixture}=require('./qa/schedule-fixture'),{buildView}=require('./ops/export-view');const f=fixture();
+ const state=f.get();state.keys={secretKey:1};const catalog={parties:[{id:'p1',name:'허구',bankAccount:'123-456-789012',accountHolder:'허구 예금주'}]};
+ const v=buildView(state,catalog,new Date('2026-10-15T03:00:00Z')),text=JSON.stringify(v);
+ assert.equal(v.today,'2026-10-15');assert.equal(v.orders.length,1);assert.equal(v.quotes.length,1);assert.equal(v.quotes[0].converted,true);assert.equal(v.orders[0].sale,10000);
+ assert.ok(v.workflow.find(w=>w.id==='orders').count===1);assert.ok(v.schedule.length>0);
+ for(const bad of ['123-456-789012','예금주','secretKey','"audit"','"keys"'])assert.ok(!text.includes(bad),bad);
+});
