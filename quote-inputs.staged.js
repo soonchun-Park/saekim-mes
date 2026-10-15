@@ -13,9 +13,9 @@
   if(original.value)set(original.value);else sync();const api={fields,set,read(){if(original.value&&original.value!==last)set(original.value);const value=dateValue(...fields.map(i=>i.value),label);original.value=value;last=value;return value;}};original._quoteDate=api;return api;
  }
  function formatPrice(value){const raw=String(value).replace(/,/g,'');if(!/^\d*(?:\.\d*)?$/.test(raw))return String(value);const [whole,decimal]=raw.split('.');return whole.replace(/\B(?=(\d{3})+(?!\d))/g,',')+(decimal===undefined?'':'.'+decimal);}
- function readPrice(value){const raw=String(value).replace(/,/g,'');if(!/^\d+(?:\.\d*)?$/.test(raw))throw Error('합의 판매 단가를 숫자로 입력하세요.');const n=Number(raw);if(!Number.isFinite(n))throw Error('합의 판매 단가 범위를 확인하세요.');return n;}
+ function readPrice(value){const raw=String(value).replace(/,/g,'');if(!/^\d+(?:\.\d*)?$/.test(raw))throw Error('견적단가를 숫자로 입력하세요.');const n=Number(raw);if(!Number.isFinite(n))throw Error('견적단가 범위를 확인하세요.');return n;}
  function mountPrice(input){mountNumber(input);mountLineAmount(input);}
- // 합의 판매 단가 아래에 수량 × 단가 금액을 바로 보여 줍니다(표시만, 저장 값은 그대로).
+ // 견적단가 아래에 수량 × 단가 금액을 바로 보여 줍니다(표시만, 저장 값은 그대로).
  function lineAmountText(quantity,price){const q=Number(String(quantity??'').trim()),p=String(price??'').replace(/,/g,'').trim();if(String(quantity??'').trim()===''||p===''||!Number.isFinite(q)||q<0||!/^\d+(?:\.\d*)?$/.test(p))return '금액: 수량과 단가를 입력하면 계산됩니다';const total=Math.round(q*Number(p));return '금액: '+formatPrice(String(q))+'개 × '+formatPrice(p)+'원 = '+formatPrice(String(total))+'원';}
  function mountLineAmount(input){const item=input.closest&&input.closest('.item'),quantity=item&&item.querySelector('[data-f="quantity"]');if(!quantity||input._lineAmount)return;const out=input.ownerDocument.createElement('small');out.className='line-amount';out.setAttribute('aria-live','polite');const host=input.closest('label');if(host)host.append(out);else input.after(out);const update=()=>{out.textContent=lineAmountText(quantity.value,input.value);};item.addEventListener('input',update);item.addEventListener('change',update);input._lineAmount=update;update();}
  const dimensionKeys=['product_length','product_diameter','allowance_length','stock_diameter'];
