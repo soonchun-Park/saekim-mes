@@ -7,7 +7,7 @@ let block=feedback.slice(feedback.indexOf('function saveStatus('),feedback.index
 ui=ui.slice(0,ui.indexOf('function persistPending('))+feedback.slice(feedback.indexOf('function persistPending('),feedback.indexOf('function saveStatus('))+block+ui.slice(ui.indexOf('function num('));
 ui=ui.replace('localRestoreMeta=null;','localRestoreMeta=null,pendingDispatched=false;').replace("pendingKind='command';pending=","pendingKind='command';pendingDispatched=false;pending=").replace("if(saved){pending=saved.request||saved;","if(saved){pendingDispatched=true;pending=saved.request||saved;");
 ui=ui.replace("const createdKind=['quote','quoteVersion']","if(pendingKind==='restore'){target.quotes=0;target.orders=0;}const createdKind=['quote','quoteVersion']");
-ui=ui.replace("return Number(i.value);","return key==='price'?QuoteInputs.readPrice(i.value):QuoteInputs.dimensionKeys.includes(key)?QuoteInputs.readDimension(i.value):Number(i.value);");
+ui=ui.replace("return Number(i.value);","return key==='price'?QuoteInputs.readPrice(i.value):QuoteInputs.dimensionKeys.includes(key)?QuoteInputs.readDimension(i.value):key==='kgRate'?QuoteInputs.readDimension(i.value,'소재 kg 단가'):Number(i.value);");
 ui=ui.replace("meta=el._materialMeta||", "meta=(MaterialCatalogUI.getMeta(el)?.provenance?MaterialCatalogUI.getMeta(el):el._materialMeta)||");
 ui=ui.replace(/if\(supply!=='customer'&&meta\.provenance\.kind==='example'[^;]+;m\.provenance\.confirmed=field\(el,'sourceConfirmed'\)\.checked;/,'');
 ui=ui.replace("field(el,'sourceConfirmed').checked=field(previous,'sourceConfirmed').checked;",'MaterialCatalogUI.copySelection(previous,el);');
@@ -20,7 +20,7 @@ ui=ui.replace("if(el._materialMeta?.provenance?.kind==='example'&&['materialName
 ui=ui.replace("['costEnabled','sourceConfirmed'].includes", "['costEnabled'].includes");
 ui=ui.replace("$('items').append(el);estimate(el);}","$('items').append(el);QuoteInputs.mountPrice(field(el,'price'));estimate(el);MaterialCatalogUI.registerItem(el,{field,estimate});}");
 ui=ui.replace("$('dialog').showModal();}","const q=type==='quoteVersion'?state.quotes.find(q=>q.id===p.id):null;for(const i of $('fields').querySelectorAll('input')){if(i.name==='due'){i.value=q?.due||'';QuoteInputs.mountDate(i);}if(i.name==='terms'){i.value=q?.terms||'';QuoteInputs.mountTerms(i);}}$('dialog').showModal();}");
-ui=ui.replace("[['due','새 납기','date']]", "[['due','새 납기','date'],['terms','결제조건','text']]");
+ui=ui.replace("[['due','새 납기요청일','date']]", "[['due','새 납기요청일','date'],['terms','결제조건','text']]");
 ui=ui.replace("try{for(const id of ['customer','due','terms'])if(!$(id).reportValidity())return;", "try{QuoteInputs.mountDate($('due')).read();for(const id of ['customer','terms'])if(!guardRequired($(id),id==='customer'?'거래처':'결제조건'))return;");
 ui=ui.replaceAll('.grid:first-of-type input','[data-f=\"name\"],[data-f=\"drawing\"],[data-f=\"quantity\"],[data-f=\"price\"]');
 ui=ui.replace("if(!i.reportValidity())throw Error('품목 필수 항목을 확인하세요.');", "if(!guardRequired(i,i.closest('label').firstChild.textContent))throw Error(i.closest('label').firstChild.textContent.trim()+': '+i.validationMessage);");
@@ -76,7 +76,7 @@ ui=ui.replaceAll("+' '+v+' mm'", "+' '+QuoteInputs.formatPrice(v)+' mm'");
 ui=ui.replace("customer:$('customer').value,due:$('due').value", "customer:$('customer').value,quoteDate:$('quoteDate').value,due:$('due').value");
 ui=ui.replace("getQuoteHeader:()=>({customer:$('customer').value,", "getQuoteHeader:()=>({quoteDate:$('quoteDate').value,customer:$('customer').value,");
 ui=ui.replace("try{QuoteDraftUI.assertCreate();", "try{QuoteDraftUI.assertCreate();QuoteInputs.mountDate($('quoteDate'),{label:'견적일자'}).read();");
-ui=ui.replace("[['due','새 납기','date'],['terms','결제조건','text']]", "[['quoteDate','견적일자','date'],['due','새 납기','date'],['terms','결제조건','text']]");
+ui=ui.replace("[['due','새 납기요청일','date'],['terms','결제조건','text']]", "[['quoteDate','견적일자','date'],['due','새 납기요청일','date'],['terms','결제조건','text']]");
 ui=ui.replace("if(i.name==='due'){", "if(i.name==='quoteDate'){i.value=QuoteListUI.today();QuoteInputs.mountDate(i,{label:'견적일자'});}if(i.name==='due'){");
 ui=ui.replace("limit:pageSize});pageCursors", "limit:pageSize,...QuoteListUI.query()});pageCursors");
 ui=ui.replace("limit:pageSize,revision:state.revision});", "limit:pageSize,revision:state.revision,...(kind==='quotes'?QuoteListUI.query():{})});");
