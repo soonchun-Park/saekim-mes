@@ -113,6 +113,13 @@ ui=ui.replace("const actionLabels={","const actionLabels={orderRestore:'수주 �
 ui+="\nOrderCancellationUI.configure({send:(type,payload)=>send(type,payload),canEdit:()=>!busy&&!pending});\nClosingUI.configure({send:(type,payload)=>send(type,payload),canEdit:()=>!busy&&!pending});\nRoutingUI.configure({send:(type,payload)=>send(type,payload),canEdit:()=>!busy&&!pending});\n";
 ui=ui.replace("onEvent:event=>DashboardDetailsUI.open", "onScheduleSaved:async()=>{await load();},canSchedule:()=>!busy&&!pending,onEvent:event=>DashboardDetailsUI.open");
 ui=ui.replace("esc(ScheduleModel.dateForOrder(o))","esc(ScheduleModel.dateForOrder(o))+' (원본 견적 '+esc(o.snapshot.due)+')'");
+// 견적 저장 후: 입력 화면을 새 견적용으로 비우고, 저장 완료 창에 견적번호를 보여 줍니다(2026-10-16 사용자 요청).
+{const need=(a)=>{if(!ui.includes(a))throw Error('견적 저장 후 초기화 위치 확인 필요: '+a.slice(0,40));};
+ need("if(savedType==='quote')QuoteDraftUI.complete(result);");need("showSaveConfirmation(savedType,result.revision,refreshed);");need("function addItem(){");
+ ui=ui.replace("if(savedType==='quote')QuoteDraftUI.complete(result);","if(savedType==='quote'){QuoteDraftUI.complete(result);try{resetQuoteForm();}catch(resetError){console.error(resetError);}}");
+ ui=ui.replace("showSaveConfirmation(savedType,result.revision,refreshed);","showSaveConfirmation(savedType,result.revision,refreshed);if(savedType==='quote'){const saved=state?.quotes?.find(q=>q.id===result.quoteId);$('saveFeedbackText').textContent=(saved?.quoteNumber?'견적 '+saved.quoteNumber+' 저장 완료. ':'견적 저장 완료. ')+(refreshed?'견적 목록을 새로 불러왔고, 입력 화면은 새 견적을 쓸 수 있게 비웠습니다.':'목록 갱신에 실패했습니다. 다시 저장하지 말고 목록 새로고침을 눌러 확인하세요.');}");
+ ui=ui.replace("function addItem(){","function resetQuoteForm(){for(const el of [...$('items').querySelectorAll('.item')]){globalThis.QuoteHistoryUI?.unregisterItem(el);el.remove();}addItem();$('customer').value='';const ps=document.querySelector('.party-customer-select');if(ps){ps.value='';ps.dispatchEvent(new Event('change',{bubbles:true}));}const pq=document.querySelector('.party-customer-search');if(pq)pq.value='';$('customer').value='';$('due').value='';QuoteInputs.mountTerms($('terms')).set('');$('quoteDate').value=QuoteListUI.today();QuoteDraftUI.reset();}\nfunction addItem(){");
+}
 fs.writeFileSync(path.join(out,'ui.js'),ui);
 html=html.replace('</head>','<link rel="stylesheet" href="/workflow-overview-ui.css"></head>').replace('<script src="/dashboard-ui.js">','<script src="/workflow-overview-ui.js"></script><script src="/dashboard-ui.js">');
 html=html.replaceAll('03 · 수주 / 생산 / 정산','03 · 수주 / 생산 / 외주');

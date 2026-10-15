@@ -13,5 +13,7 @@
   box.querySelector('.quote-draft-view').onclick=()=>root.MESNavigation.navigate('quotes',{quoteId:record.quoteId}).catch(e=>options.onError?.(e.message));box.querySelector('.quote-draft-new').onclick=startNew;
   const changed=()=>{if(record?.quoteId){record.changed=true;paint();try{save();}catch{}}};host.addEventListener('input',changed);host.addEventListener('change',changed);paint();
  }
- root.QuoteDraftUI={init,assertCreate,complete,id:()=>record?.draftId,current:()=>record?{...record}:null};
+ // 저장 후 입력 화면을 비우고 새 견적 작성을 바로 시작합니다(확인 창 없이).
+ function reset(){record={draftId:root.crypto.randomUUID(),quoteId:null,changed:false};try{save();ready=true;}catch{ready=false;}paint();}
+ root.QuoteDraftUI={init,assertCreate,complete,reset,id:()=>record?.draftId,current:()=>record?{...record}:null};
 })(globalThis);
