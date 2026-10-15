@@ -110,3 +110,5 @@ test('외부 조회 요약 자료는 수주·견적·미수를 담고 계좌·�
  assert.ok(v.workflow.find(w=>w.id==='orders').count===1);assert.ok(v.schedule.length>0);
  for(const bad of ['123-456-789012','예금주','secretKey','"audit"','"keys"'])assert.ok(!text.includes(bad),bad);
 });
+test('납품 기록이 있는 백업을 새 저장소(revision 0)에 복원할 수 있음',()=>{const {fixture}=require('./qa/schedule-fixture');const f=fixture();f.send('work',{...f.base,processId:f.self.assignment.processId,documentId:f.self.document.id,hours:1,rate:10,good:5,bad:0});f.send('inspect',{...f.base,quantity:5,rejected:0});f.send('deliver',{...f.base,quantity:2});f.send('deliver',{...f.base,quantity:3});const backup=f.get();assert.ok(backup.revision>3);const restored=restoreState(empty(),backup,0,id);assert.equal(restored.revision,backup.revision+1);assert.equal(restored.orders[0].lines[0].delivered,5);assert.deepEqual(restored.orders,backup.orders);
+ const busy={...empty(),revision:backup.revision+50};assert.equal(restoreState(busy,backup,busy.revision,id).revision,backup.revision+51);});

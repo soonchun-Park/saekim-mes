@@ -1,7 +1,7 @@
 (function(root,factory){'use strict';const model=factory();if(typeof module==='object'&&module.exports)module.exports=model;else root.MaterialModel=model;})(typeof globalThis!=='undefined'?globalThis:this,function(){
  'use strict';
  const clone=x=>JSON.parse(JSON.stringify(x));
- function numeric(x,label,zero=false){if(typeof x!=='number'||!Number.isFinite(x)||x>1e12||(zero?x<0:x<=0))throw Error(label+'은 유한한 '+(zero?'0 이상의':'양수')+' 값이 필요합니다');return x;}
+ function numeric(x,label,zero=false){if(typeof x!=='number'||!Number.isFinite(x)||x>1e12||(zero?x<0:x<=0))throw Error(label+': '+(zero?'0 이상':'0보다 큰')+' 숫자를 입력하세요');return x;}
  function geometry(shape,d){if(!d||typeof d!=='object')throw Error('발주 소재 치수가 필요합니다');numeric(d.length,'길이');if(shape==='plate'){numeric(d.width,'폭');numeric(d.height,'두께');return d.length*d.width*d.height;}if(shape==='bar'||shape==='tube'){numeric(d.diameter,'외경');let inside=0;if(shape==='tube'){inside=numeric(d.innerDiameter,'내경');if(inside>=d.diameter)throw Error('내경은 외경보다 작아야 합니다');}return Math.PI/4*(d.diameter**2-inside**2)*d.length;}throw Error('소재 형태를 선택하세요');}
  function deriveDimensions(shape,product,allowance,overrides){geometry(shape,product);if(!allowance||typeof allowance!=='object')throw Error('절단여유를 명시하세요');const a={length:numeric(allowance.length,'길이 여유',true)};const d={length:product.length+a.length};overrides=overrides||{};
   if(shape==='plate'){a.width=numeric(allowance.width,'폭 여유',true);a.height=numeric(allowance.height,'두께 여유',true);d.width=product.width+a.width;d.height=product.height+a.height;}
