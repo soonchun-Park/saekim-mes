@@ -62,3 +62,8 @@ html[data-theme=dark] body .dash-filters input[type=search]{background:#101823;c
 html[data-theme=dark] body aside>.hint{border-color:#46536a}
 }
 @media print{body #themeToggle{display:none!important}:root{color-scheme:light}}
+
+/* 어두운 화면에서 견적 목록 표가 흰 바탕으로 남아 글자가 안 보이던 문제 */
+[data-theme=dark] body .quote-table{background:#151d2b}
+[data-theme=dark] body .quote-table .quote-card:hover{background:#22304a}
+[data-theme=dark] body .quote-table .quote-date-sort{color:#fff}

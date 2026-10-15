@@ -21,8 +21,8 @@ async function main(){try{
  const f=fixture();active=await harness({seed:dir=>{fs.writeFileSync(path.join(dir,'state.json'),JSON.stringify(f.state));fs.writeFileSync(path.join(dir,'material-catalog.json'),JSON.stringify(f.catalog));}});await ready(active);const before=await active.api('/api/backup');
  await size(active,1440,1400);await navigate(active,'quotes');
  await active.run("document.getElementById('customer').value='가상 미저장 거래처';document.querySelector('[data-f=name]').value='가상 미저장 품목';");
- const styles=await active.run("({number:getComputedStyle(document.querySelector('[data-f=quantity]')).textAlign,date:getComputedStyle(document.querySelector('.due-segment')).textAlign,header:getComputedStyle(document.querySelector('header')).alignItems,button:getComputedStyle(document.querySelector('[data-bulk-kind=quote]')).alignItems})");
- assert.equal(styles.number,'right');assert.equal(styles.date,'center');assert.equal(styles.header,'center');checks.push('수량 우측·날짜 가운데·헤더/버튼 내부 정렬 유지');
+ const styles=await active.run("({number:getComputedStyle(document.querySelector('[data-f=quantity]')).textAlign,date:getComputedStyle(document.querySelector('#due')).textAlign,header:getComputedStyle(document.querySelector('header')).alignItems,button:getComputedStyle(document.querySelector('[data-bulk-kind=quote]')).alignItems})");
+ assert.equal(styles.number,'right');assert.equal(styles.date,'start');assert.equal(styles.header,'center');checks.push('수량 우측·날짜 가운데·헤더/버튼 내부 정렬 유지');
  // Unequal content in an existing form row must still start together.
  const grid=await active.run("(()=>{const g=document.querySelector('.item .grid'),children=[...g.children].filter(c=>c.tagName==='LABEL');const c=children[0],note=document.createElement('p');note.textContent='가상 긴 안내 문구 '.repeat(30);c.append(note);const row=children.slice(0,2).map(e=>({top:e.getBoundingClientRect().top,inputTop:e.querySelector('input,select')?.getBoundingClientRect().top}));return row})()");
  assert.equal(grid.length,2);assert.ok(Math.abs(grid[0].top-grid[1].top)<1);assert.ok(Math.abs(grid[0].inputTop-grid[1].inputTop)<1);checks.push('길이가 다른 견적 입력 컬럼의 시작 위치 상단 일치');
