@@ -1,0 +1,35 @@
+{
+  "createdAtUtc": "2026-10-13T15:27:08.488Z",
+  "source": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-lab",
+  "excluded": [
+    ".git",
+    "data",
+    "node_modules"
+  ],
+  "sourceFiles": [
+    {
+      "file": "material-catalog.js",
+      "sha256": "39e6c0e6e0f4205ec89f09ca9b72dc5b0296e614b32c68972bea558f7a9f2c3f"
+    },
+    {
+      "file": "material-catalog-ui.js",
+      "sha256": "386661cf0ed73785a580b498bfee28f421f27b4d72d90c4346deda0a0f2e067b"
+    },
+    {
+      "file": "server.js",
+      "sha256": "51c96bb5ba6fabf5d355f60dc40ce912297eaa5f637ff3b742f02cb40f1a1363"
+    },
+    {
+      "file": "core.js",
+      "sha256": "5d76a1551961e1e7c8954b9983701c626ebe42162ca0636c59163e14b6f4d9b4"
+    },
+    {
+      "file": "qa/integrated-server.js",
+      "sha256": "235a96ce53e8995330e9ad27525d26fac4f2b06302c0d9dac69e262c287e2859"
+    },
+    {
+      "file": "qa/build-integrated.js",
+      "sha256": "7a3d6827eb04b2c534102db9a85f7a4c1d0bfcb01afe1f717d5e6c09fda31287"
+    }
+  ]
+}

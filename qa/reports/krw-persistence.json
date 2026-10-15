@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "fictionalOnly": true,
+  "live8791Mutations": false,
+  "imported": 69,
+  "remainingMaterials": 11,
+  "sourceRestartRetainsExactBackup": true,
+  "freshRestoreAndSecondRestart": true,
+  "quoteAndOrderSnapshotsPreserved": true,
+  "partyPrivateFieldsPreserved": true,
+  "drawingBytesEqual": true,
+  "certificateBytesEqual": true,
+  "backupFormat": "mes-local-backup-v4",
+  "backupBytes": 716269,
+  "uncertainImportReplaySafe": true,
+  "checks": [
+    "approved prices only",
+    "independent disk persistence",
+    "full snapshot preservation",
+    "PDF bytes and links",
+    "fresh-directory restore",
+    "reopen restored data",
+    "idempotent import retry"
+  ]
+}

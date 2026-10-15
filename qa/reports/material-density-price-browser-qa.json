@@ -1,0 +1,54 @@
+{
+  "verifiedAt": "2026-10-13T16:50:15.016Z",
+  "isolatedDataDir": "C:\\Users\\SOONCH~1\\AppData\\Local\\Temp\\mes-partner-browser-oYD8Bb",
+  "active8790Touched": false,
+  "checks": [
+    {
+      "name": "정확한 AL6061 선택 시 공식 밀도·기준단가 자동 입력",
+      "pass": true,
+      "view": {
+        "density": "2.7",
+        "rate": "5000",
+        "status": "매입처를 선택하면 등록 단가 후보를 조회합니다. 정확 등급 제조사 참고값 · g/cm3 · https://online.kaiseraluminum.com/depot/PublicProductInformation/Document/1015/Kaiser_Aluminum_6061_Sheet_Coil_and_Plate.pdf"
+      }
+    },
+    {
+      "name": "작성 중 직접 바꾼 밀도를 새로 조회해도 보존",
+      "pass": true
+    },
+    {
+      "name": "등급 모호 PP 참고값을 자동 확정하지 않음",
+      "pass": true
+    },
+    {
+      "name": "기준단가 수정 성공 시 실제 수정 시각 기록·자동 밀도 출처 보존",
+      "pass": true,
+      "lastChangedAt": "2026-10-13T16:50:14.502Z"
+    },
+    {
+      "name": "설명 변경은 단가 마지막 수정 시각을 바꾸지 않음",
+      "pass": true
+    },
+    {
+      "name": "기준단가와 밀도 열·마지막 KST 수정일 열 표시",
+      "pass": true
+    },
+    {
+      "name": "이력 대화상자에서도 단가 실제 수정일 표시",
+      "pass": true
+    },
+    {
+      "name": "신규 소재명 입력 후 정확 비중 미리보기·서버 근거로 저장",
+      "pass": true
+    },
+    {
+      "name": "새 소재의 직접 입력 비중을 제조사 참고값으로 덮지 않음",
+      "pass": true
+    },
+    {
+      "name": "390px 모바일 페이지 전체 가로 넘침 없음",
+      "pass": true
+    }
+  ],
+  "runtimeErrors": []
+}

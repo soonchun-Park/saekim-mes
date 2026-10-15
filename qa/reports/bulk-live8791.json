@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "url": "http://127.0.0.1:8791",
+  "ownHeadlessTab": true,
+  "userTabsTouched": false,
+  "commandsOrUploadsSent": 0,
+  "backupUnchanged": "0384fdd597d0b3843a8e1ea5edec054bc1370668a58de5224e89b685d3bd342d",
+  "bulkButtons": 4,
+  "businessFields": true,
+  "formattersMounted": true,
+  "emptyQuoteDialog": true,
+  "runtimeErrors": 0,
+  "at": "2026-10-14T00:28:13.930Z"
+}

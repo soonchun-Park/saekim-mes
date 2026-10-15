@@ -1,0 +1,127 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "theme": "light",
+      "script": "quote-enhancement-browser-qa.js",
+      "code": 0,
+      "log": "calendar-status-light-quote-enhancement-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "monthly-settlement-browser-qa.js",
+      "code": 0,
+      "log": "calendar-status-light-monthly-settlement-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "party-bank-browser-qa.js",
+      "code": 0,
+      "log": "calendar-status-light-party-bank-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "bulk-browser-qa.js",
+      "code": 0,
+      "log": "calendar-status-light-bulk-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "partner-browser-qa.js",
+      "code": 0,
+      "log": "calendar-status-light-partner-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "production-browser-qa.js",
+      "code": 0,
+      "log": "calendar-status-light-production-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "schedule-browser-qa.js",
+      "code": 0,
+      "log": "calendar-status-light-schedule-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "workflow-browser-qa.js",
+      "code": 0,
+      "log": "calendar-status-light-workflow-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "routing-browser-qa.js",
+      "code": 0,
+      "log": "calendar-status-light-routing-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "calendar-status-browser-qa.js",
+      "code": 0,
+      "log": "calendar-status-light-calendar-status-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "quote-enhancement-browser-qa.js",
+      "code": 0,
+      "log": "calendar-status-dark-quote-enhancement-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "monthly-settlement-browser-qa.js",
+      "code": 0,
+      "log": "calendar-status-dark-monthly-settlement-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "party-bank-browser-qa.js",
+      "code": 0,
+      "log": "calendar-status-dark-party-bank-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "bulk-browser-qa.js",
+      "code": 0,
+      "log": "calendar-status-dark-bulk-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "partner-browser-qa.js",
+      "code": 0,
+      "log": "calendar-status-dark-partner-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "production-browser-qa.js",
+      "code": 0,
+      "log": "calendar-status-dark-production-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "schedule-browser-qa.js",
+      "code": 0,
+      "log": "calendar-status-dark-schedule-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "workflow-browser-qa.js",
+      "code": 0,
+      "log": "calendar-status-dark-workflow-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "routing-browser-qa.js",
+      "code": 0,
+      "log": "calendar-status-dark-routing-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "calendar-status-browser-qa.js",
+      "code": 0,
+      "log": "calendar-status-dark-calendar-status-browser-qa.txt"
+    }
+  ],
+  "at": "2026-10-14T22:16:13.860Z",
+  "checkCount": 230
+}

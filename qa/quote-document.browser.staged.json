@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "rows": 80,
+  "pages": 9,
+  "pdfBytes": 236552,
+  "checks": [
+    "saved agreed prices and total",
+    "390px no horizontal overflow",
+    "actual A4 multi-page PDF generated via Page.printToPDF",
+    "no print dialog or physical printing"
+  ],
+  "limitations": [
+    "original XLSX unreadable; default test format",
+    "manual PDF print dialog untested; direct PDF UI not integrated"
+  ]
+}

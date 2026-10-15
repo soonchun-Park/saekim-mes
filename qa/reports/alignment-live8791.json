@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "url": "http://127.0.0.1:8791",
+  "checks": [
+    {
+      "screen": "dashboard",
+      "top": 70,
+      "layout": 70,
+      "overflow": false
+    },
+    {
+      "screen": "quotes",
+      "top": 70,
+      "layout": 70,
+      "overflow": false
+    },
+    {
+      "screen": "orders",
+      "top": 70,
+      "layout": 70,
+      "overflow": false
+    },
+    {
+      "screen": "settlements",
+      "top": 70,
+      "layout": 70,
+      "overflow": false
+    },
+    {
+      "screen": "materials",
+      "top": 70,
+      "layout": 70,
+      "overflow": false
+    },
+    {
+      "screen": "parties",
+      "top": 70,
+      "layout": 70,
+      "overflow": false
+    },
+    {
+      "screen": "inspections",
+      "top": 70,
+      "layout": 70,
+      "overflow": false
+    }
+  ],
+  "userTabsTouched": false,
+  "ownHeadlessTab": true,
+  "commandsOrUploadsSent": 0,
+  "backupUnchanged": "276a3980e022c410919c08af7a8336370e0764c38a006759eff078ee4a36c257",
+  "runtimeErrors": 0,
+  "at": "2026-10-14T10:56:53.743Z"
+}

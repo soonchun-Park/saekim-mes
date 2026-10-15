@@ -1,0 +1,197 @@
+{
+  "completedAt": "2026-10-13T22:43:12.366Z",
+  "status": "local-request-completed",
+  "url": "http://127.0.0.1:8791",
+  "scope": [
+    "confirmed KRW/kg reference prices",
+    "single-row due date",
+    "independent persistence and backup verification"
+  ],
+  "userApprovals": [
+    "Sentinel_86ee93bbda1c8191a13be5da37e18e4e",
+    "Sentinel_2e87932c4968819197c4a7b2b7fa38fb"
+  ],
+  "import": {
+    "imported": 69,
+    "revision": 150,
+    "held": [
+      {
+        "name": "지르코늄",
+        "sourceRow": 51,
+        "sourcePrice": null,
+        "reason": "missing-price"
+      },
+      {
+        "name": "단동(아연합금동)",
+        "sourceRow": 58,
+        "sourcePrice": null,
+        "reason": "missing-price"
+      },
+      {
+        "name": "마그네슘",
+        "sourceRow": 59,
+        "sourcePrice": null,
+        "reason": "missing-price"
+      },
+      {
+        "name": "몰리브덴",
+        "sourceRow": 60,
+        "sourcePrice": null,
+        "reason": "missing-price"
+      },
+      {
+        "name": "인발",
+        "sourceRow": 65,
+        "sourcePrice": 80000,
+        "reason": "unidentified-material"
+      },
+      {
+        "name": "주석",
+        "sourceRow": 67,
+        "sourcePrice": null,
+        "reason": "missing-price"
+      },
+      {
+        "name": "nitronic60",
+        "sourceRow": 70,
+        "sourcePrice": 1,
+        "reason": "placeholder-price"
+      },
+      {
+        "name": "Rulon J",
+        "sourceRow": 71,
+        "sourcePrice": 1,
+        "reason": "placeholder-price"
+      },
+      {
+        "name": "사급",
+        "sourceRow": 72,
+        "sourcePrice": 0,
+        "reason": "non-material"
+      },
+      {
+        "name": "고베",
+        "sourceRow": 77,
+        "sourcePrice": 11000,
+        "reason": "unidentified-material"
+      },
+      {
+        "name": "OFHC",
+        "sourceRow": 83,
+        "sourcePrice": null,
+        "reason": "missing-price"
+      },
+      {
+        "name": "NI",
+        "sourceRow": 84,
+        "sourcePrice": null,
+        "reason": "missing-price"
+      }
+    ],
+    "stateUnchanged": true,
+    "partiesUnchanged": true,
+    "supplierPricesUnchanged": true,
+    "attachmentsUnchanged": true,
+    "certificatesUnchanged": true,
+    "beforeHash": "bf74a526ad16bec2dbcec798a86557a8ad8cd7908a546bb3beee67b715279f99",
+    "afterHash": "c4cdaac734c310a643b6359863d61b32bca6aa0594b4b6b00ac3fe12a53725c8",
+    "liveRestarted": false
+  },
+  "preservation": {
+    "densityPreserved": true,
+    "oldHistoryPreserved": true,
+    "existingUserPartiesPreserved": true,
+    "oldQuoteOrderSnapshotsPreserved": true,
+    "livePIDBefore": 50780,
+    "livePIDAfter": 50780,
+    "liveServerRestarted": false,
+    "userTabsTouched": false,
+    "forcedReload": false
+  },
+  "validation": {
+    "unitIntegration": {
+      "passed": 294,
+      "failed": 0,
+      "log": "qa/krw-regression-tests.txt"
+    },
+    "lint": {
+      "passed": true,
+      "rootAppScriptFiles": 86,
+      "htmlChecks": 3,
+      "additionalQAScripts": 4,
+      "log": "qa/krw-lint.txt"
+    },
+    "browser": {
+      "passed": true,
+      "checks": 9,
+      "viewports": [
+        1365,
+        1024,
+        768,
+        390,
+        320
+      ],
+      "runtimeExceptions": 0,
+      "report": "qa/reports/krw-date-browser.json"
+    },
+    "persistence": {
+      "passed": true,
+      "report": "qa/reports/krw-persistence.json"
+    },
+    "live": {
+      "passed": true,
+      "report": "qa/reports/krw-live8791.json"
+    }
+  },
+  "currentData": {
+    "referenceMaterials": 80,
+    "approvedReferencePrices": 69,
+    "userEnteredParties": 1,
+    "quotes": 0,
+    "orders": 0,
+    "drawings": 0,
+    "certificates": 0,
+    "fictionalTestDataInsertedIntoLive": false
+  },
+  "storage": {
+    "absoluteDataDirectory": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\data\\material-cert-test",
+    "business": "state.json (created after first business save)",
+    "catalog": "material-catalog.json",
+    "drawingDirectory": "attachments",
+    "certificateDirectory": "material-certificates",
+    "backupContains": [
+      "business and snapshots",
+      "materials and price history",
+      "full parties",
+      "drawing originals",
+      "certificate originals and versions"
+    ],
+    "backupLimitBytes": 48000000,
+    "pdfFileLimitBytes": 10485760,
+    "automaticScheduledBackup": false,
+    "cloudSync": false,
+    "encryptedAtRest": false,
+    "serverAutostart": false,
+    "restoreInFreshTempDirectoryTested": true
+  },
+  "backupDirectory": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\krw-price-due-2026-10-13T22-31-17-410Z",
+  "sourceChanges": [
+    {
+      "file": "quote-inputs.staged.css",
+      "before": "b11d84e44f0adb9c272b3edd29694f276bf40165bae79ca0cd799e7b85a32f2a",
+      "after": "06fa4dae97e1b3599446728c70f2ea628674a1d24ee35c59ee6d6ba8904e395f"
+    }
+  ],
+  "remainingLimitations": [
+    "Actual user viewport unavailable: MXC launcher HRESULT 0x80070003; headless checks only",
+    "Existing loaded user tab deliberately not refreshed: save drafts before reloading for updated layout",
+    "11 reference materials need confirmed price or identity",
+    "No Google connection, OAuth, deployment or multi-user access/security validation",
+    "Original XLSX Windows materialization remains blocked; supported Library read used without helper workaround"
+  ],
+  "screenshots": [
+    "qa/krw-due-1365.png",
+    "qa/krw-due-390.png",
+    "qa/krw-due-320.png"
+  ]
+}

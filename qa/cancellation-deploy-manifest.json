@@ -1,0 +1,97 @@
+{
+  "target": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\quote-cancellation-applied-2026-10-15T12-40-50-949Z",
+  "preparedAt": "2026-10-15T12:40:51.084Z",
+  "apiBeforeHash": "338bee6a8f2ae97d9f1701c67a776c085558f5894a7385e85f16ebbe8df7e0f2",
+  "dataBefore": {
+    "material-catalog.json": "211fccd2d613552c1cc9ae75011cc4d5b8bec1cfc35b6c02ca3f197ac5444e50",
+    "state.json": "1554c22b92f963e7237b893b0a1e44aa12c41481611c5abea2fc613c6dad7660"
+  },
+  "sourceBefore": {
+    "core.js": "83cf0cc3eb6543e064fdfd7d27ee6403f438fc3ad709c273b3815fd400f2e366",
+    "order-cancellation.js": null,
+    "order-cancellation-ui.js": null,
+    "order-cancellation.test.js": null,
+    "order-cancellation-api.test.js": null,
+    "closing.test.js": "37783d4f98281841ebb6c3781d6d11563edf790833b741c7ffdfc2d661e4cd40",
+    "schedule.test.js": "c56abf834e3fb487fc3ed2b34dca6f8e0640ad38d66922475b3df54d0788d883",
+    "workflow-overview.test.js": "1d9517ec9ba629f7e49a653999313359cd5aa087c80c516ac7169d71b00c0da1",
+    "settlement-api.test.js": "39b5d16ef15f18bc08e15583f0a78a6abdb5d8667484a79df4c1ebf0b7196d1b",
+    "workflow-overview.js": "dd343eed4b2f41d3a50cef53d3d5ca21ff934963e782682924c2fc6e2457bbcf",
+    "dashboard-model.js": "dc271adc40058b342f9459b86c0fedbf3f55b43625c409cb2a10ed4f5fd50152",
+    "calendar-status.js": "16c0a0c6d6a17680fa95499bb8fe5d22e375c405b93eec47e4a99c831c55b689",
+    "package.json": "0b94888b62a2a07ab7c9121f435e4dd36090d9dea78293bd58681ea45589e349",
+    "qa/build-integrated.js": "0a0000bf1d49b8becef3d8ae0127c3f6f5e9996b805b4b37e37bc71653ddf983",
+    "qa/integrated-server.js": "51c8365f2f683d08f705c7821393ceab12da2ca21143891c503734a6465168d1",
+    "qa/integrated-ui/index.html": "85db2beb7b00793a771f07a2cfc30f577eb9a696d580bdc8da4a0602532ae745",
+    "qa/integrated-ui/ui.js": "6ddb5dd9c8edc27786b79aeb4ef606bae996f6fc77f50e3935dbdb747da677ad",
+    "qa/cancellation-fixture.js": null,
+    "qa/cancellation-browser-qa.js": null,
+    "test.js": "f61456d2ce90d3963eeacb16d7bb5ee1493caa709a55ae8d23e2925e3362fe34"
+  },
+  "sourceAfter": {
+    "core.js": "20069637865711926f20e2a804e1d3194cf29016399745a78f4adb60060fbb6e",
+    "order-cancellation.js": "01410981712ec6d7f134bd6c469b1b21516281f6d3ad15c6be2c40170d3c9b85",
+    "order-cancellation-ui.js": "97791e59c57e450b3691ebd24e2f33c517c774ba3055ce1ee379dd660d47ef4e",
+    "order-cancellation.test.js": "100f0ae2f0e988b9ffeaaf5a4d990ef11fddd021cf97c7b7b5b57a2e94e350ab",
+    "order-cancellation-api.test.js": "da4ebd03ed1f7e3fbc6c1938ce9163e73c6c90de1c877258b0ea0a0bc8fa1f30",
+    "closing.test.js": "c595e0ef36bdac9710f46cdfa04991067355358693877e495d66c10b60f882ca",
+    "schedule.test.js": "63367d49fc92440e8714b256f2be0a50f91218963e3b0f6f6431c9dd13b03d0d",
+    "workflow-overview.test.js": "f4ed48e0b0de7f15a2fd2fc2e8d15306282540e1452f873b49c10d2702001b97",
+    "settlement-api.test.js": "d36f3bacecd593b842dea15eba8c0b607a4c68ca0adcfc0e3890b22b973d9538",
+    "workflow-overview.js": "6069500602bd4ab90908222a2f8378793f8acc8c575428b2c201788b6409d469",
+    "dashboard-model.js": "721ebbaefc05e3b8766ba435672f69b4c1eac09d3aa0a54100ec70f957f414e3",
+    "calendar-status.js": "4367345719880c9ffb4f6e41b31f1d281b244e04b3a4880bea6b871ace4a6356",
+    "package.json": "ba936938a613a2e417d0344ee083acb8e2ea80dcfb9cbad8ad8bc8b955a2777e",
+    "qa/build-integrated.js": "eebaaa769d88e6929184d4381bec2bdadbb9f34b6861f1cf6facf958f088067f",
+    "qa/integrated-server.js": "135ef6206095bac93e795e51884fee60c07f88f9eec9a30cf6b7b1bb49ed99a5",
+    "qa/integrated-ui/index.html": "48d5d69effb9e5451634c6a369cb73ac3883ee43500768260c1f7350dae613eb",
+    "qa/integrated-ui/ui.js": "0e403ebe2efc5a7b3e6998bd0bd7b2b276096687830f18792c3ff6eed21c79f8",
+    "qa/cancellation-fixture.js": "0b73f0b68886e49471a85b8f75bc307213f8a0b065b50f1f917e2ea03c2c49f5",
+    "qa/cancellation-browser-qa.js": "e603bde55555e76bbd73b437b61226edfe2ce21f9ca2c69a5c8354b0447ab590",
+    "test.js": "01a299bcd6f3d40ba2bd4aead52fbde83d56b2f173d3721c29ddc604551bc67f"
+  },
+  "otherServers": {
+    "8788": {
+      "online": false
+    },
+    "8789": {
+      "online": false
+    },
+    "8790": {
+      "online": false
+    }
+  },
+  "code": [
+    "core.js",
+    "order-cancellation.js",
+    "order-cancellation-ui.js",
+    "order-cancellation.test.js",
+    "order-cancellation-api.test.js",
+    "closing.test.js",
+    "schedule.test.js",
+    "workflow-overview.test.js",
+    "settlement-api.test.js",
+    "workflow-overview.js",
+    "dashboard-model.js",
+    "calendar-status.js",
+    "package.json",
+    "qa/build-integrated.js",
+    "qa/integrated-server.js",
+    "qa/integrated-ui/index.html",
+    "qa/integrated-ui/ui.js",
+    "qa/cancellation-fixture.js",
+    "qa/cancellation-browser-qa.js",
+    "test.js"
+  ],
+  "oldPid": 41892,
+  "appliedAt": "2026-10-15T12:41:17.603Z",
+  "counts": {
+    "materials": 80,
+    "prices": 69,
+    "parties": 9,
+    "quotes": 2,
+    "orders": 1
+  },
+  "verifiedAt": "2026-10-15T12:41:18.538Z",
+  "preserved": true
+}

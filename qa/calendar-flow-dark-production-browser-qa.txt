@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "checks": [
+    "390px self-assignment without horizontal overflow",
+    "self-assignment draft survives navigation",
+    "390px outsource-assignment without horizontal overflow",
+    "outsource-assignment draft survives navigation",
+    "actual UI 4 internal plus 6 outsource draft assignment",
+    "explicit document issue enables execution",
+    "390px work without horizontal overflow",
+    "work draft survives navigation",
+    "390px managed-card without horizontal overflow",
+    "issued self work 4 and outsource receipts 2 plus 4",
+    "progress prevents reassignment/amendment buttons",
+    "issued outsource preview excludes customer sales price margin and accounts",
+    "actual multi-document A4 PDF generation without physical printing"
+  ],
+  "pdfPages": 2,
+  "pdfBytes": 309627,
+  "physicalPrinting": false,
+  "realOrdersSent": false,
+  "operatingServersTouched": false,
+  "runtimeExceptions": 0
+}

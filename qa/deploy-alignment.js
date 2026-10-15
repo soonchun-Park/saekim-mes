@@ -1,0 +1,16 @@
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
+const stage=path.resolve(__dirname,'..'),live='C:/Users/SOON CHUN/Documents/Codex/2026-10-12/task/mes-erp-material-cert-lab',data=path.join(live,'data/material-cert-test'),file='enterprise-ui.staged.css',manifest=path.join(stage,'qa/alignment-deploy-manifest.json');
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex'),fileHash=f=>hash(fs.readFileSync(f));
+function tree(dir){const out={};function walk(d){for(const e of fs.readdirSync(d,{withFileTypes:true})){const p=path.join(d,e.name);if(e.isDirectory())walk(p);else out[path.relative(dir,p).replaceAll('\\','/')]=fileHash(p);}}walk(dir);return out;}
+async function get(port,route){const r=await fetch('http://127.0.0.1:'+port+route);return {status:r.status,body:await r.text()};}
+async function others(){const out={};for(const p of[8788,8789,8790]){out[p]={};for(const route of['/','/api/backup','/enterprise-ui.staged.css']){const r=await get(p,route);out[p][route]={status:r.status,hash:hash(r.body)};}}return out;}
+function save(m){fs.writeFileSync(manifest,JSON.stringify(m,null,2));fs.writeFileSync(path.join(m.target,'manifest.json'),JSON.stringify(m,null,2));}
+async function main(){const mode=process.argv[2];if(mode==='prepare'){
+ const target=path.join(live,'backups','alignment-top-'+new Date().toISOString().replace(/[:.]/g,'-'));fs.mkdirSync(target,{recursive:true});fs.copyFileSync(path.join(live,file),path.join(target,file));const backup=await get(8791,'/api/backup');assert.equal(backup.status,200);fs.writeFileSync(path.join(target,'before-backup.json'),backup.body);fs.cpSync(data,path.join(target,'data-before'),{recursive:true});const m={target,preparedAt:new Date().toISOString(),sourceBefore:fileHash(path.join(live,file)),sourceAfter:fileHash(path.join(stage,file)),apiBeforeHash:hash(backup.body),dataBefore:tree(data),otherServers:await others()};save(m);console.log(JSON.stringify(m));
+ }else if(mode==='apply'){
+ const m=JSON.parse(fs.readFileSync(manifest));assert.equal(fileHash(path.join(live,file)),m.sourceBefore,'Concurrent source change');assert.equal(fileHash(path.join(stage,file)),m.sourceAfter,'Stage change since verification');assert.deepEqual(tree(data),m.dataBefore,'Data changed; refresh backup');assert.equal(hash((await get(8791,'/api/backup')).body),m.apiBeforeHash);fs.copyFileSync(path.join(stage,file),path.join(live,file));m.appliedAt=new Date().toISOString();save(m);console.log('CSS applied without process restart.');
+ }else if(mode==='verify'){
+ const m=JSON.parse(fs.readFileSync(manifest));assert.equal(fileHash(path.join(live,file)),m.sourceAfter);assert.equal(hash((await get(8791,'/'+file)).body),m.sourceAfter);assert.deepEqual(tree(data),m.dataBefore);assert.equal(hash((await get(8791,'/api/backup')).body),m.apiBeforeHash);assert.deepEqual(await others(),m.otherServers);m.verifiedAt=new Date().toISOString();m.preserved=true;save(m);console.log(JSON.stringify({verified:true,backup:m.target,dataHash:m.apiBeforeHash,otherServersUnchanged:true,restarted:false}));
+ }else throw Error('Unknown phase');}
+main().catch(e=>{console.error(e);process.exitCode=1;});

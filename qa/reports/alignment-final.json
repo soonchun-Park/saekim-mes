@@ -1,0 +1,44 @@
+{
+  "completed": true,
+  "url": "http://127.0.0.1:8791",
+  "scope": "공통 본문 컬럼의 세로 자동 여백 제거 및 상단 정렬. 기존 가로 가운데 배치, 입력/숫자/버튼/팝업 정렬 유지.",
+  "appFilesChanged": [
+    "enterprise-ui.staged.css"
+  ],
+  "sourceHash": "eed9e849f35ffff057e057d1e8a4809509a2326c5e85d3bc7ff3e461b55d62af",
+  "tests": {
+    "relatedUnitPassed": 52,
+    "screenSizeCombinations": 35,
+    "alignmentScenarios": 7,
+    "quoteBrowserScenarios": 18,
+    "settlementBrowserScenarios": 14,
+    "liveReadOnlyScreens": 7,
+    "runtimeErrors": 0
+  },
+  "dataPreserved": true,
+  "apiBackupHash": "276a3980e022c410919c08af7a8336370e0764c38a006759eff078ee4a36c257",
+  "backup": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\alignment-top-2026-10-14T10-56-01-153Z",
+  "otherServersUnchanged": true,
+  "processes": [
+    {
+      "LocalPort": 8791,
+      "OwningProcess": 50952
+    },
+    {
+      "LocalPort": 8790,
+      "OwningProcess": 44144
+    },
+    {
+      "LocalPort": 8789,
+      "OwningProcess": 36684
+    },
+    {
+      "LocalPort": 8788,
+      "OwningProcess": 9484
+    }
+  ],
+  "restarted": false,
+  "userTabsTouched": false,
+  "blockers": [],
+  "at": "2026-10-14T10:57:35.692Z"
+}

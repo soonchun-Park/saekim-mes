@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-10-13",
+  "file": {
+    "libraryFileId": "libfile_b5c2683b9d0881918d8321c645715633",
+    "fileId": "file_00000000cc988230b7ead6694ac1cb18",
+    "name": "quote for yurim(1).xlsx",
+    "sizeBytes": 1291958,
+    "versionId": null
+  },
+  "readRoute": {
+    "skill": "c4/library",
+    "supportedRoute": "read when Library can supply the content the task needs",
+    "tool": "library.read",
+    "mode": "full",
+    "includeImages": false,
+    "startLine": 463,
+    "endLine": 484,
+    "sheetNumber": 9,
+    "totalSheets": 15,
+    "sheetName": "소재 리스트"
+  },
+  "rawExtract": [
+    "<PARSED TEXT FOR SHEET: 9 / 15 TABS\nTAB NAME: 소재 리스트>",
+    "index,소재리스트,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6\n0,No.,소재명,키로당단가,비중,구분,Remark,\n1,1,CLEAN PVC,5000,2.8,,,플라스틱\n2,2,ACETAL,5500,2,플라스틱,,\n3,3,PEEK,155000,2,,,\n4,4,black POM,6500,2,,,\n5,5,PP,7000,2,,,\n6,6,URETHAN,11000,2,,,\n7,7,무정전PC,9000,1.5,,,\n8,8,White POM,6500,2,,,\n9,9,PTFE,10000,2,,,\n10,10,PA,5000,2,,,\n11,11,abs,7400,2,,,\n12,12,pom,6500,2,,,\n13,13,아세탈,5500,2,,,\n14,14,PE,10000,2,,,\n15,15,PC,10000,2,,,\n16,16,테프론,16000,2.5,,,\n17,17,MC NYLON,10300,2,,,\n18,18,,,,,,강"
+  ],
+  "originalMaterialized": false,
+  "localWorkbookOpened": false,
+  "macroOrExternalLinksExecuted": false,
+  "priceColumn": {
+    "exactTitle": "키로당단가",
+    "denominator": "kg",
+    "currency": null,
+    "examples": [
+      {
+        "name": "CLEAN PVC",
+        "value": 5000
+      },
+      {
+        "name": "ACETAL",
+        "value": 5500
+      },
+      {
+        "name": "PEEK",
+        "value": 155000
+      }
+    ]
+  },
+  "singleQuestionForUser": "첨부 ‘소재 리스트’의 ‘키로당단가’(CLEAN PVC 5,000, ACETAL 5,500, PEEK 155,000)는 모두 원/kg 기준인가요?",
+  "applicationPolicy": "통화 확인 전 견적 원/kg나 활성 소재 단가로 자동 적용하지 않음",
+  "downloadRoute": {
+    "method": "Known direct Library ID → prepare_materialize → current official helper",
+    "result": "transfer URL only; no local workspace_path",
+    "blocker": "python3.exe 시작 실패, Win32 1920; 도우미 실행 전 차단",
+    "helperModified": false,
+    "downloadUrlBypass": false
+  }
+}

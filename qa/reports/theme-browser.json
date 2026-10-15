@@ -1,0 +1,127 @@
+{
+  "passed": true,
+  "checks": [
+    "OS 다크 설정에서도 기존 사용자 기본은 라이트",
+    "실제 상단 토글 클릭 후 입력값·포커스·커서 선택범위 유지",
+    "다크 원본 로고와 흰 심볼 파일의 바이트 보존",
+    "새로고침 및 재진입 시 브라우저 다크 선택 유지",
+    "다크 PC·모바일 7개 업무 화면 가로 잘림 없음·상단 정렬 유지",
+    "팝업 안에서 Alt+Shift+D 전환 시 모달·입력·포커스 유지",
+    "다크 화면에서도 견적 인쇄 문서는 흰 배경·SUIT 유지",
+    "라이트 재선택도 저장되며 OS 설정 변경 없음",
+    "표·모달·성공·오류·비활성·빈 상태 텍스트 대비 검사 통과 / 데이터 쓰기 0건"
+  ],
+  "screenshots": [
+    "theme-dashboard-1440.png",
+    "theme-quotes-1440.png",
+    "theme-orders-1440.png",
+    "theme-settlements-1440.png",
+    "theme-materials-1440.png",
+    "theme-parties-1440.png",
+    "theme-inspections-1440.png",
+    "theme-dashboard-390.png",
+    "theme-quotes-390.png",
+    "theme-orders-390.png",
+    "theme-settlements-390.png",
+    "theme-materials-390.png",
+    "theme-parties-390.png",
+    "theme-inspections-390.png",
+    "theme-party-dialog-dark.png",
+    "theme-quote-detail-dark.png",
+    "theme-white-print-preview-in-dark.png",
+    "theme-states-dark.png"
+  ],
+  "contrast": [
+    {
+      "screen": "dashboard-1440",
+      "count": 81,
+      "minimum": 5.64
+    },
+    {
+      "screen": "quotes-1440",
+      "count": 24,
+      "minimum": 7.09
+    },
+    {
+      "screen": "orders-1440",
+      "count": 49,
+      "minimum": 7.09
+    },
+    {
+      "screen": "settlements-1440",
+      "count": 43,
+      "minimum": 7.09
+    },
+    {
+      "screen": "materials-1440",
+      "count": 43,
+      "minimum": 5.52
+    },
+    {
+      "screen": "parties-1440",
+      "count": 48,
+      "minimum": 5.52
+    },
+    {
+      "screen": "inspections-1440",
+      "count": 19,
+      "minimum": 7.09
+    },
+    {
+      "screen": "dashboard-390",
+      "count": 21,
+      "minimum": 7.09
+    },
+    {
+      "screen": "quotes-390",
+      "count": 14,
+      "minimum": 7.09
+    },
+    {
+      "screen": "orders-390",
+      "count": 30,
+      "minimum": 7.09
+    },
+    {
+      "screen": "settlements-390",
+      "count": 23,
+      "minimum": 7.7
+    },
+    {
+      "screen": "materials-390",
+      "count": 32,
+      "minimum": 5.52
+    },
+    {
+      "screen": "parties-390",
+      "count": 29,
+      "minimum": 5.52
+    },
+    {
+      "screen": "inspections-390",
+      "count": 15,
+      "minimum": 7.09
+    },
+    {
+      "screen": "party-dialog-dark",
+      "count": 30,
+      "minimum": 5.52
+    },
+    {
+      "screen": "quote-detail-dark",
+      "count": 33,
+      "minimum": 7.09
+    },
+    {
+      "screen": "states-dark",
+      "count": 19,
+      "minimum": 6.7
+    }
+  ],
+  "issues": [],
+  "syntheticDataOnly": true,
+  "userDataTouched": false,
+  "userTabsTouched": false,
+  "runtimeErrors": [],
+  "at": "2026-10-14T14:34:07.927Z"
+}

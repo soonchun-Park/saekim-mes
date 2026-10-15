@@ -1,0 +1,162 @@
+{
+  "status": "completed-with-holds",
+  "url": "http://127.0.0.1:8791",
+  "totalFiles": 15,
+  "businesses": 9,
+  "bankOnlyDocuments": 1,
+  "newCount": 8,
+  "updatedExistingCount": 0,
+  "existingUnchanged": 1,
+  "results": [
+    {
+      "name": "케이에스 (KS) 와이어컷팅",
+      "id": "f9ea7abd-7586-4734-b5d7-6edf5645567b",
+      "businessNumber": "124-18-98784",
+      "role": "both",
+      "status": "신규 등록·상세 재조회 확인",
+      "key": "920572be-a633-486d-9b05-874629a29db3",
+      "source": "libfile_f9bcabaa1afc8191877cd5385c311306",
+      "revision": 1
+    },
+    {
+      "name": "금호정밀",
+      "id": "8c9d4c5f-da57-4abd-bf08-b9b749461d0b",
+      "businessNumber": "306-16-99265",
+      "role": "both",
+      "status": "신규 등록·상세 재조회 확인",
+      "key": "cbaee975-1856-45fe-bd89-6e23fccf92f2",
+      "source": "libfile_a6d8f46ae47c8191b31898e14936cdd3",
+      "revision": 1
+    },
+    {
+      "name": "주식회사 아라솔루션",
+      "id": "e82960eb-1e37-49c9-87e9-ef5f9547c3dc",
+      "businessNumber": "351-86-03476",
+      "role": "both",
+      "status": "신규 등록·상세 재조회 확인",
+      "key": "23f392ad-2f47-436b-9112-c0af91465950",
+      "source": "libfile_26acc537ca8c8191aaa257823c76d92d",
+      "revision": 1
+    },
+    {
+      "name": "디케이락주식회사",
+      "id": "32d07ebf-2699-4253-919e-2e469a8f14f6",
+      "businessNumber": "606-81-62536",
+      "role": "both",
+      "status": "신규 등록·상세 재조회 확인",
+      "key": "b2f9990b-726d-4163-bff0-3d7234253465",
+      "source": "libfile_6c265cfa4ac481918f609f03a1c47ddd",
+      "revision": 1
+    },
+    {
+      "name": "나일테크",
+      "id": "711c05be-133f-43ce-b837-8c9bc231dc6a",
+      "businessNumber": "312-29-10019",
+      "role": "both",
+      "status": "신규 등록·상세 재조회 확인",
+      "key": "b64d6a25-600c-48a2-9185-64f49e54fd95",
+      "source": "libfile_a37c3c1fa9748191a8bc0f5fdbc68491",
+      "revision": 1
+    },
+    {
+      "name": "솔릭스(Solixx)",
+      "id": "c02793ea-438a-4b46-9ee8-022d91f2d79b",
+      "businessNumber": "772-18-00658",
+      "role": "both",
+      "status": "신규 등록·상세 재조회 확인",
+      "key": "9396a3fc-2a75-42c0-9100-069cd5d8763f",
+      "source": "libfile_626cdef5d5008191b66212df615c8ee8",
+      "revision": 1
+    },
+    {
+      "name": "주식회사 유림솔루션",
+      "id": "1e806b23-6547-455e-aade-82065b9e9672",
+      "businessNumber": "469-88-00755",
+      "role": "both",
+      "status": "신규 등록·상세 재조회 확인",
+      "key": "facad30f-094a-4347-9bdf-931b0938862e",
+      "source": "libfile_1ccf13a967648191954e89f7980f2e1e",
+      "revision": 1
+    },
+    {
+      "name": "주식회사 신우시스템",
+      "id": "919e3eb1-9dde-4510-b84a-14c5a89e50e3",
+      "businessNumber": "125-81-97050",
+      "role": "both",
+      "status": "신규 등록·상세 재조회 확인",
+      "key": "e920a65c-dc0e-4f94-a10f-640891d61b7d",
+      "source": "libfile_711781fe8e3481919f4dfbe35e3fb604",
+      "revision": 1
+    }
+  ],
+  "held": [
+    {
+      "name": "모델솔루션 (주)",
+      "source": "libfile_e3d250ad6cec8191a6e6ef0b9262e518",
+      "status": "기존 업체 상충으로 전체 수정 보류",
+      "incoming": {
+        "businessNumber": "113-81-96403",
+        "address": "서울특별시 금천구 벚꽃로20길 24, 1층(독산동)"
+      },
+      "existing": [
+        {
+          "id": "c64adb2f-e680-461c-86b9-fc5eea9df0d2",
+          "name": "모델솔루션",
+          "businessNumber": "1138186403",
+          "address": "서울특별시 금천구 벚곷로 20길 24,"
+        }
+      ],
+      "reason": "동일 상호의 사업자번호 불일치"
+    }
+  ],
+  "fieldPolicy": "대표자·팩스 전용란 없음: 메모에 이름을 명시. 이메일은 용도 미지정으로 메모에 보존하며 견적/발주 또는 세금계산서 용도를 추정하지 않음. 담당자·미기재 연락처·결제조건·은행/계좌는 공란 유지.",
+  "verification": {
+    "apiRequery": true,
+    "diskEqualsApi": true,
+    "businessStateHashBefore": "6f1ccf1e5ba7b40d91fc17cde3b582d747539620776460d10d5e827b128a5e9c",
+    "businessStateHashAfter": "6f1ccf1e5ba7b40d91fc17cde3b582d747539620776460d10d5e827b128a5e9c",
+    "businessStateRevision": 2,
+    "catalogRevisionBefore": 151,
+    "catalogRevisionAfter": 159,
+    "originalPartiesUnchanged": true,
+    "materialsUnchanged": true,
+    "supplierPricesUnchanged": true,
+    "financialCommandsSent": 0,
+    "newBankFieldsEmpty": true,
+    "totalParties": 9
+  },
+  "backup": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\party-registration-verified-2026-10-15T11-18-38-373Z",
+  "at": "2026-10-15T11:19:08.674Z",
+  "uiVerification": {
+    "passed": true,
+    "checks": [
+      "fresh browser connection shows 9 total parties",
+      "케이에스 (KS) 와이어컷팅 detail fields match saved evidence; bank/account fields blank",
+      "금호정밀 detail fields match saved evidence; bank/account fields blank",
+      "주식회사 아라솔루션 detail fields match saved evidence; bank/account fields blank",
+      "디케이락주식회사 detail fields match saved evidence; bank/account fields blank",
+      "나일테크 detail fields match saved evidence; bank/account fields blank",
+      "솔릭스(Solixx) detail fields match saved evidence; bank/account fields blank",
+      "주식회사 유림솔루션 detail fields match saved evidence; bank/account fields blank",
+      "주식회사 신우시스템 detail fields match saved evidence; bank/account fields blank",
+      "reload retains all 8 additions and existing party"
+    ],
+    "userTabsTouched": false,
+    "ownHeadlessTab": true,
+    "commandsSent": 0,
+    "backupUnchanged": "61e971a16d21ea20dcde547c24b57770590df3666bfcc42897b4369a1f3f05b9",
+    "runtimeErrors": 0
+  },
+  "excludedDocuments": [
+    {
+      "source": "libfile_7a768e1395788191b6fd8722a0446889",
+      "fileName": "(매입)육신현  계좌번호.pdf",
+      "reason": "사용자가 해당 자료 제외를 확정. 등록하지 않음.",
+      "status": "사용자 지시로 제외"
+    }
+  ],
+  "excludedDocumentCount": 1,
+  "pendingBusinessCount": 1,
+  "userExclusionRecordedAt": "2026-10-15T11:20:46.429Z",
+  "finalVerifiedAt": "2026-10-15T11:21:26.843Z"
+}

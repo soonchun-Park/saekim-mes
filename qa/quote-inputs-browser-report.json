@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "browser": "Chrome/155.0.8059.40",
+  "scope": "isolated fixture, no application state/data access",
+  "checks": [
+    "six digits via actual key insertion fast",
+    "six digits via actual key insertion slow",
+    "leading zeros",
+    "leap year / invalid leap day",
+    "partial input retains validation",
+    "delete does not move focus",
+    "middle/selection replacement does not jump",
+    "Tab and Shift+Tab navigation",
+    "paste six digits, ISO and legacy four-digit year",
+    "live comma grouping",
+    "middle deletion preserves semantic caret",
+    "selection replacement",
+    "decimal input remains visible",
+    "empty versus explicit zero",
+    "comma-containing insertion",
+    "preset and custom value loading",
+    "custom draft survives preset toggle",
+    "zero runtime errors"
+  ]
+}

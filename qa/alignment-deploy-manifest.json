@@ -1,0 +1,58 @@
+{
+  "target": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\alignment-top-2026-10-14T10-56-01-153Z",
+  "preparedAt": "2026-10-14T10:56:01.263Z",
+  "sourceBefore": "4936b13ef37b7ab9f06cbcdb4e90ae88294d32086f9a3cec47168543a8b881e1",
+  "sourceAfter": "eed9e849f35ffff057e057d1e8a4809509a2326c5e85d3bc7ff3e461b55d62af",
+  "apiBeforeHash": "276a3980e022c410919c08af7a8336370e0764c38a006759eff078ee4a36c257",
+  "dataBefore": {
+    "material-catalog.json": "084330fb868a81a0d644bab946be17f5acb5c9c5f90b59210749176d81881360",
+    "state.json": "fd09d01b92ebc650a5381cf901fed09e752d4e3e53858cf48e3a0ac412ccd54d"
+  },
+  "otherServers": {
+    "8788": {
+      "/": {
+        "status": 200,
+        "hash": "55b835724fb79a7cdac47954eec1b950cadfda87e25f513fa30655829c005c8c"
+      },
+      "/api/backup": {
+        "status": 200,
+        "hash": "14d28491c3ac0263e1317d3cc48b5b27fd30cff3898e2bc68c88e71cbc235f72"
+      },
+      "/enterprise-ui.staged.css": {
+        "status": 404,
+        "hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      }
+    },
+    "8789": {
+      "/": {
+        "status": 200,
+        "hash": "97819265d615d24c9b771a4a2389ee94b8aebeb8e0b59127c5df4bd570f1aef0"
+      },
+      "/api/backup": {
+        "status": 200,
+        "hash": "14d28491c3ac0263e1317d3cc48b5b27fd30cff3898e2bc68c88e71cbc235f72"
+      },
+      "/enterprise-ui.staged.css": {
+        "status": 200,
+        "hash": "4936b13ef37b7ab9f06cbcdb4e90ae88294d32086f9a3cec47168543a8b881e1"
+      }
+    },
+    "8790": {
+      "/": {
+        "status": 200,
+        "hash": "b908b65ae20572f7335fcd93409611a2196e6f76fbbf0d8687e231e8d35e53bb"
+      },
+      "/api/backup": {
+        "status": 200,
+        "hash": "7f176a1412a1fa5c66120e78588f1a6ccf5f2d0dadc69dd5adefa116ad32a24c"
+      },
+      "/enterprise-ui.staged.css": {
+        "status": 200,
+        "hash": "4936b13ef37b7ab9f06cbcdb4e90ae88294d32086f9a3cec47168543a8b881e1"
+      }
+    }
+  },
+  "appliedAt": "2026-10-14T10:56:19.193Z",
+  "verifiedAt": "2026-10-14T10:56:19.427Z",
+  "preserved": true
+}

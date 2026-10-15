@@ -1,0 +1,1381 @@
+{
+  "schema": "mes-density-followup-v1",
+  "checkedAt": "2026-10-13T16:20:26.116Z",
+  "scope": "이전 미확인 63개 원명 추가 조사",
+  "appliedToActive8790": false,
+  "policy": "동일 등급 제조사 공칭값 확인은 실제 납품 LOT 인증과 다릅니다. 등급·제품형태·온도 조건을 유지하며 미확인 값은 자동 적용하지 않습니다.",
+  "counts": {
+    "access-blocked": 4,
+    "evidence-not-found": 23,
+    "grade-ambiguous": 32,
+    "exact-source-confirmed": 4
+  },
+  "materials": [
+    {
+      "name": "SKD11",
+      "classification": "access-blocked",
+      "density": null,
+      "referenceDensity": 7.67,
+      "referenceSourceId": "k110",
+      "sourceIds": [
+        "dc11",
+        "k110"
+      ],
+      "exactcondition": null,
+      "mapping": "D2/K110 값을 SKD11의 정확값으로 확정하지 않음.",
+      "searchTerms": [
+        "SKD11 density manufacturer",
+        "SKD11 比重 大同特殊鋼",
+        "SKD11 Density g/cm3"
+      ],
+      "shortEvidence": "Daido DC11 후보 원문 텍스트추출 차단. K110 제품 자체 밀도만 참고로 보존.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": "https://www.daido.co.jp/common/pdf/pages/products/tool/dc11.pdf",
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "SKD61",
+      "classification": "access-blocked",
+      "density": null,
+      "referenceDensity": null,
+      "sourceIds": [
+        "dha1"
+      ],
+      "exactcondition": null,
+      "mapping": null,
+      "searchTerms": [
+        "SKD61 density Daido",
+        "SKD61 密度 大同特殊鋼"
+      ],
+      "shortEvidence": "Daido DHA1 후보 PDF 접근은 가능하지만 텍스트0줄로 밀도 검증 미완료. H13 치환 안 함.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": "https://www.daido.co.jp/common/pdf/pages/products/tool/dha1.pdf",
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "SKH51",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": 8.07,
+      "referenceSourceId": "s600",
+      "sourceIds": [
+        "nachi",
+        "yxm1",
+        "s600"
+      ],
+      "exactcondition": null,
+      "mapping": "Proterial YXM1의 JIS SKH51/AISI M2 대응은 공식 확인. S600/HS6-5-2C의 별도 밀도는 참고만, SKH51 직접값 아님.",
+      "searchTerms": [
+        "SKH51 Density proterial.com",
+        "NACHI S2001E-6 density",
+        "Bohler S600 physical properties"
+      ],
+      "shortEvidence": "등급 대응은 명확하지만 해당 JIS 원명에 대한 직접 밀도 근거 미발견.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": "https://www.nachi-fujikoshi.co.jp/dcms_media/other/S2001E-6.pdf",
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "SKH55",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "sourceIds": [
+        "nachi"
+      ],
+      "exactcondition": null,
+      "mapping": "NACHI HM35 ↔ JIS SKH55 표기 공식 확인; 타사 M35 비중으로 대체하지 않음.",
+      "searchTerms": [
+        "SKH55 density bohler-edelstahl",
+        "NACHI S2001E-6 SKH55 Density"
+      ],
+      "shortEvidence": "공식 등급표 확인, 밀도 수치 미기재/미발견.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": "https://www.nachi-fujikoshi.co.jp/dcms_media/other/S2001E-6.pdf",
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "SKH59",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "sourceIds": [
+        "nachi"
+      ],
+      "exactcondition": null,
+      "mapping": "NACHI HM42 ↔ JIS SKH59 표기 공식 확인; M42 비중 치환 안 함.",
+      "searchTerms": [
+        "SKH59 density bohler-edelstahl",
+        "NACHI S2001E-6 SKH59 Density"
+      ],
+      "shortEvidence": "공식 등급표 확인, 밀도 수치 미기재/미발견.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": "https://www.nachi-fujikoshi.co.jp/dcms_media/other/S2001E-6.pdf",
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "SM20C",
+      "classification": "access-blocked",
+      "density": null,
+      "referenceDensity": null,
+      "sourceIds": [
+        "sm20c-sds"
+      ],
+      "exactcondition": null,
+      "mapping": "S20C로 자동 치환하지 않음.",
+      "searchTerms": [
+        "SM20C 비중"
+      ],
+      "shortEvidence": "후보 SDS 원문/게시자502. 검색요약의 무차원7.86값은 채택 안 함.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": "https://www.ekosco.com/downfile/MSDS%28%EA%B8%B0%EA%B3%84%20%EA%B5%AC%EC%A1%B0%EC%9A%A9%20%ED%83%84%EC%86%8C%20%EA%B0%95%EC%9E%AC%20SM20C%29.pdf",
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "SS41",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": null,
+      "sourceIds": [],
+      "exactcondition": null,
+      "mapping": "레거시 표기 가능성이 있으나 규격/판본 및 SS400 연결 공식 근거 미확정.",
+      "searchTerms": [
+        "SS41 density",
+        "SS41 steel density"
+      ],
+      "shortEvidence": "원명과 규격판본 고정 불가. SS400 일반값 복사 안 함.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": null,
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "SUJ2",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "sourceIds": [],
+      "exactcondition": null,
+      "mapping": "52100/100Cr6 값으로 자동 치환하지 않음.",
+      "searchTerms": [
+        "SUJ2 specific gravity",
+        "SUJ2 密度 山陽",
+        "SUJ2 density manufacturer datasheet"
+      ],
+      "shortEvidence": "원명 검색 수행. 공식 제조사/공적표준의 직접 밀도 미발견.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": null,
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "낙크80",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": null,
+      "sourceIds": [
+        "nak80"
+      ],
+      "exactcondition": null,
+      "mapping": "한국어 원명 낙크80과 Daido 상표 NAK80 동일 제품인지 사용자/납품증빙 확인 필요.",
+      "searchTerms": [
+        "NAK80 Density daido.co.jp"
+      ],
+      "shortEvidence": "영문 NAK80 공식 자료 후보 확인했지만 한국어 별칭의 제조사 연결 확정 안 함.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": "https://www.daido.co.jp/products/tool/nak80/pdf/en/nak55_80.pdf",
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "NAK80",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "sourceIds": [
+        "nak80"
+      ],
+      "exactcondition": null,
+      "mapping": "Daido NAK80 제품 자료 직접 확인; 타 유통사7.72값 채택 안 함.",
+      "searchTerms": [
+        "NAK80 Density daido.co.jp",
+        "Daido NAK80 7.72"
+      ],
+      "shortEvidence": "명확한 상표 제품 원문 있으나 확인한 브로슈어에서 비중 수치 미발견.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": "https://www.daido.co.jp/products/tool/nak80/pdf/en/nak55_80.pdf",
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "S45C",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "sourceIds": [],
+      "exactcondition": null,
+      "mapping": "AISI1045/SM45C 값으로 치환 안 함.",
+      "searchTerms": [
+        "S45C density aichi",
+        "S45C 密度 愛知製鋼",
+        "S45C density aichi-steel.co.jp"
+      ],
+      "shortEvidence": "검색은 수행했으나 제조사/공적표준 밀도 원문 근거 미발견. 등급 불명확 분류 아님.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": null,
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "SB41",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": null,
+      "sourceIds": [],
+      "exactcondition": null,
+      "mapping": "레거시/규격 판본과 현행 대응 미확정; SB410로 자동 변경 안 함.",
+      "searchTerms": [
+        "SB41 steel density"
+      ],
+      "shortEvidence": "입력 원명 규격판본/제조사 연결을 특정할 공식 자료 미발견.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": null,
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "SCM435",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "sourceIds": [],
+      "exactcondition": null,
+      "mapping": null,
+      "searchTerms": [
+        "SCM435 密度"
+      ],
+      "shortEvidence": "원명 검색 수행했으나 공식 제조사/공적표준 직접 밀도값 미발견.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": null,
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "SCM440",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "sourceIds": [],
+      "exactcondition": null,
+      "mapping": "4140로 자동 치환 안 함.",
+      "searchTerms": [
+        "SCM440 density nippon",
+        "SCM440 密度 新日鉄",
+        "SCM440 7.85 sanyo-steel.co.jp",
+        "SCM440 密度"
+      ],
+      "shortEvidence": "원명 검색 수행했으나 공식 제조사/공적표준 직접 밀도값 미발견.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": null,
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "FC250",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "sourceIds": [],
+      "exactcondition": null,
+      "mapping": null,
+      "searchTerms": [
+        "FC250 density foundry",
+        "FC250 比重",
+        "FC250 density Tobata"
+      ],
+      "shortEvidence": "원명 검색 수행. 밀도/시험온도/제품조건을 직접 연결한 공식 근거 미발견.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": null,
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "SS400",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "sourceIds": [],
+      "exactcondition": null,
+      "mapping": null,
+      "searchTerms": [
+        "SS400 7.85 nipponsteel.com",
+        "SS400 単位質量 日本製鉄",
+        "SS400 density JFE"
+      ],
+      "shortEvidence": "등급 원명 검색 수행. 일반 철강 중량계산 상수와 실제 등급 밀도 구분하여 공식 직접값 미확인 유지.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": null,
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "KP4M",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": null,
+      "sourceIds": [],
+      "exactcondition": null,
+      "mapping": "상용코드의 제조사/납품규격 미기재; HP4M/TP4M 또는 P20으로 치환 안 함.",
+      "searchTerms": [
+        "KP4M 비중",
+        "KP4M 세아"
+      ],
+      "shortEvidence": "블로그/상용판매 후보는 있으나 공식 제조사 연결·비중 원문 미확정.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": null,
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "SKS3",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "sourceIds": [],
+      "exactcondition": null,
+      "mapping": "O1 값은 별도규격으로 자동 채택 안 함.",
+      "searchTerms": [
+        "SKS3 density steel datasheet"
+      ],
+      "shortEvidence": "검색 수행. 유통/집계사이트 수치를 공식 제조사 확인값으로 채택하지 않음.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": null,
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "SK3",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "sourceIds": [],
+      "exactcondition": null,
+      "mapping": null,
+      "searchTerms": [
+        "SK3 steel density manufacturer"
+      ],
+      "shortEvidence": "원명 검색 수행. 해당 원명의 공식 직접 밀도 근거 미발견; 임의 강종 명칭변경 안 함.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": null,
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "SK5",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "sourceIds": [],
+      "exactcondition": null,
+      "mapping": null,
+      "searchTerms": [
+        "SK5 steel density manufacturer"
+      ],
+      "shortEvidence": "원명 검색 수행. 해당 원명의 공식 직접 밀도 근거 미발견; 임의 강종 명칭변경 안 함.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": null,
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "SM45C",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "sourceIds": [],
+      "exactcondition": null,
+      "mapping": "S45C/1045 자동치환 안 함.",
+      "searchTerms": [
+        "SM45C 비중"
+      ],
+      "shortEvidence": "원명 검색 수행. 공식 제조사/공적표준 직접 밀도 근거 미발견.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": null,
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "SS330",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "sourceIds": [],
+      "exactcondition": null,
+      "mapping": null,
+      "searchTerms": [
+        "SS330 steel density datasheet"
+      ],
+      "shortEvidence": "원명 검색 수행. 공개 집계표는 공식표준 원문이 아니므로 직접 밀도 확인값으로 사용 안 함.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": null,
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "sum22",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "sourceIds": [],
+      "exactcondition": null,
+      "mapping": "사용자 소문자 원명 보존. 1213/1215 등으로 임의 매핑 안 함.",
+      "searchTerms": [
+        "sum22 steel density manufacturer"
+      ],
+      "shortEvidence": "원명 검색 수행. 공식 제조사/공적표준 직접 밀도 근거 미발견.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": null,
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "SUM43",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "sourceIds": [],
+      "exactcondition": null,
+      "mapping": null,
+      "searchTerms": [
+        "SUM43 steel density manufacturer"
+      ],
+      "shortEvidence": "원명 검색 수행. 공식 제조사/공적표준 직접 밀도 근거 미발견.",
+      "checkedAt": "2026-10-13",
+      "sourceURL": null,
+      "sourceResearchFile": "steel.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "지르코늄",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 6.52,
+      "unit": "g/cm3",
+      "exactCondition": "RSC 원소표 실온 밀도; 순도 수치와 정확한 실온 온도는 원문에 명시되지 않음. 원소 금속 참고값이며 상용 합금·분말 벌크밀도에 적용하지 않음",
+      "mapping": "원소 Zr의 참고값만 확인; 구매 재질의 순도/합금 등급은 미확정",
+      "sourceURL": "https://periodic-table.rsc.org/element/40/zirconium",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "zirconium density RSC",
+        "RSC periodic-table element direct navigation"
+      ],
+      "shortEvidence": "원문 Fact box의 원소 밀도 6.52 g/cm3 및 glossary의 room temperature 조건 확인",
+      "sourceValueConfirmed": true,
+      "sourceKind": "scientific-society",
+      "purity": null,
+      "temperature": "room temperature (numerical temperature not specified for density)",
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": false
+    },
+    {
+      "name": "bronze",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": null,
+      "unit": "g/cm3",
+      "exactCondition": "청동의 특정 등급을 선택하기 전 단일 밀도 확정 불가",
+      "mapping": "청동 통칭; UNS/조성/제조상태 미지정",
+      "sourceURL": "https://www.ngk-alloys.com/wp-content/uploads/NGK-Berylco-Catalogue_EN_2024.08.pdf",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "copper.org bronze alloy physical properties",
+        "NGK official catalogue bronze"
+      ],
+      "shortEvidence": "제조사 카탈로그는 bronze를 합금군 비교명으로 사용하며 입력 통칭을 특정 등급에 대응하지 않음",
+      "attemptedSources": [
+        {
+          "url": "https://alloys.copper.org/alloy/C51000",
+          "result": "403 Forbidden"
+        }
+      ],
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": false
+    },
+    {
+      "name": "크롬동    (crcu)",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": null,
+      "unit": "g/cm3",
+      "exactCondition": "Cr/Zr 등 조성, UNS/JIS 등급과 제품 상태 필요",
+      "mapping": "CrCu 통칭; C18200 또는 다른 Cu-Cr계 등급으로 자동 매핑 금지",
+      "sourceURL": "https://www.ngk-alloys.com/wp-content/uploads/NGK-Berylco-Catalogue_EN_2024.08.pdf",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "C18200 Specific Gravity",
+        "NGK CrCu catalogue"
+      ],
+      "shortEvidence": "NGK 자료에 CrCu 비교군이 있으나 밀도/정확한 입력 등급은 확인되지 않음",
+      "attemptedSources": [
+        {
+          "url": "https://alloys.copper.org/alloy/C18200",
+          "result": "403 Forbidden"
+        }
+      ],
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": false
+    },
+    {
+      "name": "타프피치",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": null,
+      "unit": "g/cm3",
+      "exactCondition": "공급사 정식 등급과 표기 확인 필요",
+      "mapping": "명칭이 electrolytic tough pitch를 뜻하는지 확인 필요; C11000/JIS C1100 자동동일시 금지",
+      "sourceURL": "https://alloys.copper.org/alloy/C11000",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "C11000 Alloy copper.org",
+        "C1100 density Mitsubishi"
+      ],
+      "shortEvidence": "CDA 검색 결과 C11000 후보는 확인했으나 원문 403으로 비중과 입력 명칭의 동일성을 검증하지 못함",
+      "accessStatus": "403 Forbidden",
+      "snippetOnlyValue": 8.91,
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": false
+    },
+    {
+      "name": "황동",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": null,
+      "unit": "g/cm3",
+      "exactCondition": "특정 UNS/JIS 등급·제품 상태 확인 후 비중 결정",
+      "mapping": "황동 합금군; 구리/아연 비율과 납 등 첨가 성분 미지정",
+      "sourceURL": "https://www.ngk-alloys.com/wp-content/uploads/NGK-Berylco-Catalogue_EN_2024.08.pdf",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "C26000 copper.org",
+        "NGK catalogue Brass"
+      ],
+      "shortEvidence": "제조사 카탈로그는 Brass를 합금군으로 비교하며 단일 등급/밀도로 정하지 않음",
+      "attemptedSources": [
+        {
+          "url": "https://alloys.copper.org/alloy/C26000",
+          "result": "403 Forbidden"
+        }
+      ],
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": false
+    },
+    {
+      "name": "brass",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": null,
+      "unit": "g/cm3",
+      "exactCondition": "특정 UNS/JIS 등급·제품 상태 확인 후 비중 결정",
+      "mapping": "황동 합금군; 구리/아연 비율과 납 등 첨가 성분 미지정",
+      "sourceURL": "https://www.ngk-alloys.com/wp-content/uploads/NGK-Berylco-Catalogue_EN_2024.08.pdf",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "C26000 copper.org",
+        "NGK catalogue Brass"
+      ],
+      "shortEvidence": "제조사 카탈로그는 Brass를 합금군으로 비교하며 단일 등급/밀도로 정하지 않음",
+      "attemptedSources": [
+        {
+          "url": "https://alloys.copper.org/alloy/C26000",
+          "result": "403 Forbidden"
+        }
+      ],
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": false
+    },
+    {
+      "name": "구리(동)cu-C1100(브스바)",
+      "classification": "access-blocked",
+      "density": null,
+      "referenceDensity": null,
+      "unit": "g/cm3",
+      "exactCondition": "C1100 원문 물성 및 제품/순도 확인 필요",
+      "mapping": "C1100 표기가 있으나 JIS 원문 또는 제조사 대응표 미확보; UNS C11000과 자동매핑하지 않음",
+      "sourceURL": "https://alloys.copper.org/alloy/C11000",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "C1100 density Mitsubishi",
+        "C1100 比重",
+        "C11000 Alloy copper.org"
+      ],
+      "shortEvidence": "공식 CDA C11000 후보 원문은 403; MMC 후보 경로도 도구 접근 실패. 등급명 존재를 밀도 확인으로 간주하지 않음",
+      "mappingConfirmed": false,
+      "attemptedSources": [
+        {
+          "url": "https://alloys.copper.org/alloy/C11000",
+          "result": "403 Forbidden"
+        },
+        {
+          "url": "https://www.mmc.co.jp/copper/en/products/copper.html",
+          "result": "tool reported URL inaccessible; target existence not established"
+        }
+      ],
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": false
+    },
+    {
+      "name": "단동(아연합금동)",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": null,
+      "unit": "g/cm3",
+      "exactCondition": "C23000 등 특정 등급을 임의 선택하지 않음",
+      "mapping": "Cu-Zn 통칭; 아연 함량·정식 등급 미지정",
+      "sourceURL": null,
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "C23000 copper.org",
+        "copper.org copper alloys density"
+      ],
+      "shortEvidence": "C23000 공식 후보 원문 접근이 403이고 입력 이름의 정확한 조성은 제공되지 않음",
+      "attemptedSources": [
+        {
+          "url": "https://alloys.copper.org/alloy/C23000",
+          "result": "403 Forbidden"
+        }
+      ],
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": false
+    },
+    {
+      "name": "마그네슘",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 1.74,
+      "unit": "g/cm3",
+      "exactCondition": "RSC 원소표 실온 밀도; 순도 수치와 정확한 실온 온도는 원문에 명시되지 않음. 원소 금속 참고값이며 상용 합금·분말 벌크밀도에 적용하지 않음",
+      "mapping": "원소 Mg의 참고값만 확인; 구매 재질의 순도/합금 등급은 미확정",
+      "sourceURL": "https://periodic-table.rsc.org/element/12/magnesium",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "magnesium density RSC",
+        "RSC periodic-table element direct navigation"
+      ],
+      "shortEvidence": "원문 Fact box의 원소 밀도 1.74 g/cm3 및 glossary의 room temperature 조건 확인",
+      "sourceValueConfirmed": true,
+      "sourceKind": "scientific-society",
+      "purity": null,
+      "temperature": "room temperature (numerical temperature not specified for density)",
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": false
+    },
+    {
+      "name": "몰리브덴",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 10.2,
+      "unit": "g/cm3",
+      "exactCondition": "RSC 원소표 실온 밀도; 순도 수치와 정확한 실온 온도는 원문에 명시되지 않음. 원소 금속 참고값이며 상용 합금·분말 벌크밀도에 적용하지 않음",
+      "mapping": "원소 Mo의 참고값만 확인; 구매 재질의 순도/합금 등급은 미확정",
+      "sourceURL": "https://periodic-table.rsc.org/element/42/molybdenum",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "molybdenum density Plansee",
+        "RSC periodic-table element direct navigation"
+      ],
+      "shortEvidence": "원문 Fact box의 원소 밀도 10.2 g/cm3 및 glossary의 room temperature 조건 확인",
+      "sourceValueConfirmed": true,
+      "sourceKind": "scientific-society",
+      "purity": null,
+      "temperature": "room temperature (numerical temperature not specified for density)",
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": false
+    },
+    {
+      "name": "Copper",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 8.96,
+      "unit": "g/cm3",
+      "exactCondition": "RSC 원소표 실온 밀도; 순도 수치와 정확한 실온 온도는 원문에 명시되지 않음. 원소 금속 참고값이며 상용 합금·분말 벌크밀도에 적용하지 않음",
+      "mapping": "원소 Cu의 참고값만 확인; 구매 재질의 순도/합금 등급은 미확정",
+      "sourceURL": "https://periodic-table.rsc.org/element/29/copper",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "Copper density RSC",
+        "RSC periodic-table element direct navigation"
+      ],
+      "shortEvidence": "원문 Fact box의 원소 밀도 8.96 g/cm3 및 glossary의 room temperature 조건 확인",
+      "sourceValueConfirmed": true,
+      "sourceKind": "scientific-society",
+      "purity": null,
+      "temperature": "room temperature (numerical temperature not specified for density)",
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": false
+    },
+    {
+      "name": "동",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 8.96,
+      "unit": "g/cm3",
+      "exactCondition": "RSC 원소표 실온 밀도; 순도 수치와 정확한 실온 온도는 원문에 명시되지 않음. 원소 금속 참고값이며 상용 합금·분말 벌크밀도에 적용하지 않음",
+      "mapping": "원소 Cu의 참고값만 확인; 구매 재질의 순도/합금 등급은 미확정",
+      "sourceURL": "https://periodic-table.rsc.org/element/29/copper",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "Copper density RSC",
+        "RSC periodic-table element direct navigation"
+      ],
+      "shortEvidence": "원문 Fact box의 원소 밀도 8.96 g/cm3 및 glossary의 room temperature 조건 확인",
+      "sourceValueConfirmed": true,
+      "sourceKind": "scientific-society",
+      "purity": null,
+      "temperature": "room temperature (numerical temperature not specified for density)",
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": false
+    },
+    {
+      "name": "베리륨동(becu)",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 8.36,
+      "unit": "g/cm3",
+      "exactCondition": "참고 8.36은 Berylco25/C17200 및 Berylco33/25/C17300, 석출경화 후 20°C 조건에 한정",
+      "mapping": "BeCu 합금군; C17200 등으로 자동매핑 금지",
+      "sourceURL": "https://www.ngk-alloys.com/wp-content/uploads/NGK-Berylco-Catalogue_EN_2024.08.pdf",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "NGK Beryllium Copper official catalogue",
+        "C17200 copper.org"
+      ],
+      "shortEvidence": "공식 PDF p.3 표: B25/33-25=8.36, B14/B8=8.82, B7=8.71 g/cm3. 통칭에 하나의 값을 적용할 수 없음",
+      "sourceKind": "manufacturer",
+      "sourceValueConfirmed": true,
+      "referenceAlternatives": [
+        {
+          "grade": "C17200/C17300",
+          "density": 8.36
+        },
+        {
+          "grade": "C17510 B14/B8",
+          "density": 8.82
+        },
+        {
+          "grade": "C17530 B7",
+          "density": 8.71
+        }
+      ],
+      "temperatureC": 20,
+      "condition": "after precipitation hardening",
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": false
+    },
+    {
+      "name": "아연",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 7.134,
+      "unit": "g/cm3",
+      "exactCondition": "RSC 원소표 실온 밀도; 순도 수치와 정확한 실온 온도는 원문에 명시되지 않음. 원소 금속 참고값이며 상용 합금·분말 벌크밀도에 적용하지 않음",
+      "mapping": "원소 Zn의 참고값만 확인; 구매 재질의 순도/합금 등급은 미확정",
+      "sourceURL": "https://periodic-table.rsc.org/element/30/zinc",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "zinc density RSC",
+        "RSC periodic-table element direct navigation"
+      ],
+      "shortEvidence": "원문 Fact box의 원소 밀도 7.134 g/cm3 및 glossary의 room temperature 조건 확인",
+      "sourceValueConfirmed": true,
+      "sourceKind": "scientific-society",
+      "purity": null,
+      "temperature": "room temperature (numerical temperature not specified for density)",
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": false
+    },
+    {
+      "name": "인발",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": null,
+      "unit": "g/cm3",
+      "exactCondition": "인발 대상 재질부터 확인해야 하며 소재 밀도 선정 불가",
+      "mapping": "가공 방식 명칭만 제공; 소재/화학 조성/등급 미지정",
+      "sourceURL": null,
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "NGK catalogue cold drawing",
+        "Hydro precision drawn tubes"
+      ],
+      "shortEvidence": "읽은 제조사 자료는 cold drawing을 제조 방식으로 구분함. 입력 인발을 특정 금속이나 합금으로 추정하지 않음",
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": false
+    },
+    {
+      "name": "인청동",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": null,
+      "unit": "g/cm3",
+      "exactCondition": "UNS C51000 등 임의선택 금지",
+      "mapping": "Phosphor bronze 합금군; Sn/P 함량 및 정식 등급 미지정",
+      "sourceURL": "https://www.ngk-alloys.com/wp-content/uploads/NGK-Berylco-Catalogue_EN_2024.08.pdf",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "C51000 copper.org",
+        "NGK catalogue Phosphor Bronze"
+      ],
+      "shortEvidence": "공식 자료에 phosphor bronze 비교군은 있으나 입력명과 정확한 등급/밀도 대응은 확인하지 못함",
+      "attemptedSources": [
+        {
+          "url": "https://alloys.copper.org/alloy/C51000",
+          "result": "403 Forbidden"
+        }
+      ],
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": false
+    },
+    {
+      "name": "주석",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 7.287,
+      "unit": "g/cm3",
+      "exactCondition": "RSC 원소표 실온 밀도; 순도 수치와 정확한 실온 온도는 원문에 명시되지 않음. 원소 금속 참고값이며 상용 합금·분말 벌크밀도에 적용하지 않음",
+      "mapping": "원소 Sn의 참고값만 확인; 구매 재질의 순도/합금 등급은 미확정",
+      "sourceURL": "https://periodic-table.rsc.org/element/50/tin",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "tin density RSC",
+        "RSC periodic-table element direct navigation"
+      ],
+      "shortEvidence": "원문 Fact box의 원소 밀도 7.287 g/cm3 및 glossary의 room temperature 조건 확인",
+      "sourceValueConfirmed": true,
+      "sourceKind": "scientific-society",
+      "purity": null,
+      "temperature": "room temperature (numerical temperature not specified for density)",
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": false
+    },
+    {
+      "name": "AL5052",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "unit": "g/cm3",
+      "exactCondition": "질별·조질·제품 물성 원문 확인 필요",
+      "mapping": "5052 합금 번호는 명시되었으나 정확한 제조사 밀도 원문 미확보",
+      "sourceURL": null,
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "5052 density site.hydro.com",
+        "5052 specific gravity 2.68 manufacturer",
+        "A5052 比重"
+      ],
+      "shortEvidence": "공식 밀도 원문을 제한시간 내 확보하지 못함. 미조사가 아닌 조사 후 근거 미확보; 2.68을 기억/2차 자료로 입력하지 않음",
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": false,
+      "additionalRootCheck": {
+        "sourceURL": "https://online.kaiseraluminum.com/depot/PublicProductInformation/Document/1040/Kaiser_Aluminum_5052_Tube_and_Pipe.pdf",
+        "result": "공식 PDF 확보; 추출된 nominal density 행은 0.097 g/cm^3처럼 값/단위 배열이 모호하여 정확값 채택 안 함. Weight Conversion PDF는 추출 글자 손상. 원본 시각 판독 미완료.",
+        "density": null
+      }
+    },
+    {
+      "name": "AL6061",
+      "classification": "exact-source-confirmed",
+      "density": 2.7,
+      "referenceDensity": 2.7,
+      "unit": "g/cm3",
+      "exactCondition": "Nominal density at 68°F / 20°C, typical physical properties, Sheet Coil & Plate Alloy 6061. 조질별 실제 소재 성적서와 허용차는 별도 확인.",
+      "mapping": "AL6061 → 명시된 6061 합금; Kaiser Sheet Coil & Plate Alloy 6061 공식 자료",
+      "sourceURL": "https://online.kaiseraluminum.com/depot/PublicProductInformation/Document/1015/Kaiser_Aluminum_6061_Sheet_Coil_and_Plate.pdf",
+      "checkedAt": "2026-10-13T16:10:44Z",
+      "searchTerms": [
+        "6061 alloy density 2.7 hydro",
+        "6061 density site.kaiseraluminum.com",
+        "Hydro official sitemap 6061",
+        "parent found official Kaiser product-information link 20 → document 1015; direct PDF read"
+      ],
+      "shortEvidence": "공식 PDF Rev.05/06 p.2 원문에서 Nominal Density 20°C의 metric 2.70 Mg/m3 확인; 1 Mg/m3 = 1 g/cm3이므로 2.70 g/cm3.",
+      "sourceKind": "manufacturer",
+      "sourceValueConfirmed": true,
+      "temperatureC": 20,
+      "sourceUnit": "Mg/m3",
+      "sourceDensity": 2.7,
+      "documentRevision": "05/06",
+      "conversion": "1 Mg/m3 = 1 g/cm3",
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": true
+    },
+    {
+      "name": "고베",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": null,
+      "unit": "g/cm3",
+      "exactCondition": "제조사명만으로 5052/6061/특정 주조판재를 선택하지 않음",
+      "mapping": "Kobe 제조사/브랜드 표기일 가능성만 있으며 정식 합금/상품등급 불명",
+      "sourceURL": null,
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "Kobelco english products aluminum",
+        "Hydro aluminum alloys manufacturer"
+      ],
+      "shortEvidence": "정확한 상품명/합금 번호가 제공되지 않아 비중 특정 불가; Kobe 후보 페이지 접근 실패만으로 물성 확인을 주장하지 않음",
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": false
+    },
+    {
+      "name": "OFHC",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 8.96,
+      "unit": "g/cm3",
+      "exactCondition": "8.96은 RSC 원소 Cu의 실온 참고값일 뿐 OFHC 제품 등급/순도 밀도로 확정하지 않음",
+      "mapping": "무산소 고전도 구리 통칭; C10100/C10200 등 특정 UNS와 자동동일시 금지",
+      "sourceURL": "https://periodic-table.rsc.org/element/29/copper",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "OFHC density",
+        "C10100 copper.org"
+      ],
+      "shortEvidence": "원소 Cu의 밀도는 확인; 공식 OFHC 등급 원문은 확보하지 못했으며 CDA C10100 후보는 403",
+      "attemptedSources": [
+        {
+          "url": "https://alloys.copper.org/alloy/C10100",
+          "result": "403 Forbidden"
+        }
+      ],
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": false
+    },
+    {
+      "name": "NI",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 8.9,
+      "unit": "g/cm3",
+      "exactCondition": "RSC 원소표 실온 밀도; 순도 수치와 정확한 실온 온도는 원문에 명시되지 않음. 원소 금속 참고값이며 상용 합금·분말 벌크밀도에 적용하지 않음",
+      "mapping": "원소 Ni의 참고값만 확인; 구매 재질의 순도/합금 등급은 미확정",
+      "sourceURL": "https://periodic-table.rsc.org/element/28/nickel",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "nickel density RSC",
+        "RSC periodic-table element direct navigation"
+      ],
+      "shortEvidence": "원문 Fact box의 원소 밀도 8.9 g/cm3 및 glossary의 room temperature 조건 확인",
+      "sourceValueConfirmed": true,
+      "sourceKind": "scientific-society",
+      "purity": null,
+      "temperature": "room temperature (numerical temperature not specified for density)",
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": false
+    },
+    {
+      "name": "하스텔로이",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 8.89,
+      "unit": "g/cm3",
+      "exactCondition": "8.89는 HASTELLOY C-276/UNS N10276의 RT(Room Temperature) 조건에 한정",
+      "mapping": "HASTELLOY 상표 합금군; C-276로 자동매핑 금지",
+      "sourceURL": "https://haynesintl.com/en/alloys/alloy-portfolio/corrosion-resistant-alloys/hastelloy-c-276/",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "HASTELLOY C-276 alloy density",
+        "HASTELLOY C-276 8.89 haynes"
+      ],
+      "shortEvidence": "Haynes 공식 Physical Properties 표의 C-276 밀도 8.89 g/cm3 및 RT 조건 확인. 입력 통칭의 정확한 등급은 불명",
+      "sourceKind": "manufacturer",
+      "sourceValueConfirmed": true,
+      "referenceGrade": "HASTELLOY C-276 / UNS N10276",
+      "sourceResearchFile": "nonferrous.json",
+      "autoApply": false
+    },
+    {
+      "grade": "SUS303",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "condition": "조사 범위에서 정확 SUS303 등급의 제조사 밀도 자료를 확보하지 못함. 임의 기본값 사용 금지.",
+      "mapping": "AISI303 대응 및 밀도를 공식 자료로 함께 검증하지 못함.",
+      "sourceURL": "https://www.daido.co.jp/en/products/stainless/pdf/sus_jis.pdf",
+      "searchTerms": [
+        "SUS303 density manufacturer 7.93",
+        "SUS303 比重 メーカー",
+        "TOKKIN SUS303"
+      ],
+      "shortEvidence": "DAIDO의 JIS 등급 목록은 확보했으나 밀도 수치의 근거가 되지 않았다. TOKKIN의 추정303 경로 조회는 오류여서 자료 존재도 확인하지 못했다.",
+      "checkedAt": "2026-10-13",
+      "name": "SUS303",
+      "sourceResearchFile": "stainless.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "grade": "SUS304",
+      "classification": "exact-source-confirmed",
+      "density": 7.9,
+      "referenceDensity": null,
+      "condition": "TOKKIN SUS304 냉간압연 코일·시트 제품 페이지의 공시 물성. 밀도 측정 온도는 해당 표에 명시되지 않음. 실제 공급재 제조사/상태 확인 필요.",
+      "mapping": "제조사 Standards 표 JIS SUS304와 UNS S30400/AISI304를 함께 표시. 해외 표준은 동등 또는 유사 참고용이라는 제조사 주의사항 적용.",
+      "sourceURL": "https://www.tokkin.com/search/stainless-steels/austenitic/304/",
+      "searchTerms": [
+        "TOKKIN SUS304 density",
+        "SUS304 density manufacturer"
+      ],
+      "shortEvidence": "TOKKIN의 정확 SUS304 제품 페이지 Physical Properties에서 Density 7.90 g/cm³ 확인. POSCO의 304 비중7.93과 차이가 있으므로 평균/통일하지 않음.",
+      "checkedAt": "2026-10-13",
+      "name": "SUS304",
+      "sourceResearchFile": "stainless.json",
+      "unit": "g/cm3",
+      "autoApply": true
+    },
+    {
+      "grade": "SUS316",
+      "classification": "exact-source-confirmed",
+      "density": 8.03,
+      "referenceDensity": null,
+      "condition": "TOKKIN SUS316 냉간압연 코일·시트 공시 물성. 밀도 온도/열처리별 수치는 표에 명시되지 않음.",
+      "mapping": "Standards의 JIS SUS316 (G4305), UNS S31600/AISI316 명시. 해외 표준은 동등 또는 유사 참고용.",
+      "sourceURL": "https://www.tokkin.com/search/stainless-steels/austenitic/316/",
+      "searchTerms": [
+        "TOKKIN SUS316 density",
+        "SUS316 manufacturer density"
+      ],
+      "shortEvidence": "제조사 Physical Properties 표의 Density 8.03 g/cm³ 확인. POSCO304계 표의316 비중7.98과 동일값으로 치환하지 않음.",
+      "checkedAt": "2026-10-13",
+      "name": "SUS316",
+      "sourceResearchFile": "stainless.json",
+      "unit": "g/cm3",
+      "autoApply": true
+    },
+    {
+      "grade": "SUS416",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "condition": "제조사 문서에서 등급 관련 설명은 확인했으나 정확 SUS416의 밀도는 확보하지 못함.",
+      "mapping": "DAIDO DSR16FC는 SUS416에 쾌삭성 성분을 추가한 별도 제품으로 그대로 동일시할 수 없음.",
+      "sourceURL": "https://www.daido.co.jp/en/products/stainless/martensitic/index.html",
+      "searchTerms": [
+        "SUS416 density manufacturer datasheet",
+        "SUS416 比重 大同",
+        "DAIDO martensitic SUS416"
+      ],
+      "shortEvidence": "DAIDO의 DSR16FC 설명은 SUS416 대비 특성을 설명한다. 확인한 제품 페이지에 SUS416 밀도 수치는 없었다.",
+      "checkedAt": "2026-10-13",
+      "name": "SUS416",
+      "sourceResearchFile": "stainless.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "grade": "SUS420",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 7.75,
+      "condition": "실제 성적서/발주 등급이 SUS420J2로 확인될 경우에만 TOKKIN J2 참고값 사용 가능. 접미사 없는 SUS420에는 자동적용 금지.",
+      "mapping": "확인된 제조사 자료는 JIS SUS420J2/UNS S42000. 요청명 SUS420의 J1/J2 등 상세 등급이 불명확함.",
+      "sourceURL": "https://www.tokkin.com/search/stainless-steels/martensitic/420j2/",
+      "searchTerms": [
+        "TOKKIN SUS420J2 density",
+        "SUS420 density JIS J1 J2"
+      ],
+      "shortEvidence": "TOKKIN SUS420J2 페이지는 밀도7.75 g/cm³를 명시한다. 이름의420 부분만으로 요청명을 J2로 확정하지 않음.",
+      "checkedAt": "2026-10-13",
+      "name": "SUS420",
+      "sourceResearchFile": "stainless.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "grade": "SUS440C",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "condition": "조사한 제조사 자료에서 정확 SUS440C 밀도값을 검증하지 못함. 유통업체 표의 숫자는 채택하지 않음.",
+      "mapping": "AISI440C와 JIS SUS440C의 제조사 공식 대응 및 밀도 근거를 함께 확보하지 못함.",
+      "sourceURL": "https://www.daido.co.jp/en/products/stainless/pdf/sus_jis.pdf",
+      "searchTerms": [
+        "SUS440C density manufacturer datasheet",
+        "SUS440C 比重 メーカー",
+        "TOKKIN martensitic 440C"
+      ],
+      "shortEvidence": "DAIDO JIS 등급 목록은 확인했지만 밀도 근거가 없다. TOKKIN martensitic 목록은SUS420J2만 포함하며 추정440c URL 오류를 접근차단 확정으로 해석하지 않음.",
+      "checkedAt": "2026-10-13",
+      "name": "SUS440C",
+      "sourceResearchFile": "stainless.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "grade": "SUS630",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "condition": "SUS630 계열의 제조사 설명을 읽었으나 정확 요청 등급의 밀도 및 상태별 수치는 확보하지 못함.",
+      "mapping": "DAIDO SUS630-S는 SUS630 규격 안에서 개량한 제품. 17-4PH 이름만으로 정확 대응을 확정하지 않음.",
+      "sourceURL": "https://www.daido.co.jp/en/products/stainless/precipitation/index.html",
+      "searchTerms": [
+        "SUS630 density manufacturer 7.78",
+        "SUS630 比重 大同",
+        "DAIDO SUS630-S density"
+      ],
+      "shortEvidence": "DAIDO는 SUS630-S의 JIS SUS630 범위 조성 및 용체화 상태 특성을 명시하지만 읽은 페이지에는 밀도값이 없다.",
+      "checkedAt": "2026-10-13",
+      "name": "SUS630",
+      "sourceResearchFile": "stainless.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "grade": "SUS301",
+      "classification": "exact-source-confirmed",
+      "density": 7.93,
+      "referenceDensity": null,
+      "condition": "TOKKIN SUS301 제조사 공시 물성. 밀도 측정 온도는 해당 표에 명시되지 않음.",
+      "mapping": "제품 페이지 제목에 SUS301/UNS S30100 함께 명시. 해외 표준은 동등 또는 유사 참고용이라는 제조사 안내 적용.",
+      "sourceURL": "https://www.tokkin.com/search/stainless-steels/austenitic/301/",
+      "searchTerms": [
+        "TOKKIN SUS301 density",
+        "SUS301 density manufacturer"
+      ],
+      "shortEvidence": "TOKKIN SUS301 Physical Properties의 Density7.93 g/cm³ 확인.",
+      "checkedAt": "2026-10-13",
+      "name": "SUS301",
+      "sourceResearchFile": "stainless.json",
+      "unit": "g/cm3",
+      "autoApply": true
+    },
+    {
+      "grade": "STS304",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 7.93,
+      "condition": "POSCO MPPC의 KS(JIS) 표304 참고 비중. 정확 STS304 규격 및 공급재를 확인하기 전 요청등급 밀도 자동설정 금지. 비중은 무차원이며 g/cm³ 밀도의 근삿값으로만 참고.",
+      "mapping": "POSCO 표는 KS(JIS)304로 적고 STS304와의 직접 대응문구는 확인하지 못함. POSCO 뉴스의 STS304 사용 언급은 밀도 근거가 아님.",
+      "sourceURL": "https://poscomppc.com.mx/material-spec3-eng.php",
+      "searchTerms": [
+        "POSCO STS304 density",
+        "POSCO stainless specific gravity KS JIS304",
+        "STS304 비중 포스코"
+      ],
+      "shortEvidence": "POSCO MPPC 물성표의 KS(JIS)304 Specific Gravity7.93 확인. STS304 표기와 수치의 명시적 연결은 미확인.",
+      "additionalSources": [
+        "https://newsroom.posco.com/en/innovilt-lab-5-the-worlds-strongest-l-meet-the-super-angle/"
+      ],
+      "accessNotes": [
+        "POSCO stainless.pdf 및 steel-n.com 동일 카탈로그는 도구 Internal Error로 본문 확인 실패."
+      ],
+      "checkedAt": "2026-10-13",
+      "name": "STS304",
+      "sourceResearchFile": "stainless.json",
+      "unit": "g/cm3",
+      "autoApply": false
+    },
+    {
+      "name": "CLEAN PVC",
+      "classification": "evidence-not-found",
+      "manufacturer": "C.I. TAKIRON Corporation (참고 조사 대상)",
+      "applicableGrade": null,
+      "sourceURL": "https://www.tkci-plate.jp/en/product/?matl=pvc&sch=1",
+      "referenceDensity": null,
+      "searchTerms": [
+        "\"CLEAN PVC\" Takiron density",
+        "CLEAN PVC sheet density manufacturer Takiron"
+      ],
+      "shortEvidence": "제조사 PVC 제품 검색과 물성자료를 확인했지만 CLEAN PVC라는 원명을 특정 제조사·등급에 연결할 근거는 확보하지 못했다.",
+      "conditions": [
+        "CLEAN은 정확한 상품명인지 청정용도 설명인지 미확정.",
+        "일반 PVC, 내열 PVC, 발포 PVC, 금속불순물 저감 등급을 서로 대체하지 않는다."
+      ],
+      "additionalSources": [
+        "https://www.tkci-plate.jp/en/physical_property_data/"
+      ],
+      "researchStatus": "searched-no-exact-identification",
+      "density": null,
+      "unit": "g/cm3",
+      "checkedAt": "2026-10-13 16:10:28 UTC",
+      "autoApply": false,
+      "sourceResearchFile": "plastics.json"
+    },
+    {
+      "name": "PP",
+      "classification": "grade-ambiguous",
+      "manufacturer": "Ensinger",
+      "applicableGrade": "TECAPRO MT white (열안정화 의료용 PP homopolymer; 사용자 소재와 미연결)",
+      "sourceURL": "https://www.ensingerplastics.com/en/shapes/pp-medical-tecapro-mt-white",
+      "referenceDensity": 0.93,
+      "searchTerms": [
+        "Proteus polypropylene density",
+        "\"polypropylene\" \"density\" \"Röchling\"",
+        "Ensinger PP TECAPRO MT white"
+      ],
+      "shortEvidence": "제조사 해당 제품 Facts에 density 0.93 g/cm3가 명시돼 있다. 의료용 열안정화 제품의 값이며 일반 PP의 확정값이 아니다.",
+      "conditions": [
+        "homopolymer/copolymer, 열안정화, 충전재, 재생재 및 정확한 제조등급 확인 필요."
+      ],
+      "researchStatus": "searched-grade-evidence",
+      "density": null,
+      "unit": "g/cm3",
+      "checkedAt": "2026-10-13 16:10:28 UTC",
+      "autoApply": false,
+      "sourceResearchFile": "plastics.json"
+    },
+    {
+      "name": "URETHAN",
+      "classification": "grade-ambiguous",
+      "manufacturer": "RAMPF Advanced Polymers GmbH & Co. KG",
+      "applicableGrade": "RAKU TOOL WB-1404 polyurethane tooling board (사용자 소재와 미연결)",
+      "sourceURL": "https://www.rampf-group.com/fileadmin/Tooling/TDS/tds-EN/WB-1404-GB-board-material-product-datasheet.pdf",
+      "referenceDensity": 1.4,
+      "searchTerms": [
+        "\"RAKU-TOOL\" \"density\" polyurethane",
+        "URETHAN polyurethane manufacturer density"
+      ],
+      "shortEvidence": "제조사 2024-07-01 기술자료 1쪽에 polyurethane board WB-1404 density ca.1.40 g/cm³, ISO1183가 명시된다. 근삿값이며 제품규격 보증값은 아니다.",
+      "conditions": [
+        "우레탄 엘라스토머/폼/툴링보드, 경도, 발포 및 충전재 여부를 먼저 구분.",
+        "본 보드값을 일반 우레탄 봉·판에 적용 금지."
+      ],
+      "researchStatus": "searched-grade-evidence",
+      "density": null,
+      "unit": "g/cm3",
+      "checkedAt": "2026-10-13 16:10:28 UTC",
+      "autoApply": false,
+      "sourceResearchFile": "plastics.json"
+    },
+    {
+      "name": "무정전PC",
+      "classification": "grade-ambiguous",
+      "manufacturer": "SciCron Technologies",
+      "applicableGrade": "PC-300, C-300 static dissipative coated polycarbonate; typical 0.25 inch material",
+      "sourceURL": "https://sctech.com/pc-300",
+      "referenceDensity": null,
+      "referenceSpecificGravity": 1.2,
+      "searchTerms": [
+        "PC-300 density",
+        "site.scicron.com PC-300 polycarbonate density",
+        "무정전PC static dissipative coated polycarbonate"
+      ],
+      "shortEvidence": "PC-300 제조사 자료는 C-300 대전방지 코팅 제품이며 ASTM D792 specific gravity 1.20을 표기한다. 원문은 무차원 비중이므로 g/cm³ 밀도로 동일 표기하지 않았다.",
+      "conditions": [
+        "무정전PC라는 용도명만으로 PC-300/PC-350 또는 다른 코팅·도전성 충전등급을 확정할 수 없다.",
+        "코팅 제품과 무충전 일반 PC를 구분; 전형값이며 보증값 아님."
+      ],
+      "researchStatus": "searched-grade-evidence",
+      "density": null,
+      "unit": "g/cm3",
+      "checkedAt": "2026-10-13 16:10:28 UTC",
+      "autoApply": false,
+      "sourceResearchFile": "plastics.json"
+    },
+    {
+      "name": "abs",
+      "classification": "grade-ambiguous",
+      "manufacturer": "Ensinger",
+      "applicableGrade": "TECARAN ABS grey (제품군 식별만; 수치 미확보)",
+      "sourceURL": "https://www.ensingerplastics.com/en/thermoplastic-materials/abs-plastic",
+      "referenceDensity": null,
+      "searchTerms": [
+        "TECARAN ABS natural density",
+        "site.ensingerplastics.com TECARAN ABS density g cm3",
+        "Ensinger TECARAN ABS grey"
+      ],
+      "shortEvidence": "제조사 일반 ABS 페이지에서 TECARAN ABS grey 봉·판 제조를 확인했다. 사용자 abs의 등급과 제품별 밀도 수치는 확보하지 못했다.",
+      "conditions": [
+        "난연/유리섬유/도전성/재생 등급과 정확한 제조등급 미확정.",
+        "이전 제품 상세 URL은 접근 실패; 공식 일반 페이지는 읽기 가능하므로 전체 access-blocked로 처리하지 않음."
+      ],
+      "researchStatus": "searched-grade-identification-density-unverified",
+      "density": null,
+      "unit": "g/cm3",
+      "checkedAt": "2026-10-13 16:10:28 UTC",
+      "autoApply": false,
+      "sourceResearchFile": "plastics.json"
+    },
+    {
+      "name": "PE",
+      "classification": "grade-ambiguous",
+      "manufacturer": "Ensinger",
+      "applicableGrade": "TECAFINE PE300 (HD), PE500 (HMW), PE1000 (UHMW) 제품군; 특정등급 미선택",
+      "sourceURL": "https://www.ensingerplastics.com/en/thermoplastic-materials/pe-plastic",
+      "referenceDensity": null,
+      "searchTerms": [
+        "Ensinger PE TECAFINE PE300 natural",
+        "PE polyethylene manufacturer density",
+        "Polystone G density"
+      ],
+      "shortEvidence": "공식 제조사 페이지가 PE300/500/1000을 서로 다른 HD/HMW/UHMW 제품군으로 구분한다. 사용자 PE의 밀도 하나를 확정할 수 없다.",
+      "conditions": [
+        "LDPE/HDPE/HMW/UHMW, 충전재·도전성·재생재 및 공급등급 확인 필요.",
+        "공식 Takiron 물성 PDF도 검토했지만 텍스트 추출의 열 매핑이 불안정하여 개별 수치를 채택하지 않았다."
+      ],
+      "additionalSources": [
+        "https://www.tkci-plate.jp/wp-content/uploads/2025/05/en_p80_p83.pdf"
+      ],
+      "researchStatus": "searched-grade-evidence-density-unverified",
+      "density": null,
+      "unit": "g/cm3",
+      "checkedAt": "2026-10-13 16:10:28 UTC",
+      "autoApply": false,
+      "sourceResearchFile": "plastics.json"
+    },
+    {
+      "name": "PC",
+      "classification": "grade-ambiguous",
+      "manufacturer": "Ensinger",
+      "applicableGrade": "TECANAT GF30 natural, 30% glass fibre reinforced (사용자 소재와 미연결)",
+      "sourceURL": "https://www.ensingerplastics.com/en/shapes/glass-filled-tecanat-gf30-natural",
+      "referenceDensity": 1.42,
+      "searchTerms": [
+        "\"polycarbonate\" \"density\" \"Ensinger\"",
+        "Ensinger TECANAT natural",
+        "TECANAT GF30 natural density"
+      ],
+      "shortEvidence": "제조사 TECANAT GF30 natural Facts에 density 1.42 g/cm3가 명시된다. 30% 유리섬유 충전 등급이므로 일반 투명 PC에 적용할 수 없다.",
+      "conditions": [
+        "무충전/유리섬유/도전성/코팅 및 정확한 제조등급 확인 필요.",
+        "일반 PC 소개문 수치와 특정등급 자료를 혼합하지 않으며 GF30 참고값만 분리 기록."
+      ],
+      "researchStatus": "searched-grade-evidence",
+      "density": null,
+      "unit": "g/cm3",
+      "checkedAt": "2026-10-13 16:10:28 UTC",
+      "autoApply": false,
+      "sourceResearchFile": "plastics.json"
+    }
+  ]
+}

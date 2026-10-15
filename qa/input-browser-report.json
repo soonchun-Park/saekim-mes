@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "method": "actual Chrome keyboard events and Input.insertText paste-style insertion; no single fill for input tests",
+  "checks": [
+    "contract:product_diameter:slow/fast/delete/backspace/insert/replace/decimal/paste",
+    "contract:product_length:slow/fast/delete/backspace/insert/replace/decimal/paste",
+    "contract:stock_diameter:slow/fast/delete/backspace/insert/replace/decimal/paste",
+    "contract:allowance_length:slow/fast/delete/backspace/insert/replace/decimal/paste",
+    "contract:quantity real keys",
+    "customer:product_diameter:slow/fast/delete/backspace/insert/replace/decimal/paste",
+    "customer:product_length:slow/fast/delete/backspace/insert/replace/decimal/paste",
+    "customer:stock_diameter:slow/fast/delete/backspace/insert/replace/decimal/paste",
+    "customer:allowance_length:slow/fast/delete/backspace/insert/replace/decimal/paste",
+    "customer:quantity real keys",
+    "explicit Tab diameter to length"
+  ],
+  "dimensionChildListMutations": 0,
+  "runtimeErrors": 0,
+  "userDataUntouched": true
+}

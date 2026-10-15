@@ -1,0 +1,102 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "theme": "light",
+      "script": "quote-enhancement-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-light-quote-enhancement-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "monthly-settlement-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-light-monthly-settlement-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "party-bank-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-light-party-bank-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "bulk-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-light-bulk-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "partner-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-light-partner-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "production-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-light-production-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "schedule-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-light-schedule-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "workflow-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-light-workflow-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "quote-enhancement-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-dark-quote-enhancement-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "monthly-settlement-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-dark-monthly-settlement-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "party-bank-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-dark-party-bank-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "bulk-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-dark-bulk-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "partner-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-dark-partner-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "production-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-dark-production-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "schedule-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-dark-schedule-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "workflow-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-dark-workflow-browser-qa.txt"
+    }
+  ],
+  "at": "2026-10-14T15:35:10.035Z"
+}

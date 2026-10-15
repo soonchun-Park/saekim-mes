@@ -1,0 +1,155 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-10-13",
+  "densityUnit": "g/cm3",
+  "scope": "스테인리스 9개 등급 제조사 1차자료 읽기 조사. 기존 참조·마스터·운영 데이터에는 적용하지 않음.",
+  "policy": "exact-source-confirmed는 정확 요청등급과 제조사 공시밀도를 직접 읽은 경우. grade-ambiguous는 다른 명칭/접미사 자료만 확인한 경우. evidence-not-found는 조사했으나 채택 가능한 수치 근거를 찾지 못한 경우로 미조사와 다름. 추정URL 오류만으로 access-blocked로 분류하지 않음.",
+  "materials": [
+    {
+      "grade": "SUS303",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "condition": "조사 범위에서 정확 SUS303 등급의 제조사 밀도 자료를 확보하지 못함. 임의 기본값 사용 금지.",
+      "mapping": "AISI303 대응 및 밀도를 공식 자료로 함께 검증하지 못함.",
+      "sourceURL": "https://www.daido.co.jp/en/products/stainless/pdf/sus_jis.pdf",
+      "searchTerms": [
+        "SUS303 density manufacturer 7.93",
+        "SUS303 比重 メーカー",
+        "TOKKIN SUS303"
+      ],
+      "shortEvidence": "DAIDO의 JIS 등급 목록은 확보했으나 밀도 수치의 근거가 되지 않았다. TOKKIN의 추정303 경로 조회는 오류여서 자료 존재도 확인하지 못했다.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "grade": "SUS304",
+      "classification": "exact-source-confirmed",
+      "density": 7.9,
+      "referenceDensity": null,
+      "condition": "TOKKIN SUS304 냉간압연 코일·시트 제품 페이지의 공시 물성. 밀도 측정 온도는 해당 표에 명시되지 않음. 실제 공급재 제조사/상태 확인 필요.",
+      "mapping": "제조사 Standards 표 JIS SUS304와 UNS S30400/AISI304를 함께 표시. 해외 표준은 동등 또는 유사 참고용이라는 제조사 주의사항 적용.",
+      "sourceURL": "https://www.tokkin.com/search/stainless-steels/austenitic/304/",
+      "searchTerms": [
+        "TOKKIN SUS304 density",
+        "SUS304 density manufacturer"
+      ],
+      "shortEvidence": "TOKKIN의 정확 SUS304 제품 페이지 Physical Properties에서 Density 7.90 g/cm³ 확인. POSCO의 304 비중7.93과 차이가 있으므로 평균/통일하지 않음.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "grade": "SUS316",
+      "classification": "exact-source-confirmed",
+      "density": 8.03,
+      "referenceDensity": null,
+      "condition": "TOKKIN SUS316 냉간압연 코일·시트 공시 물성. 밀도 온도/열처리별 수치는 표에 명시되지 않음.",
+      "mapping": "Standards의 JIS SUS316 (G4305), UNS S31600/AISI316 명시. 해외 표준은 동등 또는 유사 참고용.",
+      "sourceURL": "https://www.tokkin.com/search/stainless-steels/austenitic/316/",
+      "searchTerms": [
+        "TOKKIN SUS316 density",
+        "SUS316 manufacturer density"
+      ],
+      "shortEvidence": "제조사 Physical Properties 표의 Density 8.03 g/cm³ 확인. POSCO304계 표의316 비중7.98과 동일값으로 치환하지 않음.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "grade": "SUS416",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "condition": "제조사 문서에서 등급 관련 설명은 확인했으나 정확 SUS416의 밀도는 확보하지 못함.",
+      "mapping": "DAIDO DSR16FC는 SUS416에 쾌삭성 성분을 추가한 별도 제품으로 그대로 동일시할 수 없음.",
+      "sourceURL": "https://www.daido.co.jp/en/products/stainless/martensitic/index.html",
+      "searchTerms": [
+        "SUS416 density manufacturer datasheet",
+        "SUS416 比重 大同",
+        "DAIDO martensitic SUS416"
+      ],
+      "shortEvidence": "DAIDO의 DSR16FC 설명은 SUS416 대비 특성을 설명한다. 확인한 제품 페이지에 SUS416 밀도 수치는 없었다.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "grade": "SUS420",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 7.75,
+      "condition": "실제 성적서/발주 등급이 SUS420J2로 확인될 경우에만 TOKKIN J2 참고값 사용 가능. 접미사 없는 SUS420에는 자동적용 금지.",
+      "mapping": "확인된 제조사 자료는 JIS SUS420J2/UNS S42000. 요청명 SUS420의 J1/J2 등 상세 등급이 불명확함.",
+      "sourceURL": "https://www.tokkin.com/search/stainless-steels/martensitic/420j2/",
+      "searchTerms": [
+        "TOKKIN SUS420J2 density",
+        "SUS420 density JIS J1 J2"
+      ],
+      "shortEvidence": "TOKKIN SUS420J2 페이지는 밀도7.75 g/cm³를 명시한다. 이름의420 부분만으로 요청명을 J2로 확정하지 않음.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "grade": "SUS440C",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "condition": "조사한 제조사 자료에서 정확 SUS440C 밀도값을 검증하지 못함. 유통업체 표의 숫자는 채택하지 않음.",
+      "mapping": "AISI440C와 JIS SUS440C의 제조사 공식 대응 및 밀도 근거를 함께 확보하지 못함.",
+      "sourceURL": "https://www.daido.co.jp/en/products/stainless/pdf/sus_jis.pdf",
+      "searchTerms": [
+        "SUS440C density manufacturer datasheet",
+        "SUS440C 比重 メーカー",
+        "TOKKIN martensitic 440C"
+      ],
+      "shortEvidence": "DAIDO JIS 등급 목록은 확인했지만 밀도 근거가 없다. TOKKIN martensitic 목록은SUS420J2만 포함하며 추정440c URL 오류를 접근차단 확정으로 해석하지 않음.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "grade": "SUS630",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "condition": "SUS630 계열의 제조사 설명을 읽었으나 정확 요청 등급의 밀도 및 상태별 수치는 확보하지 못함.",
+      "mapping": "DAIDO SUS630-S는 SUS630 규격 안에서 개량한 제품. 17-4PH 이름만으로 정확 대응을 확정하지 않음.",
+      "sourceURL": "https://www.daido.co.jp/en/products/stainless/precipitation/index.html",
+      "searchTerms": [
+        "SUS630 density manufacturer 7.78",
+        "SUS630 比重 大同",
+        "DAIDO SUS630-S density"
+      ],
+      "shortEvidence": "DAIDO는 SUS630-S의 JIS SUS630 범위 조성 및 용체화 상태 특성을 명시하지만 읽은 페이지에는 밀도값이 없다.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "grade": "SUS301",
+      "classification": "exact-source-confirmed",
+      "density": 7.93,
+      "referenceDensity": null,
+      "condition": "TOKKIN SUS301 제조사 공시 물성. 밀도 측정 온도는 해당 표에 명시되지 않음.",
+      "mapping": "제품 페이지 제목에 SUS301/UNS S30100 함께 명시. 해외 표준은 동등 또는 유사 참고용이라는 제조사 안내 적용.",
+      "sourceURL": "https://www.tokkin.com/search/stainless-steels/austenitic/301/",
+      "searchTerms": [
+        "TOKKIN SUS301 density",
+        "SUS301 density manufacturer"
+      ],
+      "shortEvidence": "TOKKIN SUS301 Physical Properties의 Density7.93 g/cm³ 확인.",
+      "checkedAt": "2026-10-13"
+    },
+    {
+      "grade": "STS304",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 7.93,
+      "condition": "POSCO MPPC의 KS(JIS) 표304 참고 비중. 정확 STS304 규격 및 공급재를 확인하기 전 요청등급 밀도 자동설정 금지. 비중은 무차원이며 g/cm³ 밀도의 근삿값으로만 참고.",
+      "mapping": "POSCO 표는 KS(JIS)304로 적고 STS304와의 직접 대응문구는 확인하지 못함. POSCO 뉴스의 STS304 사용 언급은 밀도 근거가 아님.",
+      "sourceURL": "https://poscomppc.com.mx/material-spec3-eng.php",
+      "searchTerms": [
+        "POSCO STS304 density",
+        "POSCO stainless specific gravity KS JIS304",
+        "STS304 비중 포스코"
+      ],
+      "shortEvidence": "POSCO MPPC 물성표의 KS(JIS)304 Specific Gravity7.93 확인. STS304 표기와 수치의 명시적 연결은 미확인.",
+      "additionalSources": [
+        "https://newsroom.posco.com/en/innovilt-lab-5-the-worlds-strongest-l-meet-the-super-angle/"
+      ],
+      "accessNotes": [
+        "POSCO stainless.pdf 및 steel-n.com 동일 카탈로그는 도구 Internal Error로 본문 확인 실패."
+      ],
+      "checkedAt": "2026-10-13"
+    }
+  ]
+}

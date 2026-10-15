@@ -1,0 +1,17 @@
+{
+  "theme": "dark",
+  "checks": [
+    "opening, validation without acknowledgement and cancel write zero; incomplete quantities and money explicitly shown",
+    "double click, lost response, reload and exact-key retry create one closing; business data preserved and history text escaped",
+    "calendar has distinct manual closing label and completed/closed filter; uncompleted deliveries not invented",
+    "manual closing chip has readable text contrast at least 4.5:1 in actual theme",
+    "explicit release retains original closing record and appends actor/reason/time; cancel release writes zero",
+    "reconnect preserves close/reopen history and mobile 390px confirmation remains usable"
+  ],
+  "contrast": {
+    "fg": "rgb(225, 236, 255)",
+    "bg": "rgb(24, 43, 73)",
+    "ratio": 11.916609023061415
+  },
+  "ok": true
+}

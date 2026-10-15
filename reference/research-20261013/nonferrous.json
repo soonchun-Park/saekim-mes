@@ -1,0 +1,495 @@
+{
+  "schema": 1,
+  "scope": "nonferrous request names only; research evidence, no production data or live app modification",
+  "checkedAt": "2026-10-13T16:08:31Z",
+  "policy": "density는 입력 재질의 정확한 적용 등급/조건이 확인될 때만 설정. source-confirmed 참고값도 grade 불명확이면 referenceDensity에만 저장. null은 0이 아니며 조사 미실행을 뜻하지 않음.",
+  "entries": [
+    {
+      "name": "지르코늄",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 6.52,
+      "unit": "g/cm3",
+      "exactCondition": "RSC 원소표 실온 밀도; 순도 수치와 정확한 실온 온도는 원문에 명시되지 않음. 원소 금속 참고값이며 상용 합금·분말 벌크밀도에 적용하지 않음",
+      "mapping": "원소 Zr의 참고값만 확인; 구매 재질의 순도/합금 등급은 미확정",
+      "sourceURL": "https://periodic-table.rsc.org/element/40/zirconium",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "zirconium density RSC",
+        "RSC periodic-table element direct navigation"
+      ],
+      "shortEvidence": "원문 Fact box의 원소 밀도 6.52 g/cm3 및 glossary의 room temperature 조건 확인",
+      "sourceValueConfirmed": true,
+      "sourceKind": "scientific-society",
+      "purity": null,
+      "temperature": "room temperature (numerical temperature not specified for density)"
+    },
+    {
+      "name": "bronze",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": null,
+      "unit": "g/cm3",
+      "exactCondition": "청동의 특정 등급을 선택하기 전 단일 밀도 확정 불가",
+      "mapping": "청동 통칭; UNS/조성/제조상태 미지정",
+      "sourceURL": "https://www.ngk-alloys.com/wp-content/uploads/NGK-Berylco-Catalogue_EN_2024.08.pdf",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "copper.org bronze alloy physical properties",
+        "NGK official catalogue bronze"
+      ],
+      "shortEvidence": "제조사 카탈로그는 bronze를 합금군 비교명으로 사용하며 입력 통칭을 특정 등급에 대응하지 않음",
+      "attemptedSources": [
+        {
+          "url": "https://alloys.copper.org/alloy/C51000",
+          "result": "403 Forbidden"
+        }
+      ]
+    },
+    {
+      "name": "크롬동    (crcu)",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": null,
+      "unit": "g/cm3",
+      "exactCondition": "Cr/Zr 등 조성, UNS/JIS 등급과 제품 상태 필요",
+      "mapping": "CrCu 통칭; C18200 또는 다른 Cu-Cr계 등급으로 자동 매핑 금지",
+      "sourceURL": "https://www.ngk-alloys.com/wp-content/uploads/NGK-Berylco-Catalogue_EN_2024.08.pdf",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "C18200 Specific Gravity",
+        "NGK CrCu catalogue"
+      ],
+      "shortEvidence": "NGK 자료에 CrCu 비교군이 있으나 밀도/정확한 입력 등급은 확인되지 않음",
+      "attemptedSources": [
+        {
+          "url": "https://alloys.copper.org/alloy/C18200",
+          "result": "403 Forbidden"
+        }
+      ]
+    },
+    {
+      "name": "타프피치",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": null,
+      "unit": "g/cm3",
+      "exactCondition": "공급사 정식 등급과 표기 확인 필요",
+      "mapping": "명칭이 electrolytic tough pitch를 뜻하는지 확인 필요; C11000/JIS C1100 자동동일시 금지",
+      "sourceURL": "https://alloys.copper.org/alloy/C11000",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "C11000 Alloy copper.org",
+        "C1100 density Mitsubishi"
+      ],
+      "shortEvidence": "CDA 검색 결과 C11000 후보는 확인했으나 원문 403으로 비중과 입력 명칭의 동일성을 검증하지 못함",
+      "accessStatus": "403 Forbidden",
+      "snippetOnlyValue": 8.91
+    },
+    {
+      "name": "황동",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": null,
+      "unit": "g/cm3",
+      "exactCondition": "특정 UNS/JIS 등급·제품 상태 확인 후 비중 결정",
+      "mapping": "황동 합금군; 구리/아연 비율과 납 등 첨가 성분 미지정",
+      "sourceURL": "https://www.ngk-alloys.com/wp-content/uploads/NGK-Berylco-Catalogue_EN_2024.08.pdf",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "C26000 copper.org",
+        "NGK catalogue Brass"
+      ],
+      "shortEvidence": "제조사 카탈로그는 Brass를 합금군으로 비교하며 단일 등급/밀도로 정하지 않음",
+      "attemptedSources": [
+        {
+          "url": "https://alloys.copper.org/alloy/C26000",
+          "result": "403 Forbidden"
+        }
+      ]
+    },
+    {
+      "name": "brass",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": null,
+      "unit": "g/cm3",
+      "exactCondition": "특정 UNS/JIS 등급·제품 상태 확인 후 비중 결정",
+      "mapping": "황동 합금군; 구리/아연 비율과 납 등 첨가 성분 미지정",
+      "sourceURL": "https://www.ngk-alloys.com/wp-content/uploads/NGK-Berylco-Catalogue_EN_2024.08.pdf",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "C26000 copper.org",
+        "NGK catalogue Brass"
+      ],
+      "shortEvidence": "제조사 카탈로그는 Brass를 합금군으로 비교하며 단일 등급/밀도로 정하지 않음",
+      "attemptedSources": [
+        {
+          "url": "https://alloys.copper.org/alloy/C26000",
+          "result": "403 Forbidden"
+        }
+      ]
+    },
+    {
+      "name": "구리(동)cu-C1100(브스바)",
+      "classification": "access-blocked",
+      "density": null,
+      "referenceDensity": null,
+      "unit": "g/cm3",
+      "exactCondition": "C1100 원문 물성 및 제품/순도 확인 필요",
+      "mapping": "C1100 표기가 있으나 JIS 원문 또는 제조사 대응표 미확보; UNS C11000과 자동매핑하지 않음",
+      "sourceURL": "https://alloys.copper.org/alloy/C11000",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "C1100 density Mitsubishi",
+        "C1100 比重",
+        "C11000 Alloy copper.org"
+      ],
+      "shortEvidence": "공식 CDA C11000 후보 원문은 403; MMC 후보 경로도 도구 접근 실패. 등급명 존재를 밀도 확인으로 간주하지 않음",
+      "mappingConfirmed": false,
+      "attemptedSources": [
+        {
+          "url": "https://alloys.copper.org/alloy/C11000",
+          "result": "403 Forbidden"
+        },
+        {
+          "url": "https://www.mmc.co.jp/copper/en/products/copper.html",
+          "result": "tool reported URL inaccessible; target existence not established"
+        }
+      ]
+    },
+    {
+      "name": "단동(아연합금동)",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": null,
+      "unit": "g/cm3",
+      "exactCondition": "C23000 등 특정 등급을 임의 선택하지 않음",
+      "mapping": "Cu-Zn 통칭; 아연 함량·정식 등급 미지정",
+      "sourceURL": null,
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "C23000 copper.org",
+        "copper.org copper alloys density"
+      ],
+      "shortEvidence": "C23000 공식 후보 원문 접근이 403이고 입력 이름의 정확한 조성은 제공되지 않음",
+      "attemptedSources": [
+        {
+          "url": "https://alloys.copper.org/alloy/C23000",
+          "result": "403 Forbidden"
+        }
+      ]
+    },
+    {
+      "name": "마그네슘",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 1.74,
+      "unit": "g/cm3",
+      "exactCondition": "RSC 원소표 실온 밀도; 순도 수치와 정확한 실온 온도는 원문에 명시되지 않음. 원소 금속 참고값이며 상용 합금·분말 벌크밀도에 적용하지 않음",
+      "mapping": "원소 Mg의 참고값만 확인; 구매 재질의 순도/합금 등급은 미확정",
+      "sourceURL": "https://periodic-table.rsc.org/element/12/magnesium",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "magnesium density RSC",
+        "RSC periodic-table element direct navigation"
+      ],
+      "shortEvidence": "원문 Fact box의 원소 밀도 1.74 g/cm3 및 glossary의 room temperature 조건 확인",
+      "sourceValueConfirmed": true,
+      "sourceKind": "scientific-society",
+      "purity": null,
+      "temperature": "room temperature (numerical temperature not specified for density)"
+    },
+    {
+      "name": "몰리브덴",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 10.2,
+      "unit": "g/cm3",
+      "exactCondition": "RSC 원소표 실온 밀도; 순도 수치와 정확한 실온 온도는 원문에 명시되지 않음. 원소 금속 참고값이며 상용 합금·분말 벌크밀도에 적용하지 않음",
+      "mapping": "원소 Mo의 참고값만 확인; 구매 재질의 순도/합금 등급은 미확정",
+      "sourceURL": "https://periodic-table.rsc.org/element/42/molybdenum",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "molybdenum density Plansee",
+        "RSC periodic-table element direct navigation"
+      ],
+      "shortEvidence": "원문 Fact box의 원소 밀도 10.2 g/cm3 및 glossary의 room temperature 조건 확인",
+      "sourceValueConfirmed": true,
+      "sourceKind": "scientific-society",
+      "purity": null,
+      "temperature": "room temperature (numerical temperature not specified for density)"
+    },
+    {
+      "name": "Copper",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 8.96,
+      "unit": "g/cm3",
+      "exactCondition": "RSC 원소표 실온 밀도; 순도 수치와 정확한 실온 온도는 원문에 명시되지 않음. 원소 금속 참고값이며 상용 합금·분말 벌크밀도에 적용하지 않음",
+      "mapping": "원소 Cu의 참고값만 확인; 구매 재질의 순도/합금 등급은 미확정",
+      "sourceURL": "https://periodic-table.rsc.org/element/29/copper",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "Copper density RSC",
+        "RSC periodic-table element direct navigation"
+      ],
+      "shortEvidence": "원문 Fact box의 원소 밀도 8.96 g/cm3 및 glossary의 room temperature 조건 확인",
+      "sourceValueConfirmed": true,
+      "sourceKind": "scientific-society",
+      "purity": null,
+      "temperature": "room temperature (numerical temperature not specified for density)"
+    },
+    {
+      "name": "동",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 8.96,
+      "unit": "g/cm3",
+      "exactCondition": "RSC 원소표 실온 밀도; 순도 수치와 정확한 실온 온도는 원문에 명시되지 않음. 원소 금속 참고값이며 상용 합금·분말 벌크밀도에 적용하지 않음",
+      "mapping": "원소 Cu의 참고값만 확인; 구매 재질의 순도/합금 등급은 미확정",
+      "sourceURL": "https://periodic-table.rsc.org/element/29/copper",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "Copper density RSC",
+        "RSC periodic-table element direct navigation"
+      ],
+      "shortEvidence": "원문 Fact box의 원소 밀도 8.96 g/cm3 및 glossary의 room temperature 조건 확인",
+      "sourceValueConfirmed": true,
+      "sourceKind": "scientific-society",
+      "purity": null,
+      "temperature": "room temperature (numerical temperature not specified for density)"
+    },
+    {
+      "name": "베리륨동(becu)",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 8.36,
+      "unit": "g/cm3",
+      "exactCondition": "참고 8.36은 Berylco25/C17200 및 Berylco33/25/C17300, 석출경화 후 20°C 조건에 한정",
+      "mapping": "BeCu 합금군; C17200 등으로 자동매핑 금지",
+      "sourceURL": "https://www.ngk-alloys.com/wp-content/uploads/NGK-Berylco-Catalogue_EN_2024.08.pdf",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "NGK Beryllium Copper official catalogue",
+        "C17200 copper.org"
+      ],
+      "shortEvidence": "공식 PDF p.3 표: B25/33-25=8.36, B14/B8=8.82, B7=8.71 g/cm3. 통칭에 하나의 값을 적용할 수 없음",
+      "sourceKind": "manufacturer",
+      "sourceValueConfirmed": true,
+      "referenceAlternatives": [
+        {
+          "grade": "C17200/C17300",
+          "density": 8.36
+        },
+        {
+          "grade": "C17510 B14/B8",
+          "density": 8.82
+        },
+        {
+          "grade": "C17530 B7",
+          "density": 8.71
+        }
+      ],
+      "temperatureC": 20,
+      "condition": "after precipitation hardening"
+    },
+    {
+      "name": "아연",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 7.134,
+      "unit": "g/cm3",
+      "exactCondition": "RSC 원소표 실온 밀도; 순도 수치와 정확한 실온 온도는 원문에 명시되지 않음. 원소 금속 참고값이며 상용 합금·분말 벌크밀도에 적용하지 않음",
+      "mapping": "원소 Zn의 참고값만 확인; 구매 재질의 순도/합금 등급은 미확정",
+      "sourceURL": "https://periodic-table.rsc.org/element/30/zinc",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "zinc density RSC",
+        "RSC periodic-table element direct navigation"
+      ],
+      "shortEvidence": "원문 Fact box의 원소 밀도 7.134 g/cm3 및 glossary의 room temperature 조건 확인",
+      "sourceValueConfirmed": true,
+      "sourceKind": "scientific-society",
+      "purity": null,
+      "temperature": "room temperature (numerical temperature not specified for density)"
+    },
+    {
+      "name": "인발",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": null,
+      "unit": "g/cm3",
+      "exactCondition": "인발 대상 재질부터 확인해야 하며 소재 밀도 선정 불가",
+      "mapping": "가공 방식 명칭만 제공; 소재/화학 조성/등급 미지정",
+      "sourceURL": null,
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "NGK catalogue cold drawing",
+        "Hydro precision drawn tubes"
+      ],
+      "shortEvidence": "읽은 제조사 자료는 cold drawing을 제조 방식으로 구분함. 입력 인발을 특정 금속이나 합금으로 추정하지 않음"
+    },
+    {
+      "name": "인청동",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": null,
+      "unit": "g/cm3",
+      "exactCondition": "UNS C51000 등 임의선택 금지",
+      "mapping": "Phosphor bronze 합금군; Sn/P 함량 및 정식 등급 미지정",
+      "sourceURL": "https://www.ngk-alloys.com/wp-content/uploads/NGK-Berylco-Catalogue_EN_2024.08.pdf",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "C51000 copper.org",
+        "NGK catalogue Phosphor Bronze"
+      ],
+      "shortEvidence": "공식 자료에 phosphor bronze 비교군은 있으나 입력명과 정확한 등급/밀도 대응은 확인하지 못함",
+      "attemptedSources": [
+        {
+          "url": "https://alloys.copper.org/alloy/C51000",
+          "result": "403 Forbidden"
+        }
+      ]
+    },
+    {
+      "name": "주석",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 7.287,
+      "unit": "g/cm3",
+      "exactCondition": "RSC 원소표 실온 밀도; 순도 수치와 정확한 실온 온도는 원문에 명시되지 않음. 원소 금속 참고값이며 상용 합금·분말 벌크밀도에 적용하지 않음",
+      "mapping": "원소 Sn의 참고값만 확인; 구매 재질의 순도/합금 등급은 미확정",
+      "sourceURL": "https://periodic-table.rsc.org/element/50/tin",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "tin density RSC",
+        "RSC periodic-table element direct navigation"
+      ],
+      "shortEvidence": "원문 Fact box의 원소 밀도 7.287 g/cm3 및 glossary의 room temperature 조건 확인",
+      "sourceValueConfirmed": true,
+      "sourceKind": "scientific-society",
+      "purity": null,
+      "temperature": "room temperature (numerical temperature not specified for density)"
+    },
+    {
+      "name": "AL5052",
+      "classification": "evidence-not-found",
+      "density": null,
+      "referenceDensity": null,
+      "unit": "g/cm3",
+      "exactCondition": "질별·조질·제품 물성 원문 확인 필요",
+      "mapping": "5052 합금 번호는 명시되었으나 정확한 제조사 밀도 원문 미확보",
+      "sourceURL": null,
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "5052 density site.hydro.com",
+        "5052 specific gravity 2.68 manufacturer",
+        "A5052 比重"
+      ],
+      "shortEvidence": "공식 밀도 원문을 제한시간 내 확보하지 못함. 미조사가 아닌 조사 후 근거 미확보; 2.68을 기억/2차 자료로 입력하지 않음"
+    },
+    {
+      "name": "AL6061",
+      "classification": "exact-source-confirmed",
+      "density": 2.7,
+      "referenceDensity": 2.7,
+      "unit": "g/cm3",
+      "exactCondition": "Nominal density at 68°F / 20°C, typical physical properties, Sheet Coil & Plate Alloy 6061. 조질별 실제 소재 성적서와 허용차는 별도 확인.",
+      "mapping": "AL6061 → 명시된 6061 합금; Kaiser Sheet Coil & Plate Alloy 6061 공식 자료",
+      "sourceURL": "https://online.kaiseraluminum.com/depot/PublicProductInformation/Document/1015/Kaiser_Aluminum_6061_Sheet_Coil_and_Plate.pdf",
+      "checkedAt": "2026-10-13T16:10:44Z",
+      "searchTerms": [
+        "6061 alloy density 2.7 hydro",
+        "6061 density site.kaiseraluminum.com",
+        "Hydro official sitemap 6061",
+        "parent found official Kaiser product-information link 20 → document 1015; direct PDF read"
+      ],
+      "shortEvidence": "공식 PDF Rev.05/06 p.2 원문에서 Nominal Density 20°C의 metric 2.70 Mg/m3 확인; 1 Mg/m3 = 1 g/cm3이므로 2.70 g/cm3.",
+      "sourceKind": "manufacturer",
+      "sourceValueConfirmed": true,
+      "temperatureC": 20,
+      "sourceUnit": "Mg/m3",
+      "sourceDensity": 2.7,
+      "documentRevision": "05/06",
+      "conversion": "1 Mg/m3 = 1 g/cm3"
+    },
+    {
+      "name": "고베",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": null,
+      "unit": "g/cm3",
+      "exactCondition": "제조사명만으로 5052/6061/특정 주조판재를 선택하지 않음",
+      "mapping": "Kobe 제조사/브랜드 표기일 가능성만 있으며 정식 합금/상품등급 불명",
+      "sourceURL": null,
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "Kobelco english products aluminum",
+        "Hydro aluminum alloys manufacturer"
+      ],
+      "shortEvidence": "정확한 상품명/합금 번호가 제공되지 않아 비중 특정 불가; Kobe 후보 페이지 접근 실패만으로 물성 확인을 주장하지 않음"
+    },
+    {
+      "name": "OFHC",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 8.96,
+      "unit": "g/cm3",
+      "exactCondition": "8.96은 RSC 원소 Cu의 실온 참고값일 뿐 OFHC 제품 등급/순도 밀도로 확정하지 않음",
+      "mapping": "무산소 고전도 구리 통칭; C10100/C10200 등 특정 UNS와 자동동일시 금지",
+      "sourceURL": "https://periodic-table.rsc.org/element/29/copper",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "OFHC density",
+        "C10100 copper.org"
+      ],
+      "shortEvidence": "원소 Cu의 밀도는 확인; 공식 OFHC 등급 원문은 확보하지 못했으며 CDA C10100 후보는 403",
+      "attemptedSources": [
+        {
+          "url": "https://alloys.copper.org/alloy/C10100",
+          "result": "403 Forbidden"
+        }
+      ]
+    },
+    {
+      "name": "NI",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 8.9,
+      "unit": "g/cm3",
+      "exactCondition": "RSC 원소표 실온 밀도; 순도 수치와 정확한 실온 온도는 원문에 명시되지 않음. 원소 금속 참고값이며 상용 합금·분말 벌크밀도에 적용하지 않음",
+      "mapping": "원소 Ni의 참고값만 확인; 구매 재질의 순도/합금 등급은 미확정",
+      "sourceURL": "https://periodic-table.rsc.org/element/28/nickel",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "nickel density RSC",
+        "RSC periodic-table element direct navigation"
+      ],
+      "shortEvidence": "원문 Fact box의 원소 밀도 8.9 g/cm3 및 glossary의 room temperature 조건 확인",
+      "sourceValueConfirmed": true,
+      "sourceKind": "scientific-society",
+      "purity": null,
+      "temperature": "room temperature (numerical temperature not specified for density)"
+    },
+    {
+      "name": "하스텔로이",
+      "classification": "grade-ambiguous",
+      "density": null,
+      "referenceDensity": 8.89,
+      "unit": "g/cm3",
+      "exactCondition": "8.89는 HASTELLOY C-276/UNS N10276의 RT(Room Temperature) 조건에 한정",
+      "mapping": "HASTELLOY 상표 합금군; C-276로 자동매핑 금지",
+      "sourceURL": "https://haynesintl.com/en/alloys/alloy-portfolio/corrosion-resistant-alloys/hastelloy-c-276/",
+      "checkedAt": "2026-10-13T16:08:31Z",
+      "searchTerms": [
+        "HASTELLOY C-276 alloy density",
+        "HASTELLOY C-276 8.89 haynes"
+      ],
+      "shortEvidence": "Haynes 공식 Physical Properties 표의 C-276 밀도 8.89 g/cm3 및 RT 조건 확인. 입력 통칭의 정확한 등급은 불명",
+      "sourceKind": "manufacturer",
+      "sourceValueConfirmed": true,
+      "referenceGrade": "HASTELLOY C-276 / UNS N10276"
+    }
+  ]
+}

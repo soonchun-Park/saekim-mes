@@ -1,0 +1,136 @@
+{
+  "passed": true,
+  "url": "http://127.0.0.1:8791",
+  "checks": [
+    {
+      "theme": "light",
+      "screen": "dashboard",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "light",
+      "screen": "quotes",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "light",
+      "screen": "orders",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "light",
+      "screen": "settlements",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "light",
+      "screen": "materials",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "light",
+      "screen": "parties",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "light",
+      "screen": "inspections",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "dark",
+      "screen": "dashboard",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "dark",
+      "screen": "quotes",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "dark",
+      "screen": "orders",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "dark",
+      "screen": "settlements",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "dark",
+      "screen": "materials",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "dark",
+      "screen": "parties",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "dark",
+      "screen": "inspections",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    }
+  ],
+  "fonts": [
+    {
+      "familyName": "SUIT Variable Thin",
+      "postScriptName": "SUITVariable-Bold",
+      "isCustomFont": true,
+      "glyphCount": 8
+    }
+  ],
+  "userTabsTouched": false,
+  "ownHeadlessTab": true,
+  "workflowGroupsVerified": 12,
+  "clockVerified": true,
+  "scheduleReadOnlyRouteVerified": true,
+  "routingAssetsAndTitleVerified": true,
+  "commandsOrUploadsSent": 0,
+  "backupUnchanged": "d115e24d07ac54b2f7b276b4c577ff20c1b1aaaa9ded448b6a34c0a58131cbc7",
+  "runtimeErrors": 0,
+  "at": "2026-10-14T16:33:46.107Z"
+}

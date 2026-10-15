@@ -1,0 +1,21 @@
+{
+  "theme": "dark",
+  "checks": [
+    "calendar drag/drop opens before/after review; cancel writes zero",
+    "explicit confirm, repeated click saves once and original quote preserved",
+    "current date and history survive browser reconnect",
+    "undo is reviewed, confirmed and recorded as a separate history entry",
+    "month boundary and week view retain mode; late external receipt warning and no cascading customer date",
+    "response loss resolves stored command result without duplicate mutation",
+    "failed request leaves calendar unchanged; explicit status check enables exact-key retry",
+    "local retry-record storage failure aborts before submitting command",
+    "actual quote event is read-only and has no confirm action",
+    "keyboard F2 date selector preserves ordinary detail click",
+    "390px touch date-selector alternative and modal fit",
+    "unresolved request survives reconnect; confirmed unsubmitted request can be canceled without writes",
+    "concurrent revision rejection keeps plan unchanged and requires fresh review",
+    "KST midnight changes clock only; focused input value/caret and form DOM preserved",
+    "clock cards, CI and theme button do not overlap at 390/768/1440px"
+  ],
+  "ok": true
+}

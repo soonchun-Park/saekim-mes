@@ -1,0 +1,19 @@
+{
+  "browser": "Chrome headless via isolated profile",
+  "passed": true,
+  "checks": [
+    "actual browser complete quote/order/production/inventory/inspection/delivery/payment",
+    "material formula preview",
+    "simulated response loss after real commit retries same key without duplicate",
+    "double click quote creates once",
+    "cancel dialog makes no mutation",
+    "partial payment balance and incomplete",
+    "invalid excess delivery refused",
+    "reload persisted snapshot",
+    "actual file-input backup restore",
+    "hash navigation back preserves state",
+    "desktop 1440 and mobile 390 no horizontal overflow",
+    "zero runtime exceptions"
+  ],
+  "revision": 18
+}

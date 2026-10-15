@@ -1,0 +1,88 @@
+{
+  "target": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\templates-applied-2026-10-15T11-43-46-024Z",
+  "preparedAt": "2026-10-15T11:43:46.136Z",
+  "apiBeforeHash": "5c3cbf87b91bfa9d8422c26126c7d7645e611f2be8d645bc9f04ccc94b568633",
+  "dataBefore": {
+    "material-catalog.json": "211fccd2d613552c1cc9ae75011cc4d5b8bec1cfc35b6c02ca3f197ac5444e50",
+    "state.json": "6f1ccf1e5ba7b40d91fc17cde3b582d747539620776460d10d5e827b128a5e9c"
+  },
+  "sourceBefore": {
+    "bulk-import-model.js": "a79178e27e3b47d6263e8832aa5b2e2b7602a9a4368e03c9a64de3a175c23a5a",
+    "bulk-import-ui.js": "2ef0c6a06b40d28110b19ab4dca4fe11f8f7b515c10e8c31431b822780d83214",
+    "bulk-import-ui.css": "76cccef6c94ae1b19614eab4fb17845550946e160c83e92ab1c8485f364f8631",
+    "bulk-template.js": null,
+    "templates/quote.xlsx": null,
+    "templates/party.xlsx": null,
+    "templates/material.xlsx": null,
+    "templates/price.xlsx": null,
+    "qa/build-integrated.js": "18433c4aefa11ce046a61be848d7b7a08239bd1830bf32d421fa3f5edc14ddab",
+    "qa/integrated-ui/index.html": "cb24052fa60387612e95172cffb1026b8004b337bdea367857305b12bbe74c8a",
+    "bulk-template.test.js": null,
+    "package.json": "b6db10d55a422d56e8c6b15881f85302f303ec9f1d18fb17cdd55233e6cc4c96",
+    "xlsx-values.js": "7dee3217e65942952095f36ccba40dd65787c1315507a550d3db082e5560ea95",
+    "bulk-import.test.js": "7d26cd191aa8fdb7d332d4770438a341500b2e084e6c6132826d71b294a0ab48",
+    "qa/template-fixtures.js": null,
+    "qa/build-import-templates.mjs": null,
+    "qa/template-browser-qa.js": null
+  },
+  "sourceAfter": {
+    "bulk-import-model.js": "2b5db28115d31a082a4d41cc6d61b69652380f570d6f9c20f3d257db7e9ab3d2",
+    "bulk-import-ui.js": "f0c558f751a54b6b94ef7a804f70ab35651aed385925d753045ccb1ca4863a33",
+    "bulk-import-ui.css": "4cea7039af1b40f0b28e559680d85c332c4c81b884676473744c7daffcd5b793",
+    "bulk-template.js": "cd087b5956bf7ce1bccdb35e11111c5c466fe90e44df19f146702bd00bba6f51",
+    "templates/quote.xlsx": "d26647878565f8f7f800f8d2d7f3f1e8452b579525927bb5cc9152ed8f731bef",
+    "templates/party.xlsx": "ac27f54aa9c278e53ef47809d9d0b3fe905bfe580cc697c23a3f56027c85704c",
+    "templates/material.xlsx": "2eb31c0fed886488f1efe9a383bc0637e0f067de8ef01e130fc7194584eef58c",
+    "templates/price.xlsx": "007b613a47316fc30f6c5d5cdc104434f6533f7e99510eb27823c36f7ca70bdd",
+    "qa/build-integrated.js": "18433c4aefa11ce046a61be848d7b7a08239bd1830bf32d421fa3f5edc14ddab",
+    "qa/integrated-ui/index.html": "cb24052fa60387612e95172cffb1026b8004b337bdea367857305b12bbe74c8a",
+    "bulk-template.test.js": "77e115f29fa843fd654921a1b4851ea6e68a3cbe323ef7d12377365f6aab4d66",
+    "package.json": "eb36a79e126ca60c2732a5b0da339bbfa99920d0527403db9d5aca1be26c7989",
+    "xlsx-values.js": "5d3eb94a44ce8e79168b3964fb63080d92f23cbd865c07b1e6f4e7d942be491d",
+    "bulk-import.test.js": "f6cf672f99b4305e12e9abe82ef2016a0f849b4adc28f5a648f9bb7b2b4651a7",
+    "qa/template-fixtures.js": "7ca9b088ea3ddf4ba3011c3a84cbe143f9795f245046a93c46512af3edb02872",
+    "qa/build-import-templates.mjs": "053f24150b2c4d66946831fd35f44eefadf9aa21817ff15efdc4c3e2e8789b5d",
+    "qa/template-browser-qa.js": "f97f1e13bf03c200bb69f90064ea53975f17a6195a7e0b069c44c8a2633569de"
+  },
+  "otherServers": {
+    "8788": {
+      "online": false
+    },
+    "8789": {
+      "online": false
+    },
+    "8790": {
+      "online": false
+    }
+  },
+  "code": [
+    "bulk-import-model.js",
+    "bulk-import-ui.js",
+    "bulk-import-ui.css",
+    "bulk-template.js",
+    "templates/quote.xlsx",
+    "templates/party.xlsx",
+    "templates/material.xlsx",
+    "templates/price.xlsx",
+    "qa/build-integrated.js",
+    "qa/integrated-ui/index.html",
+    "bulk-template.test.js",
+    "package.json",
+    "xlsx-values.js",
+    "bulk-import.test.js",
+    "qa/template-fixtures.js",
+    "qa/build-import-templates.mjs",
+    "qa/template-browser-qa.js"
+  ],
+  "oldPid": 38536,
+  "appliedAt": "2026-10-15T11:44:23.969Z",
+  "counts": {
+    "materials": 80,
+    "prices": 69,
+    "parties": 9,
+    "quotes": 1,
+    "orders": 1
+  },
+  "verifiedAt": "2026-10-15T11:44:43.776Z",
+  "preserved": true
+}

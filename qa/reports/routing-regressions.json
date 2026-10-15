@@ -1,0 +1,116 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "theme": "light",
+      "script": "quote-enhancement-browser-qa.js",
+      "code": 0,
+      "log": "routing-light-quote-enhancement-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "monthly-settlement-browser-qa.js",
+      "code": 0,
+      "log": "routing-light-monthly-settlement-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "party-bank-browser-qa.js",
+      "code": 0,
+      "log": "routing-light-party-bank-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "bulk-browser-qa.js",
+      "code": 0,
+      "log": "routing-light-bulk-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "partner-browser-qa.js",
+      "code": 0,
+      "log": "routing-light-partner-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "production-browser-qa.js",
+      "code": 0,
+      "log": "routing-light-production-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "schedule-browser-qa.js",
+      "code": 0,
+      "log": "routing-light-schedule-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "workflow-browser-qa.js",
+      "code": 0,
+      "log": "routing-light-workflow-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "routing-browser-qa.js",
+      "code": 0,
+      "log": "routing-light-routing-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "quote-enhancement-browser-qa.js",
+      "code": 0,
+      "log": "routing-dark-quote-enhancement-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "monthly-settlement-browser-qa.js",
+      "code": 0,
+      "log": "routing-dark-monthly-settlement-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "party-bank-browser-qa.js",
+      "code": 0,
+      "log": "routing-dark-party-bank-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "bulk-browser-qa.js",
+      "code": 0,
+      "log": "routing-dark-bulk-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "partner-browser-qa.js",
+      "code": 0,
+      "log": "routing-dark-partner-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "production-browser-qa.js",
+      "code": 0,
+      "log": "routing-dark-production-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "schedule-browser-qa.js",
+      "code": 0,
+      "log": "routing-dark-schedule-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "workflow-browser-qa.js",
+      "code": 0,
+      "log": "routing-dark-workflow-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "routing-browser-qa.js",
+      "code": 0,
+      "log": "routing-dark-routing-browser-qa.txt"
+    }
+  ],
+  "at": "2026-10-14T16:32:39.644Z",
+  "checkCount": 218,
+  "note": "9 workflows × 2 themes; separate temporary data and own headless tabs"
+}

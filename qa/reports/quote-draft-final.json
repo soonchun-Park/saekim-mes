@@ -1,0 +1,164 @@
+{
+  "completedAt": "2026-10-14T00:28:47.212Z",
+  "url": "http://127.0.0.1:8791",
+  "status": "completed",
+  "problem": {
+    "reproduced": true,
+    "before": "Bulk save followed by normal save created 2 quotes from a preserved manual draft"
+  },
+  "changes": [
+    "One persistent drafting ID shared by normal and XLSX creation routes",
+    "Server rejects second creation with the same draft ID even if request key or payload changes",
+    "Saved quote ID, completion message and link remain on the preserved input screen",
+    "Edits remain unsaved until explicit new-quote confirmation; prior saved quote is never overwritten",
+    "Uncertain outcome blocks ordinary save and recovers using the same request; server can repair missing client completion linkage"
+  ],
+  "validation": {
+    "unitIntegration": {
+      "passed": 310,
+      "failed": 0,
+      "log": "qa/recovery-final-tests.txt"
+    },
+    "lint": {
+      "passed": true,
+      "files": 94
+    },
+    "quoteDraftUI": {
+      "passed": true,
+      "checks": [
+        "이중 클릭 및 서버 성공·응답 유실 후 일반 저장 차단, 입력 보존",
+        "같은 요청 재시도는 견적 1건 유지, 저장 견적 ID와 완료 상태 연결",
+        "성공 후 일반 저장 반복 및 엑셀 재업로드 차단",
+        "저장 후 수정·화면 이동·복귀에도 수정 입력과 완료 연결 유지, 자동 중복 저장 없음",
+        "저장된 견적 보기로 정확한 견적에 이동",
+        "새 견적 작성 취소는 유지, 명시 승인 후에만 수정 입력으로 별도 견적 1건 저장",
+        "새로고침 후에도 저장 완료 연결 유지 및 반복 생성 차단",
+        "브라우저 완료 표시 누락 시 서버가 중복 생성 없이 기존 견적 연결 복구"
+      ],
+      "runtimeErrors": 0,
+      "userDataTouched": false,
+      "userTabsTouched": false,
+      "temporaryData": "C:\\Users\\SOONCH~1\\AppData\\Local\\Temp\\mes-partner-browser-QVx3o7",
+      "at": "2026-10-14T00:26:31.293Z"
+    },
+    "bulkUI": {
+      "passed": true,
+      "checks": [
+        "4종 업로드 버튼과 빈 견적 업로드 창 초기화",
+        "실제 양식 다운로드: 업태·종목 및 참조ID 시트",
+        "오류·중복 행 표시 및 확정 전 취소 저장 0건",
+        "업로드→미리보기→이중클릭 확정→재접속→상세 값 보존",
+        "사업자번호 커서·하이픈 삭제·선택 교체, 전화 유형·국제번호·내선 및 수기 편집 저장",
+        "소재·매입처 단가 실제 업로드, 참조ID 및 원/kg 저장",
+        "현재 수기 품목+엑셀 품목 함께 견적 저장, 원래 입력·고객 스냅샷·문서·재접속 보존",
+        "101행 미리보기 50행 페이지 전환과 390px 화면"
+      ],
+      "runtimeErrors": 0,
+      "temporaryData": "C:\\Users\\SOONCH~1\\AppData\\Local\\Temp\\mes-partner-browser-DWezh6",
+      "userTabsTouched": false,
+      "userDataChanged": false,
+      "at": "2026-10-14T00:26:36.261Z"
+    },
+    "existingUI": {
+      "passed": true,
+      "checks": [
+        "통합 초기화·대시보드 기본 화면·런타임 오류 0",
+        "고객 선택 결제조건 자동 입력·7개 화면 왕복 시 미저장 견적 유지",
+        "소재·거래처 별도 화면·목록 계좌 비노출",
+        "저장 원/kg 단가 자동 반영·직접 수정 단가 화면 이동 후 유지",
+        "과거 견적 blur 알림만·명시 비교 확인·판매단가만 복사·제조 입력 유지",
+        "거래처 상세에서만 계좌·별도 세금 이메일 확인",
+        "검사 품목·REV 확인 강제·미저장 검사 임시값 복원·정확한 품목에만 기록",
+        "월·주 전환·업체 ID 필터·전체 복귀·캘린더 건수 일치",
+        "캘린더 선택 수주 상세 카드로 포커스 이동·복귀 시 기간 상태 유지",
+        "390px 모바일 7개 화면 가로 넘침 없음"
+      ],
+      "runtimeErrors": 0,
+      "temporaryData": "C:\\Users\\SOONCH~1\\AppData\\Local\\Temp\\mes-partner-browser-U2NwIQ",
+      "source": "허구 QA 데이터, 기존 사용자 서버 미변경",
+      "verifiedAt": "2026-10-14T00:26:38.606Z"
+    },
+    "totalBrowserChecks": 26,
+    "liveReadOnly": {
+      "passed": true,
+      "url": "http://127.0.0.1:8791",
+      "ownHeadlessTab": true,
+      "userTabsTouched": false,
+      "commandsOrUploadsSent": 0,
+      "backupUnchanged": "0384fdd597d0b3843a8e1ea5edec054bc1370668a58de5224e89b685d3bd342d",
+      "bulkButtons": 4,
+      "businessFields": true,
+      "formattersMounted": true,
+      "emptyQuoteDialog": true,
+      "runtimeErrors": 0,
+      "at": "2026-10-14T00:28:13.930Z"
+    }
+  },
+  "preservation": {
+    "userDataFilesByteIdentical": true,
+    "backupBeforeSHA256": "0384fdd597d0b3843a8e1ea5edec054bc1370668a58de5224e89b685d3bd342d",
+    "backupAfterSHA256": "0384fdd597d0b3843a8e1ea5edec054bc1370668a58de5224e89b685d3bd342d",
+    "userTabsTouched": false,
+    "liveTestDataInserted": false,
+    "counts": {
+      "materials": 80,
+      "prices": 69,
+      "parties": 1,
+      "quotes": 0,
+      "orders": 0
+    },
+    "pidBefore": 39164,
+    "pidAfter": 21104,
+    "otherServers": [
+      {
+        "port": 8788,
+        "pid": 9484
+      },
+      {
+        "port": 8789,
+        "pid": 36684
+      },
+      {
+        "port": 8790,
+        "pid": 44144
+      }
+    ]
+  },
+  "backupDirectory": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\bulk-upload-2026-10-14T00-27-34-863Z",
+  "sourceSHA256": {
+    "quote-draft-id.js": "9fdc401d016bad4f5a54cbfe6ff8c5f3ddaa3dee6b1d627a8064bf36c8ebe8cf",
+    "quote-draft-ui.js": "ffebe11e9372db1d89105c55a6b319f2ed9e9a30e5dfc943d2ea468635bd6a67",
+    "qa/quote-draft-browser-qa.js": "08196e015a5485a67da520ba2aa5437dac3103915a24ff29d5d63b8f0afd9409",
+    "xlsx-values.js": "7dee3217e65942952095f36ccba40dd65787c1315507a550d3db082e5560ea95",
+    "bulk-import-model.js": "fbdc3acae43f4103279f8c2dddf46fdfb89e8376ea00f2be0793b158ce78a68a",
+    "bulk-import-service.js": "052346824e6a0ff61510372629c63ad3e262ce8c220439f60eb2e579daa3f1db",
+    "bulk-import-ui.js": "8dbeb65c36582bf480f6622a9a38c46b20cc9437ae1b347ed753a83488253d02",
+    "bulk-import-ui.css": "76cccef6c94ae1b19614eab4fb17845550946e160c83e92ab1c8485f364f8631",
+    "party-inputs.js": "61e4729f0da49039795c26803aebc3b1be5bb3459a57aabd63ef6f138b2f66af",
+    "party-model.js": "bf01d9c76766bcef77b0cdae61c274c88ef44329db9b6dda0569df52d7f9f565",
+    "party-ui.js": "18b2233fb19868e8127e532356d675415cba53699f4f74ff3b90863606b2b63c",
+    "material-catalog.js": "0f50900d2e8d1d1d550b97e08b70a18f57c52a6a6cf4b023d88df19d575123f4",
+    "quote-document.staged.js": "e6bb83846e17a70ed038d9e701c3866b3d7bca3702672f942d2078b095427cbf",
+    "server.js": "e4d556043ca2fafd54e127f32eb1a9fb9cb9940e588ec994dca8e49dfce78077",
+    "package.json": "dfabfacd6075ee888b0fecb3a6f09d6b871662044c9dd5a307b0d24e57e2fb83",
+    "README.md": "c4fec9641058646415197fcf15060323a5041ff698d41a32e337fade679d92af",
+    "bulk-import.test.js": "7d26cd191aa8fdb7d332d4770438a341500b2e084e6c6132826d71b294a0ab48",
+    "qa/build-integrated.js": "5af2aacaf1582e1476f17d0bf75a5d8ec3047f4417c27939d4c48e036db69d04",
+    "qa/integrated-server.js": "90b87a494ad8090f266e67b6af43d18448ff5524828d8284a9607df66952e551",
+    "qa/integrated-ui/ui.js": "ecb04ab476ffefcf6593e39d8e6fd57a883e9406c32f7e702b5cb14fde3ec501",
+    "qa/integrated-ui/index.html": "4c01b523042bb75d7f5b44bcf07b34d274e0ba362e1cbe0aa3d0b63b282aa37d",
+    "qa/integrated-ui/styles.css": "dd1b157ca1b618e8db29b0feb20036615bdb7d3985266264ba968a709834fcb2",
+    "qa/bulk-browser-qa.js": "1c1b8e7d3cadbf6885860b525a1df53e0bb7c46f99cf92a8e68f62a38f25800c"
+  },
+  "usage": [
+    "Save any existing unfinished input before refreshing the existing user tab to load updated scripts",
+    "After a successful save use 저장된 견적 보기 to open the saved record",
+    "To create a separate quote with retained edited values use 이 입력으로 새 견적 작성 and explicitly confirm"
+  ],
+  "limitations": [
+    "Preserved edits do not automatically revise an issued quote; explicit new-quote action creates a separate quote",
+    "Old already-loaded tabs require reload for the new client completion controls; user tabs were deliberately not refreshed",
+    "Native browser tool startup remains unavailable; verification used separate headless QA tabs"
+  ],
+  "remainingBlockers": []
+}

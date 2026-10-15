@@ -1,0 +1,156 @@
+{
+  "completed": true,
+  "url": "http://127.0.0.1:8791",
+  "at": "2026-10-14T15:40:44.036Z",
+  "unitIntegrationTests": 343,
+  "lintSyntaxFiles": 106,
+  "browserChecks": 184,
+  "browserGroups": [
+    {
+      "theme": "light",
+      "script": "quote-enhancement-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-light-quote-enhancement-browser-qa.txt",
+      "checks": 18
+    },
+    {
+      "theme": "light",
+      "script": "monthly-settlement-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-light-monthly-settlement-browser-qa.txt",
+      "checks": 14
+    },
+    {
+      "theme": "light",
+      "script": "party-bank-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-light-party-bank-browser-qa.txt",
+      "checks": 7
+    },
+    {
+      "theme": "light",
+      "script": "bulk-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-light-bulk-browser-qa.txt",
+      "checks": 8
+    },
+    {
+      "theme": "light",
+      "script": "partner-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-light-partner-browser-qa.txt",
+      "checks": 10
+    },
+    {
+      "theme": "light",
+      "script": "production-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-light-production-browser-qa.txt",
+      "checks": 13
+    },
+    {
+      "theme": "light",
+      "script": "schedule-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-light-schedule-browser-qa.txt",
+      "checks": 15
+    },
+    {
+      "theme": "light",
+      "script": "workflow-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-light-workflow-browser-qa.txt",
+      "checks": 7
+    },
+    {
+      "theme": "dark",
+      "script": "quote-enhancement-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-dark-quote-enhancement-browser-qa.txt",
+      "checks": 18
+    },
+    {
+      "theme": "dark",
+      "script": "monthly-settlement-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-dark-monthly-settlement-browser-qa.txt",
+      "checks": 14
+    },
+    {
+      "theme": "dark",
+      "script": "party-bank-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-dark-party-bank-browser-qa.txt",
+      "checks": 7
+    },
+    {
+      "theme": "dark",
+      "script": "bulk-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-dark-bulk-browser-qa.txt",
+      "checks": 8
+    },
+    {
+      "theme": "dark",
+      "script": "partner-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-dark-partner-browser-qa.txt",
+      "checks": 10
+    },
+    {
+      "theme": "dark",
+      "script": "production-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-dark-production-browser-qa.txt",
+      "checks": 13
+    },
+    {
+      "theme": "dark",
+      "script": "schedule-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-dark-schedule-browser-qa.txt",
+      "checks": 15
+    },
+    {
+      "theme": "dark",
+      "script": "workflow-browser-qa.js",
+      "code": 0,
+      "log": "calendar-flow-dark-workflow-browser-qa.txt",
+      "checks": 7
+    }
+  ],
+  "liveScreens": 14,
+  "liveRuntimeErrors": 0,
+  "liveCommandsOrUploadsSent": 0,
+  "backup": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\calendar-clock-workflow-2026-10-14T15-37-27-953Z",
+  "apiHash": "276a3980e022c410919c08af7a8336370e0764c38a006759eff078ee4a36c257",
+  "counts": {
+    "materials": 80,
+    "prices": 69,
+    "parties": 1,
+    "quotes": 1,
+    "orders": 0
+  },
+  "userTabsTouched": false,
+  "otherPortsPreserved": [
+    8788,
+    8789,
+    8790
+  ],
+  "oldPid": 50952,
+  "newPid": 63100,
+  "referenceImage": {
+    "libraryId": "libfile_79784139b8ec8191bbe88d457736039f",
+    "local": "reference/clock/image(2).png",
+    "bytes": 29018,
+    "sha256": "ae13c585972bbeb4d38455c2038b1f968ff606a25de4cd4cd4718077f3b119c7",
+    "pixelsInspected": true
+  },
+  "limitations": [
+    "상단은 한국 현재 날짜·시간입니다. D-Day 목표일은 제공되지 않았습니다.",
+    "모바일 일정 이동은 날짜 선택 버튼을 사용합니다.",
+    "원본 견적·발행 문서와 실제 완료 이력은 변경하지 않습니다.",
+    "업무 흐름은 전체 저장 자료 기준이며 캘린더 필터와 별도 집계합니다."
+  ],
+  "blockers": []
+}

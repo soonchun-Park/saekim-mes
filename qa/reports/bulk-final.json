@@ -1,0 +1,130 @@
+{
+  "completedAt": "2026-10-14T00:16:41.259Z",
+  "url": "http://127.0.0.1:8791",
+  "status": "completed",
+  "scope": [
+    "XLSX templates, preview, row validation, selected atomic bulk save: quote items/parties/materials/supplier prices",
+    "Current manual quote draft plus imported items in one new quote",
+    "Optional businessType/businessItem across editor, XLSX, persistence and new quote snapshots",
+    "Business number and supported domestic phone auto-hyphens with non-domestic text preserved"
+  ],
+  "limits": {
+    "xlsxBytes": 5242880,
+    "quoteItemsIncludingDraft": 100,
+    "otherRows": 1000,
+    "previewPageRows": 50,
+    "previewMinutes": 30,
+    "existingBlankUpdate": "retain",
+    "bulkClearDelete": false,
+    "googleConnected": false
+  },
+  "tests": {
+    "unitIntegrationPassed": 307,
+    "failed": 0,
+    "lintPassed": true,
+    "bulkUI": [
+      "4종 업로드 버튼과 빈 견적 업로드 창 초기화",
+      "실제 양식 다운로드: 업태·종목 및 참조ID 시트",
+      "오류·중복 행 표시 및 확정 전 취소 저장 0건",
+      "업로드→미리보기→이중클릭 확정→재접속→상세 값 보존",
+      "사업자번호 커서·하이픈 삭제·선택 교체, 전화 유형·국제번호·내선 및 수기 편집 저장",
+      "소재·매입처 단가 실제 업로드, 참조ID 및 원/kg 저장",
+      "현재 수기 품목+엑셀 품목 함께 견적 저장, 원래 입력·고객 스냅샷·문서·재접속 보존",
+      "101행 미리보기 50행 페이지 전환과 390px 화면"
+    ],
+    "existingUI": [
+      "통합 초기화·대시보드 기본 화면·런타임 오류 0",
+      "고객 선택 결제조건 자동 입력·7개 화면 왕복 시 미저장 견적 유지",
+      "소재·거래처 별도 화면·목록 계좌 비노출",
+      "저장 원/kg 단가 자동 반영·직접 수정 단가 화면 이동 후 유지",
+      "과거 견적 blur 알림만·명시 비교 확인·판매단가만 복사·제조 입력 유지",
+      "거래처 상세에서만 계좌·별도 세금 이메일 확인",
+      "검사 품목·REV 확인 강제·미저장 검사 임시값 복원·정확한 품목에만 기록",
+      "월·주 전환·업체 ID 필터·전체 복귀·캘린더 건수 일치",
+      "캘린더 선택 수주 상세 카드로 포커스 이동·복귀 시 기간 상태 유지",
+      "390px 모바일 7개 화면 가로 넘침 없음"
+    ],
+    "live": {
+      "passed": true,
+      "url": "http://127.0.0.1:8791",
+      "ownHeadlessTab": true,
+      "userTabsTouched": false,
+      "commandsOrUploadsSent": 0,
+      "backupUnchanged": "0384fdd597d0b3843a8e1ea5edec054bc1370668a58de5224e89b685d3bd342d",
+      "bulkButtons": 4,
+      "businessFields": true,
+      "formattersMounted": true,
+      "emptyQuoteDialog": true,
+      "runtimeErrors": 0,
+      "at": "2026-10-14T00:16:01.378Z"
+    },
+    "synthetic1000RowsMs": 784,
+    "synthetic1000RowsNote": "Measured isolated new catalog; time varies with PC and data"
+  },
+  "preservation": {
+    "backupHashBefore": "0384fdd597d0b3843a8e1ea5edec054bc1370668a58de5224e89b685d3bd342d",
+    "backupHashAfter": "0384fdd597d0b3843a8e1ea5edec054bc1370668a58de5224e89b685d3bd342d",
+    "liveDataBytesUnchanged": true,
+    "userTabsTouched": false,
+    "testDataInsertedIntoLive": false,
+    "liveCounts": {
+      "materials": 80,
+      "prices": 69,
+      "parties": 1,
+      "quotes": 0,
+      "orders": 0
+    },
+    "old8791PID": 50780,
+    "new8791PID": 39164,
+    "otherServersPreserved": [
+      {
+        "port": 8788,
+        "pid": 9484
+      },
+      {
+        "port": 8789,
+        "pid": 36684
+      },
+      {
+        "port": 8790,
+        "pid": 44144
+      }
+    ]
+  },
+  "backupDirectory": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\bulk-upload-2026-10-14T00-13-00-697Z",
+  "sourceHashes": {
+    "xlsx-values.js": "7dee3217e65942952095f36ccba40dd65787c1315507a550d3db082e5560ea95",
+    "bulk-import-model.js": "fbdc3acae43f4103279f8c2dddf46fdfb89e8376ea00f2be0793b158ce78a68a",
+    "bulk-import-service.js": "73ceb80a81132bfad46a6b0ed89f1d3dc86e57e02ffb6b5c200ebec3054479ae",
+    "bulk-import-ui.js": "c3700f5be21fe1b8487e38599e15f9d64aa3c7882e9a1c6e3a7f326e64ddef83",
+    "bulk-import-ui.css": "80c2cdba333b4dbf3e92be00c3984b95018e1d58fc1d7dbb86eaf53c699aef51",
+    "party-inputs.js": "61e4729f0da49039795c26803aebc3b1be5bb3459a57aabd63ef6f138b2f66af",
+    "party-model.js": "bf01d9c76766bcef77b0cdae61c274c88ef44329db9b6dda0569df52d7f9f565",
+    "party-ui.js": "18b2233fb19868e8127e532356d675415cba53699f4f74ff3b90863606b2b63c",
+    "material-catalog.js": "0f50900d2e8d1d1d550b97e08b70a18f57c52a6a6cf4b023d88df19d575123f4",
+    "quote-document.staged.js": "e6bb83846e17a70ed038d9e701c3866b3d7bca3702672f942d2078b095427cbf",
+    "server.js": "c28e1a75c94b9e0614037624b0373efa46f71c3ec89faa2ba9108b27e579935e",
+    "package.json": "dfabfacd6075ee888b0fecb3a6f09d6b871662044c9dd5a307b0d24e57e2fb83",
+    "README.md": "c46097565d530792b60978c33b0dd272146f4f785f02b175486f157fa943d674",
+    "bulk-import.test.js": "c0d5d626df52afcec9d9e311734002e3983a3a6e38a9852e63c4d92aac11bdb2",
+    "qa/build-integrated.js": "e42fbf8abb19bdc84e07fbcffe626e1ef6d9660ae71493a780900272b1ec4a19",
+    "qa/integrated-server.js": "1602cb9cadee94f4f2502550ca33aafc832a4c6c6e19a89ddd1a275c3c717329",
+    "qa/integrated-ui/ui.js": "e62fcc6ccc4e2d064c4ce865a5f9d047f186dbdf7881b3f909d2db5ff1972bba",
+    "qa/integrated-ui/index.html": "6fc66a3cec947bf33daf539c9e0e0dfa7fdd31f24d28530f8adf622f2f71fe95",
+    "qa/integrated-ui/styles.css": "dd1b157ca1b618e8db29b0feb20036615bdb7d3985266264ba968a709834fcb2",
+    "qa/bulk-browser-qa.js": "1c1b8e7d3cadbf6885860b525a1df53e0bb7c46f99cf92a8e68f62a38f25800c"
+  },
+  "remainingLimitations": [
+    "Native browser tool could not start (HRESULT 0x80070003); actual user window untouched and own Headless Chrome tabs used",
+    "Only .xlsx value-only inputs; XLS/CSV/macros/formulas/external links unsupported",
+    "Original draft stays on screen after bulk quote save; avoid saving it a second time",
+    "No external deployment, Google connection, scheduled backups or operational security certification"
+  ],
+  "evidence": [
+    "qa/recovery-final-tests.txt",
+    "qa/recovery-bulk-tests.txt",
+    "qa/reports/bulk-browser-qa.json",
+    "qa/reports/partner-browser-qa.json",
+    "qa/reports/bulk-live8791.json"
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "applied": true,
+  "url": "http://127.0.0.1:8791",
+  "at": "2026-10-14T22:18:12.001Z",
+  "processId": 64424,
+  "features": [
+    "Separate stage and state colored chips with short readable labels",
+    "Same labels in month/week cells, date lists and detail dialog; linked order current status and source basis",
+    "Explicit status legend in light and dark themes; mobile 390px labels retained",
+    "No status field changes, new closing events or invented completion dates"
+  ],
+  "mapping": {
+    "stages": {
+      "quote": "blue / 견적",
+      "order": "indigo / 수주",
+      "production": "cyan / 자체 생산",
+      "outsource": "amber / 외주",
+      "receipt": "teal / 입고",
+      "delivery": "green / 납품"
+    },
+    "states": {
+      "waiting": "gray / 대기·계획",
+      "progress": "gold / 진행중",
+      "complete": "green / 공정완료·입고완료·납품완료",
+      "settled": "purple / 납품·정산완료",
+      "converted": "blue / 수주전환",
+      "paused": "orange / 보류",
+      "canceled": "red / 취소",
+      "recorded": "teal / 실제 입고·부분납품 기록"
+    }
+  },
+  "criteria": {
+    "deliveryComplete": "Every order line delivered equals its positive ordered quantity",
+    "settled": "Delivery complete AND positive sale total equals billed total equals allocated payments",
+    "processComplete": "Recorded process quantity reaches its assigned quantity; sequential route uses prior good output and prior completion",
+    "quoteConverted": "Existing active linked order; not a delivered/settled claim",
+    "notInferred": [
+      "Closing from date or overdue",
+      "Full completion from one paid invoice",
+      "Successful completion from a superseded quote or zero downstream input"
+    ]
+  },
+  "clarification": {
+    "status": "pending_definition",
+    "action": "Use the name 클로징",
+    "target": "Calendar final order status label",
+    "reason": "Existing model has no explicit closing confirmation field/history",
+    "question": "클로징은 전량 납품+매출 전액 청구·입금 완료인가요, 아니면 담당자가 별도로 종료 확정한 건인가요?",
+    "implementedWhilePending": "Use factual label 납품·정산완료 and explain source criteria; no inferred closing"
+  },
+  "tests": {
+    "unitIntegrationPassed": 366,
+    "failed": 0,
+    "syntaxFiles": 112,
+    "browserChecks": 230,
+    "browserRuns": 20,
+    "liveScreens": 14,
+    "minimumTextContrast": {
+      "light": 6.762166562259227,
+      "dark": 8.971777788165205
+    },
+    "rangeDragResizeUndoRegression": true,
+    "mobileWidth": 390,
+    "serverErrors": 0
+  },
+  "preservation": {
+    "apiHashBeforeAndAfter": "d115e24d07ac54b2f7b276b4c577ff20c1b1aaaa9ded448b6a34c0a58131cbc7",
+    "dataFileHashesUnchanged": true,
+    "counts": {
+      "materials": 80,
+      "prices": 69,
+      "parties": 1,
+      "quotes": 1,
+      "orders": 1
+    },
+    "userTabsTouched": false,
+    "unsavedUserInputsTouched": false,
+    "realCustomerMutations": 0,
+    "oldPortsUnchanged": true,
+    "ports": {
+      "8788": 9484,
+      "8789": 36684,
+      "8790": 44144,
+      "8791": 64424
+    }
+  },
+  "backup": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\calendar-status-applied-2026-10-14T22-16-14-075Z",
+  "executionBlockers": [],
+  "evidence": [
+    "CALENDAR-STATUS-NOTES.md",
+    "qa/reports/calendar-status-full-tests.txt",
+    "qa/reports/calendar-status-regressions.json",
+    "qa/reports/calendar-status-live8791.json",
+    "qa/calendar-status-deploy-manifest.json"
+  ]
+}

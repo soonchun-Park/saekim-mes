@@ -1,0 +1,73 @@
+{
+  "target": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\quote-archive-applied-2026-10-15T12-10-40-521Z",
+  "preparedAt": "2026-10-15T12:10:40.632Z",
+  "apiBeforeHash": "5c3cbf87b91bfa9d8422c26126c7d7645e611f2be8d645bc9f04ccc94b568633",
+  "dataBefore": {
+    "material-catalog.json": "211fccd2d613552c1cc9ae75011cc4d5b8bec1cfc35b6c02ca3f197ac5444e50",
+    "state.json": "6f1ccf1e5ba7b40d91fc17cde3b582d747539620776460d10d5e827b128a5e9c"
+  },
+  "sourceBefore": {
+    "core.js": "a2c90f6c709f08b1024e5adfc8aaec091d7f060b0bdec8698264576b0f9b22a6",
+    "quote-document.staged.js": "3c4cd3427d58dd47f742c3dd1a7b6489028072163f82afd8597716db620bf30c",
+    "quote-list-ui.js": "1739d631ea19267a4dfca62a372df5c8ae8f47092b002238750fa4b46c47c3ba",
+    "workflow-overview.js": "3ffb6c07cfb40df1a0c662c757fd02af0722618e5e103ad74b408dfa20bb41cc",
+    "ui-material.staged.js": "d1e7784bccf98818d103d54ca21222ba398feaf21d52f92a445793662f301866",
+    "qa/build-integrated.js": "18433c4aefa11ce046a61be848d7b7a08239bd1830bf32d421fa3f5edc14ddab",
+    "qa/integrated-server.js": "f4f71d0e281a106bf805f533f2ded9ba61dc467f31bf4f84e5603e2258ac88b2",
+    "qa/integrated-ui/index.html": "cb24052fa60387612e95172cffb1026b8004b337bdea367857305b12bbe74c8a",
+    "qa/integrated-ui/ui.js": "c51870106583c45eaeb4416fdb6ba867666ee73ce19c808428d358b885d7501d",
+    "quote-archive.test.js": null,
+    "package.json": "eb36a79e126ca60c2732a5b0da339bbfa99920d0527403db9d5aca1be26c7989",
+    "quote-archive.js": null
+  },
+  "sourceAfter": {
+    "core.js": "83cf0cc3eb6543e064fdfd7d27ee6403f438fc3ad709c273b3815fd400f2e366",
+    "quote-document.staged.js": "fe7b51281c2bff6116a81392ee4151d9a44138f46cbfb67ccbb3947f37000bfe",
+    "quote-list-ui.js": "f436394bb3d7535c9be70222022a471362e300bcd2093de7058cda31b311daa2",
+    "workflow-overview.js": "dd343eed4b2f41d3a50cef53d3d5ca21ff934963e782682924c2fc6e2457bbcf",
+    "ui-material.staged.js": "3fbd570c84e84616969ce9bfa9d0ba7e057951949a0096f2e6fac64dee6745c4",
+    "qa/build-integrated.js": "30965cb9b5e51f03ff3e1440d20d4a1a58067b2a3b0e279e686040ed78168dd3",
+    "qa/integrated-server.js": "3359b838cf06ba7c56171692ee08ed3dfd238289e3c906f22e3d983ddc8d2a39",
+    "qa/integrated-ui/index.html": "8d40829799657db2fb4f074a2c1f5b043ed6139c949e26770eb770cdbc3b30a3",
+    "qa/integrated-ui/ui.js": "6ddb5dd9c8edc27786b79aeb4ef606bae996f6fc77f50e3935dbdb747da677ad",
+    "quote-archive.test.js": "c6eb7ffbdf37630d5f1866809de0454849e31d83a5c736cbc864e8bf8cedf7e8",
+    "package.json": "a5fe822a9737a0c1be62ff5edee4eb8504906646e5310eca88f7877e08d95416",
+    "quote-archive.js": "2a5433762dd0792c176f6c75790e55fa363f1db80ac3571715f7555cfcf691b2"
+  },
+  "otherServers": {
+    "8788": {
+      "online": false
+    },
+    "8789": {
+      "online": false
+    },
+    "8790": {
+      "online": false
+    }
+  },
+  "code": [
+    "core.js",
+    "quote-document.staged.js",
+    "quote-list-ui.js",
+    "workflow-overview.js",
+    "ui-material.staged.js",
+    "qa/build-integrated.js",
+    "qa/integrated-server.js",
+    "qa/integrated-ui/index.html",
+    "qa/integrated-ui/ui.js",
+    "quote-archive.test.js",
+    "package.json",
+    "quote-archive.js"
+  ],
+  "oldPid": 38252,
+  "appliedAt": "2026-10-15T12:15:45.382Z",
+  "counts": {
+    "materials": 80,
+    "prices": 69,
+    "parties": 9,
+    "quotes": 1,
+    "orders": 1
+  },
+  "verifiedAt": "2026-10-15T12:15:46.178Z",
+  "preserved": true
+}

@@ -1,0 +1,141 @@
+{
+  "passed": true,
+  "url": "http://127.0.0.1:8791",
+  "checks": [
+    {
+      "theme": "light",
+      "screen": "dashboard",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "light",
+      "screen": "quotes",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "light",
+      "screen": "orders",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "light",
+      "screen": "settlements",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "light",
+      "screen": "materials",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "light",
+      "screen": "parties",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "light",
+      "screen": "inspections",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "dark",
+      "screen": "dashboard",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "dark",
+      "screen": "quotes",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "dark",
+      "screen": "orders",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "dark",
+      "screen": "settlements",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "dark",
+      "screen": "materials",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "dark",
+      "screen": "parties",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    },
+    {
+      "theme": "dark",
+      "screen": "inspections",
+      "top": 88,
+      "layout": 88,
+      "overflow": false,
+      "font": "\"SUIT Variable\", \"Malgun Gothic\", \"Apple SD Gothic Neo\", \"Segoe UI\", sans-serif"
+    }
+  ],
+  "fonts": [
+    {
+      "familyName": "SUIT Variable Thin",
+      "postScriptName": "SUITVariable-Bold",
+      "isCustomFont": true,
+      "glyphCount": 8
+    }
+  ],
+  "userTabsTouched": false,
+  "ownHeadlessTab": true,
+  "workflowGroupsVerified": 12,
+  "clockVerified": true,
+  "scheduleReadOnlyRouteVerified": true,
+  "routingAssetsAndTitleVerified": true,
+  "calendarStatusLegendAndApiVerified": true,
+  "closingControlsVerified": true,
+  "cancellationPreviewAndCloseVerified": true,
+  "rfqControlsVerified": true,
+  "templateControls": 4,
+  "commandsOrUploadsSent": 0,
+  "backupUnchanged": "338bee6a8f2ae97d9f1701c67a776c085558f5894a7385e85f16ebbe8df7e0f2",
+  "runtimeErrors": 0,
+  "at": "2026-10-15T12:41:21.356Z"
+}

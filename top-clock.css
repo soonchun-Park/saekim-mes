@@ -1,0 +1,7 @@
+body>header .top-clock{display:flex;align-items:center;gap:10px;margin-left:auto;flex:none;color:#193254;line-height:1.2;white-space:nowrap}
+.top-clock-caption{display:flex;flex-direction:column;gap:5px;text-align:right;font-size:12px}.top-clock-caption small{font-size:10px;color:#65748a}
+.top-clock-tiles{display:flex;gap:4px}.top-clock-tile{display:flex;flex-direction:column;align-items:center;justify-content:center;width:48px;height:58px;border-radius:4px;background:#f0f1f3;gap:4px}.top-clock-tile b{font-size:26px;font-weight:850;font-variant-numeric:tabular-nums;line-height:1}.top-clock-tile small{font-size:8px;letter-spacing:1px;color:#4d5c73}
+@media(min-width:701px) and (max-width:1200px){body>header .brand small,body>header>.badge{display:none}.top-clock-caption{font-size:11px}}
+@media(max-width:700px){body>header{display:grid;grid-template-columns:1fr auto;gap:8px 12px}body>header .brand{grid-column:1;grid-row:1}body>header #themeToggle{grid-column:2;grid-row:1;margin:0}body>header .top-clock{grid-column:1/-1;grid-row:2;width:100%;justify-content:space-between;margin:0}.top-clock-caption{text-align:left;font-size:12px}.top-clock-tile{width:39px;height:45px;gap:2px}.top-clock-tile b{font-size:23px}.top-clock-tile small{font-size:7px}}
+@media screen{html[data-theme=dark] .top-clock{color:#e6edf7}html[data-theme=dark] .top-clock-tile{background:#202b3c}html[data-theme=dark] .top-clock-caption small,html[data-theme=dark] .top-clock-tile small{color:#bdc9db}}
+@media print{.top-clock{display:none!important}}

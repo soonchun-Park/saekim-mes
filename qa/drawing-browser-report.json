@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "browser": "installed Chrome with actual file-picker change and form submission",
+  "checks": [
+    "multiple PNG and STEP originals saved and downloaded",
+    "PNG preview content type / CAD download only",
+    "duplicate item names remain separate",
+    "quote A to order B preserves A and other item Q",
+    "existing work warns / dialog cancellation no mutation",
+    "C pending until work/outsource/inspection checks",
+    "confirmed C history and past work B preserved",
+    "new quote D leaves issued A and existing order C unchanged",
+    "actual file input backup restore includes attachments and histories",
+    "390px no overflow",
+    "runtime exceptions 0"
+  ],
+  "userDataUntouched": true
+}

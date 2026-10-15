@@ -1,0 +1,21 @@
+(function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.RFQModel=api;})(globalThis,function(){'use strict';
+ const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ function text(v,label,max=500,required=false){if(v===undefined||v===null)v='';if(typeof v!=='string'||v.length>max||/[\x00-\x08\x0b\x0c\x0e-\x1f]/.test(v)||required&&!v.trim())throw Error(label+'을 확인하세요');return v.trim();}
+ function date(v,label){const s=text(v,label,10);if(s&&(!/^\d{4}-\d{2}-\d{2}$/.test(s)||!Number.isFinite(Date.parse(s))||new Date(s).toISOString().slice(0,10)!==s))throw Error(label+' 날짜 오류');return s;}
+ function email(v){const s=text(v,'받는 이메일',254,true);if(/[\r\n,;<>]/.test(s)||!/^\S+@[^\s@]+\.[^\s@]+$/.test(s))throw Error('받는 이메일은 확인한 주소 한 개만 입력하세요');return s;}
+ function candidates(p){const values=[];if(p.salesEmail)values.push({email:p.salesEmail,label:'영업 이메일'});for(const e of String(p.note||'').match(/[A-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Z0-9.-]+\.[A-Z]{2,}/ig)||[])values.push({email:e,label:'메모의 이메일 · 용도 확인 필요'});const seen=new Set();return values.filter(v=>{try{v.email=email(v.email);if(seen.has(v.email.toLowerCase()))return false;seen.add(v.email.toLowerCase());return true;}catch{return false;}});}
+ function build(input){
+  if(!input||!Array.isArray(input.items)||input.items.length<1||input.items.length>100)throw Error('견적요청 품목은 1~100개를 선택하세요');
+  const out={number:text(input.number,'요청번호',100,true),date:date(input.date,'요청일'),supplier:{name:text(input.supplier?.name,'외주업체',200,true)},sender:Object.fromEntries(['name','businessNumber','representative','address','businessType','businessItem','phone','email'].map(k=>[k,text(input.sender?.[k],'요청자 정보',500)])),title:text(input.title||input.items[0]?.name,'건명',200,true),reference:text(input.reference,'참조',200),deliveryPlace:text(input.deliveryPlace,'납품장소'),paymentTerms:text(input.paymentTerms,'결제조건'),vatRate:input.vatRate??0.1,replyBy:date(input.replyBy,'회신기한'),delivery:text(input.delivery,'요청 납기'),request:text(input.request,'요청사항',2000),items:input.items.map(i=>{
+   if(!Number.isSafeInteger(i.quantity)||i.quantity<1||i.quantity>1e9)throw Error('요청 수량은 1 이상의 정수입니다');
+   return {name:text(i.name,'품명',200,true),drawing:text(i.drawing,'도면번호·개정',300),material:text(i.material,'재질',150),specification:text(i.specification,'규격',500),finish:text(i.finish,'후처리',300),quantity:i.quantity,unit:text(i.unit||'EA','단위',20,true),note:text(i.note,'품목 요청사항',500)};
+  })};
+  if(typeof out.vatRate!=='number'||!Number.isFinite(out.vatRate)||out.vatRate<0||out.vatRate>1)throw Error('세율을 확인하세요');if(out.sender.email)email(out.sender.email);
+  if(!out.date||!/^[A-Za-z0-9가-힣._-]+$/.test(out.number))throw Error('요청일·요청번호 확인 필요');return out;
+ }
+ function subject(request){const q=build(request);return '[견적요청] '+q.number+' · '+q.items[0].name+(q.items.length>1?' 외 '+(q.items.length-1)+'종':'');}
+ function body(request){const q=build(request);return [q.supplier.name+' 귀중','아래 품목에 대한 견적을 요청드립니다. 본 문서는 발주서 또는 구매 확정이 아닙니다.','요청번호: '+q.number,'요청일: '+q.date,q.replyBy?'회신기한: '+q.replyBy:'회신기한: 협의',q.delivery?'요청 납기: '+q.delivery:'요청 납기: 협의','',...q.items.map((i,n)=>[(n+1)+'. '+i.name,'도면/개정: '+(i.drawing||'미기재'),'규격: '+(i.specification||'미기재'),'재질: '+(i.material||'미기재'),'후처리: '+(i.finish||'미기재'),'수량: '+i.quantity+' '+i.unit,i.note?'요청사항: '+i.note:''].filter(Boolean).join('\n')),'',q.request,'단가, 부가세 포함 여부, 납기, 견적 유효기간을 회신해 주세요.','새김솔루션'].filter(v=>v!==undefined).join('\n');}
+ function mailto(request,address,confirmed){if(confirmed!==true)throw Error('받는 주소·본문·첨부를 확인해 주세요');const to=email(address),url='mailto:'+encodeURIComponent(to)+'?subject='+encodeURIComponent(subject(request))+'&body='+encodeURIComponent(body(request));if(url.length>1800)throw Error('메일창 링크 길이를 초과합니다. 본문 복사와 첨부 파일을 이용하세요.');return url;}
+ function publicFilename(index,original){const ext=String(original).split('.').at(-1).toLowerCase();if(!['pdf','png','jpg','jpeg','webp','dwg','dxf','step','stp','igs','iges'].includes(ext))throw Error('도면은 PDF·이미지·CAD 형식만 선택하세요');return '도면-'+String(index+1).padStart(2,'0')+'.'+ext;}
+ return {build,email,candidates,subject,body,mailto,publicFilename,esc};
+});

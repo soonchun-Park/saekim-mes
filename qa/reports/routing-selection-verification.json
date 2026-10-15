@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "location": "수주 / 생산 / 외주 > 품목 > 기존 자체 생산으로 배정 / 외주로 배정 버튼",
+  "checks": [
+    {
+      "theme": "light",
+      "selected": "자체",
+      "buttons": [
+        {
+          "mode": "자체",
+          "text": "✓ 자체 생산으로 배정 / 작업지시 · 선택됨",
+          "pressed": "true",
+          "background": "rgb(234, 242, 255)",
+          "border": "rgb(0, 87, 255)",
+          "color": "rgb(20, 61, 133)"
+        },
+        {
+          "mode": "외주",
+          "text": "외주로 배정 / 발주 초안",
+          "pressed": "false",
+          "background": "rgb(255, 255, 255)",
+          "border": "rgb(187, 197, 211)",
+          "color": "rgb(63, 77, 97)"
+        }
+      ]
+    },
+    {
+      "theme": "light",
+      "selected": "외주",
+      "buttons": [
+        {
+          "mode": "자체",
+          "text": "자체 생산으로 배정 / 작업지시",
+          "pressed": "false",
+          "background": "rgb(255, 255, 255)",
+          "border": "rgb(187, 197, 211)",
+          "color": "rgb(63, 77, 97)"
+        },
+        {
+          "mode": "외주",
+          "text": "✓ 외주로 배정 / 발주 초안 · 선택됨",
+          "pressed": "true",
+          "background": "rgb(234, 242, 255)",
+          "border": "rgb(0, 87, 255)",
+          "color": "rgb(20, 61, 133)"
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "selected": "자체",
+      "buttons": [
+        {
+          "mode": "자체",
+          "text": "✓ 자체 생산으로 배정 / 작업지시 · 선택됨",
+          "pressed": "true",
+          "background": "rgb(38, 62, 98)",
+          "border": "rgb(138, 181, 255)",
+          "color": "rgb(230, 237, 247)"
+        },
+        {
+          "mode": "외주",
+          "text": "외주로 배정 / 발주 초안",
+          "pressed": "false",
+          "background": "rgb(37, 50, 72)",
+          "border": "rgb(100, 115, 138)",
+          "color": "rgb(220, 231, 247)"
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "selected": "외주",
+      "buttons": [
+        {
+          "mode": "자체",
+          "text": "자체 생산으로 배정 / 작업지시",
+          "pressed": "false",
+          "background": "rgb(37, 50, 72)",
+          "border": "rgb(100, 115, 138)",
+          "color": "rgb(220, 231, 247)"
+        },
+        {
+          "mode": "외주",
+          "text": "✓ 외주로 배정 / 발주 초안 · 선택됨",
+          "pressed": "true",
+          "background": "rgb(38, 62, 98)",
+          "border": "rgb(138, 181, 255)",
+          "color": "rgb(230, 237, 247)"
+        }
+      ]
+    }
+  ],
+  "userDataChanged": false,
+  "userTabsTouched": false,
+  "codeChanged": false,
+  "transitionFinished": true,
+  "verifiedAt": "2026-10-14T16:38:36.731Z"
+}

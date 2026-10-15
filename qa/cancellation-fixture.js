@@ -1,0 +1,5 @@
+'use strict';
+const {fixture}=require('./routing-fixture'),M=require('../order-cancellation');
+function payload(order,extra={}){const v=M.preview(order);return {orderId:order.id,cancelRevision:v.status.revision,reviewSignature:v.signature,targetId:v.status.last?.id||null,actor:'가상 담당자',reason:'가상 취소·복구 검증',acknowledge:true,...extra};}
+function progressed(){const f=fixture();f.route('routeEnable');const own=f.add('자체'),out=f.add('외주',1,300);for(const x of [own,out])f.send('documentIssue',{...f.base,documentId:x.doc.id});f.send('work',{...f.base,processId:own.p.id,documentId:own.doc.id,hours:1,rate:100,good:5,bad:0});f.send('receive',{...f.base,processId:out.p.id,documentId:out.doc.id,quantity:3,rejected:0,actual:300});f.send('inspect',{...f.base,quantity:3,rejected:0});f.send('deliver',{...f.base,quantity:2});const inv=f.send('invoice',{orderId:f.base.orderId,amount:2000});f.send('payment',{orderId:f.base.orderId,date:'2026-10-15',allocations:[{invoiceId:inv.id,amount:1000}]});return f;}
+module.exports={payload,progressed,fixture};

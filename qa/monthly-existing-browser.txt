@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "checks": [
+    "orders screen has no invoice/payment input buttons",
+    "selected order context reaches settlement",
+    "invoice drafts are isolated by order and preserved across selection",
+    "payment draft preserved through settlement/orders round trip",
+    "actual partial payment updates remaining balance without delivery completion",
+    "successful payment clears only its own action draft",
+    "original quote/PDF navigation and preview remain available",
+    "1440px and 390px responsive layout without horizontal overflow"
+  ],
+  "runtimeExceptions": 0,
+  "actualFinancialTransactions": false,
+  "fixture": "fictional local ledger",
+  "operatingServersTouched": false
+}

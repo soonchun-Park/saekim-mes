@@ -1,0 +1,180 @@
+{
+  "schema": "mes-material-density-research/1",
+  "checkedAt": "2026-10-13 16:10:28 UTC",
+  "referenceOnly": true,
+  "scope": "추가 조사 7개 원명; 운영 코드·데이터 및 기존 reference 변경 없음",
+  "policy": "density는 사용자 원명과 제조사·등급의 정확한 연결이 확인된 경우만 설정. 현재 7개 모두 등급 미확정으로 null. referenceDensity는 특정 제품의 공개값이며 자동 원가계산에 사용 금지.",
+  "limitations": [
+    "검색 서비스가 여러 질의에 무관한 결과를 반환하여 제조사 홈페이지의 실제 링크로 교차 탐색했다.",
+    "접근 실패한 추정 URL은 제품 부재의 증거가 아니다.",
+    "PDF 표의 열 매핑을 시각적으로 확정하지 못한 수치는 채택하지 않았다.",
+    "비중(specific gravity)은 원문의 무차원 단위를 보존하며 밀도 g/cm3와 엄밀한 동일값으로 간주하지 않는다."
+  ],
+  "items": [
+    {
+      "name": "CLEAN PVC",
+      "classification": "evidence-not-found",
+      "manufacturer": "C.I. TAKIRON Corporation (참고 조사 대상)",
+      "applicableGrade": null,
+      "sourceURL": "https://www.tkci-plate.jp/en/product/?matl=pvc&sch=1",
+      "referenceDensity": null,
+      "searchTerms": [
+        "\"CLEAN PVC\" Takiron density",
+        "CLEAN PVC sheet density manufacturer Takiron"
+      ],
+      "shortEvidence": "제조사 PVC 제품 검색과 물성자료를 확인했지만 CLEAN PVC라는 원명을 특정 제조사·등급에 연결할 근거는 확보하지 못했다.",
+      "conditions": [
+        "CLEAN은 정확한 상품명인지 청정용도 설명인지 미확정.",
+        "일반 PVC, 내열 PVC, 발포 PVC, 금속불순물 저감 등급을 서로 대체하지 않는다."
+      ],
+      "additionalSources": [
+        "https://www.tkci-plate.jp/en/physical_property_data/"
+      ],
+      "researchStatus": "searched-no-exact-identification",
+      "density": null,
+      "unit": "g/cm3",
+      "checkedAt": "2026-10-13 16:10:28 UTC",
+      "autoApply": false
+    },
+    {
+      "name": "PP",
+      "classification": "grade-ambiguous",
+      "manufacturer": "Ensinger",
+      "applicableGrade": "TECAPRO MT white (열안정화 의료용 PP homopolymer; 사용자 소재와 미연결)",
+      "sourceURL": "https://www.ensingerplastics.com/en/shapes/pp-medical-tecapro-mt-white",
+      "referenceDensity": 0.93,
+      "searchTerms": [
+        "Proteus polypropylene density",
+        "\"polypropylene\" \"density\" \"Röchling\"",
+        "Ensinger PP TECAPRO MT white"
+      ],
+      "shortEvidence": "제조사 해당 제품 Facts에 density 0.93 g/cm3가 명시돼 있다. 의료용 열안정화 제품의 값이며 일반 PP의 확정값이 아니다.",
+      "conditions": [
+        "homopolymer/copolymer, 열안정화, 충전재, 재생재 및 정확한 제조등급 확인 필요."
+      ],
+      "researchStatus": "searched-grade-evidence",
+      "density": null,
+      "unit": "g/cm3",
+      "checkedAt": "2026-10-13 16:10:28 UTC",
+      "autoApply": false
+    },
+    {
+      "name": "URETHAN",
+      "classification": "grade-ambiguous",
+      "manufacturer": "RAMPF Advanced Polymers GmbH & Co. KG",
+      "applicableGrade": "RAKU TOOL WB-1404 polyurethane tooling board (사용자 소재와 미연결)",
+      "sourceURL": "https://www.rampf-group.com/fileadmin/Tooling/TDS/tds-EN/WB-1404-GB-board-material-product-datasheet.pdf",
+      "referenceDensity": 1.4,
+      "searchTerms": [
+        "\"RAKU-TOOL\" \"density\" polyurethane",
+        "URETHAN polyurethane manufacturer density"
+      ],
+      "shortEvidence": "제조사 2024-07-01 기술자료 1쪽에 polyurethane board WB-1404 density ca.1.40 g/cm³, ISO1183가 명시된다. 근삿값이며 제품규격 보증값은 아니다.",
+      "conditions": [
+        "우레탄 엘라스토머/폼/툴링보드, 경도, 발포 및 충전재 여부를 먼저 구분.",
+        "본 보드값을 일반 우레탄 봉·판에 적용 금지."
+      ],
+      "researchStatus": "searched-grade-evidence",
+      "density": null,
+      "unit": "g/cm3",
+      "checkedAt": "2026-10-13 16:10:28 UTC",
+      "autoApply": false
+    },
+    {
+      "name": "무정전PC",
+      "classification": "grade-ambiguous",
+      "manufacturer": "SciCron Technologies",
+      "applicableGrade": "PC-300, C-300 static dissipative coated polycarbonate; typical 0.25 inch material",
+      "sourceURL": "https://sctech.com/pc-300",
+      "referenceDensity": null,
+      "referenceSpecificGravity": 1.2,
+      "searchTerms": [
+        "PC-300 density",
+        "site.scicron.com PC-300 polycarbonate density",
+        "무정전PC static dissipative coated polycarbonate"
+      ],
+      "shortEvidence": "PC-300 제조사 자료는 C-300 대전방지 코팅 제품이며 ASTM D792 specific gravity 1.20을 표기한다. 원문은 무차원 비중이므로 g/cm³ 밀도로 동일 표기하지 않았다.",
+      "conditions": [
+        "무정전PC라는 용도명만으로 PC-300/PC-350 또는 다른 코팅·도전성 충전등급을 확정할 수 없다.",
+        "코팅 제품과 무충전 일반 PC를 구분; 전형값이며 보증값 아님."
+      ],
+      "researchStatus": "searched-grade-evidence",
+      "density": null,
+      "unit": "g/cm3",
+      "checkedAt": "2026-10-13 16:10:28 UTC",
+      "autoApply": false
+    },
+    {
+      "name": "abs",
+      "classification": "grade-ambiguous",
+      "manufacturer": "Ensinger",
+      "applicableGrade": "TECARAN ABS grey (제품군 식별만; 수치 미확보)",
+      "sourceURL": "https://www.ensingerplastics.com/en/thermoplastic-materials/abs-plastic",
+      "referenceDensity": null,
+      "searchTerms": [
+        "TECARAN ABS natural density",
+        "site.ensingerplastics.com TECARAN ABS density g cm3",
+        "Ensinger TECARAN ABS grey"
+      ],
+      "shortEvidence": "제조사 일반 ABS 페이지에서 TECARAN ABS grey 봉·판 제조를 확인했다. 사용자 abs의 등급과 제품별 밀도 수치는 확보하지 못했다.",
+      "conditions": [
+        "난연/유리섬유/도전성/재생 등급과 정확한 제조등급 미확정.",
+        "이전 제품 상세 URL은 접근 실패; 공식 일반 페이지는 읽기 가능하므로 전체 access-blocked로 처리하지 않음."
+      ],
+      "researchStatus": "searched-grade-identification-density-unverified",
+      "density": null,
+      "unit": "g/cm3",
+      "checkedAt": "2026-10-13 16:10:28 UTC",
+      "autoApply": false
+    },
+    {
+      "name": "PE",
+      "classification": "grade-ambiguous",
+      "manufacturer": "Ensinger",
+      "applicableGrade": "TECAFINE PE300 (HD), PE500 (HMW), PE1000 (UHMW) 제품군; 특정등급 미선택",
+      "sourceURL": "https://www.ensingerplastics.com/en/thermoplastic-materials/pe-plastic",
+      "referenceDensity": null,
+      "searchTerms": [
+        "Ensinger PE TECAFINE PE300 natural",
+        "PE polyethylene manufacturer density",
+        "Polystone G density"
+      ],
+      "shortEvidence": "공식 제조사 페이지가 PE300/500/1000을 서로 다른 HD/HMW/UHMW 제품군으로 구분한다. 사용자 PE의 밀도 하나를 확정할 수 없다.",
+      "conditions": [
+        "LDPE/HDPE/HMW/UHMW, 충전재·도전성·재생재 및 공급등급 확인 필요.",
+        "공식 Takiron 물성 PDF도 검토했지만 텍스트 추출의 열 매핑이 불안정하여 개별 수치를 채택하지 않았다."
+      ],
+      "additionalSources": [
+        "https://www.tkci-plate.jp/wp-content/uploads/2025/05/en_p80_p83.pdf"
+      ],
+      "researchStatus": "searched-grade-evidence-density-unverified",
+      "density": null,
+      "unit": "g/cm3",
+      "checkedAt": "2026-10-13 16:10:28 UTC",
+      "autoApply": false
+    },
+    {
+      "name": "PC",
+      "classification": "grade-ambiguous",
+      "manufacturer": "Ensinger",
+      "applicableGrade": "TECANAT GF30 natural, 30% glass fibre reinforced (사용자 소재와 미연결)",
+      "sourceURL": "https://www.ensingerplastics.com/en/shapes/glass-filled-tecanat-gf30-natural",
+      "referenceDensity": 1.42,
+      "searchTerms": [
+        "\"polycarbonate\" \"density\" \"Ensinger\"",
+        "Ensinger TECANAT natural",
+        "TECANAT GF30 natural density"
+      ],
+      "shortEvidence": "제조사 TECANAT GF30 natural Facts에 density 1.42 g/cm3가 명시된다. 30% 유리섬유 충전 등급이므로 일반 투명 PC에 적용할 수 없다.",
+      "conditions": [
+        "무충전/유리섬유/도전성/코팅 및 정확한 제조등급 확인 필요.",
+        "일반 PC 소개문 수치와 특정등급 자료를 혼합하지 않으며 GF30 참고값만 분리 기록."
+      ],
+      "researchStatus": "searched-grade-evidence",
+      "density": null,
+      "unit": "g/cm3",
+      "checkedAt": "2026-10-13 16:10:28 UTC",
+      "autoApply": false
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "target": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\saekim-design-2026-10-14T13-57-37-973Z",
+  "preparedAt": "2026-10-14T13:57:38.138Z",
+  "sourceBefore": {
+    "enterprise-ui.staged.css": "eed9e849f35ffff057e057d1e8a4809509a2326c5e85d3bc7ff3e461b55d62af",
+    "qa/build-integrated.js": "b9b7d07371d7ba2133f0a66effb302b30a8c5cab40d847471d67aecc8a297c6c",
+    "qa/integrated-ui/index.html": "dfa676b29690b5e1c153215a06f699002c94a9c93bb8207ed7db1459f84bc65c",
+    "reference/saekim-ci/saekim-horizontal.svg": null,
+    "reference/saekim-ci/saekim-symbol.svg": null,
+    "reference/saekim-ci/README.md": null
+  },
+  "sourceAfter": {
+    "enterprise-ui.staged.css": "89f5987ae5e669c7eae3e3e198b201d9a3edd70dc88cd0761b10ebd4c5304844",
+    "qa/build-integrated.js": "d380f28bf879e20b14fd943cb6841efa60fb2b8483de9109a90986ef7aede5bb",
+    "qa/integrated-ui/index.html": "39d99d37cfa94c0ac7e8c3a598f7709eba02380bf08d2bb4f03a3be2bbf979f2",
+    "reference/saekim-ci/saekim-horizontal.svg": "8b2f6e850c542056079fdae59b02718c50f23eba68dcfab468ea9a7af5d6078b",
+    "reference/saekim-ci/saekim-symbol.svg": "49061e0c5abdfe75247aa0c7c8c50e2f6791d17e062aa1cc578f6c4b45f25806",
+    "reference/saekim-ci/README.md": "52e2700c2de0cd999b09eaf93b0fa6a43ce04f858f7f7185daba657d2adcb843"
+  },
+  "unchanged": {
+    "core.js": "e51e1a9d7c647ed597c8cdfa94067614424fb6c7ed742eecf8c220edbd533c01",
+    "server.js": "edb45b432ccd32ddcdd2834f5fcb45065906bd93ca826eb94ef6e7e988f1bcf1",
+    "navigation-ui.js": "f77fd7a6ea4ec924528cfbe60be9dfd950169b22be9b5c02e69611604ecdace7",
+    "party-ui.js": "18b2233fb19868e8127e532356d675415cba53699f4f74ff3b90863606b2b63c",
+    "quote-inputs.staged.js": "5d587acac822bc2d7a360d00f2b66a2d142fb5b008f5420c519d6a3f0b916660",
+    "settlement-model.js": "47c7362de89c5988c02dea8a332b5bd84d1174587e8a2f0d8aba885d1ed80f02",
+    "bulk-import-service.js": "052346824e6a0ff61510372629c63ad3e262ce8c220439f60eb2e579daa3f1db",
+    "qa/integrated-ui/ui.js": "5a764915b102df75b7a359f925e3812c20cff80e9e1cd0070e7150669e0e6a8c",
+    "qa/integrated-ui/styles.css": "dd1b157ca1b618e8db29b0feb20036615bdb7d3985266264ba968a709834fcb2"
+  },
+  "apiBeforeHash": "276a3980e022c410919c08af7a8336370e0764c38a006759eff078ee4a36c257",
+  "dataBefore": {
+    "material-catalog.json": "084330fb868a81a0d644bab946be17f5acb5c9c5f90b59210749176d81881360",
+    "state.json": "fd09d01b92ebc650a5381cf901fed09e752d4e3e53858cf48e3a0ac412ccd54d"
+  },
+  "otherServers": {
+    "8788": {
+      "/": {
+        "status": 200,
+        "hash": "55b835724fb79a7cdac47954eec1b950cadfda87e25f513fa30655829c005c8c"
+      },
+      "/api/backup": {
+        "status": 200,
+        "hash": "14d28491c3ac0263e1317d3cc48b5b27fd30cff3898e2bc68c88e71cbc235f72"
+      },
+      "/enterprise-ui.staged.css": {
+        "status": 404,
+        "hash": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      }
+    },
+    "8789": {
+      "/": {
+        "status": 200,
+        "hash": "97819265d615d24c9b771a4a2389ee94b8aebeb8e0b59127c5df4bd570f1aef0"
+      },
+      "/api/backup": {
+        "status": 200,
+        "hash": "14d28491c3ac0263e1317d3cc48b5b27fd30cff3898e2bc68c88e71cbc235f72"
+      },
+      "/enterprise-ui.staged.css": {
+        "status": 200,
+        "hash": "4936b13ef37b7ab9f06cbcdb4e90ae88294d32086f9a3cec47168543a8b881e1"
+      }
+    },
+    "8790": {
+      "/": {
+        "status": 200,
+        "hash": "b908b65ae20572f7335fcd93409611a2196e6f76fbbf0d8687e231e8d35e53bb"
+      },
+      "/api/backup": {
+        "status": 200,
+        "hash": "7f176a1412a1fa5c66120e78588f1a6ccf5f2d0dadc69dd5adefa116ad32a24c"
+      },
+      "/enterprise-ui.staged.css": {
+        "status": 200,
+        "hash": "4936b13ef37b7ab9f06cbcdb4e90ae88294d32086f9a3cec47168543a8b881e1"
+      }
+    }
+  },
+  "code": [
+    "enterprise-ui.staged.css",
+    "qa/build-integrated.js",
+    "qa/integrated-ui/index.html",
+    "reference/saekim-ci/saekim-horizontal.svg",
+    "reference/saekim-ci/saekim-symbol.svg",
+    "reference/saekim-ci/README.md"
+  ],
+  "appliedAt": "2026-10-14T13:59:09.551Z",
+  "verifiedAt": "2026-10-14T13:59:09.933Z",
+  "preserved": true
+}

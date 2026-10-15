@@ -1,0 +1,24 @@
+{
+  "checkedAtUtc": "2026-10-13T15:16:13.594Z",
+  "httpStatus": 200,
+  "revision": 0,
+  "quoteCount": 0,
+  "orderCount": 0,
+  "activeAssets": [
+    {
+      "name": "index-material.staged.html",
+      "unchangedSinceBeforeUiWork": true
+    },
+    {
+      "name": "ui-material.staged.js",
+      "unchangedSinceBeforeUiWork": true
+    },
+    {
+      "name": "material-preview.js",
+      "unchangedSinceBeforeUiWork": true
+    }
+  ],
+  "userTabNavigated": false,
+  "userTabReloaded": false,
+  "activeServerRestarted": false
+}

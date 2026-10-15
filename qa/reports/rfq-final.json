@@ -1,0 +1,35 @@
+{
+  "url": "http://127.0.0.1:8791",
+  "applied": true,
+  "verifiedAt": "2026-10-15T12:28:44.456Z",
+  "tests": {
+    "all": 407,
+    "rfqUnitApi": 9,
+    "rfqBrowser": 14,
+    "existingQuoteProductionBrowserRuns": 4,
+    "xlsxZeroAndBlankVerified": true,
+    "pdfA4Pages": 1
+  },
+  "backup": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\quote-rfq-applied-2026-10-15T12-28-02-323Z",
+  "dataHash": "338bee6a8f2ae97d9f1701c67a776c085558f5894a7385e85f16ebbe8df7e0f2",
+  "counts": {
+    "materials": 80,
+    "prices": 69,
+    "parties": 9,
+    "quotes": 2,
+    "orders": 1
+  },
+  "features": [
+    "견적 등록 → 외주 견적요청서",
+    "선택 품목·외주업체·조건·회사정보 직접 확인",
+    "PDF 인쇄 저장·업체 회신용 XLSX",
+    "선택 도면 + XLSX 포함 .eml 초안"
+  ],
+  "limitations": [
+    "메일 서비스 미연결 · 실제 발송은 사용자 메일 앱에서 실행",
+    "회사정보 마스터 없음 · RFQ 창에서 직접 입력",
+    "첨부 원문 내부의 기밀은 사용자가 확인"
+  ],
+  "externalMessagesSent": 0,
+  "userTabsTouched": false
+}

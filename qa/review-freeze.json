@@ -1,0 +1,227 @@
+{
+  "CapturedAtUtc": "2026-10-12T14:44:51.8926242Z",
+  "Project": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-lab",
+  "CodeChangesPaused": true,
+  "Files": [
+    {
+      "File": "apps-script\\appsscript.json",
+      "SHA256": "4581A26F54B40E733E8E99D37393592ACBB81075897084F95F822C7420D3514C",
+      "Bytes": 206
+    },
+    {
+      "File": "apps-script\\build.js",
+      "SHA256": "07641409D93CCE7BB232FE241D22F41DFB4DB314C639919B7946C87E900A094D",
+      "Bytes": 1014
+    },
+    {
+      "File": "apps-script\\Code.gs",
+      "SHA256": "D62DE65D7EB3E80D513465568A660DEDCB831E1AF399AFFA455951E4D18625BC",
+      "Bytes": 2766
+    },
+    {
+      "File": "apps-script\\Core.gs",
+      "SHA256": "FE5C36F1162FD47D405DC7B6624BA6E49C604F1EAD155DAC023EA1D9C4CD0B9F",
+      "Bytes": 17518
+    },
+    {
+      "File": "apps-script\\MaterialModel.gs",
+      "SHA256": "9D306AB8A3FCC29C1EF04610499D6D32AB6BDB26ABE9F3FFC748A423B6D345D4",
+      "Bytes": 5260
+    },
+    {
+      "File": "apps-script\\RowStore.gs",
+      "SHA256": "70E4ACDA4E58CF5065CE43E2C22710D03D3659F2EA6EBB59BDEE2B2C34084BA1",
+      "Bytes": 27201
+    },
+    {
+      "File": "attachments.js",
+      "SHA256": "5EC597EE13085EB28EB78FB5EF6F41DBAC80CDFAF7A19EE7C37F3CBCB86601D7",
+      "Bytes": 8837
+    },
+    {
+      "File": "attachments.test.js",
+      "SHA256": "A8976F3890EB3075AA7A8AD8CB2A91666D3BB2028B597AE4DF65168A5270ACBC",
+      "Bytes": 12727
+    },
+    {
+      "File": "browser-drawing-qa.js",
+      "SHA256": "F021C6DC84B25F5C3D3EDD99A9112AFE443EB5447166B980DC70FFA0AD3D44ED",
+      "Bytes": 12160
+    },
+    {
+      "File": "browser-google-mock-qa.js",
+      "SHA256": "A99560AB13493B391F804338BFE50E05FDA71924B15A88278335F8C2F7331833",
+      "Bytes": 5680
+    },
+    {
+      "File": "browser-input-qa.js",
+      "SHA256": "3E55C83967617B2B6D3F79889DEE34641AE8210BBCE696C8D342EFCED06933E8",
+      "Bytes": 5989
+    },
+    {
+      "File": "browser-material-qa.js",
+      "SHA256": "DBD1815E1FDBD42B10112E283C5BFDF2D3AF81F7A26B80B307A2BCC16F846459",
+      "Bytes": 6298
+    },
+    {
+      "File": "browser-qa.js",
+      "SHA256": "31AF579786632B653B7C1742920725A04E1341202D9EF3ACDA72413671C7C133",
+      "Bytes": 9509
+    },
+    {
+      "File": "check-user-screen.js",
+      "SHA256": "A9C54B71BFA0D8E88C52761FB4B1871ED0303E771760BA4F9E9090D48C03831D",
+      "Bytes": 2236
+    },
+    {
+      "File": "core.js",
+      "SHA256": "C10F472E1B9578E0FBEBF3D59D89F4F7ED4D19D27F1A81205EC287F8D75B6A3B",
+      "Bytes": 25552
+    },
+    {
+      "File": "drawing-preview.js",
+      "SHA256": "BE13FA0114F8DE383702C2BDC16FC61BE3A662A536FDCA34B1652531728632A2",
+      "Bytes": 800
+    },
+    {
+      "File": "drawing-ui.fragment.staged.js",
+      "SHA256": "879B0AED17D67C4D54603B1CB2CBA42BDE3F9ABFD0EF3F6B54BE14A04785267F",
+      "Bytes": 7110
+    },
+    {
+      "File": "drawing-ui.test.js",
+      "SHA256": "BA5C64CE344039107BA68F42482C221C86CEC8400F374948C8161520157BF5D4",
+      "Bytes": 6854
+    },
+    {
+      "File": "google-adapter.test.js",
+      "SHA256": "D93110E6FDBE87AD752A09ECD1C8B455D784E61ECA4EAB8F7CFD177822099F33",
+      "Bytes": 6535
+    },
+    {
+      "File": "index-drawing.staged.html",
+      "SHA256": "D560BA7E70EEC95F87851B1C5303294E11027298CED515A1CBCC1397868DDDF9",
+      "Bytes": 5648
+    },
+    {
+      "File": "index-material.staged.html",
+      "SHA256": "55B835724FB79A7CDAC47954EEC1B950CADFDA87E25F513FA30655829C005C8C",
+      "Bytes": 5155
+    },
+    {
+      "File": "index.html",
+      "SHA256": "A91C56E6CB09564B3D7867B81A02A68554C69F6E2B61FA540A1716821106DA8F",
+      "Bytes": 5031
+    },
+    {
+      "File": "lint.js",
+      "SHA256": "DBB930F9683440CF04BB3A0F3437FF73A1F72CA0AD85F263E09C16F44B47E42A",
+      "Bytes": 1756
+    },
+    {
+      "File": "local-pagination.test.js",
+      "SHA256": "B588867DE508FEE012FD08D3C43AB534EE42EB5CAB6998DE9528F329C78F6636",
+      "Bytes": 3258
+    },
+    {
+      "File": "material-fields.staged.js",
+      "SHA256": "00A2E082E7A14A8AD4BBA7459B7854171E3F787F6CCA6CB376396A6BE96BB5A8",
+      "Bytes": 876
+    },
+    {
+      "File": "material-integration.test.js",
+      "SHA256": "ED733D3513E83AC94EE8120E3A8599E2FF706230FE72E0E5CFC2360308F82D74",
+      "Bytes": 2484
+    },
+    {
+      "File": "material-model.js",
+      "SHA256": "9D306AB8A3FCC29C1EF04610499D6D32AB6BDB26ABE9F3FFC748A423B6D345D4",
+      "Bytes": 5260
+    },
+    {
+      "File": "material-model.test.js",
+      "SHA256": "831D0C319CFB5D10BEAE10ECDCED2C40EF854B06FA660989B3EEE0A3AD06DC13",
+      "Bytes": 4824
+    },
+    {
+      "File": "material-preview.js",
+      "SHA256": "DEB12711C2706905D5286D9AFDA64C2C14254F84F49A10DAF49124FDE2E6AA87",
+      "Bytes": 844
+    },
+    {
+      "File": "material-ui.test.js",
+      "SHA256": "C65F8147C32D7D8FF43EB875D88FD681A261FE424D02ECDBC6497C574AECB244",
+      "Bytes": 5872
+    },
+    {
+      "File": "package.json",
+      "SHA256": "964BBEC8F74E34723751449C50D22E3DBC6DA41B2F35B92BDA07D600C162A3EA",
+      "Bytes": 816
+    },
+    {
+      "File": "rowstore-mock.js",
+      "SHA256": "E9EDB2F7E2F62870FAA1BE97CD002BCC3AE0ADF94CF0B52887364E91CD3B1C41",
+      "Bytes": 5119
+    },
+    {
+      "File": "rowstore.test.js",
+      "SHA256": "2959975460709A3E0F17B22795BB8003522B785F2652E2CDCDB51731ABCC6241",
+      "Bytes": 9901
+    },
+    {
+      "File": "scale-test.js",
+      "SHA256": "9E5015E7E34BDB82B4B2D21A897AF060292BA0DBB84578CC25BAE7B265D64337",
+      "Bytes": 7198
+    },
+    {
+      "File": "server.js",
+      "SHA256": "13AB227577F662CDCD7FCB3FD553F054711184D46C297594E11BD2B78C6B466D",
+      "Bytes": 7462
+    },
+    {
+      "File": "styles-drawing.staged.css",
+      "SHA256": "0106B71A317B4D317CD53A4FC2528FF6672B1F556CE3F23AD771BC4AF9D21A5F",
+      "Bytes": 9451
+    },
+    {
+      "File": "styles-material.staged.css",
+      "SHA256": "F6EF4526D115A4A4412284BD0DFE7B2DA856E59A1EA5AFE7BEBDDB47A7B3E44C",
+      "Bytes": 8262
+    },
+    {
+      "File": "styles.css",
+      "SHA256": "9F992E41DE81CD8FB2AC2D0719F999E4F553EBEC0423A3F5A35FB230CD173945",
+      "Bytes": 7568
+    },
+    {
+      "File": "supply.test.js",
+      "SHA256": "FB5D77DD2AD2D577C0114823A2115F4F449D890469952EFA45FA17550ABD3243",
+      "Bytes": 2855
+    },
+    {
+      "File": "test.js",
+      "SHA256": "909CF8F822C91609D01958693939B1EE1E7CBBBDD0130A7FC01B0EE774E6FDF8",
+      "Bytes": 12941
+    },
+    {
+      "File": "ui-drawing.staged.js",
+      "SHA256": "3EFCEF8A901DC65AD8EC586EFD7E67F804C47C342F024A8E66A55DCB83D7C623",
+      "Bytes": 55671
+    },
+    {
+      "File": "ui-material.staged.js",
+      "SHA256": "D1E7784BCCF98818D103D54CA21222BA398FEAF21D52F92A445793662F301866",
+      "Bytes": 37011
+    },
+    {
+      "File": "ui.js",
+      "SHA256": "50016CF18F3E811C5F1D34089A42BE4E903535CB561E4336A8F9D893C0028473",
+      "Bytes": 29141
+    },
+    {
+      "File": "ui.test.js",
+      "SHA256": "B28FC122D2A52E848AA929692EEA52EC9246CDFE6E773B712105F16628AC45C9",
+      "Bytes": 11255
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+[
+  {
+    "screen": "dashboard",
+    "mainTop": 70,
+    "layoutTop": 70,
+    "mainHeight": 2216,
+    "marginTop": "0px",
+    "marginBottom": "0px",
+    "alignSelf": "auto",
+    "gridRows": []
+  },
+  {
+    "screen": "quotes",
+    "mainTop": 70,
+    "layoutTop": 70,
+    "mainHeight": 1719,
+    "marginTop": "0px",
+    "marginBottom": "0px",
+    "alignSelf": "auto",
+    "gridRows": [
+      {
+        "alignItems": "normal",
+        "children": [
+          {
+            "tag": "LABEL",
+            "top": 396.5625,
+            "height": 67
+          },
+          {
+            "tag": "LABEL",
+            "top": 396.5625,
+            "height": 67
+          },
+          {
+            "tag": "DIV",
+            "top": 477.5625,
+            "height": 139
+          },
+          {
+            "tag": "LABEL",
+            "top": 630.359375,
+            "height": 116
+          },
+          {
+            "tag": "LABEL",
+            "top": 630.359375,
+            "height": 116
+          }
+        ]
+      },
+      {
+        "alignItems": "normal",
+        "children": [
+          {
+            "tag": "LABEL",
+            "top": 492.5625,
+            "height": 67
+          },
+          {
+            "tag": "LABEL",
+            "top": 492.5625,
+            "height": 67
+          }
+        ]
+      },
+      {
+        "alignItems": "normal",
+        "children": [
+          {
+            "tag": "LABEL",
+            "top": 846.953125,
+            "height": 67
+          },
+          {
+            "tag": "LABEL",
+            "top": 846.953125,
+            "height": 67
+          },
+          {
+            "tag": "LABEL",
+            "top": 846.953125,
+            "height": 67
+          },
+          {
+            "tag": "LABEL",
+            "top": 846.953125,
+            "height": 67
+          }
+        ]
+      },
+      {
+        "alignItems": "normal",
+        "children": [
+          {
+            "tag": "LABEL",
+            "top": 1033.34375,
+            "height": 67
+          },
+          {
+            "tag": "LABEL",
+            "top": 1033.34375,
+            "height": 67
+          },
+          {
+            "tag": "LABEL",
+            "top": 1033.34375,
+            "height": 67
+          },
+          {
+            "tag": "LABEL",
+            "top": 1033.34375,
+            "height": 67
+          },
+          {
+            "tag": "LABEL",
+            "top": 1033.34375,
+            "height": 67
+          },
+          {
+            "tag": "LABEL",
+            "top": 1114.34375,
+            "height": 67
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "screen": "orders",
+    "mainTop": 335.265625,
+    "layoutTop": 70,
+    "mainHeight": 499,
+    "marginTop": "0px",
+    "marginBottom": "0px",
+    "alignSelf": "auto",
+    "gridRows": []
+  },
+  {
+    "screen": "settlements",
+    "mainTop": 70,
+    "layoutTop": 70,
+    "mainHeight": 1305,
+    "marginTop": "0px",
+    "marginBottom": "0px",
+    "alignSelf": "auto",
+    "gridRows": []
+  },
+  {
+    "screen": "materials",
+    "mainTop": 70,
+    "layoutTop": 70,
+    "mainHeight": 1234,
+    "marginTop": "0px",
+    "marginBottom": "0px",
+    "alignSelf": "auto",
+    "gridRows": []
+  },
+  {
+    "screen": "parties",
+    "mainTop": 258.015625,
+    "layoutTop": 70,
+    "mainHeight": 654,
+    "marginTop": "0px",
+    "marginBottom": "0px",
+    "alignSelf": "auto",
+    "gridRows": [
+      {
+        "alignItems": "normal",
+        "children": [
+          {
+            "tag": "LABEL",
+            "top": 584.578125,
+            "height": 67
+          },
+          {
+            "tag": "LABEL",
+            "top": 584.578125,
+            "height": 67
+          },
+          {
+            "tag": "LABEL",
+            "top": 584.578125,
+            "height": 67
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "screen": "inspections",
+    "mainTop": 286.765625,
+    "layoutTop": 70,
+    "mainHeight": 596,
+    "marginTop": "0px",
+    "marginBottom": "0px",
+    "alignSelf": "auto",
+    "gridRows": []
+  }
+]

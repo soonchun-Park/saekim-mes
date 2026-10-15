@@ -1,0 +1,17 @@
+{
+  "environment": "isolated background Chrome target, fake data and ephemeral fixture port",
+  "passed": true,
+  "checks": [
+    "blur focus/no auto-popup",
+    "comparison acknowledgements",
+    "sales price only",
+    "native dialog close",
+    "scheduled/actual counts",
+    "undated separate",
+    "detail navigation",
+    "week view",
+    "arrow-key calendar focus",
+    "390px no horizontal overflow"
+  ],
+  "runtimeErrors": []
+}

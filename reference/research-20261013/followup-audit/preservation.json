@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-10-13T17:08:18.796Z",
+  "codeFilesCompared": 97,
+  "changedCodeFiles": [],
+  "serviceDataFiles": [
+    "attachments",
+    "material-catalog.json",
+    "material-certificates"
+  ],
+  "catalogSha256": "4387d9b0e6570377831dc7c2ecdc0248988bc974157c160bcbd817d58cdfa1bc",
+  "note": "조사에서 서비스 data/ 경로 쓰기 및 프로세스 재시작 명령은 실행하지 않음. 새 사용자 입력은 수정하지 않음."
+}

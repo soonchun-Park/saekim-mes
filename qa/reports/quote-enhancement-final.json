@@ -1,0 +1,129 @@
+{
+  "completedAt": "2026-10-14T02:20:47.046Z",
+  "status": "completed",
+  "url": "http://127.0.0.1:8791",
+  "changes": [
+    "길이·외경·추가 길이·발주 외경 쉼표와 소수점/커서 유지, 계산과 저장은 숫자",
+    "매입처와 단가 후보는 절단/가공여유 아래",
+    "한국 시간 기본 견적일자, 날짜별 견적-YYYYMMDD-001 발급, UUID/기존 번호 보존",
+    "일반/XLSX/새 버전의 원자적 번호 발급, 같은 요청 재시도·동시 저장 충돌·취소·백업 복원에서 중복 재발급 방지",
+    "전체 견적 날짜 조회/정렬과 최대 25건 표 목록",
+    "행/Enter 상세 팝업, 품목/수량/단가/합계/납기, ESC/초점 복귀, 기존 문서/인쇄 및 업무 연결"
+  ],
+  "tests": {
+    "automated": {
+      "total": 317,
+      "passed": 317,
+      "failed": 0,
+      "log": "qa/quote-enhancement-tests.txt"
+    },
+    "syntaxFiles": 97,
+    "browser": [
+      {
+        "report": "qa/reports/quote-enhancement-browser-qa.json",
+        "checks": 18
+      },
+      {
+        "report": "qa/reports/bulk-browser-qa.json",
+        "checks": 8
+      },
+      {
+        "report": "qa/reports/partner-browser-qa.json",
+        "checks": 10
+      },
+      {
+        "report": "qa/reports/quote-draft-browser-qa.json",
+        "checks": 8
+      }
+    ],
+    "browserChecks": 44,
+    "liveReadOnly": {
+      "passed": true,
+      "url": "http://127.0.0.1:8791",
+      "ownHeadlessTab": true,
+      "userTabsTouched": false,
+      "commandsOrUploadsSent": 0,
+      "backupUnchanged": "276a3980e022c410919c08af7a8336370e0764c38a006759eff078ee4a36c257",
+      "quoteDateInput": true,
+      "quoteTableFilters": true,
+      "dimensionComma": true,
+      "supplierPosition": true,
+      "bulkButtons": 4,
+      "businessFields": true,
+      "formattersMounted": true,
+      "emptyQuoteDialog": true,
+      "runtimeErrors": 0,
+      "at": "2026-10-14T02:19:18.796Z"
+    },
+    "fixtures": "Only fictional data in separate temporary directories and own headless tabs"
+  },
+  "preservation": {
+    "diskFilesByteIdentical": true,
+    "backupBeforeSHA256": "276a3980e022c410919c08af7a8336370e0764c38a006759eff078ee4a36c257",
+    "backupAfterSHA256": "276a3980e022c410919c08af7a8336370e0764c38a006759eff078ee4a36c257",
+    "userTabsTouched": false,
+    "liveTestDataInserted": false,
+    "counts": {
+      "materials": 80,
+      "prices": 69,
+      "parties": 1,
+      "quotes": 1,
+      "orders": 0
+    },
+    "pidBefore": 21104,
+    "pidAfter": 22916,
+    "otherServers": [
+      {
+        "port": 8788,
+        "pid": 9484
+      },
+      {
+        "port": 8789,
+        "pid": 36684
+      },
+      {
+        "port": 8790,
+        "pid": 44144
+      }
+    ],
+    "otherServerHTMLAndBackupUnchanged": true
+  },
+  "backupDirectory": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\quote-enhancement-2026-10-14T02-18-01-762Z",
+  "sourceSHA256": {
+    "quote-inputs.staged.js": "5d587acac822bc2d7a360d00f2b66a2d142fb5b008f5420c519d6a3f0b916660",
+    "quote-inputs.staged.test.js": "c766b22f4f88ede22024a8eeac2b4fee07540adae5d79a9a02333ff5ee5cb5ac",
+    "material-catalog-ui.js": "94a3e707106e9bf2c06ec5b245257bcfb969993ae8df86ed39802b06b4843d5e",
+    "core.js": "e51e1a9d7c647ed597c8cdfa94067614424fb6c7ed742eecf8c220edbd533c01",
+    "server.js": "edb45b432ccd32ddcdd2834f5fcb45065906bd93ca826eb94ef6e7e988f1bcf1",
+    "quote-list-model.js": "7069b86edd44331e72170d46fa34d749ca2261e87bc21241d775e5a1b64ba5f5",
+    "quote-list-ui.js": "1739d631ea19267a4dfca62a372df5c8ae8f47092b002238750fa4b46c47c3ba",
+    "quote-list-ui.css": "0246e85944dbf1f8a9c03c1dc6eb580804dd00bb5219e413121a8726242fd3ec",
+    "navigation-ui.js": "f77fd7a6ea4ec924528cfbe60be9dfd950169b22be9b5c02e69611604ecdace7",
+    "quote-document.staged.js": "84b4ad6d55676b298e33090dd3675bea2fad0ce26afb190fc2e06ba31efaee4d",
+    "bulk-import-model.js": "a79178e27e3b47d6263e8832aa5b2e2b7602a9a4368e03c9a64de3a175c23a5a",
+    "bulk-import-ui.js": "2ef0c6a06b40d28110b19ab4dca4fe11f8f7b515c10e8c31431b822780d83214",
+    "qa/build-integrated.js": "b9b7d07371d7ba2133f0a66effb302b30a8c5cab40d847471d67aecc8a297c6c",
+    "qa/integrated-server.js": "8ba856ce5ba1f33e4af61680444f85e869dc789a49023a9be27a84282d7892c8",
+    "qa/integrated-ui/ui.js": "5a764915b102df75b7a359f925e3812c20cff80e9e1cd0070e7150669e0e6a8c",
+    "qa/integrated-ui/index.html": "dfa676b29690b5e1c153215a06f699002c94a9c93bb8207ed7db1459f84bc65c",
+    "local-pagination.test.js": "3f36e8c011e9a80b34f8e36f95aeaec5b117742262c0262cc8ca5589b9bce9d5",
+    "quote-number.test.js": "b7d947599dcd01790be788bbc27ce39b4f4f7e4303a84f0b8eec4cc8eb9596a3",
+    "package.json": "d3c55d3fde98f01cd74fb2f67258c46f26af8ea55fcb50468e21721643a34202",
+    "README.md": "f66eb47b3922b2d59c4c08823ba61c8f524771be49d3e0ec0ffa994c51864ac1",
+    "qa/quote-enhancement-browser-qa.js": "e062616b317450df81527b896938453449d53a2070838da836bab174c1ffdbd9"
+  },
+  "usage": [
+    "작성 중인 내용을 저장/보관한 다음 기존 탭을 새로고침합니다.",
+    "견적일자를 확인하고 일반 저장 또는 XLSX 미리보기·확정으로 새 번호를 받습니다.",
+    "견적 목록 날짜 범위를 조회하고 행/상세 버튼으로 세부내용을 확인합니다.",
+    "작업 / 출력 또는 상세 팝업에서 새 견적 버전·전환·미리보기·인쇄를 사용합니다."
+  ],
+  "limitations": [
+    "기존 견적에 번호를 소급 발급하거나 기존 번호·연결을 변경하지 않습니다.",
+    "새 견적 버전은 새 날짜별 번호를 받으며 이전 버전은 보존합니다.",
+    "엑셀목록은 화면 표 형식입니다. 별도 견적 목록 XLSX 내보내기는 추가하지 않았습니다.",
+    "PDF 저장은 기존 인쇄 대화상자의 PDF 저장 방식입니다.",
+    "이전에 로드된 사용자 탭은 새로고침 후 새 UI를 표시합니다."
+  ],
+  "remainingBlockers": []
+}

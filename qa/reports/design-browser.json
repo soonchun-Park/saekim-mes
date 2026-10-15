@@ -1,0 +1,169 @@
+{
+  "passed": true,
+  "checks": [
+    "원본 SVG 바이트 그대로 표시·외부 이미지 요청 없음·새김 CI 파랑 일치",
+    "7개 주요 페이지·견적표·견적 상세·거래처 폼: 1440px/390px 실제 렌더 및 가로 넘침 없음",
+    "태블릿 1024px에서 주요 필터·입력·합계 줄바꿈 유지",
+    "화면 왕복 후 미저장 견적·쉼표 단가 보존, 수량 우측 정렬과 납기 한 줄 유지",
+    "실제 Tab 키 이동 시 가시적 포커스 테두리, 견적 상세 Escape 닫기",
+    "가상 XLSX 업로드·미리보기 팝업 PC/모바일 표시 후 취소·저장 0건",
+    "전체 디자인 점검 동안 원장 변경 0건·런타임 오류 0건·기존 사용자 탭 접근 없음"
+  ],
+  "screenshots": [
+    "design-dashboard-desktop.png",
+    "design-quotes-desktop.png",
+    "design-orders-desktop.png",
+    "design-settlements-desktop.png",
+    "design-materials-desktop.png",
+    "design-parties-desktop.png",
+    "design-inspections-desktop.png",
+    "design-quote-table-desktop.png",
+    "design-quote-dialog-desktop.png",
+    "design-party-dialog-desktop.png",
+    "design-dashboard-mobile.png",
+    "design-quotes-mobile.png",
+    "design-orders-mobile.png",
+    "design-settlements-mobile.png",
+    "design-materials-mobile.png",
+    "design-parties-mobile.png",
+    "design-inspections-mobile.png",
+    "design-quote-table-mobile.png",
+    "design-quote-dialog-mobile.png",
+    "design-party-dialog-mobile.png",
+    "design-xlsx-preview-desktop.png",
+    "design-xlsx-preview-mobile.png"
+  ],
+  "measurements": [
+    {
+      "label": "dashboard-desktop",
+      "width": 1440,
+      "scrollWidth": 1425
+    },
+    {
+      "label": "quotes-desktop",
+      "width": 1440,
+      "scrollWidth": 1425
+    },
+    {
+      "label": "orders-desktop",
+      "width": 1440,
+      "scrollWidth": 1425
+    },
+    {
+      "label": "settlements-desktop",
+      "width": 1440,
+      "scrollWidth": 1425
+    },
+    {
+      "label": "materials-desktop",
+      "width": 1440,
+      "scrollWidth": 1425
+    },
+    {
+      "label": "parties-desktop",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "label": "inspections-desktop",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "label": "quote-table-desktop",
+      "width": 1440,
+      "scrollWidth": 1425
+    },
+    {
+      "label": "quote-dialog-desktop",
+      "width": 1440,
+      "scrollWidth": 1425
+    },
+    {
+      "label": "party-dialog-desktop",
+      "width": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "label": "dashboard-mobile",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "label": "quotes-mobile",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "label": "orders-mobile",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "label": "settlements-mobile",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "label": "materials-mobile",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "label": "parties-mobile",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "label": "inspections-mobile",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "label": "quote-table-mobile",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "label": "quote-dialog-mobile",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "label": "party-dialog-mobile",
+      "width": 390,
+      "scrollWidth": 390
+    },
+    {
+      "label": "dashboard-tablet",
+      "width": 1024,
+      "scrollWidth": 1009
+    },
+    {
+      "label": "quotes-tablet",
+      "width": 1024,
+      "scrollWidth": 1009
+    },
+    {
+      "label": "settlements-tablet",
+      "width": 1024,
+      "scrollWidth": 1009
+    },
+    {
+      "label": "xlsx-preview-desktop",
+      "width": 1440,
+      "scrollWidth": 1425
+    },
+    {
+      "label": "xlsx-preview-mobile",
+      "width": 390,
+      "scrollWidth": 390
+    }
+  ],
+  "logoSha256": "8b2f6e850c542056079fdae59b02718c50f23eba68dcfab468ea9a7af5d6078b",
+  "userDataTouched": false,
+  "userTabsTouched": false,
+  "runtimeErrors": 0,
+  "syntheticDataOnly": true,
+  "at": "2026-10-14T13:56:17.649Z"
+}

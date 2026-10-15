@@ -1,0 +1,116 @@
+{
+  "theme": "dark",
+  "checks": [
+    "settled partial invoice stays in progress; delivered and delivered-plus-settled have distinct labels, colors and editability",
+    "every stage and status legend chip meets 4.5:1 text contrast in actual computed styles",
+    "day details and document dialog show the same status with the underlying quantity/payment basis",
+    "completed filter retains original behavior without inventing closing events or dates",
+    "390px layout preserves text labels and has no document horizontal overflow",
+    "all status reads and navigation leave state, dates, documents and backup byte-equivalent"
+  ],
+  "contrast": [
+    {
+      "label": "견적",
+      "ratio": 8.971777788165205,
+      "fg": "rgb(197, 227, 255)",
+      "bg": "rgb(24, 57, 87)"
+    },
+    {
+      "label": "수주",
+      "ratio": 8.989720274639627,
+      "fg": "rgb(220, 216, 255)",
+      "bg": "rgb(48, 48, 92)"
+    },
+    {
+      "label": "자체 생산",
+      "ratio": 9.632240361459491,
+      "fg": "rgb(198, 237, 255)",
+      "bg": "rgb(24, 59, 73)"
+    },
+    {
+      "label": "외주",
+      "ratio": 8.987624232651926,
+      "fg": "rgb(255, 225, 168)",
+      "bg": "rgb(73, 55, 27)"
+    },
+    {
+      "label": "입고",
+      "ratio": 9.659896510554939,
+      "fg": "rgb(190, 241, 239)",
+      "bg": "rgb(25, 60, 64)"
+    },
+    {
+      "label": "납품",
+      "ratio": 9.934352692822353,
+      "fg": "rgb(198, 244, 215)",
+      "bg": "rgb(25, 61, 43)"
+    },
+    {
+      "label": "대기",
+      "ratio": 9.89163218074991,
+      "fg": "rgb(220, 229, 242)",
+      "bg": "rgb(41, 52, 69)"
+    },
+    {
+      "label": "진행중",
+      "ratio": 8.987624232651926,
+      "fg": "rgb(255, 225, 168)",
+      "bg": "rgb(73, 55, 27)"
+    },
+    {
+      "label": "완료",
+      "ratio": 9.934352692822353,
+      "fg": "rgb(198, 244, 215)",
+      "bg": "rgb(25, 61, 43)"
+    },
+    {
+      "label": "납품·정산완료",
+      "ratio": 9.881169132696678,
+      "fg": "rgb(236, 219, 255)",
+      "bg": "rgb(59, 40, 89)"
+    },
+    {
+      "label": "수주전환",
+      "ratio": 8.971777788165205,
+      "fg": "rgb(197, 227, 255)",
+      "bg": "rgb(24, 57, 87)"
+    },
+    {
+      "label": "개정전",
+      "ratio": 9.89163218074991,
+      "fg": "rgb(220, 229, 242)",
+      "bg": "rgb(41, 52, 69)"
+    },
+    {
+      "label": "보류",
+      "ratio": 9.74363444449313,
+      "fg": "rgb(255, 219, 187)",
+      "bg": "rgb(72, 44, 28)"
+    },
+    {
+      "label": "취소",
+      "ratio": 9.763781992789417,
+      "fg": "rgb(255, 211, 214)",
+      "bg": "rgb(76, 36, 41)"
+    },
+    {
+      "label": "실적기록",
+      "ratio": 9.659896510554939,
+      "fg": "rgb(190, 241, 239)",
+      "bg": "rgb(25, 60, 64)"
+    },
+    {
+      "label": "대상0",
+      "ratio": 9.89163218074991,
+      "fg": "rgb(220, 229, 242)",
+      "bg": "rgb(41, 52, 69)"
+    },
+    {
+      "label": "확인필요",
+      "ratio": 9.89163218074991,
+      "fg": "rgb(220, 229, 242)",
+      "bg": "rgb(41, 52, 69)"
+    }
+  ],
+  "ok": true
+}

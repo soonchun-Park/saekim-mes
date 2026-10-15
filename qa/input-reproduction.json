@@ -1,0 +1,10 @@
+{
+  "reproduced": true,
+  "observation": {
+    "value": "1",
+    "start": null,
+    "end": null
+  },
+  "dimensionChildListMutations": 20,
+  "method": "real Chrome CDP individual keyboard events, 90ms spacing"
+}

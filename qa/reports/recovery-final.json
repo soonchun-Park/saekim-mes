@@ -1,0 +1,230 @@
+{
+  "status": "completed-with-user-decisions-pending",
+  "url": "http://127.0.0.1:8791",
+  "at": "2026-10-15T12:42:53.535Z",
+  "serverPid": 51140,
+  "features": {
+    "bulkImport": {
+      "kinds": [
+        "견적 품목",
+        "거래처",
+        "소재",
+        "매입처별 단가"
+      ],
+      "sheets": [
+        "입력",
+        "작성안내",
+        "작성예시",
+        "참조ID"
+      ],
+      "flow": "양식 다운로드 → 입력 시트 작성 → 업로드 미리보기 → 오류·중복 확인 → 선택 행 저장 확정",
+      "buttons": [
+        {
+          "screen": "견적 등록",
+          "label": "품목 양식 다운로드",
+          "file": "mes-quote-template.xlsx"
+        },
+        {
+          "screen": "거래처 관리",
+          "label": "거래처 양식 다운로드",
+          "file": "mes-party-template.xlsx"
+        },
+        {
+          "screen": "소재·단가 관리",
+          "label": "소재 양식 다운로드",
+          "file": "mes-material-template.xlsx"
+        },
+        {
+          "screen": "소재·단가 관리",
+          "label": "매입 단가 양식 다운로드",
+          "file": "mes-price-template.xlsx"
+        }
+      ],
+      "outputs": [
+        "새김MES_거래처_등록양식.xlsx",
+        "새김MES_견적품목_등록양식.xlsx",
+        "새김MES_매입처별단가_등록양식.xlsx",
+        "새김MES_소재_등록양식.xlsx"
+      ],
+      "libraryFiles": {
+        "quote": "libfile_366f3f0dd37481918e708b7213037e43",
+        "party": "libfile_8a800476258c81918246835bd1843115",
+        "material": "libfile_a36dedf6e0fc8191b06ac288fd0523e6",
+        "price": "libfile_0693398a0a8c819196dddc53d2603b3d"
+      }
+    },
+    "party": {
+      "businessTypeAndItem": true,
+      "businessAndPhoneHyphens": true,
+      "leadingZerosAndAccountPreserved": true,
+      "modelBusinessNumber": "113-81-96403",
+      "excludedPerson": "육신현"
+    },
+    "rfq": {
+      "url": "http://127.0.0.1:8791",
+      "applied": true,
+      "verifiedAt": "2026-10-15T12:28:44.456Z",
+      "tests": {
+        "all": 407,
+        "rfqUnitApi": 9,
+        "rfqBrowser": 14,
+        "existingQuoteProductionBrowserRuns": 4,
+        "xlsxZeroAndBlankVerified": true,
+        "pdfA4Pages": 1
+      },
+      "backup": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\quote-rfq-applied-2026-10-15T12-28-02-323Z",
+      "dataHash": "338bee6a8f2ae97d9f1701c67a776c085558f5894a7385e85f16ebbe8df7e0f2",
+      "counts": {
+        "materials": 80,
+        "prices": 69,
+        "parties": 9,
+        "quotes": 2,
+        "orders": 1
+      },
+      "features": [
+        "견적 등록 → 외주 견적요청서",
+        "선택 품목·외주업체·조건·회사정보 직접 확인",
+        "PDF 인쇄 저장·업체 회신용 XLSX",
+        "선택 도면 + XLSX 포함 .eml 초안"
+      ],
+      "limitations": [
+        "메일 서비스 미연결 · 실제 발송은 사용자 메일 앱에서 실행",
+        "회사정보 마스터 없음 · RFQ 창에서 직접 입력",
+        "첨부 원문 내부의 기밀은 사용자가 확인"
+      ],
+      "externalMessagesSent": 0,
+      "userTabsTouched": false
+    },
+    "orderCancellation": {
+      "location": "수주 / 생산 / 외주 → 수주 상세 하단 → 수주 취소…",
+      "flow": "영향 확인 → 담당자·사유·확인란 → 수주 취소 확정",
+      "restore": "동일 위치 수주 취소 복구… → 현황·담당자·사유 확인 → 복구 확정",
+      "preserves": [
+        "생산실적",
+        "외주 발행 문서",
+        "입고",
+        "납품",
+        "청구",
+        "입금",
+        "재고",
+        "클로징 이력"
+      ],
+      "blocksNewBusinessWhileCanceled": true,
+      "followUp": [
+        "미수금",
+        "기발행 외주 문서·업체 연락",
+        "기존 입고·납품과 재고",
+        "반품·환불 필요 여부"
+      ],
+      "externalActions": 0,
+      "realOrdersCanceled": 0
+    },
+    "sourceQuotes": {
+      "registered": 1,
+      "registeredQuotes": [
+        {
+          "id": "423342a3-eb42-4eef-9255-3a9501f13177",
+          "number": "SK-261009-001",
+          "date": "2026-10-09",
+          "quantity": 250,
+          "unitPrice": 7000,
+          "supply": 1750000,
+          "vat": 175000,
+          "total": 1925000
+        }
+      ],
+      "held": [
+        {
+          "folders": [
+            "1002 MLV-TJ 지그부품 24종 (SK-261002-001)"
+          ],
+          "reason": "24종 견적요청서의 단가·금액 빈값. 0원 등록하지 않음."
+        },
+        {
+          "folders": [
+            "1007 SP COBRACULUM V27 (SK-261007-001)",
+            "1014 모델솔루션 수량 변경에 따른 견적 요청 (SK-261014-001)"
+          ],
+          "reason": "150개 기존 견적과 70개 변경 요청. 최종 70개 단가·견적 미확인."
+        },
+        {
+          "folders": [
+            "1014-2"
+          ],
+          "reason": "331588-01/392141-01 각 1000/2500/5000/8500개 수량별 대안. 합산 금지, 선택 수량 미정."
+        }
+      ],
+      "excluded": [
+        {
+          "source": "1012_Intu(새김).zip / PO26101201_새김.xlsx",
+          "reason": "발주서. 새로운 견적으로 등록하지 않음; 10월9일 견적과 연결되는 후속 자료."
+        },
+        {
+          "source": "1014-2 / 새김솔루션(20261015).pdf",
+          "reason": "에스엔이노텍의 매입 견적. 고객 매출 견적으로 등록하지 않음."
+        },
+        {
+          "source": "XLSX/PDF 세 쌍 및 COBRACULUM 재첨부 견적",
+          "reason": "동일 문서 쌍·기존 150개 견적 중복. 개별 견적으로 만들지 않음."
+        },
+        {
+          "source": "메일 원본 (SK-261007-002 중복·취소)",
+          "reason": "폴더의 중복·취소 표시와 동일 150개 문의 확인. 신규 견적으로 만들지 않음."
+        }
+      ],
+      "originalFolderUnmodified": true
+    }
+  },
+  "verification": {
+    "unitApiTestsPassed": 418,
+    "browserRegressionRuns": 22,
+    "cancellationBrowserRuns": 3,
+    "cancellationChecks": 15,
+    "rfqBrowserChecks": 14,
+    "liveReadOnlyChecks": 14,
+    "lintFiles": 129,
+    "liveCommandsOrUploads": 0,
+    "liveDataUnchangedDuringDeployment": "338bee6a8f2ae97d9f1701c67a776c085558f5894a7385e85f16ebbe8df7e0f2",
+    "counts": {
+      "materials": 80,
+      "prices": 69,
+      "parties": 9,
+      "quotes": 2,
+      "orders": 1
+    },
+    "oldPorts8788to8790Preserved": true,
+    "userTabsTouched": false
+  },
+  "backup": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\quote-cancellation-applied-2026-10-15T12-40-50-949Z",
+  "quoteImportBackup": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\model-quotes-reviewed-2026-10-15T12-16-15-487Z",
+  "pending": [
+    {
+      "state": "awaiting-user-information",
+      "target": "MLV-TJ 24종",
+      "question": "단가·금액이 빈 견적요청서입니다. 최종 단가가 확정된 견적본이 있습니까?"
+    },
+    {
+      "state": "awaiting-user-information",
+      "target": "SP COBRACULUM V27",
+      "question": "기존 원문 SK-2610-001(10월 8일, 150개 × 162,000원)과 10월 14일의 70개 변경 요청 중 최종 70개 견적 단가·견적본을 확인해 주세요. 폴더명 번호나 메일 언급 날짜로 덮어쓰지 않았습니다."
+    },
+    {
+      "state": "awaiting-user-information",
+      "target": "SK-261015-001 / PEEK 부싱·튜브",
+      "question": "각 품목의 1,000/2,500/5,000/8,500개 대안 중 선택 수량이 있습니까? 선택 전에는 합산 견적으로 등록하지 않습니다.",
+      "archiveAssessment": "수량 대안 원문 보관은 가능하지만 현재 MES 보관 스키마는 합계형 견적입니다. 원본 파일·검토 결과만 보존했고 앱 견적 등록은 보류했습니다."
+    },
+    {
+      "state": "capability-not-connected",
+      "target": "RFQ 실제 메일 발송",
+      "reason": "메일 서비스 미연결. 첨부 포함 .eml 초안은 완성됐으며 지원하는 메일 앱에서 사용자가 최종 발송합니다."
+    },
+    {
+      "state": "data-not-configured",
+      "target": "문서 회사 정보",
+      "reason": "회사정보 마스터가 없어 RFQ에서 직접 입력합니다. 기존 견적·발주 문서의 미설정 부가세·회사정보는 임의로 만들지 않습니다."
+    }
+  ],
+  "deniedActions": [],
+  "uncertainActions": []
+}

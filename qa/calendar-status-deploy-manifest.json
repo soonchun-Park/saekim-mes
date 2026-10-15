@@ -1,0 +1,95 @@
+{
+  "target": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\calendar-status-applied-2026-10-14T22-16-14-075Z",
+  "preparedAt": "2026-10-14T22:16:14.181Z",
+  "apiBeforeHash": "d115e24d07ac54b2f7b276b4c577ff20c1b1aaaa9ded448b6a34c0a58131cbc7",
+  "dataBefore": {
+    "material-catalog.json": "084330fb868a81a0d644bab946be17f5acb5c9c5f90b59210749176d81881360",
+    "state.json": "6f1ccf1e5ba7b40d91fc17cde3b582d747539620776460d10d5e827b128a5e9c"
+  },
+  "sourceBefore": {
+    "calendar-status.js": null,
+    "calendar-status.css": null,
+    "dashboard-model.js": "336bef8a1ee0f19d4044c919f9557e32e0fb239285839dfa3765bc0e9044ac67",
+    "dashboard-ui.js": "97e2d987be32362fa4a13d770f456939602ab0ebd3ecb823d45206368051e528",
+    "dashboard-ui.css": "ffc304c86d2df667d49cb1dcdeb13bf52b34cec283f1c299f21ff4d3d8b2ad3a",
+    "dashboard-details-ui.js": "eddc2ae292735104a54583fc58e52ee9a0a08ce235e18122587aa3c2bc8d6abd",
+    "qa/build-integrated.js": "d667d0b8be8d71e2d1b23a5a6fe5a1cd785a3a4f525788ede4b566a88ba076d9",
+    "qa/integrated-server.js": "e8d430d4f9641000605d9d8e6a9bd3fd157d4753f59ac5c496682ab25b8f0ec8",
+    "qa/integrated-ui/index.html": "3a3c383cbe607361e53632d24b3313f97fb82a5bdf3198341ceede6e39a9a6ba",
+    "qa/integrated-ui/ui.js": "042dd5b48996e19d954578f192fb740137aaf85fde0b1225c2a9cb152a69ca9f",
+    "package.json": "2a99e3b12a0048b1142e952389c16065a64b16797cbd433836923c89ad5edac8",
+    "calendar-status.test.js": null,
+    "qa/calendar-status-browser-qa.js": null,
+    "qa/run-calendar-status-regressions.js": null,
+    "qa/calendar-status-live-readonly.js": null,
+    "CALENDAR-STATUS-NOTES.md": null
+  },
+  "sourceAfter": {
+    "calendar-status.js": "a63b318fb8563037620882ce063230429673c3d1285ea2d9c39b35cbbb33d71d",
+    "calendar-status.css": "a5cd4a98a17d955e1f0196d69c76c4a1a230fabfac970698e56a3359a09df793",
+    "dashboard-model.js": "1923818ec11299bed1767b1c04fa4823e94bada959620767aebb91d124625e9e",
+    "dashboard-ui.js": "d4402719d053d5136ee41a2aae3360261e48552748ea2b60460d93f5e9271cc3",
+    "dashboard-ui.css": "ffc304c86d2df667d49cb1dcdeb13bf52b34cec283f1c299f21ff4d3d8b2ad3a",
+    "dashboard-details-ui.js": "3b69421720268fb87dee49f762ade4740a4721c869dc79e961625549147139bc",
+    "qa/build-integrated.js": "9bf4559e9242974a13a5fea431055e1c3d8f7a94202c38749d96a09470504e1a",
+    "qa/integrated-server.js": "b57c1fc9d7d8b55f68c3d48807659c53fe49e191539b2a0f9e5d7f28e2e12106",
+    "qa/integrated-ui/index.html": "af159df28dc3851546051f0df8ee5853d50144e8485903159fcfbac8430ea73e",
+    "qa/integrated-ui/ui.js": "042dd5b48996e19d954578f192fb740137aaf85fde0b1225c2a9cb152a69ca9f",
+    "package.json": "b52bb96cfecc32c4ec6f58ea6ff782bff94a6c663ce0fd4929b434f6211958f8",
+    "calendar-status.test.js": "834a31d41191b193a0b67e82ba20b0129dbe9f648f33d5d57a428d977249ecbc",
+    "qa/calendar-status-browser-qa.js": "8470da61f02137f851ad78ecf34b17fc937711ce0306caa7c7fc4fd6a0f661a6",
+    "qa/run-calendar-status-regressions.js": "47481307ad144cfeded2383568cff074b651acbf06c4164c3aa7c77f3049d8e0",
+    "qa/calendar-status-live-readonly.js": "aadd8bae2fbe8e946eee65490be43bddd23b82c79fecfeee22505a275a823df5",
+    "CALENDAR-STATUS-NOTES.md": "fdea6a8609b3e9552e8051c96a09f6ccf776e71303b5f473cff8b3a0695228de"
+  },
+  "otherServers": {
+    "8788": {
+      "html": "55b835724fb79a7cdac47954eec1b950cadfda87e25f513fa30655829c005c8c",
+      "backup": "14d28491c3ac0263e1317d3cc48b5b27fd30cff3898e2bc68c88e71cbc235f72"
+    },
+    "8789": {
+      "html": "97819265d615d24c9b771a4a2389ee94b8aebeb8e0b59127c5df4bd570f1aef0",
+      "backup": "14d28491c3ac0263e1317d3cc48b5b27fd30cff3898e2bc68c88e71cbc235f72"
+    },
+    "8790": {
+      "html": "b908b65ae20572f7335fcd93409611a2196e6f76fbbf0d8687e231e8d35e53bb",
+      "backup": "7f176a1412a1fa5c66120e78588f1a6ccf5f2d0dadc69dd5adefa116ad32a24c"
+    }
+  },
+  "code": [
+    "calendar-status.js",
+    "calendar-status.css",
+    "dashboard-model.js",
+    "dashboard-ui.js",
+    "dashboard-ui.css",
+    "dashboard-details-ui.js",
+    "qa/build-integrated.js",
+    "qa/integrated-server.js",
+    "qa/integrated-ui/index.html",
+    "qa/integrated-ui/ui.js",
+    "package.json",
+    "calendar-status.test.js",
+    "qa/calendar-status-browser-qa.js",
+    "qa/run-calendar-status-regressions.js",
+    "qa/calendar-status-live-readonly.js",
+    "CALENDAR-STATUS-NOTES.md"
+  ],
+  "oldPid": 66524,
+  "appliedAt": "2026-10-14T22:16:43.289Z",
+  "counts": {
+    "materials": 80,
+    "prices": 69,
+    "parties": 1,
+    "quotes": 1,
+    "orders": 1
+  },
+  "verifiedAt": "2026-10-14T22:17:06.946Z",
+  "preserved": true,
+  "newPid": 64424,
+  "portsAfter": {
+    "8788": 9484,
+    "8789": 36684,
+    "8790": 44144,
+    "8791": 64424
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "target": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\quote-rfq-applied-2026-10-15T12-28-02-323Z",
+  "preparedAt": "2026-10-15T12:28:02.438Z",
+  "apiBeforeHash": "338bee6a8f2ae97d9f1701c67a776c085558f5894a7385e85f16ebbe8df7e0f2",
+  "dataBefore": {
+    "material-catalog.json": "211fccd2d613552c1cc9ae75011cc4d5b8bec1cfc35b6c02ca3f197ac5444e50",
+    "state.json": "1554c22b92f963e7237b893b0a1e44aa12c41481611c5abea2fc613c6dad7660"
+  },
+  "sourceBefore": {
+    "server.js": "03378c1cd7c586b674b5aaa819cfcece9b0cf3eb0e86f9c06aaa59fb7c484da1",
+    "xlsx-values.js": "5d3eb94a44ce8e79168b3964fb63080d92f23cbd865c07b1e6f4e7d942be491d",
+    "rfq-model.js": null,
+    "rfq-document.js": null,
+    "rfq-workbook.js": null,
+    "rfq-ui.js": null,
+    "rfq-ui.css": null,
+    "rfq.test.js": null,
+    "templates/rfq.xlsx": null,
+    "reference/saekim-ci/saekim-rfq-logo.png": null,
+    "quote-document.staged.js": "fe7b51281c2bff6116a81392ee4151d9a44138f46cbfb67ccbb3947f37000bfe",
+    "production-documents.js": "2c1fc6c7997efb43a2e4c39280da2e3f7ff571b69db9fcbd6980c62f6b5c9510",
+    "package.json": "a5fe822a9737a0c1be62ff5edee4eb8504906646e5310eca88f7877e08d95416",
+    "qa/build-integrated.js": "30965cb9b5e51f03ff3e1440d20d4a1a58067b2a3b0e279e686040ed78168dd3",
+    "qa/integrated-server.js": "3359b838cf06ba7c56171692ee08ed3dfd238289e3c906f22e3d983ddc8d2a39",
+    "qa/integrated-ui/index.html": "8d40829799657db2fb4f074a2c1f5b043ed6139c949e26770eb770cdbc3b30a3",
+    "qa/integrated-ui/ui.js": "6ddb5dd9c8edc27786b79aeb4ef606bae996f6fc77f50e3935dbdb747da677ad",
+    "qa/build-rfq-template.mjs": null,
+    "qa/rfq-browser-qa.js": null,
+    "qa/inspect-rfq.mjs": null
+  },
+  "sourceAfter": {
+    "server.js": "79877b207ef5c08a33506404d7cec982d360fd3bea2c2fe517a00d7029f85de0",
+    "xlsx-values.js": "41eccc1fe95b3d0bb7d4636513411fde14670ab74f04ea71758f44c51a94ebb1",
+    "rfq-model.js": "15a2f78349202c7caf3e5a7102ef572b22b5c8f090726bbb1b8174528f80bd87",
+    "rfq-document.js": "51253855ad8f0cd68446d692e7321fbda059a98e8e79aad29c0056a7fce55056",
+    "rfq-workbook.js": "172be324508a6e907bc0bc388c3f7137f8a975add06fd9495ff4f9043d10c676",
+    "rfq-ui.js": "371dfa7db21fae4667cbc70939d23130e7131641be3a4ba380cb90bc510b9234",
+    "rfq-ui.css": "ef168c53b96b57c7170369ebd63c6de48e22b6c42b8078088bb3368680d7ad1e",
+    "rfq.test.js": "f3c7a2c8eefa4beb00a35724b0075d02b387b807ff46d58c4aa29b608b1f5104",
+    "templates/rfq.xlsx": "04096f81e58412db4cd9b425f3f43fa9ba12c4bede6d8c0aa375cc98fd4a79d3",
+    "reference/saekim-ci/saekim-rfq-logo.png": "aa2a402c37b79da49dcb8d27b1a82e3b5a2605f0d9ac292ac1031ffba39551d3",
+    "quote-document.staged.js": "540b3b7506cd8d9ac2cc6305c0bf3b1c52c7b5a3c53030f94a7c49e9a27f34ea",
+    "production-documents.js": "4edf1d660009830a4264fde0c225ffd6f9002e98afcca0c7e1e40cfe6f47df55",
+    "package.json": "0b94888b62a2a07ab7c9121f435e4dd36090d9dea78293bd58681ea45589e349",
+    "qa/build-integrated.js": "0a0000bf1d49b8becef3d8ae0127c3f6f5e9996b805b4b37e37bc71653ddf983",
+    "qa/integrated-server.js": "51c8365f2f683d08f705c7821393ceab12da2ca21143891c503734a6465168d1",
+    "qa/integrated-ui/index.html": "85db2beb7b00793a771f07a2cfc30f577eb9a696d580bdc8da4a0602532ae745",
+    "qa/integrated-ui/ui.js": "6ddb5dd9c8edc27786b79aeb4ef606bae996f6fc77f50e3935dbdb747da677ad",
+    "qa/build-rfq-template.mjs": "f89a6af4d992949d65dc2c2adb5e14d1d335c81149269efb59b1babc5535153e",
+    "qa/rfq-browser-qa.js": "fc3523b96cb6df3685a00493f576da4018731ddf31b047c86748d0d70e65ba1b",
+    "qa/inspect-rfq.mjs": "fe2cffc0dff1adb86a714e2b6339aa7fa8cbdd98318c93c9082eb33f0bd90911"
+  },
+  "otherServers": {
+    "8788": {
+      "online": false
+    },
+    "8789": {
+      "online": false
+    },
+    "8790": {
+      "online": false
+    }
+  },
+  "code": [
+    "server.js",
+    "xlsx-values.js",
+    "rfq-model.js",
+    "rfq-document.js",
+    "rfq-workbook.js",
+    "rfq-ui.js",
+    "rfq-ui.css",
+    "rfq.test.js",
+    "templates/rfq.xlsx",
+    "reference/saekim-ci/saekim-rfq-logo.png",
+    "quote-document.staged.js",
+    "production-documents.js",
+    "package.json",
+    "qa/build-integrated.js",
+    "qa/integrated-server.js",
+    "qa/integrated-ui/index.html",
+    "qa/integrated-ui/ui.js",
+    "qa/build-rfq-template.mjs",
+    "qa/rfq-browser-qa.js",
+    "qa/inspect-rfq.mjs"
+  ],
+  "oldPid": 34128,
+  "appliedAt": "2026-10-15T12:28:43.714Z",
+  "counts": {
+    "materials": 80,
+    "prices": 69,
+    "parties": 9,
+    "quotes": 2,
+    "orders": 1
+  },
+  "verifiedAt": "2026-10-15T12:28:44.456Z",
+  "preserved": true
+}

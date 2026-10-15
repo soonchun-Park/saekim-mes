@@ -1,0 +1,1 @@
+Static lint passed: 110 JavaScript/Apps Script syntax files; three UI HTML IDs, local assets and element references. No third-party ESLint dependency.

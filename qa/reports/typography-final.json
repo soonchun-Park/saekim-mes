@@ -1,0 +1,116 @@
+{
+  "passed": true,
+  "url": "http://127.0.0.1:8791",
+  "font": "SUIT Variable v2.0.5",
+  "license": "SIL Open Font License 1.1",
+  "reference": "M3PN Korean body/title computed CSS and rendered glyphs inspected in isolated Headless Chrome 155",
+  "fullTests": 325,
+  "browserRegressionScenarios": 140,
+  "runs": [
+    {
+      "theme": "light",
+      "script": "quote-enhancement",
+      "passed": true,
+      "checks": 18,
+      "file": "qa/typography-light-quote-enhancement-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "monthly-settlement",
+      "passed": true,
+      "checks": 14,
+      "file": "qa/typography-light-monthly-settlement-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "party-bank",
+      "passed": true,
+      "checks": 7,
+      "file": "qa/typography-light-party-bank-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "bulk",
+      "passed": true,
+      "checks": 8,
+      "file": "qa/typography-light-bulk-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "partner",
+      "passed": true,
+      "checks": 10,
+      "file": "qa/typography-light-partner-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "production",
+      "passed": true,
+      "checks": 13,
+      "file": "qa/typography-light-production-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "quote-enhancement",
+      "passed": true,
+      "checks": 18,
+      "file": "qa/typography-dark-quote-enhancement-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "monthly-settlement",
+      "passed": true,
+      "checks": 14,
+      "file": "qa/typography-dark-monthly-settlement-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "party-bank",
+      "passed": true,
+      "checks": 7,
+      "file": "qa/typography-dark-party-bank-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "bulk",
+      "passed": true,
+      "checks": 8,
+      "file": "qa/typography-dark-bulk-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "partner",
+      "passed": true,
+      "checks": 10,
+      "file": "qa/typography-dark-partner-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "production",
+      "passed": true,
+      "checks": 13,
+      "file": "qa/typography-dark-production-browser-qa.txt"
+    }
+  ],
+  "typographyChecks": 8,
+  "themeChecks": 9,
+  "darkContrastSamples": 553,
+  "contrastIssues": 0,
+  "liveChecks": 14,
+  "backup": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\typography-theme-2026-10-14T14-40-09-891Z",
+  "dataHash": "276a3980e022c410919c08af7a8336370e0764c38a006759eff078ee4a36c257",
+  "dataPreserved": true,
+  "businessRulesUnchanged": true,
+  "serverRestarted": false,
+  "serverPids": {
+    "8788": 9484,
+    "8789": 36684,
+    "8790": 44144,
+    "8791": 50952
+  },
+  "userTabsTouched": false,
+  "actualDataCommands": 0,
+  "externalFontRequests": 0,
+  "remainingBlockers": [],
+  "at": "2026-10-14T14:43:20.877Z"
+}

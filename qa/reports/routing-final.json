@@ -1,0 +1,83 @@
+{
+  "completed": true,
+  "applied": true,
+  "url": "http://127.0.0.1:8791",
+  "at": "2026-10-14T16:34:46.065Z",
+  "processId": 66524,
+  "features": [
+    "Sequential own/external processes per order line; dynamic add, edit, reorder, remove and status",
+    "Range calendar, whole-range drag, end resize, explicit only/following preview and atomic undo",
+    "External process total, missing vs zero, latest-version-only sum, VAT labels and issued-document settlement integration",
+    "Final-stage-only inventory and predecessor-good-quantity caps",
+    "Immutable quote/issued document history, explicit opt-in for eligible old single assignment",
+    "Screen/menu title: 수주 / 생산 / 외주; separate settlement remains"
+  ],
+  "tests": {
+    "unitIntegrationPassed": 360,
+    "failed": 0,
+    "syntaxFiles": 110,
+    "browserWorkflows": 18,
+    "browserChecks": 218,
+    "liveReadOnlyScreens": 14,
+    "runtimeErrors": 0,
+    "simulatedDiskFailure": true,
+    "lostResponseRetryAcrossReload": true,
+    "backupRestoreAndRestart": true,
+    "realCustomerTestMutations": 0,
+    "pdfs": [
+      {
+        "file": "qa/reports/routing-purchase-light.pdf",
+        "bytes": 287375,
+        "pages": 1,
+        "sha256": "11adb6caf2da7f9a1b6426c11b1664261c038d20191da9ecac86ee031ae4fbfa"
+      },
+      {
+        "file": "qa/reports/routing-purchase-dark.pdf",
+        "bytes": 287378,
+        "pages": 1,
+        "sha256": "a5ec722b3b7042c7544bc887325d45eb303e46d6489646c1f67e27179c49dc19"
+      }
+    ]
+  },
+  "preservation": {
+    "apiBackupBeforeAndAfter": "d115e24d07ac54b2f7b276b4c577ff20c1b1aaaa9ded448b6a34c0a58131cbc7",
+    "dataFileHashesUnchanged": true,
+    "counts": {
+      "materials": 80,
+      "prices": 69,
+      "parties": 1,
+      "quotes": 1,
+      "orders": 1
+    },
+    "userTabsTouched": false,
+    "userUnsavedInputsTouched": false,
+    "oldPortsPreserved": {
+      "8788": 9484,
+      "8789": 36684,
+      "8790": 44144,
+      "8791": 66524
+    },
+    "externalSendOrDeployment": false,
+    "googleConnectionChanged": false
+  },
+  "backups": [
+    "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\sequential-routing-2026-10-14T15-53-55-073Z",
+    "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\sequential-routing-applied-2026-10-14T16-28-34-588Z",
+    "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\sequential-routing-settlement-applied-2026-10-14T16-32-59-507Z"
+  ],
+  "limitations": [
+    "Existing parallel quantity-split or legacy processes are not automatically migrated.",
+    "Structural changes are locked after actual production begins; incomplete schedules and status may still change.",
+    "Schedule edits change current plans, not already-issued documents.",
+    "No automatic VAT calculation, external purchase execution or payment posting."
+  ],
+  "blockers": [],
+  "usage": "수주 / 생산 / 외주 → 품목 → 공정 추가 · 순차 공정 시작. 자체/외주와 기간·업체·총액 입력 → 확인 저장. 캘린더에서 이동/기간 조정 → 이 공정만 또는 후속 함께 → 영향 확인 후 확정.",
+  "evidence": [
+    "ROUTING-NOTES.md",
+    "qa/reports/routing-full-tests.txt",
+    "qa/reports/routing-regressions.json",
+    "qa/reports/routing-live8791.json",
+    "qa/routing-settlement-deploy-manifest.json"
+  ]
+}

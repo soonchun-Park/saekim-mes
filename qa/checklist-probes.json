@@ -1,0 +1,392 @@
+{
+  "atUtc": "2026-10-12T14:53:15.274Z",
+  "mode": "pure functions / fictional in-memory states only; no server or application data writes",
+  "cases": {
+    "TC-A1": {
+      "productKg": 1.57,
+      "kg": 2.17602,
+      "unitMaterialRaw": 2611.2239999999997,
+      "totalKg": 21.760199999999998,
+      "totalMaterialRaw": 26112.239999999998,
+      "unitMaterialWon": 2611,
+      "totalMaterialWon": 26112,
+      "stockDimensions": {
+        "length": 110,
+        "width": 210,
+        "height": 12
+      },
+      "volumeMm3": 277200
+    },
+    "TC-A2": {
+      "kg": 1.958277419445549,
+      "unitMaterialRaw": 2937.4161291683236,
+      "totalKg": 39.16554838891098,
+      "totalMaterialRaw": 58748.32258336647,
+      "unitMaterialWon": 2937,
+      "totalMaterialWon": 58748,
+      "stockDimensions": {
+        "diameter": 55,
+        "length": 105
+      },
+      "volumeMm3": 249462.09164911453
+    },
+    "TC-A3": {
+      "inputMapping": "OD60 thickness5 => innerDiameter50 (manual mapping; UI has no thickness conversion)",
+      "kg": 1.356382628187393,
+      "unitMaterialRaw": 1627.6591538248715,
+      "totalKg": 1.356382628187393,
+      "totalMaterialRaw": 1627.6591538248715,
+      "unitMaterialWon": 1628,
+      "totalMaterialWon": 1628,
+      "stockDimensions": {
+        "diameter": 60,
+        "innerDiameter": 50,
+        "length": 200
+      },
+      "volumeMm3": 172787.59594743862,
+      "invalidInnerDiameter": [
+        {
+          "n": 0,
+          "accepted": false,
+          "error": "내경은 유한한 양수 값이 필요합니다"
+        },
+        {
+          "n": -1,
+          "accepted": false,
+          "error": "내경은 유한한 양수 값이 필요합니다"
+        },
+        {
+          "n": 60,
+          "accepted": false,
+          "error": "내경은 외경보다 작아야 합니다"
+        },
+        {
+          "n": 61,
+          "accepted": false,
+          "error": "내경은 외경보다 작아야 합니다"
+        }
+      ]
+    },
+    "TC-A4": {
+      "accepted": true,
+      "estimate": {
+        "kg": 2176.02,
+        "unitMaterialRaw": 2611224,
+        "totalKg": 21760.2,
+        "totalMaterialRaw": 26112240,
+        "unitMaterialWon": 2611224,
+        "totalMaterialWon": 26112240,
+        "stockDimensions": {
+          "length": 110,
+          "width": 210,
+          "height": 12
+        },
+        "volumeMm3": 277200
+      }
+    },
+    "TC-B1": {
+      "contract": {
+        "kg": 0.785,
+        "material": 2937,
+        "processing": 8000,
+        "total": 10937
+      },
+      "customer": {
+        "materialExcluded": true,
+        "kg": null,
+        "material": null,
+        "processing": 8000,
+        "total": 8000
+      },
+      "otherCostIgnored": true
+    },
+    "TC-B2": {
+      "rawMarkup": 15518.1,
+      "currentQuoteMarkup": 15519,
+      "rawMargin": 17052.857142857145,
+      "currentQuoteMargin": 17053,
+      "confirmed16000ProfitMargin": 0.2539375,
+      "confirmed16000Markup": 0.34037027728910113
+    },
+    "TC-B3": {
+      "accepted": false,
+      "error": "kg당 단가은 유한한 양수 값이 필요합니다"
+    },
+    "TC-C1": {
+      "orders": 1,
+      "lines": 2,
+      "revision": 2,
+      "newKeyRepeat": {
+        "accepted": false,
+        "error": "이미 수주 전환됨"
+      }
+    },
+    "TC-C2": {
+      "sameKeyReplayAfterFirstApplyCommit": {
+        "orders": 1,
+        "lines": 2
+      },
+      "networkDropConversionNotNewlyExecuted": true
+    },
+    "TC-D1": {
+      "produced": 90,
+      "line": {
+        "id": "a4c5588b-e520-464e-b091-3ffbd7da1691",
+        "quantity": 100,
+        "inspected": 90,
+        "accepted": 85,
+        "rejected": 5,
+        "delivered": 40,
+        "stockProduced": 90,
+        "inventory": {
+          "수입검사": 0,
+          "라인투입": 0,
+          "재고": 0,
+          "완제품": 45,
+          "반품": 5
+        },
+        "stockMoves": [],
+        "materialActual": [],
+        "processes": [
+          {
+            "id": "d4bdf408-21af-4db9-87da-dda603b8db9f",
+            "name": "가공",
+            "mode": "자체",
+            "estimated": 0,
+            "actual": 100,
+            "hours": 1,
+            "good": 100,
+            "bad": 0,
+            "canceled": false,
+            "received": 0,
+            "createdDrawing": {
+              "revision": "A",
+              "attachments": [],
+              "reason": "견적 발행 도면 확정",
+              "actor": "시험 사용자",
+              "confirmedAt": "2026-10-12T14:53:15.284Z"
+            },
+            "drawingRecords": [
+              {
+                "id": "c8cb3ea1-aab6-4f70-92a3-c3390d2f25ec",
+                "type": "work",
+                "time": "2026-10-12T14:53:15.286Z",
+                "drawing": {
+                  "revision": "A",
+                  "attachments": [],
+                  "reason": "견적 발행 도면 확정",
+                  "actor": "시험 사용자",
+                  "confirmedAt": "2026-10-12T14:53:15.284Z"
+                },
+                "payload": {
+                  "orderId": "502556bd-f683-4191-a62c-bb92c2b185c6",
+                  "lineId": "a4c5588b-e520-464e-b091-3ffbd7da1691",
+                  "processId": "d4bdf408-21af-4db9-87da-dda603b8db9f",
+                  "hours": 1,
+                  "rate": 100,
+                  "good": 100,
+                  "bad": 0
+                }
+              }
+            ]
+          },
+          {
+            "id": "6fa9a15a-0ff8-4144-bf76-7d6f413e37bb",
+            "name": "도금",
+            "mode": "외주",
+            "estimated": 0,
+            "actual": 1000,
+            "hours": 0,
+            "good": 0,
+            "bad": 0,
+            "canceled": false,
+            "received": 90,
+            "createdDrawing": {
+              "revision": "A",
+              "attachments": [],
+              "reason": "견적 발행 도면 확정",
+              "actor": "시험 사용자",
+              "confirmedAt": "2026-10-12T14:53:15.284Z"
+            },
+            "drawingRecords": [
+              {
+                "id": "a498ced2-f5c6-4a1d-b781-0995523ebf51",
+                "type": "receive",
+                "time": "2026-10-12T14:53:15.287Z",
+                "drawing": {
+                  "revision": "A",
+                  "attachments": [],
+                  "reason": "견적 발행 도면 확정",
+                  "actor": "시험 사용자",
+                  "confirmedAt": "2026-10-12T14:53:15.284Z"
+                },
+                "payload": {
+                  "orderId": "502556bd-f683-4191-a62c-bb92c2b185c6",
+                  "lineId": "a4c5588b-e520-464e-b091-3ffbd7da1691",
+                  "processId": "6fa9a15a-0ff8-4144-bf76-7d6f413e37bb",
+                  "quantity": 90,
+                  "actual": 1000
+                }
+              }
+            ]
+          }
+        ],
+        "orderDrawing": {
+          "revision": "A",
+          "attachments": [],
+          "reason": "견적 발행 도면 확정",
+          "actor": "시험 사용자",
+          "confirmedAt": "2026-10-12T14:53:15.284Z"
+        },
+        "currentDrawing": {
+          "revision": "A",
+          "attachments": [],
+          "reason": "견적 발행 도면 확정",
+          "actor": "시험 사용자",
+          "confirmedAt": "2026-10-12T14:53:15.284Z"
+        },
+        "drawingHistory": [],
+        "inspectionDrawings": [
+          {
+            "id": "0e73bcbd-099f-4c12-a27b-ebb57bf7c517",
+            "time": "2026-10-12T14:53:15.287Z",
+            "drawing": {
+              "revision": "A",
+              "attachments": [],
+              "reason": "견적 발행 도면 확정",
+              "actor": "시험 사용자",
+              "confirmedAt": "2026-10-12T14:53:15.284Z"
+            },
+            "quantity": 90,
+            "rejected": 5
+          }
+        ]
+      },
+      "summary": {
+        "sale": 1500000,
+        "billed": 0,
+        "paid": 0,
+        "balance": 0,
+        "unbilled": 1500000,
+        "complete": false,
+        "estimated": 0,
+        "processingEstimated": 0,
+        "actual": 1100,
+        "materialEstimated": 0,
+        "materialActual": 0,
+        "estimateComplete": false,
+        "quantity": 100,
+        "produced": 90,
+        "delivered": 40,
+        "productionProgress": 0.9,
+        "deliveryProgress": 0.4,
+        "paymentProgress": 0
+      },
+      "outsourceShipCommand": {
+        "accepted": false,
+        "error": "지원하지 않는 작업"
+      }
+    },
+    "TC-D2": {
+      "vatInvoice": {
+        "accepted": false,
+        "error": "납품금액 초과 청구"
+      },
+      "genericPartial": {
+        "sale": 660000,
+        "billed": 660000,
+        "paid": 300000,
+        "balance": 360000,
+        "unbilled": 0,
+        "complete": false,
+        "estimated": 0,
+        "processingEstimated": 0,
+        "actual": 1,
+        "materialEstimated": 0,
+        "materialActual": 0,
+        "estimateComplete": false,
+        "quantity": 1,
+        "produced": 1,
+        "delivered": 1,
+        "productionProgress": 1,
+        "deliveryProgress": 1,
+        "paymentProgress": 0.45454545454545453
+      },
+      "genericFull": {
+        "sale": 660000,
+        "billed": 660000,
+        "paid": 660000,
+        "balance": 0,
+        "unbilled": 0,
+        "complete": true,
+        "estimated": 0,
+        "processingEstimated": 0,
+        "actual": 1,
+        "materialEstimated": 0,
+        "materialActual": 0,
+        "estimateComplete": false,
+        "quantity": 1,
+        "produced": 1,
+        "delivered": 1,
+        "productionProgress": 1,
+        "deliveryProgress": 1,
+        "paymentProgress": 1
+      }
+    },
+    "TC-D3": {
+      "summary": {
+        "sale": 660000,
+        "billed": 660000,
+        "paid": 659000,
+        "balance": 1000,
+        "unbilled": 0,
+        "complete": false,
+        "estimated": 0,
+        "processingEstimated": 0,
+        "actual": 1,
+        "materialEstimated": 0,
+        "materialActual": 0,
+        "estimateComplete": false,
+        "quantity": 1,
+        "produced": 1,
+        "delivered": 1,
+        "productionProgress": 1,
+        "deliveryProgress": 1,
+        "paymentProgress": 0.9984848484848485
+      },
+      "feeAdjustment": {
+        "accepted": false,
+        "error": "지원하지 않는 작업"
+      }
+    },
+    "TC-D4": {
+      "accepted": false,
+      "error": "초과 입금"
+    },
+    "TC-E1": {
+      "accepted": false,
+      "error": "납기 필수 (500자 이내)"
+    },
+    "TC-E2": {
+      "staleB": {
+        "accepted": false,
+        "error": "다른 변경이 있습니다. 새로고침하세요"
+      },
+      "savedPrice": 120
+    },
+    "TC-E3": {
+      "invalidSecondLine": {
+        "accepted": false,
+        "error": "도면 REV 필수 (500자 이내)"
+      },
+      "originalStateUnchanged": true,
+      "orders": 0
+    }
+  },
+  "roundingNotes": {
+    "barSwappedVolumeRatio": 1.9090909090909092,
+    "barRoundKg3ThenTotal": 58740,
+    "barRawThenTotal": 58748,
+    "plateRawOrderMaterialEstimate": 26112.239999999998
+  }
+}

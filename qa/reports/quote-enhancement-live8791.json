@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "url": "http://127.0.0.1:8791",
+  "ownHeadlessTab": true,
+  "userTabsTouched": false,
+  "commandsOrUploadsSent": 0,
+  "backupUnchanged": "276a3980e022c410919c08af7a8336370e0764c38a006759eff078ee4a36c257",
+  "quoteDateInput": true,
+  "quoteTableFilters": true,
+  "dimensionComma": true,
+  "supplierPosition": true,
+  "bulkButtons": 4,
+  "businessFields": true,
+  "formattersMounted": true,
+  "emptyQuoteDialog": true,
+  "runtimeErrors": 0,
+  "at": "2026-10-14T02:19:18.796Z"
+}

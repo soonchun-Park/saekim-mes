@@ -1,0 +1,48 @@
+{
+  "completed": true,
+  "url": "http://127.0.0.1:8791",
+  "manualClosing": true,
+  "closeReopenHistory": true,
+  "automaticFinancialClosing": false,
+  "existingRecordsChanged": 0,
+  "tests": {
+    "unitAndApi": 376,
+    "failures": 0,
+    "browserRuns": 22,
+    "browserChecks": 242,
+    "liveReadOnlyScreens": 14,
+    "lintFiles": 116
+  },
+  "backup": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\closing-applied-2026-10-15T10-56-42-819Z",
+  "apiHash": "d115e24d07ac54b2f7b276b4c577ff20c1b1aaaa9ded448b6a34c0a58131cbc7",
+  "rawStateHash": "6f1ccf1e5ba7b40d91fc17cde3b582d747539620776460d10d5e827b128a5e9c",
+  "dataPreserved": true,
+  "counts": {
+    "materials": 80,
+    "prices": 69,
+    "parties": 1,
+    "quotes": 1,
+    "orders": 1
+  },
+  "oldPorts": {
+    "8788": {
+      "online": false
+    },
+    "8789": {
+      "online": false
+    },
+    "8790": {
+      "online": false
+    }
+  },
+  "livePid": 38536,
+  "userTabsTouched": false,
+  "customerWriteCommands": 0,
+  "bank": {
+    "connected": false,
+    "reviewOnly": true,
+    "details": "MANUAL-CLOSING-NOTES.md"
+  },
+  "blockers": [],
+  "at": "2026-10-15T10:58:31.306Z"
+}

@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "mode": "actual browser with local Google-service mock; NO real Google connection",
+  "checks": [
+    "actual .gs row store state/page reaches real UI",
+    "browser assembles manifest/page archive",
+    "file selection executes staged row upload/validation/publication",
+    "pre-backup quote/order restored without loss",
+    "restore audit visible",
+    "resume metadata cleared",
+    "runtime exceptions 0"
+  ],
+  "mockMetrics": {
+    "reads": 266,
+    "readCells": 652,
+    "writes": 182,
+    "writeCells": 389,
+    "fullSheetReads": 0,
+    "maxReadRange": 14
+  }
+}

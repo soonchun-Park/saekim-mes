@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "checks": [
+    "4종 업로드 버튼과 빈 견적 업로드 창 초기화",
+    "실제 양식 다운로드: 업태·종목 및 참조ID 시트",
+    "오류·중복 행 표시 및 확정 전 취소 저장 0건",
+    "업로드→미리보기→이중클릭 확정→재접속→상세 값 보존",
+    "사업자번호 커서·하이픈 삭제·선택 교체, 전화 유형·국제번호·내선 및 수기 편집 저장",
+    "소재·매입처 단가 실제 업로드, 참조ID 및 원/kg 저장",
+    "현재 수기 품목+엑셀 품목 함께 견적 저장, 원래 입력·고객 스냅샷·문서·재접속 보존",
+    "101행 미리보기 50행 페이지 전환과 390px 화면"
+  ],
+  "runtimeErrors": 0,
+  "temporaryData": "C:\\Users\\SOONCH~1\\AppData\\Local\\Temp\\mes-partner-browser-zEebx3",
+  "userTabsTouched": false,
+  "userDataChanged": false,
+  "at": "2026-10-14T15:34:59.636Z"
+}

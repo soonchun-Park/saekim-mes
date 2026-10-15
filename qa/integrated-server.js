@@ -1,0 +1,10 @@
+'use strict';
+const path=require('node:path'),{createServer}=require('../server');
+const root=path.resolve(__dirname,'..');
+const assets={'/':['qa/integrated-ui/index.html','text/html'],'/ui-material.staged.js':['qa/integrated-ui/ui.js','text/javascript'],'/styles-material.staged.css':['qa/integrated-ui/styles.css','text/css']};
+for(const f of ['material-model.js','material-fields.staged.js','quote-inputs.staged.js','quote-inputs.staged.css','material-catalog-ui.js','material-catalog-ui.css','quote-document.staged.js','quote-document.staged.css','enterprise-ui.staged.css'])assets['/'+f]=[f,f.endsWith('.css')?'text/css':'text/javascript'];
+for(const f of ['order-cancellation.js','order-cancellation-ui.js','rfq-model.js','rfq-document.js','rfq-ui.js','rfq-ui.css','quote-archive.js','closing-model.js','closing-ui.js','closing-ui.css','calendar-status.js','calendar-status.css','quote-list-ui.js','quote-list-ui.css','quote-draft-ui.js','party-inputs.js','bulk-import-ui.js','bulk-import-ui.css','party-model.js','party-ui.js','party-ui.css','banks.js','quote-history-ui.js','quote-history-ui.css','dashboard-ui.js','dashboard-ui.css','navigation-ui.js','navigation-ui.css','material-certificates-ui.js','material-certificates-ui.css','settlement-ui.js','settlement-ui.css','dashboard-details-ui.js','dashboard-details-ui.css','production-ui.js','production-ui.css','production-documents.js','production-documents.css','schedule-model.js','schedule-ui.js','schedule-ui.css','routing-model.js','routing-ui.js','routing-ui.css','workflow-overview-ui.js','workflow-overview-ui.css'])assets['/'+f]=[f,f.endsWith('.css')?'text/css':'text/javascript'];
+assets['/rfq-logo.png']=['reference/saekim-ci/saekim-rfq-logo.png','image/png'];
+function preview(options={}){return createServer({...options,dataDir:options.dataDir||path.join(root,'data','material-cert-test'),assets});}
+if(require.main===module){const port=Number(process.env.PORT||8792);preview().listen(port,'127.0.0.1',()=>console.log('새김 MES 작업 사본 http://127.0.0.1:'+port+' · 원본 8791 데이터와 분리'));}
+module.exports={preview,assets};

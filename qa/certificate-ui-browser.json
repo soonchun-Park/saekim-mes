@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": [
+    "actual integrated form upload",
+    "KST upload display",
+    "actual stored PDF open endpoint and download link",
+    "replacement preserves both original versions",
+    "invalid PDF refused with text and file input preserved",
+    "desktop and mobile 390px no horizontal overflow"
+  ],
+  "physicalPrinting": false,
+  "externalTransmission": false,
+  "runtimeExceptions": 0
+}

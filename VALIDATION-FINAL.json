@@ -1,0 +1,195 @@
+{
+  "status": "LOCAL_TRIAL_VERIFIED_NOT_GOOGLE_PRODUCTION",
+  "verifiedAt": "2026-10-13T17:00:22.870Z",
+  "project": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab",
+  "preview": {
+    "verifiedAt": "2026-10-13T16:59:17.180Z",
+    "url": "http://127.0.0.1:8791",
+    "pid": 50780,
+    "health": [
+      {
+        "port": 8788,
+        "httpStatus": 200,
+        "revision": 0,
+        "quotes": 0,
+        "orders": 0
+      },
+      {
+        "port": 8789,
+        "httpStatus": 200,
+        "revision": 0,
+        "quotes": 0,
+        "orders": 0
+      },
+      {
+        "port": 8790,
+        "httpStatus": 200,
+        "revision": 0,
+        "quotes": 0,
+        "orders": 0
+      },
+      {
+        "port": 8791,
+        "httpStatus": 200,
+        "revision": 0,
+        "quotes": 0,
+        "orders": 0
+      }
+    ],
+    "referenceMaterials": 80,
+    "autoDensity": 10,
+    "enteredBasePrices": 0,
+    "parties": 0,
+    "newBusinessStateExists": false,
+    "oldMaterialCatalogSha256": "73f3c0c9bb3b4a8b18cd58d2e76881ebc86e5d1ba9b23072adacbd1d8e636086",
+    "oldBusinessStateExists": false
+  },
+  "tests": {
+    "command": "npm test",
+    "pass": 290,
+    "fail": 0,
+    "skipped": 0,
+    "output": "qa/final-tests.txt"
+  },
+  "lint": {
+    "command": "npm run lint",
+    "pass": true,
+    "javascriptAndAppsScriptFiles": 86,
+    "htmlSets": 3,
+    "output": "qa/final-lint.txt",
+    "type": "project static syntax/asset/HTML ID checks; no third-party ESLint"
+  },
+  "browser": [
+    {
+      "file": "qa/reports/partner-browser-qa.json",
+      "passed": true,
+      "checkCount": 10,
+      "runtimeErrors": 0
+    },
+    {
+      "file": "qa/reports/party-bank-browser-qa.json",
+      "passed": true,
+      "checkCount": 7,
+      "runtimeErrors": 0
+    },
+    {
+      "file": "qa/reports/material-density-price-browser-qa.json",
+      "passed": true,
+      "checkCount": 10,
+      "runtimeErrors": []
+    },
+    {
+      "file": "qa/reports/dashboard-details-browser-qa.json",
+      "passed": true,
+      "checkCount": 8,
+      "runtimeErrors": 0
+    },
+    {
+      "file": "qa/certificate-ui-browser.json",
+      "passed": true,
+      "checkCount": 6,
+      "runtimeErrors": 0
+    },
+    {
+      "file": "qa/certificate-api-browser.json",
+      "passed": true,
+      "checkCount": null,
+      "runtimeErrors": 0
+    },
+    {
+      "file": "qa/settlement-browser.json",
+      "passed": true,
+      "checkCount": 8,
+      "runtimeErrors": 0
+    },
+    {
+      "file": "qa/production-browser.json",
+      "passed": true,
+      "checkCount": 13,
+      "runtimeErrors": 0
+    }
+  ],
+  "browserCheckCount": 62,
+  "pdf": {
+    "passed": true,
+    "pages": 2,
+    "pageSizes": [
+      [
+        594.95996,
+        841.91998
+      ],
+      [
+        594.95996,
+        841.91998
+      ]
+    ],
+    "koreanTextExtracted": true,
+    "sensitiveFieldsAbsent": true,
+    "file": "qa/production-documents.pdf",
+    "rendered": [
+      "qa/production-document-render-1.png",
+      "qa/production-document-render-2.png"
+    ],
+    "physicalPrint": false,
+    "externalTransmission": false
+  },
+  "features": {
+    "materialCertificate": "PDF immutable blobs and version links; backup v4 with original files; restore journal and rollback; 10MiB limit",
+    "priceLastChanged": "server successful amount/unit changes, derived history, KST; registration and effective dates separate",
+    "partyRoles": {
+      "customer": "매출처",
+      "supplier": "매입처",
+      "both": "매출·매입"
+    },
+    "settlement": "separate page; immutable ID filters; partial invoice/payment allocation; complete requires full delivery/invoice/payment; outsource issued amount vs actual cost read-only",
+    "production": "explicit own/outsource quantity allocation; saved draft/issue/revision snapshots; server caps; split receipts and rejects; documentID+version+REV trace; no actual sends",
+    "dashboard": "calendar before summary; event details with party/items/quantity/amount/due/status; immutable source IDs; keyboard/ESC/background close, late response guard and mobile",
+    "localSafety": "idempotency/optimistic revision/server validation/atomic records/audit; new production complete backup restore tested"
+  },
+  "reference": {
+    "materialNames": 80,
+    "automaticExactNominalDensity": 10,
+    "unconfirmedDensity": 70,
+    "basePricesApplied": 0,
+    "research": "reference/research-20261013/material-density-followup.json",
+    "library": {
+      "fileName": "quote for yurim(1).xlsx",
+      "libraryFileId": "libfile_b5c2683b9d0881918d8321c645715633",
+      "supportedReadSucceeded": true,
+      "sourceSheet": "9 of 15: 소재 리스트",
+      "sourceColumn": "키로당단가",
+      "localMaterializationSucceeded": false,
+      "block": "prepare_materialize returned download URL; official Windows helper could not run python3.exe AppExecutionAlias: Win32 1920 ERROR_CANT_ACCESS_FILE. No helper modification, alternate interpreter or signed-URL bypass.",
+      "excelOrMacrosExecuted": false
+    },
+    "currencyConfirmation": "CLEAN PVC 5,000 / ACETAL 5,500 / PEEK 155,000 are per kg but currency unconfirmed; ask whether all are KRW/kg."
+  },
+  "google": {
+    "oauthCreated": false,
+    "persistentAccessCreated": false,
+    "deployed": false,
+    "legacyAppsScriptGenerated": true,
+    "mockOnly": true,
+    "expandedProductionCommandsSupported": false,
+    "unsupportedWritesRejectedBeforeCommit": true,
+    "notes": "Local split allocation/version document model is not supported by Google RowStore. Core dependency is included and wrapped. A full matching Google UI/data adapter remains future work with approval."
+  },
+  "remainingPolicies": [
+    "Rework/additional production and progressed-assignment cancellation/returns need explicit policy; currently guarded from rewriting history.",
+    "Supplier payment allocation, reject deductions, VAT/tax invoice policies remain undefined; no amounts or transactions inferred.",
+    "Reference ERP/Test Sheets structure not inspected due unavailable access."
+  ],
+  "noActions": {
+    "operationalDataChanged": false,
+    "operationalDataMigrated": false,
+    "oldProjectsOverwritten": false,
+    "realEmailsOrOrdersSent": false,
+    "realFinancialTransactions": false,
+    "paidPurchases": false
+  },
+  "notes": [
+    "Preview is a local single-computer trial, not an authenticated production service.",
+    "Codex browser panel request returned queued; URL is ready and verified by read-only health checks.",
+    "Older inherited reports are historical; only the evidence listed in this report is current."
+  ]
+}

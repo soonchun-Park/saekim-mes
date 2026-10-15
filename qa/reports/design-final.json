@@ -1,0 +1,93 @@
+{
+  "completed": true,
+  "url": "http://127.0.0.1:8791",
+  "scope": [
+    "원본 새김 로고·심볼·CI 파랑 #0057FF / 검정 #0B0B0B",
+    "흰색 헤더와 차분한 사이드 메뉴, 상단 정렬 유지",
+    "표·폼·버튼·상태·팝업·업무 캘린더·정산 카드 통일",
+    "안내문과 푸터를 업무 패널 아래에 배치",
+    "한국어 시스템 글꼴, 키보드 포커스, PC/태블릿/모바일"
+  ],
+  "appFilesChanged": [
+    "enterprise-ui.staged.css",
+    "qa/build-integrated.js",
+    "qa/integrated-ui/index.html",
+    "reference/saekim-ci/saekim-horizontal.svg",
+    "reference/saekim-ci/saekim-symbol.svg",
+    "reference/saekim-ci/README.md"
+  ],
+  "businessCodeUnchanged": [
+    "core.js",
+    "server.js",
+    "navigation-ui.js",
+    "party-ui.js",
+    "quote-inputs.staged.js",
+    "settlement-model.js",
+    "bulk-import-service.js",
+    "qa/integrated-ui/ui.js",
+    "qa/integrated-ui/styles.css"
+  ],
+  "tests": {
+    "fullRegressionPassed": 325,
+    "finalRelatedPassed": 52,
+    "browserRegressionScenarios": 70,
+    "designScenarios": 7,
+    "renderMeasurements": 25,
+    "syntheticScreenshots": 22,
+    "liveReadOnlyScreens": 7,
+    "runtimeErrors": 0
+  },
+  "screenshots": [
+    "design-dashboard-desktop.png",
+    "design-quotes-desktop.png",
+    "design-orders-desktop.png",
+    "design-settlements-desktop.png",
+    "design-materials-desktop.png",
+    "design-parties-desktop.png",
+    "design-inspections-desktop.png",
+    "design-quote-table-desktop.png",
+    "design-quote-dialog-desktop.png",
+    "design-party-dialog-desktop.png",
+    "design-dashboard-mobile.png",
+    "design-quotes-mobile.png",
+    "design-orders-mobile.png",
+    "design-settlements-mobile.png",
+    "design-materials-mobile.png",
+    "design-parties-mobile.png",
+    "design-inspections-mobile.png",
+    "design-quote-table-mobile.png",
+    "design-quote-dialog-mobile.png",
+    "design-party-dialog-mobile.png",
+    "design-xlsx-preview-desktop.png",
+    "design-xlsx-preview-mobile.png"
+  ],
+  "originalLogoSha256": "8b2f6e850c542056079fdae59b02718c50f23eba68dcfab468ea9a7af5d6078b",
+  "backup": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\saekim-design-2026-10-14T13-57-37-973Z",
+  "apiBackupHash": "276a3980e022c410919c08af7a8336370e0764c38a006759eff078ee4a36c257",
+  "dataPreserved": true,
+  "userTabsTouched": false,
+  "otherServersUnchanged": true,
+  "processes": [
+    {
+      "LocalPort": 8791,
+      "OwningProcess": 50952
+    },
+    {
+      "LocalPort": 8790,
+      "OwningProcess": 44144
+    },
+    {
+      "LocalPort": 8789,
+      "OwningProcess": 36684
+    },
+    {
+      "LocalPort": 8788,
+      "OwningProcess": 9484
+    }
+  ],
+  "restarted": false,
+  "googleDeploymentOrPermissionChanges": false,
+  "remainingBlockers": [],
+  "resolvedDownloadIssue": "Initial automatic review denial resolved after trusted user request evidence; official expired URL refreshed and originals downloaded successfully.",
+  "at": "2026-10-14T14:00:46.277Z"
+}

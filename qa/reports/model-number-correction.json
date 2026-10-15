@@ -1,0 +1,28 @@
+{
+  "status": "completed",
+  "backup": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\model-business-number-2026-10-15T11-32-57-346Z",
+  "stateHash": "6f1ccf1e5ba7b40d91fc17cde3b582d747539620776460d10d5e827b128a5e9c",
+  "command": {
+    "type": "partyUpdate",
+    "key": "4f9feddf-91c3-42d6-9b57-f6a50d6b8057",
+    "revision": 159,
+    "actor": "사용자 확인: 96403이 맞아 (비인증 기록)",
+    "payload": {
+      "id": "c64adb2f-e680-461c-86b9-fc5eea9df0d2",
+      "businessNumber": "113-81-96403"
+    }
+  },
+  "at": "2026-10-15T11:33:49.285Z",
+  "before": "113-81-86403",
+  "after": "113-81-96403",
+  "totalParties": 9,
+  "catalogRevision": 160,
+  "verified": {
+    "api": true,
+    "disk": true,
+    "idPreserved": true,
+    "otherFieldsPreserved": true,
+    "transactionsAndDocumentsUnchanged": true,
+    "stateHash": "6f1ccf1e5ba7b40d91fc17cde3b582d747539620776460d10d5e827b128a5e9c"
+  }
+}

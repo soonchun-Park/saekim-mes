@@ -1,0 +1,899 @@
+{
+  "schema": "mes-business-checklist-review-v1",
+  "reviewedAtUtc": "2026-10-12T14:53:15Z",
+  "source": {
+    "filename": "검토체크리스트_MES_ERP.xlsx",
+    "library_file_id": "libfile_a8a466ad56c881919a603fef7cf40e9e",
+    "access": "부모가 제공한 6개 탭 전체 파싱 텍스트. 이 컴퓨터에서 원본 xlsx를 다운로드하거나 실행하지 않음."
+  },
+  "scope": "업무 규칙·기능·계산·UX 대조. 소스/서버/운영 데이터 수정, 보안 검사 우회, Google 연결·배포 없음. 수정 방향은 제안이며 구현 승인이 아님. 모든 REV 완료는 격리 staged 검증 범위이며 현재8788 사용자화면 도면/REV UI는 미활성.",
+  "snapshot": {
+    "manifest": "qa/review-freeze.json",
+    "capturedAtUtc": "2026-10-12T14:44:51.8926242Z",
+    "fileCount": 44,
+    "manifestSHA256": "E3156C655FD67B91489FD82E6A139642E2A304136ABC8D7E4B3F7C81F98E9B5C",
+    "verifiedUnchangedAtUtc": "2026-10-12T14:51:55.5303339Z",
+    "gitCommit": null
+  },
+  "criteria": {
+    "완료": "현재 소스와 해당 동작의 구체적인 격리 시험 증거가 모두 있음. 실서비스 완료를 뜻하지 않음.",
+    "미완료": "체크리스트 기대 행동에 필요한 기능이 없거나 다른 행동이 확인됨. 부분적으로 통과한 기능은 별도 기재.",
+    "보류": "정책 결정 또는 정확한 시나리오/화면 전체 시험이 필요함. 서로 다른 반올림 정책 자체를 구현 오류로 단정하지 않음.",
+    "REV공통범위": "모든 REV 완료 판정은 격리된 staged 코드 검증이다. 현재 http://127.0.0.1:8788 사용자 화면에서는 도면/REV UI가 미활성이다."
+  },
+  "executionState": {
+    "liveAddress": "http://127.0.0.1:8788",
+    "liveMode": "소재 미리보기, material-preview.js PID2360. HTTP200. 커서 수정 활성. 도면 UI 미활성.",
+    "cursor": {
+      "status": "완료",
+      "cause": "estimate가 매 input마다 제품 치수 label을 appendChild로 재배치하여 포커스를 잃음.",
+      "fix": "형태가 바뀔 때만 DOM 순서 변경. 소수 입력은 text+inputmode decimal로 원문/선택영역 유지.",
+      "reproduction": "qa/input-reproduction.json: 123 입력 결과 1, 치수 DOM 변경20회",
+      "verification": "qa/input-browser-report.json: 도급/사급, 제품외경/길이·발주외경·여유·수량 실제 개별 키 입력, 삭제/중간삽입/선택교체/소수/붙여넣기방식 입력, DOM 변경0·runtime오류0",
+      "evidence": [
+        "ui-material.staged.js:30 estimate",
+        "ui-material.staged.js:31 inputField",
+        "ui-drawing.staged.js:59 estimate",
+        "ui-drawing.staged.js:60 inputField"
+      ]
+    },
+    "drawings": {
+      "status": "보류",
+      "implemented": "품목별 복수 첨부, 원본 다운로드/일부 미리보기, 별도 견적REV/수주REV 선택, 변경대기/3범위 확인/이력, 첨부 백업복원 코드 존재. 격리 Chrome 흐름 통과.",
+      "notFinished": "8788 활성화하지 않음. 최종 전체 회귀 재실행 없음. 기존 저장 품목 sourceItemId가 없는 경우 UI에서 임의 UUID를 만들지만 서버는 item.id를 기대하는 호환성 문제 확인. 최초 수주 확정 REV와 현재 REV가 독립적으로 보존되는 필드 구조 아님.",
+      "evidence": [
+        "qa/drawing-browser-report.json",
+        "attachments.test.js:11",
+        "ui-drawing.staged.js:45 openDrawingDialog",
+        "core.js:16 drawingRef"
+      ]
+    },
+    "testHistory": "마지막 전체 실행은100건 중99통과/1실패(10MB 첨부 base64 정규식 stack overflow). 이후 해당 정규식은 변경됐고 첨부8건 통과가 보고됐으나 최종 동결 코드 전체 통과는 확인하지 않음. 기존85건 통과를 모든 체크리스트 항목의 통과 증거로 사용하지 않음.",
+    "runningTests": "2026-10-12T14:45경 프로세스 읽기 확인: 시험 node 프로세스 없음, material-preview.js 서버만 있음. 에이전트 중단. 새 전체 시험 시작하지 않음.",
+    "verifiedAtUtc": {
+      "cursorChrome": "2026-10-12T14:38:36Z",
+      "drawingChrome": "2026-10-12T14:42:31Z",
+      "pureFunctionProbes": "2026-10-12T14:53:15.274Z"
+    }
+  },
+  "numericNotes": [
+    {
+      "id": "N1",
+      "finding": "TC-A2의 외경/길이 교환 비율 약4.4배는 잘못됨.",
+      "correct": "Φ55×105 → Φ105×55의 체적비 =105/55=1.909090909배",
+      "codeChanged": false
+    },
+    {
+      "id": "N2",
+      "finding": "A1/A2/A3의 기대 중량과 총량 반올림 금액은 중간 반올림 없이 계산하면 맞음.",
+      "actual": {
+        "A1Kg": 2.17602,
+        "A1UnitRaw": 2611.224,
+        "A1TotalRounded": 26112,
+        "A2Kg": 1.958277419445549,
+        "A2UnitRaw": 2937.4161291683236,
+        "A2TotalRounded": 58748,
+        "A3Kg": 1.356382628187393
+      }
+    },
+    {
+      "id": "N3",
+      "finding": "중량 소수3자리 표시는 계산 정밀도와 구분해야 함. A2 kg를1.958로 먼저 반올림하면 총58,740원이고 현재 raw 계산 후 반올림은58,748원.",
+      "recommendation": "계산은 원정밀도, 표시자리수는 별도 정책. 원가 총액과 개당×수량 정책을 문서별로 명시 합의."
+    },
+    {
+      "id": "N4",
+      "finding": "B2 가산률30% raw값15,518.1. 체크리스트는 Math.round로15,518, 현재 추천가는 Math.ceil로15,519. 이익률30%는 raw17,052.857…로 현재17,053.",
+      "classification": "산식 오류가 아닌 추천가 반올림/올림 정책 차이. 사용자 결정 필요.",
+      "codeChanged": false
+    },
+    {
+      "id": "N5",
+      "finding": "소재 미리보기는 전체 raw 소재비를 정수 원으로 반올림하지만 core.summary 원가 합계는 raw 값을 사용함. A1 미리보기26,112원 / 합계 raw26,112.24원.",
+      "classification": "화면·원가 합계·인쇄 정밀도 통일 범위 확인 필요. 확인 없이 모든 서류 일치로 표시하지 않음."
+    }
+  ],
+  "decisions": [
+    {
+      "id": "Q1",
+      "question": "완제품 수량 기준 공정",
+      "status": "미완료",
+      "actual": "모든 취소되지 않은 공정의 자체양품/외주입고 최솟값이 검사 가능 입고량. 검사 합격 후 완제품 재고에 반영. 최종공정 지정 없음.",
+      "agreement": "부분 동의",
+      "recommendation": "품목별 최종/필수 공정을 명시하되 선행 필수 공정 완료와 검사 합격도 확인. 단순 최종공정만으로 선행 미완료를 통과시키지 않도록 규칙 결정.",
+      "evidence": [
+        "core.js:30 produced",
+        "core.js:31 syncStock",
+        "core.js:60 inspect",
+        "test.js:10"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "id": "Q2",
+      "question": "수주 확정 후 가격·수량·납기 변경",
+      "status": "미완료",
+      "actual": "order.snapshot은 고정. 이후 새 견적 버전은 생성 가능하나 기존 수주를 변경하는 변경수주 기능은 없음.",
+      "agreement": "동의",
+      "recommendation": "원 수주와 연결된 명시적 변경수주 버전으로 가격·수량·납기 전후 값/사유/담당자/적용 시점 보존. 기존 작업·납품·청구 영향도 결정.",
+      "evidence": [
+        "core.js:40 quoteVersion",
+        "core.js:44 convert",
+        "attachments.test.js:16"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "id": "Q3",
+      "question": "반올림 단계·단위",
+      "status": "보류",
+      "actual": "kg 원정밀도 계산/화면4자리, 개당 소재비Math.round 및 총raw소재비Math.round, 추천가Math.ceil, 실제소재비/가공실적Math.round. 원가합계 raw 유지.",
+      "agreement": "부분 동의",
+      "recommendation": "중량 표시3자리와 계산정밀도를 분리. 합의 판매단가×수량/청구는 정수원 기준, 소재 원가 총량 반올림은 별도 정책으로 결정 후 모든 화면/출력 검증. 현 정책을 틀렸다고 임의 변경하지 않음.",
+      "evidence": [
+        "material-model.js:16 estimateLine",
+        "core.js:27 items",
+        "core.js:58 work",
+        "core.js:63 materialActual",
+        "core.js:74 summary",
+        "ui-drawing.staged.js:59 estimate"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "id": "Q4",
+      "question": "REV 변경 전 제작량 처리 책임",
+      "status": "미완료",
+      "actual": "work/outsource/inspection의 세 확인 boolean, 사유·시험입력 담당자·일시·변경 전후 도면 이력. 문서별 영향없음/재작업/폐기 처분 및 수량 책임 없음.",
+      "agreement": "동의",
+      "recommendation": "영향 대상 실적/문서별 수량과 확인완료·영향없음·재작업·폐기, 근거·담당자·일시 기록. 과거 REV 검사/작업 자체는 수정하지 않음.",
+      "evidence": [
+        "core.js:52 drawingChange",
+        "core.js:54 drawingConfirm",
+        "ui-drawing.staged.js:44 openDrawingDialog"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "id": "Q5",
+      "question": "외주 부족·분실·불량 소유/정산",
+      "status": "미완료",
+      "actual": "외주공정 입고수량/입고 실제비만 누적. 외주 출고·분실·외주별 불량/재작업 및 검사합격 기준 정산 자동 연결 없음.",
+      "agreement": "부분 동의",
+      "recommendation": "출고/입고/불량/미입고·책임과 합의정산수량을 분리. 실제 외주 계약이 합격수량 기준인지 입고수량/작업금액 기준인지 먼저 결정.",
+      "evidence": [
+        "core.js:56 process",
+        "core.js:59 receive",
+        "core.js:60 inspect"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "id": "Q6",
+      "question": "입금 N:M·수수료·선금",
+      "status": "미완료",
+      "actual": "서버 allocations 배열로 한 입금 다청구·한 청구 다입금 가능. 잔액/전액청구/전량납품으로 완료 판정. UI는 한 번에 한 청구 배분. 수수료/선금/미배분 금액 없음.",
+      "agreement": "동의",
+      "recommendation": "입금 총액과 배분 N:M을 보존하고 미배분 선수금·과입금·승인 차감 항목 추가 방향. 소액 차이를 자동 완납시키지 않음.",
+      "evidence": [
+        "core.js:65 payment",
+        "core.js:76 summary",
+        "ui-drawing.staged.js:77 form.onsubmit",
+        "test.js:53"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "id": "Q7",
+      "question": "실제 발주 소재 치수 확정",
+      "status": "미완료",
+      "actual": "견적 제품치수/여유/발주치수를 보존하고 수주에 견적 스냅샷 복사. 실제 발주 소재 치수의 별도 확정/견적 차이 기록 없음. materialActual은 kg/단가/메모만.",
+      "agreement": "동의",
+      "recommendation": "견적 소재와 실제 조달 소재/확정 담당자·시점·차이 사유 분리. 견적/수주 원본 소재는 보존.",
+      "evidence": [
+        "material-model.js:6 deriveDimensions",
+        "core.js:44 convert",
+        "core.js:63 materialActual"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "id": "Q8",
+      "question": "사급 수량·불량·잔재 책임",
+      "status": "미완료",
+      "actual": "사급 소재비 제외는 구현. 고객 소재 수령/사용/반환/손실 원장·소유 책임 없음.",
+      "agreement": "동의",
+      "recommendation": "고객 소유 소재 수령·사용·반환·불량/손실 수량 및 책임·사유 원장을 비용 제외와 별도로 관리.",
+      "evidence": [
+        "material-model.js:16 estimateLine",
+        "material-model.js:17 cost",
+        "core.js:63 materialActual",
+        "supply.test.js:4"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "id": "Q9",
+      "question": "누락 단가 초안/확정",
+      "status": "미완료",
+      "actual": "견적 저장이 곧 issuedAt 있는 발행 스냅샷. 계산사용 도급 소재단가 누락은 거절. 단가 미완성 초안 상태·저장 기능 없음. 실제 고객 발송 기능 없음.",
+      "agreement": "동의",
+      "recommendation": "초안과 확정을 분리하고 누락 항목 목록 보존. 확정/내보내기 시 검증하되 발송은 별도 명시 동작으로 구분.",
+      "evidence": [
+        "core.js:38 quote",
+        "core.js:39 quote",
+        "material-model.js:11 validateMaterial",
+        "ui-drawing.staged.js:76 create"
+      ],
+      "proposalOnly": true
+    },
+    {
+      "id": "Q10",
+      "question": "납기 미정 초안→수주",
+      "status": "미완료",
+      "actual": "견적 생성/버전부터 납기 날짜 필수. 미정/협의중 초안 표시 없음. 정상 견적의 수주는 날짜 스냅샷 유지.",
+      "agreement": "부분 동의",
+      "recommendation": "초안은 납기 미정 허용, 수주 확정은 합의 날짜 또는 임시 날짜+미확정 상태를 필수로 하도록 업무 정책 결정.",
+      "evidence": [
+        "core.js:38 quote",
+        "core.js:43 quoteVersion",
+        "core.js:82 validateState",
+        "qa/checklist-probes.json TC-E1"
+      ],
+      "proposalOnly": true
+    }
+  ],
+  "testCases": [
+    {
+      "id": "TC-A1",
+      "status": "보류",
+      "actual": "제품1.570kg·소재2.17602kg·개당2,611원·총26,112원 계산 확인. 원가합계raw26,112.24이므로 모든 화면/인쇄 동일 표시 정책까지는 확인되지 않음.",
+      "evidence": [
+        "material-model.js:16 estimateLine",
+        "core.js:74 summary",
+        "qa/checklist-probes.json TC-A1"
+      ],
+      "direction": "계산정밀도/표시·문서 원가반올림 정책 결정 후 전체 화면/출력 대조."
+    },
+    {
+      "id": "TC-A2",
+      "status": "완료",
+      "actual": "체적249.462091649cm³·1.958277419kg·개당2,937원·총58,748원. 외경→길이(mm) 및 실제 키보드 Tab 순서 확인. 현재 총raw 반올림 정책에 해당.",
+      "evidence": [
+        "material-model.js:5 geometry",
+        "material-model.js:16 estimateLine",
+        "ui-drawing.staged.js:59 estimate",
+        "qa/checklist-probes.json TC-A2",
+        "qa/input-browser-report.json"
+      ],
+      "direction": "4.4배 비고를1.90909배로 정정. kg3자리 표시는 계산 반올림과 분리."
+    },
+    {
+      "id": "TC-A3",
+      "status": "보류",
+      "actual": "OD60/ID50/L200으로 변환하면1.356382628kg, 잘못된 내경0/음수/OD이상 거절. 현재 파이프 UI는 두께가 아닌 내경 입력이며 원문 두께5의 자동변환은 없음.",
+      "evidence": [
+        "material-model.js:5 geometry",
+        "material-model.test.js:8",
+        "qa/checklist-probes.json TC-A3",
+        "material-fields.staged.js:3"
+      ],
+      "direction": "파이프 입력을 내경/두께 중 어느 방식으로 받을지 결정 후 해당 UI 입력 그대로 재시험."
+    },
+    {
+      "id": "TC-A4",
+      "status": "미완료",
+      "actual": "비중7850을 경고 없이 허용하며 중량/소재비가1000배가 됨. 양수·유한·1e12 상한만 있음.",
+      "evidence": [
+        "material-model.js:4 numeric",
+        "material-model.js:11 validateMaterial",
+        "qa/checklist-probes.json TC-A4"
+      ],
+      "direction": "g/cm³ 단위와 현실적 범위/특수재질 예외를 결정하고 오입력 경고/확정 제한 제안."
+    },
+    {
+      "id": "TC-B1",
+      "status": "미완료",
+      "actual": "사급은 소재비를 제외하고 가공8,000원 유지. 기타1,000원을 합산하는 견적원가 필드가 없어 예시 도급10,937/사급8,000으로 나오며11,937/9,000 전체 사례 미충족.",
+      "evidence": [
+        "material-model.js:17 cost",
+        "core.js:19 items",
+        "qa/checklist-probes.json TC-B1",
+        "supply.test.js:7"
+      ],
+      "direction": "기타비의 종류/개당·총액 기준을 별도 원가 항목으로 결정. 사급 소재 제외와 독립 합산."
+    },
+    {
+      "id": "TC-B2",
+      "status": "보류",
+      "actual": "추천/합의가 분리·스냅샷은 시험됨. 원가11,937의 현재 가산추천가는올림15,519, 이익률추천가는17,053. 확정16,000 기준25.39375%/34.03703%의 실제이익 표시 UI 없음.",
+      "evidence": [
+        "core.js:11 pricing",
+        "core.js:27 items",
+        "test.js:21",
+        "material-integration.test.js:3",
+        "qa/checklist-probes.json TC-B2"
+      ],
+      "direction": "추천가 올림/반올림 정책 및 확정가 기준 이익률 표시 범위를 결정.15,518에 맞춰 임의 코드수정 금지."
+    },
+    {
+      "id": "TC-B3",
+      "status": "완료",
+      "actual": "소재 계산을 사용하는 도급에서 kg 단가 누락은 계산 대기/입력필요 오류이며 저장 거절. 사급은 명시 소재비 제외이고 누락을0원으로 채우지 않음. 미완성 초안 저장은 별도 미구현.",
+      "evidence": [
+        "material-model.js:11 validateMaterial",
+        "ui-drawing.staged.js:24 num",
+        "ui-drawing.staged.js:59 estimate",
+        "material-ui.test.js:8",
+        "qa/checklist-probes.json TC-B3"
+      ],
+      "direction": "초안 저장 기능은 Q9로 별도 검토."
+    },
+    {
+      "id": "TC-C1",
+      "status": "미완료",
+      "actual": "동일키 전환3회 결과 수주1건·품목2줄. 다른 키 반복은 '이미 수주 전환됨' 오류이며 기대한 기존수주 자동연결 UX는 없음. 이후 새 견적이 기존수주를 바꾸지 않음은 별도 Chrome/단위 증거 있음.",
+      "evidence": [
+        "core.js:33 apply",
+        "core.js:44 convert",
+        "qa/checklist-probes.json TC-C1",
+        "attachments.test.js:16",
+        "qa/drawing-browser-report.json"
+      ],
+      "direction": "중복 방지는 유지하고 이미 전환된 결과의 수주 ID 반환/열기 UX 제안. 동시 실제2탭 동일전환은 추가 확인 필요."
+    },
+    {
+      "id": "TC-C2",
+      "status": "보류",
+      "actual": "메모리에서 전환 커밋 후 동일키 replay는1수주·2품목. 일반명령/첨부의 실제commit 응답손실 재시도 Chrome증거는 있으나 수주전환의 정확한 네트워크 차단 사례는 별도 실행하지 않음.",
+      "evidence": [
+        "core.js:33 apply",
+        "server.js:9 commit",
+        "qa/checklist-probes.json TC-C2",
+        "qa/browser-report.json"
+      ],
+      "direction": "별도 격리 HTTP 전환 응답손실/재시도 시나리오 확인 후 판정."
+    },
+    {
+      "id": "TC-D1",
+      "status": "미완료",
+      "actual": "공정 합산 없이 min(100,90)=90입고, 검사합격85, 납품40 후 완제품45 확인. 외주출고100·미입고 책임·불량5의 재작업3/폐기2 구분은 없음.",
+      "evidence": [
+        "core.js:30 produced",
+        "core.js:59 receive",
+        "core.js:60 inspect",
+        "core.js:61 deliver",
+        "qa/checklist-probes.json TC-D1"
+      ],
+      "direction": "출고/미입고 및 재작업/폐기 수량 상태를 분리하는 업무 규칙 제안."
+    },
+    {
+      "id": "TC-D2",
+      "status": "미완료",
+      "actual": "청구660,000을 일반 합의판매금액으로 두면300,000후잔액360,000, 추가360,000후0·완료. 원문600,000+VAT60,000은 VAT필드가 없어 납품금액초과청구로 거절.",
+      "evidence": [
+        "core.js:64 invoice",
+        "core.js:65 payment",
+        "core.js:76 summary",
+        "qa/checklist-probes.json TC-D2",
+        "qa/browser-report.json"
+      ],
+      "direction": "부가세 포함/별도 가격과 청구한도/잔액 기준 결정. 부분입금 계산 자체는 유지."
+    },
+    {
+      "id": "TC-D3",
+      "status": "미완료",
+      "actual": "659,000 입금 시 잔액1,000으로 자동완납하지 않음. 수수료 차감 처리 명령/화면 없음.",
+      "evidence": [
+        "core.js:65 payment",
+        "core.js:76 summary",
+        "qa/checklist-probes.json TC-D3"
+      ],
+      "direction": "사용자 명시 차감 종류·금액·사유·감사기록 제안."
+    },
+    {
+      "id": "TC-D4",
+      "status": "미완료",
+      "actual": "660,000 청구에700,000 배분은 초과입금으로 거절.40,000 선수금/미배분 입금 분리 저장 없음.",
+      "evidence": [
+        "core.js:65 payment",
+        "qa/checklist-probes.json TC-D4"
+      ],
+      "direction": "입금 총액과 청구배분, 미배분 과입금/선수금 잔액 원장 분리 제안."
+    },
+    {
+      "id": "TC-E1",
+      "status": "미완료",
+      "actual": "빈 납기 견적 저장은 '납기 필수'로 거절. 납기 미정 초안 없음.",
+      "evidence": [
+        "core.js:38 quote",
+        "qa/checklist-probes.json TC-E1"
+      ],
+      "direction": "초안 상태에서만 납기 미정 허용, 수주 확정 때 날짜 검증하는 방식 제안."
+    },
+    {
+      "id": "TC-E2",
+      "status": "보류",
+      "actual": "코어에서A 단가120 저장 후 이전revision B 수량변경은 충돌 거절·단가120 유지했고 HTTP 동시요청 근거가 있음. 정확한 두 Chrome 탭 단가/수량 수정은 미시험이므로 전체 항목 보류.",
+      "evidence": [
+        "core.js:35 apply",
+        "test.js:68",
+        "qa/checklist-probes.json TC-E2"
+      ],
+      "direction": "충돌 후 비교/재입력 UX는 개선 제안. 정확한2탭 단가/수량 수정 화면은 아직 별도 Chrome 시험 없음.",
+      "assessmentScope": "사용자 원문 항목 전체 기준"
+    },
+    {
+      "id": "TC-E3",
+      "status": "보류",
+      "actual": "두 번째 품목 검증 실패 시 수주0·원상태 동일이며 apply clone/전체파일commit 시험 근거가 있음. 수주 전환 도중 실제 새로고침/취소는 미시험이므로 전체 항목 보류.",
+      "evidence": [
+        "core.js:34 apply",
+        "core.js:44 convert",
+        "server.js:9 commit",
+        "test.js:77",
+        "qa/checklist-probes.json TC-E3",
+        "qa/browser-report.json"
+      ],
+      "direction": "전환도중실제reload 사용자동작은 추가 UX 확인사항으로 남김.",
+      "assessmentScope": "사용자 원문 항목 전체 기준"
+    },
+    {
+      "id": "TC-E4",
+      "status": "완료",
+      "actual": "격리 Chrome에서 백업 후 견적 추가→실제 file input 복원: 견적2건·수주1건, A/D견적과수주C/과거작업B·첨부 ID 링크 보존. 누락/손상 첨부는 거절. UUID와복원키무효화로 번호재사용을 피함.",
+      "evidence": [
+        "browser-drawing-qa.js:19",
+        "qa/drawing-browser-report.json",
+        "attachments.test.js:13",
+        "test.js:59",
+        "core.js:111 restoreState",
+        "attachments.js:18 restore"
+      ],
+      "direction": "현재는 로컬 증거. 실제Google/Drive 복원 완료로 확대 해석하지 않음."
+    }
+  ],
+  "revTimeline": [
+    {
+      "id": "t0",
+      "status": "완료",
+      "actual": "견적품목A에 복수파일 ID/첨부시각/소스품목ID 연결, 실제파일선택·저장·다운로드 확인.",
+      "evidence": [
+        "attachments.js:14 upload",
+        "core.js:15 attachmentRefs",
+        "qa/drawing-browser-report.json"
+      ],
+      "direction": "8788 도면 활성화는 보류 상태."
+    },
+    {
+      "id": "t1",
+      "status": "완료",
+      "actual": "수주선택B·견적A·다른품목Q 유지, 사유/시험담당자/확정일시 기록. 화면에 견적/수주REV를 구분.",
+      "evidence": [
+        "core.js:46 convert",
+        "ui-drawing.staged.js:48 submitDrawingForm",
+        "qa/drawing-browser-report.json"
+      ],
+      "direction": "담당자 문자열은 인증된 사용자 신원으로 간주하지 않음."
+    },
+    {
+      "id": "t2",
+      "status": "미완료",
+      "actual": "공정.createdDrawing B는 보존하지만 별도 WO/PO 문서 발행·수량·문서별REV는 없음.",
+      "evidence": [
+        "core.js:56 process",
+        "attachments.test.js:11"
+      ],
+      "direction": "작업지시/외주발주 문서 ID·수량·근거REV 스냅샷을 별도 문서 모델로 제안."
+    },
+    {
+      "id": "t3",
+      "status": "미완료",
+      "actual": "자체양품/불량 실적에 당시B 도면 기록 가능. 외주 도금 출고 수량·REV 기록 경로 없음.",
+      "evidence": [
+        "core.js:58 work",
+        "core.js:59 receive",
+        "attachments.test.js:11"
+      ],
+      "direction": "외주 출고 이벤트/수량/시점/근거REV 추가 방향 제안."
+    },
+    {
+      "id": "t4",
+      "status": "완료",
+      "actual": "C등록은 pendingDrawing, 확정전B 유지·변경확인필요 표시·이전파일/작업B 보존. 실제Chrome 검증.",
+      "evidence": [
+        "core.js:52 drawingChange",
+        "ui-drawing.staged.js:52 orderDrawingHtml",
+        "qa/drawing-browser-report.json"
+      ],
+      "direction": "고정 코드 staged기능 증거이며 live8788에서는 미활성."
+    },
+    {
+      "id": "t5",
+      "status": "미완료",
+      "actual": "세범위 확인 체크와 변경대기 작업잠금은 있으나 WO/PO/검사 문서별 영향없음/재작업/폐기 선택 기록은 없음.",
+      "evidence": [
+        "core.js:51 apply",
+        "core.js:54 drawingConfirm",
+        "ui-drawing.staged.js:44 openDrawingDialog"
+      ],
+      "direction": "문서별 처리 결과/사유/수량을 확인 범위와 연결하는 방식 제안."
+    },
+    {
+      "id": "t6",
+      "status": "미완료",
+      "actual": "검사 당시 REV·수량·불량은 inspectionDrawings로 보존. 기존제작40개의 재작업/폐기/영향없음 처분과 검사성적서 발행은 없음.",
+      "evidence": [
+        "core.js:60 inspect",
+        "attachments.test.js:11"
+      ],
+      "direction": "B기준 수량 처분 및 재검사 근거C를 별도 이벤트로 기록하는 방향 제안."
+    },
+    {
+      "id": "t7",
+      "status": "미완료",
+      "actual": "REV확정은 가격/납기 자동변경 없이 reviewRequired만 표시. 변경수주 등록 기능은 없음.",
+      "evidence": [
+        "core.js:54 drawingConfirm",
+        "attachments.test.js:11"
+      ],
+      "direction": "가격/납기 변경이 필요한 경우 새 변경수주에 전후 값·사유를 기록하는 방식 제안."
+    },
+    {
+      "id": "t8",
+      "status": "미완료",
+      "actual": "deliver는 납품누계/완제품재고만 변경. 개별 납품의 도면REV 스냅샷/납품서 없음.",
+      "evidence": [
+        "core.js:61 deliver",
+        "core.js:68 audit"
+      ],
+      "direction": "납품 이벤트 ID·수량·근거 검사/REV 배분과 납품서 스냅샷 제안."
+    }
+  ],
+  "revAdditional": [
+    {
+      "id": "REV-X1",
+      "status": "완료",
+      "actual": "REV는 별도 사용자문자열이며 파일명에서 추정/정렬하지 않음. 파일명A.png에 견적D를 입력한 Chrome사례도D를 그대로 보존.",
+      "evidence": [
+        "attachments.js:14 upload",
+        "core.js:16 drawingRef",
+        "ui-drawing.staged.js:47 submitDrawingForm",
+        "qa/drawing-browser-report.json"
+      ],
+      "direction": "문자열의대소문자/공백 동일성 정책은 사용자 결정사항."
+    },
+    {
+      "id": "REV-X2",
+      "status": "미완료",
+      "actual": "orderDrawing/currentDrawing 둘 다 변경확정C로 갱신하고 같아야 한다고 검증. 최초수주확정B와현재C를 독립된 필드로 유지하지 않음(B는 과거변경 이력에서 조회 가능).",
+      "evidence": [
+        "core.js:18 validateDrawingRecords",
+        "core.js:54 drawingConfirm"
+      ],
+      "direction": "최초수주확정 스냅샷·현재확정·검토중REV를 분리하고 과거문서를 고정하는 방식 제안."
+    },
+    {
+      "id": "REV-X3",
+      "status": "미완료",
+      "actual": "C확정 전후 기존B 작업·inspectionDrawings 내용 동일은 시험됨. 검사성적서 발행 기능이 없어 원문 성적서 전체 항목은 미완료.",
+      "evidence": [
+        "attachments.test.js:11",
+        "core.js:60 inspect",
+        "core.js:54 drawingConfirm"
+      ],
+      "direction": "검사성적서 파일 자체 발행은 미구현 범위.",
+      "assessmentScope": "검사 기록 보존과 검사성적서 발행을 구분"
+    },
+    {
+      "id": "REV-X4",
+      "status": "미완료",
+      "actual": "같은 업로드 요청키는 재사용하지만 새키의 동일REV/파일은 새첨부 ID로 허용. 동일REV 중복 경고 없음.",
+      "evidence": [
+        "attachments.js:14 upload",
+        "drawing-ui.test.js:7",
+        "browser-drawing-qa.js:10"
+      ],
+      "direction": "복수도면을 허용하면서 동일 문서/내용/REV 중복을 판별할 기준을 먼저 결정."
+    },
+    {
+      "id": "REV-X5",
+      "status": "미완료",
+      "actual": "발행/사용중 첨부는 삭제거절. 미사용 첨부취소는 index에서 제거하고 취소키를 남기지만 '삭제됨' 표시/파일 삭제 이력 UI는 없음.",
+      "evidence": [
+        "attachments.js:19 cancel",
+        "ui-drawing.staged.js:35 paintAttachmentEditor"
+      ],
+      "direction": "사용중 원본 보존 정책과 비사용 soft-delete·사유/담당자/표시/보관기간을 결정."
+    },
+    {
+      "id": "REV-X6",
+      "status": "미완료",
+      "actual": "첨부의 모든 revision이 품목확정REV와 같아야 함.2장중1장C/다른장B 혼합 선택은 거절되어 해당 변경 시나리오 지원 못함.",
+      "evidence": [
+        "core.js:16 drawingRef",
+        "ui-drawing.staged.js:33 ensureDrawingRevision"
+      ],
+      "direction": "도면별 정체성/REV와 품목 패키지 확정REV를 구분하고 1장변경도 품목확인에 연결하는 방식 제안."
+    }
+  ],
+  "functionalScope": [
+    {
+      "id": "FS1",
+      "status": "보류",
+      "tier": "첫 버전 필수",
+      "actual": "복수품목/형상별 계산/치수 구분 존재, 전 화면·인쇄 반올림 통일 정책은 미확인.",
+      "evidence": [
+        "material-model.js:16",
+        "core.js:19"
+      ],
+      "direction": "Q3 정책 결정 후 표시 검증."
+    },
+    {
+      "id": "FS2",
+      "status": "완료",
+      "tier": "첫 버전 필수",
+      "actual": "도급/사급과 도급 누락단가 거절·계산대기 표시 증거 있음.",
+      "evidence": [
+        "supply.test.js:4",
+        "material-ui.test.js:8",
+        "qa/material-browser-report.json"
+      ],
+      "direction": "초안 상태는 별도 제안."
+    },
+    {
+      "id": "FS3",
+      "status": "보류",
+      "tier": "첫 버전 필수",
+      "actual": "추천/합의가 분리, 품목별 markup/margin 선택. 문서 전체의 단일 표기 및 확정가 이익 표시 정책 미결정.",
+      "evidence": [
+        "core.js:27",
+        "ui-drawing.staged.js:57"
+      ],
+      "direction": "어느가격기준을서류에표시할지 결정."
+    },
+    {
+      "id": "FS4",
+      "status": "완료",
+      "tier": "첫 버전 필수",
+      "actual": "단일견적계열1수주와 가격·수량·납기 스냅샷 및같은키재시도 검증.",
+      "evidence": [
+        "core.js:44",
+        "qa/checklist-probes.json TC-C1",
+        "attachments.test.js:16"
+      ],
+      "direction": "기존수주자동열기는별도미완료 UX."
+    },
+    {
+      "id": "FS5",
+      "status": "완료",
+      "tier": "첫 버전 필수",
+      "actual": "staged품목복수첨부·REV·변경확인필요 및 세범위확인.격리Chrome통과,live활성화는보류.",
+      "evidence": [
+        "qa/drawing-browser-report.json",
+        "drawing-ui.test.js:12"
+      ],
+      "direction": "사용자 승인 없는 기능추가·활성화는 중지."
+    },
+    {
+      "id": "FS6",
+      "status": "미완료",
+      "tier": "첫 버전 필수",
+      "actual": "작업/입고는 있으나 별도 작업지시/외주발주문서와 외주출고 없음.",
+      "evidence": [
+        "core.js:56",
+        "core.js:59"
+      ],
+      "direction": "문서·출고모델제안."
+    },
+    {
+      "id": "FS7",
+      "status": "미완료",
+      "tier": "첫 버전 필수",
+      "actual": "검사양품/불량 존재, 명시최종공정 지정없음.",
+      "evidence": [
+        "core.js:30",
+        "core.js:60"
+      ],
+      "direction": "Q1 최종/필수공정기준 결정."
+    },
+    {
+      "id": "FS8",
+      "status": "미완료",
+      "tier": "첫 버전 필수",
+      "actual": "부분납품·청구·배분은 존재. 청구는납품금액한도 수주기준이고 개별납품 ID와연결된청구서 모델은 없음.",
+      "evidence": [
+        "core.js:61",
+        "core.js:64",
+        "core.js:65"
+      ],
+      "direction": "개별납품/청구연결·VAT/선금범위결정."
+    },
+    {
+      "id": "FS9",
+      "status": "미완료",
+      "tier": "첫 버전 필수",
+      "actual": "수동백업/실제복원시험 있음.주기백업 스케줄·자동실행없음.",
+      "evidence": [
+        "server.js:18",
+        "qa/drawing-browser-report.json"
+      ],
+      "direction": "주기·보관위치·권한/스케줄 별도승인 후 구성제안."
+    },
+    {
+      "id": "FS10",
+      "status": "미완료",
+      "tier": "나중에",
+      "actual": "다단계승인/권한세분화 미구현.확인담당자는 시험입력문자열.",
+      "evidence": [
+        "ui-drawing.staged.js:46"
+      ],
+      "direction": "첫버전결함으로취급하지말고후순위유지."
+    },
+    {
+      "id": "FS11",
+      "status": "미완료",
+      "tier": "나중에",
+      "actual": "LOT/시리얼·설비/작업자별 집계없음.공정총시간만있음.",
+      "evidence": [
+        "core.js:58"
+      ],
+      "direction": "추적요건발생전확대하지않음."
+    },
+    {
+      "id": "FS12",
+      "status": "미완료",
+      "tier": "나중에",
+      "actual": "APS·용량계획없음.",
+      "evidence": [
+        "core.js:37 apply command dispatch"
+      ],
+      "direction": "후순위범위유지."
+    },
+    {
+      "id": "FS13",
+      "status": "미완료",
+      "tier": "나중에",
+      "actual": "재고평가/FIFO없음.검사전/완제품/반품 위치는있으나 복수창고원장아님.",
+      "evidence": [
+        "core.js:12 locations",
+        "core.js:62 stockMove"
+      ],
+      "direction": "후순위범위유지."
+    },
+    {
+      "id": "FS14",
+      "status": "미완료",
+      "tier": "나중에",
+      "actual": "다통화/환율/분개/회계 Excel 내보내기 없음.현재 JSON백업만.",
+      "evidence": [
+        "core.js:64",
+        "server.js:18"
+      ],
+      "direction": "필요시회계내보내기범위부터별도결정."
+    },
+    {
+      "id": "FS15",
+      "status": "미완료",
+      "tier": "나중에",
+      "actual": "다단계BOM없음.",
+      "evidence": [
+        "core.js:19 items",
+        "core.js:56 process"
+      ],
+      "direction": "단품업무필요성이확인되기전추가하지않음."
+    },
+    {
+      "id": "FS16",
+      "status": "완료",
+      "tier": "지양",
+      "actual": "도면파일명/내용으로REV를자동판정하지않음.업로드형식검증은파일형식식별이며도면해석아님.",
+      "evidence": [
+        "attachments.js:9 validContent",
+        "core.js:16 drawingRef",
+        "qa/drawing-browser-report.json"
+      ],
+      "direction": "사용자명시REV정책유지."
+    },
+    {
+      "id": "FS17",
+      "status": "보류",
+      "tier": "참고 가정",
+      "actual": "Google 모의 Lock/키/revision·행저장 및규모시험존재. 실제 Google권한/할당량/속도/Drive첨부는 미검증.",
+      "evidence": [
+        "apps-script/Code.gs:5 gateway",
+        "apps-script/ROW-STORAGE.md",
+        "apps-script/scale-evidence.json"
+      ],
+      "direction": "모의성공을실서비스완료로표시하지않음.추가권한승인전연결금지."
+    }
+  ],
+  "unverifiedOrBlocked": [
+    "고정코드최종전체회귀(신규첨부9·Google11·UI7추가포함) 실행하지않음;진행중시험없음.",
+    "생성된apps-script/Core.gs가마지막core.js와동일한지빌드재실행으로검증하지않음(코드중단시점이후빌드금지).",
+    "기존품목sourceItemId없는도면편집UI의임의UUID/서버item.id불일치.새UUID품목Chrome통과를legacy호환완료로간주하지않음.",
+    "실제2개Chrome탭의단가/수량편집,전환응답손실/전환도중reload정확사례는별도미실행.",
+    "8788의도면기능활성화/사용자기존저장자료에대한기능시험은중지됨.현재사용자료는변경하지않음.",
+    "이전별도독립검토서비스의보안위험감지실패는여전히별개차단.이문서는그보안검토의통과나우회가아님."
+  ],
+  "summary": {
+    "decisions": {
+      "total": 10,
+      "완료": 0,
+      "미완료": 9,
+      "보류": 1
+    },
+    "testCases": {
+      "total": 17,
+      "완료": 3,
+      "미완료": 8,
+      "보류": 6
+    },
+    "revTimeline": {
+      "total": 9,
+      "완료": 3,
+      "미완료": 6,
+      "보류": 0
+    },
+    "revAdditional": {
+      "total": 6,
+      "완료": 1,
+      "미완료": 5,
+      "보류": 0
+    },
+    "functionalScope": {
+      "total": 17,
+      "완료": 4,
+      "미완료": 10,
+      "보류": 3
+    }
+  },
+  "postReviewValidation": {
+    "verifiedAtUtc": "2026-10-12T15:09:56.776Z",
+    "backupPath": "C:/Users/SOON CHUN/Documents/Codex/2026-10-12/task/backups/MES-ERP-20261012T150413Z",
+    "isolatedRestore": "C:/Users/SOON CHUN/Documents/Codex/2026-10-12/task/backups/restore-check-20261012T150413Z",
+    "originalProjectUntouched": true,
+    "originalServerUntouched": true,
+    "filesSha256Verified": 65,
+    "syntaxFiles": 36,
+    "htmlUIs": 3,
+    "tests": {
+      "total": 102,
+      "passed": 102,
+      "failed": 0
+    },
+    "stateChecks": [
+      {
+        "path": "data/state.json",
+        "revision": 2,
+        "quotes": 0,
+        "orders": 0,
+        "attachments": 0,
+        "valid": true
+      },
+      {
+        "path": "data/material-preview/state.json",
+        "revision": 0,
+        "quotes": 0,
+        "orders": 0,
+        "attachments": 0,
+        "valid": true
+      }
+    ],
+    "attachmentNote": "Current stored trial data references zero drawings; attachment bundle/refs/hash/restore are exercised by fictional tests, not by actual user drawings.",
+    "initialArchiveSha256": "E77F5ADAE8E5A113E60A1CE02BC6287E32482D2EDAABB5F2160215C3A8E45890",
+    "sourceCodeChanged": false,
+    "scope": "Backup isolated restore verification; does not promote checklist cases without their own evidence"
+  },
+  "assessmentRevision": {
+    "atUtc": "2026-10-12T15:26:33.552Z",
+    "basis": "사용자 원문 전체를 기준으로 보수적 재판정",
+    "changedIds": [
+      "TC-E2",
+      "TC-E3",
+      "REV-X3"
+    ],
+    "applicationCodeChanged": false,
+    "uploaded": false
+  }
+}

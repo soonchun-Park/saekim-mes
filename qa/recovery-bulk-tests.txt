@@ -1,0 +1,22 @@
+??XLSX templates have real OOXML, Korean headers, text format and reference sheets (28.7478ms)
+??Reject corrupt ZIP, extension, oversized input, formulas, macros, external links, DTD and unknown headers (12.759ms)
+??Korean number formats preserve international, extensions, partial and excessive input (0.7681ms)
+??Preview and cancellation write zero files or business rows (130.4697ms)
+??Optional blank and zero are distinct; numeric identifier cells and invalid dates rejected (43.9436ms)
+??Atomic save, double click, lost response retry, restart and full backup restore (115.5219ms)
+??Precommit failure saves no partial rows; same request succeeds once after recovery (49.4837ms)
+??Duplicates in file, existing business numbers ignoring hyphens, explicit selected updates and empty preservation (66.2684ms)
+??Stale preview and mismatched retry key cannot mutate current data (40.4186ms)
+??Quote includes current draft, preserves inputs and captures immutable customer snapshot (85.6234ms)
+??Quote draft duplicate, 100 item cap, material reference and KRW/kg computation (75.1715ms)
+??Supplier prices require valid refs, units and dates and persist without changing quotes (80.2271ms)
+{"batchRows":1000,"elapsedMs":784,"eventLoopTicks":22}
+??1000 rows save atomically while event loop remains responsive (793.8049ms)
+??tests 13
+??suites 0
+??pass 13
+??fail 0
+??cancelled 0
+??skipped 0
+??todo 0
+??duration_ms 1693.842

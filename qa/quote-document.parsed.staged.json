@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "parser": "pypdf",
+  "renderer": "Poppler pdftoppm",
+  "pages": 9,
+  "bytes": 236552,
+  "customer_note_present": true,
+  "utc_issue_date_present": true,
+  "quote_total_present": true,
+  "xlsx_blocker_absent": true,
+  "total_present": true,
+  "rendered_pages": [
+    1,
+    9
+  ],
+  "physical_print": false
+}

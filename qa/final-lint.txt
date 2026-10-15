@@ -1,0 +1,5 @@
+
+> mes-erp-material-cert-lab@0.3.0 lint
+> node lint.js
+
+Static lint passed: 86 JavaScript/Apps Script syntax files; three UI HTML IDs, local assets and element references. No third-party ESLint dependency.

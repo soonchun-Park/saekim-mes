@@ -1,0 +1,22 @@
+/* SUIT UI typography. The original outlined SAEKIM CI is unchanged. */
+:root{--font-ui:"SUIT Variable","Malgun Gothic","Apple SD Gothic Neo","Segoe UI",sans-serif}
+body{font-family:var(--font-ui);font-size:14px;font-weight:400;line-height:1.65;letter-spacing:0}
+body input,body select,body textarea,body button{font-family:var(--font-ui)}
+body main>.heading h1{font-size:26px;font-weight:700;line-height:1.35;letter-spacing:-.025em}
+body h2,body .heading h2,body .dashboard-manager .dash-header h2,body .qh-dialog header h2{font-size:18px;font-weight:650;line-height:1.5;letter-spacing:-.015em}
+body h3,body .item>.heading h3{font-size:15px;font-weight:600;line-height:1.5;letter-spacing:0}
+body h4,body label{font-size:13px;font-weight:500;line-height:1.55}
+body input,body select,body textarea{font-size:14px;font-weight:400;line-height:1.5}
+body button,body .dashboard-manager button,body .bulk-dialog .bulk-template,body .qh-open,body .qh-dialog button{font-size:13px;font-weight:600;line-height:1.5}
+body aside nav a{font-size:14px;font-weight:500}body aside nav a[aria-current=page]{font-weight:650}
+body .hint,body .muted,body small{line-height:1.65}
+body table,body .catalog-table-wrap table,body .party-table-wrap table,body .quote-table,body .settlement-events-wrap table,body .settlement-outsourcing table{font-size:13px;line-height:1.65}
+body th,body .catalog-table-wrap th,body .party-table-wrap th,body .quote-table th,body .settlement-events-wrap th,body .settlement-outsourcing th,body .bulk-table th,body .qh-dialog th{font-size:12px;font-weight:600;line-height:1.6}
+body .qh-dialog td,body .quote-detail-scroll td{font-size:13px;line-height:1.65}
+body .catalog-table-wrap button,body .party-table-wrap td button,body .quote-row-actions button,body .pagination button{font-size:12px}
+body .number,body input[inputmode=decimal],body input[inputmode=numeric],body input[type=number],body .metric strong,body .finance-grid strong,body .material-totals strong,body .dash-summary strong,body .settlement-totals strong,body .quote-detail-total{font-variant-numeric:lining-nums tabular-nums;letter-spacing:0}
+body .number{text-align:right}
+body td,body .quote-detail-dialog h2,body .heading h3{overflow-wrap:anywhere}
+body .finance-grid strong,body .material-totals strong,body .quote-detail-total{font-weight:650}
+body select{padding-right:28px}
+@media(max-width:700px){body main>.heading h1{font-size:23px}body input:not([type=checkbox]):not([type=radio]):not([type=file]),body select,body textarea{font-size:16px}body .due-segments .due-segment{padding-left:4px;padding-right:4px}body aside nav a{font-size:13px}body .dashboard-manager .dash-mini-events button{font-size:9px;line-height:1.5}}

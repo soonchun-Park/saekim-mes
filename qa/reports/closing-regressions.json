@@ -1,0 +1,138 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "theme": "light",
+      "script": "quote-enhancement-browser-qa.js",
+      "code": 0,
+      "log": "closing-light-quote-enhancement-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "monthly-settlement-browser-qa.js",
+      "code": 0,
+      "log": "closing-light-monthly-settlement-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "party-bank-browser-qa.js",
+      "code": 0,
+      "log": "closing-light-party-bank-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "bulk-browser-qa.js",
+      "code": 0,
+      "log": "closing-light-bulk-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "partner-browser-qa.js",
+      "code": 0,
+      "log": "closing-light-partner-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "production-browser-qa.js",
+      "code": 0,
+      "log": "closing-light-production-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "schedule-browser-qa.js",
+      "code": 0,
+      "log": "closing-light-schedule-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "workflow-browser-qa.js",
+      "code": 0,
+      "log": "closing-light-workflow-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "routing-browser-qa.js",
+      "code": 0,
+      "log": "closing-light-routing-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "calendar-status-browser-qa.js",
+      "code": 0,
+      "log": "closing-light-calendar-status-browser-qa.txt"
+    },
+    {
+      "theme": "light",
+      "script": "closing-browser-qa.js",
+      "code": 0,
+      "log": "closing-light-closing-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "quote-enhancement-browser-qa.js",
+      "code": 0,
+      "log": "closing-dark-quote-enhancement-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "monthly-settlement-browser-qa.js",
+      "code": 0,
+      "log": "closing-dark-monthly-settlement-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "party-bank-browser-qa.js",
+      "code": 0,
+      "log": "closing-dark-party-bank-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "bulk-browser-qa.js",
+      "code": 0,
+      "log": "closing-dark-bulk-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "partner-browser-qa.js",
+      "code": 0,
+      "log": "closing-dark-partner-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "production-browser-qa.js",
+      "code": 0,
+      "log": "closing-dark-production-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "schedule-browser-qa.js",
+      "code": 0,
+      "log": "closing-dark-schedule-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "workflow-browser-qa.js",
+      "code": 0,
+      "log": "closing-dark-workflow-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "routing-browser-qa.js",
+      "code": 0,
+      "log": "closing-dark-routing-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "calendar-status-browser-qa.js",
+      "code": 0,
+      "log": "closing-dark-calendar-status-browser-qa.txt"
+    },
+    {
+      "theme": "dark",
+      "script": "closing-browser-qa.js",
+      "code": 0,
+      "log": "closing-dark-closing-browser-qa.txt"
+    }
+  ],
+  "at": "2026-10-15T10:55:03.893Z"
+}

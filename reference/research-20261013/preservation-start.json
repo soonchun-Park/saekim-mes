@@ -1,0 +1,17 @@
+{
+  "checkedAt": "2026-10-13T16:06:01.425Z",
+  "scope": "조회만 수행; 8790 서버 재시작/화면 새로고침/입력 변경 없음",
+  "files": [
+    {
+      "path": "data/partner-ui-test/material-catalog.json",
+      "exists": true,
+      "sha256": "73f3c0c9bb3b4a8b18cd58d2e76881ebc86e5d1ba9b23072adacbd1d8e636086",
+      "revision": 80,
+      "materials": 80
+    },
+    {
+      "path": "data/partner-ui-test/state.json",
+      "exists": false
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "fixture": "fictional image-only scanned certificate",
+  "hashVerified": true,
+  "koreanFilename": "허구_재료성적서_스캔시험.pdf",
+  "browserUpload": true,
+  "browserOriginalFetch": true,
+  "inlinePdfIframeRequested": true,
+  "desktopWidth": 1200,
+  "mobileWidth": 390,
+  "horizontalOverflow": false,
+  "runtimeExceptions": 0,
+  "physicalPrint": false,
+  "limitations": [
+    "Scanned image fixture has no text layer; no OCR performed"
+  ],
+  "pdfViewerRenderingVisuallyVerified": true
+}

@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "base": "http://127.0.0.1:8791",
+  "readOnlyProbe": true,
+  "ownHeadlessTab": true,
+  "userTabsTouched": false,
+  "liveBackupUnchanged": "c4cdaac734c310a643b6359863d61b32bca6aa0594b4b6b00ac3fe12a53725c8",
+  "catalogRevision": 150,
+  "materials": 80,
+  "prices": 69,
+  "partyCount": 1,
+  "quoteCount": 0,
+  "orderCount": 0,
+  "attachmentCount": 0,
+  "certificateCount": 0,
+  "cssSHA256": "06fa4dae97e1b3599446728c70f2ea628674a1d24ee35c59ee6d6ba8904e395f",
+  "examples": [
+    {
+      "name": "CLEAN PVC",
+      "kgRate": 5000
+    },
+    {
+      "name": "AL6061",
+      "kgRate": 6500
+    },
+    {
+      "name": "PEEK",
+      "kgRate": 155000
+    }
+  ],
+  "due": {
+    "display": "grid",
+    "ys": [
+      652.359375,
+      652.359375,
+      652.359375
+    ],
+    "labels": [
+      "연 YY",
+      "월 MM",
+      "일 DD"
+    ]
+  },
+  "runtimeExceptions": 0
+}

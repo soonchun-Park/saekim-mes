@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "browser": "installed Chrome",
+  "live8787Untouched": true,
+  "barFieldOrder": [
+    "외경",
+    "길이"
+  ],
+  "checks": [
+    "plate/bar/tube immediate estimate",
+    "quantity total",
+    "missing rate rejected",
+    "invalid stock geometry rejected",
+    "quote to order immutable material snapshot",
+    "bar DOM/tab order diameter then length",
+    "material cost directly below dimensions before machining",
+    "customer supplied missing density/rate saved by actual create handler",
+    "both supply transitions recalculate",
+    "reload renders customer supplied snapshot exclusion",
+    "new item defaults contract",
+    "390px no overflow",
+    "runtime exceptions 0"
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "target": "C:\\Users\\SOON CHUN\\Documents\\Codex\\2026-10-12\\task\\mes-erp-material-cert-lab\\backups\\closing-applied-2026-10-15T10-56-42-819Z",
+  "preparedAt": "2026-10-15T10:56:42.962Z",
+  "apiBeforeHash": "d115e24d07ac54b2f7b276b4c577ff20c1b1aaaa9ded448b6a34c0a58131cbc7",
+  "dataBefore": {
+    "material-catalog.json": "084330fb868a81a0d644bab946be17f5acb5c9c5f90b59210749176d81881360",
+    "state.json": "6f1ccf1e5ba7b40d91fc17cde3b582d747539620776460d10d5e827b128a5e9c"
+  },
+  "sourceBefore": {
+    "closing-model.js": null,
+    "closing-ui.js": null,
+    "closing-ui.css": null,
+    "core.js": "a9138ed0f192da8a22b7926a3d51270dc9b9c81e5491c2b4ee52f496a0073ffb",
+    "server.js": "f826613aa669775b4c6724506ba941399b410d2f20de7776582e396fd6ee095e",
+    "calendar-status.js": "a63b318fb8563037620882ce063230429673c3d1285ea2d9c39b35cbbb33d71d",
+    "calendar-status.css": "a5cd4a98a17d955e1f0196d69c76c4a1a230fabfac970698e56a3359a09df793",
+    "dashboard-model.js": "1923818ec11299bed1767b1c04fa4823e94bada959620767aebb91d124625e9e",
+    "dashboard-ui.js": "d4402719d053d5136ee41a2aae3360261e48552748ea2b60460d93f5e9271cc3",
+    "qa/build-integrated.js": "9bf4559e9242974a13a5fea431055e1c3d8f7a94202c38749d96a09470504e1a",
+    "qa/integrated-server.js": "b57c1fc9d7d8b55f68c3d48807659c53fe49e191539b2a0f9e5d7f28e2e12106",
+    "qa/integrated-ui/index.html": "af159df28dc3851546051f0df8ee5853d50144e8485903159fcfbac8430ea73e",
+    "qa/integrated-ui/ui.js": "042dd5b48996e19d954578f192fb740137aaf85fde0b1225c2a9cb152a69ca9f",
+    "package.json": "b52bb96cfecc32c4ec6f58ea6ff782bff94a6c663ce0fd4929b434f6211958f8",
+    "closing.test.js": null,
+    "closing-api.test.js": null,
+    "qa/closing-browser-qa.js": null,
+    "qa/run-closing-regressions.js": null,
+    "qa/closing-live-readonly.js": null,
+    "CALENDAR-STATUS-NOTES.md": "fdea6a8609b3e9552e8051c96a09f6ccf776e71303b5f473cff8b3a0695228de",
+    "MANUAL-CLOSING-NOTES.md": null
+  },
+  "sourceAfter": {
+    "closing-model.js": "7a40a2163c4ad143f371e950dab4f00a9b19efdba144ddb8b27fae8034efaed8",
+    "closing-ui.js": "925a05ffc4d53a2b283f7738fcfab12aa0b558a276b8704a8d40d4a88856b3f5",
+    "closing-ui.css": "11a1df32a64900666486b354094fd17549201bcf23782162261500352327b264",
+    "core.js": "a2c90f6c709f08b1024e5adfc8aaec091d7f060b0bdec8698264576b0f9b22a6",
+    "server.js": "03378c1cd7c586b674b5aaa819cfcece9b0cf3eb0e86f9c06aaa59fb7c484da1",
+    "calendar-status.js": "16c0a0c6d6a17680fa95499bb8fe5d22e375c405b93eec47e4a99c831c55b689",
+    "calendar-status.css": "77eb1cf647bfcc456f9f2523b0c91945775e869989fb7c9d3520394b708b233c",
+    "dashboard-model.js": "dc271adc40058b342f9459b86c0fedbf3f55b43625c409cb2a10ed4f5fd50152",
+    "dashboard-ui.js": "a23ade22c29c34fbfeb0a12a71687dcfafa86a1bed437ad8d27ba6ae06c206c7",
+    "qa/build-integrated.js": "18433c4aefa11ce046a61be848d7b7a08239bd1830bf32d421fa3f5edc14ddab",
+    "qa/integrated-server.js": "f4f71d0e281a106bf805f533f2ded9ba61dc467f31bf4f84e5603e2258ac88b2",
+    "qa/integrated-ui/index.html": "cb24052fa60387612e95172cffb1026b8004b337bdea367857305b12bbe74c8a",
+    "qa/integrated-ui/ui.js": "c51870106583c45eaeb4416fdb6ba867666ee73ce19c808428d358b885d7501d",
+    "package.json": "b6db10d55a422d56e8c6b15881f85302f303ec9f1d18fb17cdd55233e6cc4c96",
+    "closing.test.js": "37783d4f98281841ebb6c3781d6d11563edf790833b741c7ffdfc2d661e4cd40",
+    "closing-api.test.js": "2c25498f5a28ab668a210a713624b90ae39f25021101f03036114aadcb5ada43",
+    "qa/closing-browser-qa.js": "f404e1473868354b6f330642c3f35dcece10473a5c53598672fdc6f3d38a93ca",
+    "qa/run-closing-regressions.js": "f28833f6615a7b324c88d360a8791e0e3cfaa048e28b0f629103d6279f7ef862",
+    "qa/closing-live-readonly.js": "d41a3ba638b63d26c16846b7580817d58ef124a760bb35ac5965a8d2df1c96c0",
+    "CALENDAR-STATUS-NOTES.md": "0c99f43909524b8b56ef6c5fbdb1baf92a0245d1a633ce51ee07199a4101df68",
+    "MANUAL-CLOSING-NOTES.md": "165ad7ce28d3535aad22a253dce8025a98ec55587dd176f8f3593d4d5dad7053"
+  },
+  "otherServers": {
+    "8788": {
+      "online": false
+    },
+    "8789": {
+      "online": false
+    },
+    "8790": {
+      "online": false
+    }
+  },
+  "code": [
+    "closing-model.js",
+    "closing-ui.js",
+    "closing-ui.css",
+    "core.js",
+    "server.js",
+    "calendar-status.js",
+    "calendar-status.css",
+    "dashboard-model.js",
+    "dashboard-ui.js",
+    "qa/build-integrated.js",
+    "qa/integrated-server.js",
+    "qa/integrated-ui/index.html",
+    "qa/integrated-ui/ui.js",
+    "package.json",
+    "closing.test.js",
+    "closing-api.test.js",
+    "qa/closing-browser-qa.js",
+    "qa/run-closing-regressions.js",
+    "qa/closing-live-readonly.js",
+    "CALENDAR-STATUS-NOTES.md",
+    "MANUAL-CLOSING-NOTES.md"
+  ],
+  "oldPid": 37412,
+  "appliedAt": "2026-10-15T10:57:11.429Z",
+  "counts": {
+    "materials": 80,
+    "prices": 69,
+    "parties": 1,
+    "quotes": 1,
+    "orders": 1
+  },
+  "verifiedAt": "2026-10-15T10:57:27.165Z",
+  "preserved": true
+}

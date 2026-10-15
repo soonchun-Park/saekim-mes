@@ -1,0 +1,160 @@
+{
+  "passed": true,
+  "total": 242,
+  "results": [
+    {
+      "theme": "light",
+      "script": "quote-enhancement-browser-qa.js",
+      "code": 0,
+      "log": "closing-light-quote-enhancement-browser-qa.txt",
+      "checks": 18
+    },
+    {
+      "theme": "light",
+      "script": "monthly-settlement-browser-qa.js",
+      "code": 0,
+      "log": "closing-light-monthly-settlement-browser-qa.txt",
+      "checks": 14
+    },
+    {
+      "theme": "light",
+      "script": "party-bank-browser-qa.js",
+      "code": 0,
+      "log": "closing-light-party-bank-browser-qa.txt",
+      "checks": 7
+    },
+    {
+      "theme": "light",
+      "script": "bulk-browser-qa.js",
+      "code": 0,
+      "log": "closing-light-bulk-browser-qa.txt",
+      "checks": 8
+    },
+    {
+      "theme": "light",
+      "script": "partner-browser-qa.js",
+      "code": 0,
+      "log": "closing-light-partner-browser-qa.txt",
+      "checks": 10
+    },
+    {
+      "theme": "light",
+      "script": "production-browser-qa.js",
+      "code": 0,
+      "log": "closing-light-production-browser-qa.txt",
+      "checks": 13
+    },
+    {
+      "theme": "light",
+      "script": "schedule-browser-qa.js",
+      "code": 0,
+      "log": "closing-light-schedule-browser-qa.txt",
+      "checks": 15
+    },
+    {
+      "theme": "light",
+      "script": "workflow-browser-qa.js",
+      "code": 0,
+      "log": "closing-light-workflow-browser-qa.txt",
+      "checks": 7
+    },
+    {
+      "theme": "light",
+      "script": "routing-browser-qa.js",
+      "code": 0,
+      "log": "closing-light-routing-browser-qa.txt",
+      "checks": 17
+    },
+    {
+      "theme": "light",
+      "script": "calendar-status-browser-qa.js",
+      "code": 0,
+      "log": "closing-light-calendar-status-browser-qa.txt",
+      "checks": 6
+    },
+    {
+      "theme": "light",
+      "script": "closing-browser-qa.js",
+      "code": 0,
+      "log": "closing-light-closing-browser-qa.txt",
+      "checks": 6
+    },
+    {
+      "theme": "dark",
+      "script": "quote-enhancement-browser-qa.js",
+      "code": 0,
+      "log": "closing-dark-quote-enhancement-browser-qa.txt",
+      "checks": 18
+    },
+    {
+      "theme": "dark",
+      "script": "monthly-settlement-browser-qa.js",
+      "code": 0,
+      "log": "closing-dark-monthly-settlement-browser-qa.txt",
+      "checks": 14
+    },
+    {
+      "theme": "dark",
+      "script": "party-bank-browser-qa.js",
+      "code": 0,
+      "log": "closing-dark-party-bank-browser-qa.txt",
+      "checks": 7
+    },
+    {
+      "theme": "dark",
+      "script": "bulk-browser-qa.js",
+      "code": 0,
+      "log": "closing-dark-bulk-browser-qa.txt",
+      "checks": 8
+    },
+    {
+      "theme": "dark",
+      "script": "partner-browser-qa.js",
+      "code": 0,
+      "log": "closing-dark-partner-browser-qa.txt",
+      "checks": 10
+    },
+    {
+      "theme": "dark",
+      "script": "production-browser-qa.js",
+      "code": 0,
+      "log": "closing-dark-production-browser-qa.txt",
+      "checks": 13
+    },
+    {
+      "theme": "dark",
+      "script": "schedule-browser-qa.js",
+      "code": 0,
+      "log": "closing-dark-schedule-browser-qa.txt",
+      "checks": 15
+    },
+    {
+      "theme": "dark",
+      "script": "workflow-browser-qa.js",
+      "code": 0,
+      "log": "closing-dark-workflow-browser-qa.txt",
+      "checks": 7
+    },
+    {
+      "theme": "dark",
+      "script": "routing-browser-qa.js",
+      "code": 0,
+      "log": "closing-dark-routing-browser-qa.txt",
+      "checks": 17
+    },
+    {
+      "theme": "dark",
+      "script": "calendar-status-browser-qa.js",
+      "code": 0,
+      "log": "closing-dark-calendar-status-browser-qa.txt",
+      "checks": 6
+    },
+    {
+      "theme": "dark",
+      "script": "closing-browser-qa.js",
+      "code": 0,
+      "log": "closing-dark-closing-browser-qa.txt",
+      "checks": 6
+    }
+  ]
+}

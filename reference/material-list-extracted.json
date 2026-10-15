@@ -1,0 +1,745 @@
+{
+  "source": {
+    "libraryFileId": "libfile_b5c2683b9d0881918d8321c645715633",
+    "fileId": "file_00000000cc988230b7ead6694ac1cb18",
+    "fileName": "quote for yurim(1).xlsx",
+    "version": 0,
+    "sheet": "소재 리스트",
+    "unitHeader": "키로당단가",
+    "priceDenominator": "kg",
+    "currency": "unconfirmed",
+    "readAt": "2026-10-13",
+    "originalMaterialized": false
+  },
+  "rows": [
+    {
+      "sourceRow": 1,
+      "name": "CLEAN PVC",
+      "sourcePrice": 5000,
+      "sourceDensity": 2.8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 2,
+      "name": "ACETAL",
+      "sourcePrice": 5500,
+      "sourceDensity": 2,
+      "sourceCategory": "플라스틱",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 3,
+      "name": "PEEK",
+      "sourcePrice": 155000,
+      "sourceDensity": 2,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 4,
+      "name": "black POM",
+      "sourcePrice": 6500,
+      "sourceDensity": 2,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 5,
+      "name": "PP",
+      "sourcePrice": 7000,
+      "sourceDensity": 2,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 6,
+      "name": "URETHAN",
+      "sourcePrice": 11000,
+      "sourceDensity": 2,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 7,
+      "name": "무정전PC",
+      "sourcePrice": 9000,
+      "sourceDensity": 1.5,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 8,
+      "name": "White POM",
+      "sourcePrice": 6500,
+      "sourceDensity": 2,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 9,
+      "name": "PTFE",
+      "sourcePrice": 10000,
+      "sourceDensity": 2,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 10,
+      "name": "PA",
+      "sourcePrice": 5000,
+      "sourceDensity": 2,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 11,
+      "name": "abs",
+      "sourcePrice": 7400,
+      "sourceDensity": 2,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 12,
+      "name": "pom",
+      "sourcePrice": 6500,
+      "sourceDensity": 2,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 13,
+      "name": "아세탈",
+      "sourcePrice": 5500,
+      "sourceDensity": 2,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 14,
+      "name": "PE",
+      "sourcePrice": 10000,
+      "sourceDensity": 2,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 15,
+      "name": "PC",
+      "sourcePrice": 10000,
+      "sourceDensity": 2,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 16,
+      "name": "테프론",
+      "sourcePrice": 16000,
+      "sourceDensity": 2.5,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 17,
+      "name": "MC NYLON",
+      "sourcePrice": 10300,
+      "sourceDensity": 2,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 20,
+      "name": "SKD11",
+      "sourcePrice": 6400,
+      "sourceDensity": 7.8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 21,
+      "name": "SKD61",
+      "sourcePrice": 7000,
+      "sourceDensity": 7.8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 22,
+      "name": "SKH51",
+      "sourcePrice": 22000,
+      "sourceDensity": 7.8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 23,
+      "name": "SKH55",
+      "sourcePrice": 28000,
+      "sourceDensity": 7.8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 24,
+      "name": "SKH59",
+      "sourcePrice": 32000,
+      "sourceDensity": 7.8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 25,
+      "name": "SM20C",
+      "sourcePrice": 1500,
+      "sourceDensity": 7.8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 26,
+      "name": "SS41",
+      "sourcePrice": 1500,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 27,
+      "name": "SUJ2",
+      "sourcePrice": 4000,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 28,
+      "name": "SUS303",
+      "sourcePrice": 9000,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 29,
+      "name": "SUS304",
+      "sourcePrice": 7000,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 30,
+      "name": "SUS316",
+      "sourcePrice": 8000,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 31,
+      "name": "SUS416",
+      "sourcePrice": 8000,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 32,
+      "name": "SUS420",
+      "sourcePrice": 8000,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 33,
+      "name": "SUS440C",
+      "sourcePrice": 7000,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 34,
+      "name": "SUS630",
+      "sourcePrice": 12080,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 35,
+      "name": "낙크80",
+      "sourcePrice": 13000,
+      "sourceDensity": 9,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 36,
+      "name": "NAK80",
+      "sourcePrice": 13500,
+      "sourceDensity": 7.8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 37,
+      "name": "S45C",
+      "sourcePrice": 3500,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 38,
+      "name": "SB41",
+      "sourcePrice": 1500,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 39,
+      "name": "SCM435",
+      "sourcePrice": 2000,
+      "sourceDensity": 7.8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 40,
+      "name": "SCM440",
+      "sourcePrice": 2000,
+      "sourceDensity": 7.8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 41,
+      "name": "FC250",
+      "sourcePrice": 4000,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 42,
+      "name": "SUS301",
+      "sourcePrice": 10000,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 43,
+      "name": "SS400",
+      "sourcePrice": 2500,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 44,
+      "name": "KP4M",
+      "sourcePrice": 4000,
+      "sourceDensity": 7.8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 45,
+      "name": "SKS3",
+      "sourcePrice": 8000,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 46,
+      "name": "SK3",
+      "sourcePrice": 5000,
+      "sourceDensity": 7.8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 47,
+      "name": "SK5",
+      "sourcePrice": 6000,
+      "sourceDensity": 7.8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 48,
+      "name": "SM45C",
+      "sourcePrice": 6000,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 49,
+      "name": "STS304",
+      "sourcePrice": 6000,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 50,
+      "name": "SS330",
+      "sourcePrice": 3000,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 51,
+      "name": "지르코늄",
+      "sourcePrice": null,
+      "sourceDensity": 6.51,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 52,
+      "name": "bronze",
+      "sourcePrice": 16300,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "청동",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 53,
+      "name": "크롬동    (crcu)",
+      "sourcePrice": 22000,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 54,
+      "name": "타프피치",
+      "sourcePrice": 11000,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 56,
+      "name": "황동",
+      "sourcePrice": 8500,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 57,
+      "name": "구리(동)cu-C1100(브스바)",
+      "sourcePrice": 11800,
+      "sourceDensity": 9,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 58,
+      "name": "단동(아연합금동)",
+      "sourcePrice": null,
+      "sourceDensity": 9,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 59,
+      "name": "마그네슘",
+      "sourcePrice": null,
+      "sourceDensity": 1.7,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 60,
+      "name": "몰리브덴",
+      "sourcePrice": null,
+      "sourceDensity": 10.28,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 61,
+      "name": "Copper",
+      "sourcePrice": 11800,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 62,
+      "name": "brass",
+      "sourcePrice": 12000,
+      "sourceDensity": 9,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 63,
+      "name": "베리륨동(becu)",
+      "sourcePrice": 32000,
+      "sourceDensity": 9,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 64,
+      "name": "아연",
+      "sourcePrice": 10000,
+      "sourceDensity": 9,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 65,
+      "name": "인발",
+      "sourcePrice": 80000,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 66,
+      "name": "인청동",
+      "sourcePrice": 16300,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 67,
+      "name": "주석",
+      "sourcePrice": null,
+      "sourceDensity": 7.26,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 68,
+      "name": "동",
+      "sourcePrice": 12000,
+      "sourceDensity": 9,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 70,
+      "name": "nitronic60",
+      "sourcePrice": 1,
+      "sourceDensity": 1,
+      "sourceCategory": "",
+      "sourceRemark": "소재사급",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 71,
+      "name": "Rulon J",
+      "sourcePrice": 1,
+      "sourceDensity": 1,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 72,
+      "name": "사급",
+      "sourcePrice": 0,
+      "sourceDensity": 0,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": false
+    },
+    {
+      "sourceRow": 74,
+      "name": "AL5052",
+      "sourcePrice": 6500,
+      "sourceDensity": 2.8,
+      "sourceCategory": "알루미늄",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 75,
+      "name": "AL6061",
+      "sourcePrice": 6500,
+      "sourceDensity": 2.8,
+      "sourceCategory": "알루미늄",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 76,
+      "name": "AL7075",
+      "sourcePrice": 11000,
+      "sourceDensity": 2.8,
+      "sourceCategory": "알루미늄",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 77,
+      "name": "고베",
+      "sourcePrice": 11000,
+      "sourceDensity": 2.8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 79,
+      "name": "티타늄2",
+      "sourcePrice": 50000,
+      "sourceDensity": 4.5,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 80,
+      "name": "티타늄5",
+      "sourcePrice": 70000,
+      "sourceDensity": 4.5,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 81,
+      "name": "TI5",
+      "sourcePrice": 70000,
+      "sourceDensity": 4.5,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 82,
+      "name": "TI2",
+      "sourcePrice": 50000,
+      "sourceDensity": 4.5,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 83,
+      "name": "OFHC",
+      "sourcePrice": null,
+      "sourceDensity": null,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 84,
+      "name": "NI",
+      "sourcePrice": null,
+      "sourceDensity": null,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 85,
+      "name": "sum22",
+      "sourcePrice": 2000,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 86,
+      "name": "하스텔로이",
+      "sourcePrice": 200000,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    },
+    {
+      "sourceRow": 87,
+      "name": "SUM43",
+      "sourcePrice": 3000,
+      "sourceDensity": 8,
+      "sourceCategory": "",
+      "sourceRemark": "",
+      "selectionCandidate": true
+    }
+  ]
+}

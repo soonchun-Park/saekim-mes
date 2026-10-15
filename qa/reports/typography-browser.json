@@ -1,0 +1,210 @@
+{
+  "passed": true,
+  "checks": [
+    "공식 SUIT 원본·OFL 포함 및 한글 제목/본문 실제 glyph 렌더링 확인",
+    "PC/태블릿/모바일 7개 업무 화면 가로 잘림 없음",
+    "입력 포커스·선택범위 보존, 드롭다운 SUIT, 금액 우측/고정폭 숫자, 모바일 납기 한 줄 유지",
+    "견적 상세/인쇄 미리보기 장문 한글·영문·큰 금액 모바일 줄바꿈, 서체 로드 후 인쇄 활성화",
+    "생산 문서 미리보기 SUIT·발행본 인쇄 동작 유지 및 독립 HTML 서체·라이선스 포함",
+    "앱 외부 네트워크 요청 0건·업무 데이터 변경 0건·런타임 오류 0건",
+    "실제 Chromium A4 PDF 생성 및 SUIT 글꼴 임베딩 확인 (프린터 출력 없음)",
+    "서체 데이터 로드 실패 시 시스템 한글 폴백으로 내용/줄바꿈 유지"
+  ],
+  "fonts": [
+    {
+      "selector": "main>.heading h1",
+      "fonts": [
+        {
+          "familyName": "SUIT Variable Thin",
+          "postScriptName": "SUITVariable-Bold",
+          "isCustomFont": true,
+          "glyphCount": 8
+        }
+      ]
+    },
+    {
+      "selector": "main>.heading .muted",
+      "fonts": [
+        {
+          "familyName": "SUIT Variable Thin",
+          "postScriptName": "SUITVariable",
+          "isCustomFont": true,
+          "glyphCount": 21
+        }
+      ]
+    },
+    {
+      "selector": ".sheet tbody td:nth-child(2) b",
+      "fonts": [
+        {
+          "familyName": "SUIT Variable Thin",
+          "postScriptName": "SUITVariable-SemiBold",
+          "isCustomFont": true,
+          "glyphCount": 45
+        }
+      ]
+    },
+    {
+      "selector": ".sheet tbody td:nth-child(2) b",
+      "fonts": [
+        {
+          "familyName": "Malgun Gothic",
+          "postScriptName": "MalgunGothicBold",
+          "isCustomFont": false,
+          "glyphCount": 45
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    "typography-dashboard-1440.png",
+    "typography-quotes-1440.png",
+    "typography-parties-1440.png",
+    "typography-dashboard-390.png",
+    "typography-quotes-390.png",
+    "typography-parties-390.png",
+    "typography-quote-detail-mobile.png",
+    "typography-quote-document-mobile.png",
+    "typography-quote-print-desktop.png"
+  ],
+  "sizes": [
+    {
+      "name": "dashboard-1440",
+      "width": 1440,
+      "scroll": 1425
+    },
+    {
+      "name": "quotes-1440",
+      "width": 1440,
+      "scroll": 1425
+    },
+    {
+      "name": "orders-1440",
+      "width": 1440,
+      "scroll": 1425
+    },
+    {
+      "name": "settlements-1440",
+      "width": 1440,
+      "scroll": 1425
+    },
+    {
+      "name": "materials-1440",
+      "width": 1440,
+      "scroll": 1425
+    },
+    {
+      "name": "parties-1440",
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "name": "inspections-1440",
+      "width": 1440,
+      "scroll": 1440
+    },
+    {
+      "name": "dashboard-1024",
+      "width": 1024,
+      "scroll": 1009
+    },
+    {
+      "name": "quotes-1024",
+      "width": 1024,
+      "scroll": 1009
+    },
+    {
+      "name": "orders-1024",
+      "width": 1024,
+      "scroll": 1009
+    },
+    {
+      "name": "settlements-1024",
+      "width": 1024,
+      "scroll": 1009
+    },
+    {
+      "name": "materials-1024",
+      "width": 1024,
+      "scroll": 1009
+    },
+    {
+      "name": "parties-1024",
+      "width": 1024,
+      "scroll": 1009
+    },
+    {
+      "name": "inspections-1024",
+      "width": 1024,
+      "scroll": 1024
+    },
+    {
+      "name": "dashboard-390",
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "name": "quotes-390",
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "name": "orders-390",
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "name": "settlements-390",
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "name": "materials-390",
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "name": "parties-390",
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "name": "inspections-390",
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "name": "quote-detail-mobile",
+      "width": 390,
+      "scroll": 390
+    },
+    {
+      "name": "font-load-failure-fallback",
+      "width": 390,
+      "scroll": 390
+    }
+  ],
+  "pdf": "typography-quote.pdf",
+  "pdfFonts": [
+    "AAAAAA+SUITVariable-Bold",
+    "BAAAAA+SUITVariable",
+    "CAAAAA+SUITVariable-SemiBold",
+    "DAAAAA+SUITVariable",
+    "EAAAAA+SUITVariable-Bold",
+    "FAAAAA+SUITVariable",
+    "GAAAAA+SUITVariable-Bold",
+    "HAAAAA+SUITVariable-Bold"
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/155.0.8059.40",
+    "revision": "@cfaadc5a132d78e1828635aa8405a499f3e14864",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/155.0.0.0 Safari/537.36",
+    "jsVersion": "15.5.35.20"
+  },
+  "runtimeErrors": [],
+  "userTabsTouched": false,
+  "userDataTouched": false,
+  "syntheticDataOnly": true,
+  "at": "2026-10-14T14:31:16.321Z"
+}

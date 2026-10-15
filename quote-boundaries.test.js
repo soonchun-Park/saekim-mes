@@ -1,0 +1,8 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),crypto=require('node:crypto'),C=require('./core');
+const apply=(state,request)=>C.apply(state,request,crypto.randomUUID);
+const quote=items=>({type:'quote',key:crypto.randomUUID(),revision:0,payload:{customer:'허구 금액경계 고객',due:'2026-10-22',terms:'마감 후 55일',items}});
+const item=(quantity,price)=>({name:'허구 부품',drawing:'FICTION-R1',quantity,price});
+test('new quotation total is rejected before publication at the existing order monetary limit',()=>{const state=C.empty();assert.throws(()=>apply(state,quote([item(2000000,1000000)])),/견적 합계/);assert.equal(state.revision,0);assert.equal(state.quotes.length,0);assert.throws(()=>apply(state,quote([item(1,1000000000000),item(1,1)])),/견적 합계/);const result=apply(state,quote([item(1000000,1000000)]));assert.equal(result.quotes.length,1);});
+test('legacy quotation records remain valid without rewriting their monetary snapshots',()=>{const r=apply(C.empty(),quote([item(1,1)]));const old=r;old.quotes[0].items[0].quantity=2000000;old.quotes[0].items[0].price=1000000;C.validateState(old);assert.equal(old.quotes[0].items[0].quantity*old.quotes[0].items[0].price,2000000000000);});
+test('compiled Google gateway rejects oversized new quotations before projection',()=>{const {createFixture}=require('./rowstore-mock');const f=createFixture({coreSource:'apps-script/Core.gs',materialSource:'apps-script/MaterialModel.gs'});const result=f.call('command',quote([item(2000000,1000000)]));assert.equal(result.ok,false);assert.match(result.error,/견적 합계/);assert.equal(f.call('state').state.quotes.length,0);assert.equal(f.call('state').revision,0);});
