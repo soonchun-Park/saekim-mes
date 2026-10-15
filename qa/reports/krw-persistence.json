@@ -11,7 +11,7 @@
   "drawingBytesEqual": true,
   "certificateBytesEqual": true,
   "backupFormat": "mes-local-backup-v4",
-  "backupBytes": 716801,
+  "backupBytes": 707029,
   "uncertainImportReplaySafe": true,
   "checks": [
     "approved prices only",
