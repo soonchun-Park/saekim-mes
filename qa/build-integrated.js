@@ -24,7 +24,7 @@ ui=ui.replace("[['due','새 납기','date']]", "[['due','새 납기','date'],['t
 ui=ui.replace("try{for(const id of ['customer','due','terms'])if(!$(id).reportValidity())return;", "try{QuoteInputs.mountDate($('due')).read();for(const id of ['customer','terms'])if(!guardRequired($(id),id==='customer'?'거래처':'결제조건'))return;");
 ui=ui.replaceAll('.grid:first-of-type input','[data-f=\"name\"],[data-f=\"drawing\"],[data-f=\"quantity\"],[data-f=\"price\"]');
 ui=ui.replace("if(!i.reportValidity())throw Error('품목 필수 항목을 확인하세요.');", "if(!guardRequired(i,i.closest('label').firstChild.textContent))throw Error(i.closest('label').firstChild.textContent.trim()+': '+i.validationMessage);");
-ui=ui.replace("for(const i of $('form').querySelectorAll('input,select'))p[i.name]=i.type==='number'?Number(i.value):i.value;", "for(const i of $('form').querySelectorAll('input,select')){if(!i.name)continue;p[i.name]=i.name==='due'?QuoteInputs.mountDate(i).read():i.type==='number'?Number(i.value):i.value;}");
+ui=ui.replace("for(const i of $('form').querySelectorAll('input,select'))p[i.name]=i.type==='number'?Number(i.value):i.value;", "for(const i of $('form').querySelectorAll('input,select')){if(!i.name)continue;p[i.name]=(i.name==='due'||i.name==='quoteDate')?QuoteInputs.mountDate(i).read():i.type==='number'?Number(i.value):i.value;}");
 ui=ui.replace("catch(e){message(e.message,true);}};\n$('form').onsubmit", "catch(e){saveStatus('저장 전 입력 확인 필요','blocked');message('저장하지 못했습니다: '+e.message+' 입력값은 유지됩니다.',true);}};\n$('form').onsubmit");
 ui=ui.replace("d.append(a);$('quotes').append(d);", "if(globalThis.QuoteDocument){for(const label of ['견적서 미리보기','PDF 저장 / 인쇄']){const b=document.createElement('button');b.className='secondary';b.textContent=label;b.onclick=()=>{try{QuoteDocument.openPreview({...q,_superseded:old},{print:label!=='견적서 미리보기'});}catch(e){message('견적서 미리보기를 열지 못했습니다: '+e.message,true);}};a.append(b);}}d.append(a);$('quotes').append(d);");
 ui=ui.replace("addItem();try{localRestoreMeta", "QuoteInputs.mountDate($('due'));QuoteInputs.mountTerms($('terms'));MaterialCatalogUI.init({containerId:'catalogManager'});addItem();try{localRestoreMeta");
@@ -75,16 +75,16 @@ ui=ui.replace("QuoteInputs.mountPrice(field(el,'price'));estimate(el);MaterialCa
 ui=ui.replaceAll("+' '+v+' mm'", "+' '+QuoteInputs.formatPrice(v)+' mm'");
 ui=ui.replace("customer:$('customer').value,due:$('due').value", "customer:$('customer').value,quoteDate:$('quoteDate').value,due:$('due').value");
 ui=ui.replace("getQuoteHeader:()=>({customer:$('customer').value,", "getQuoteHeader:()=>({quoteDate:$('quoteDate').value,customer:$('customer').value,");
-ui=ui.replace("try{QuoteDraftUI.assertCreate();", "try{QuoteDraftUI.assertCreate();if(!guardRequired($('quoteDate'),'견적일자'))return;");
+ui=ui.replace("try{QuoteDraftUI.assertCreate();", "try{QuoteDraftUI.assertCreate();QuoteInputs.mountDate($('quoteDate'),{label:'견적일자'}).read();");
 ui=ui.replace("[['due','새 납기','date'],['terms','결제조건','text']]", "[['quoteDate','견적일자','date'],['due','새 납기','date'],['terms','결제조건','text']]");
-ui=ui.replace("if(i.name==='due'){", "if(i.name==='quoteDate')i.value=QuoteListUI.today();if(i.name==='due'){");
+ui=ui.replace("if(i.name==='due'){", "if(i.name==='quoteDate'){i.value=QuoteListUI.today();QuoteInputs.mountDate(i,{label:'견적일자'});}if(i.name==='due'){");
 ui=ui.replace("limit:pageSize});pageCursors", "limit:pageSize,...QuoteListUI.query()});pageCursors");
 ui=ui.replace("limit:pageSize,revision:state.revision});", "limit:pageSize,revision:state.revision,...(kind==='quotes'?QuoteListUI.query():{})});");
 const quoteStart=ui.indexOf(" $('quotes').innerHTML='';for(const q of visibleQuotes)");
 const quoteEnd=ui.indexOf(" $('orders').innerHTML='';",quoteStart);
 if(quoteStart<0||quoteEnd<0)throw Error('견적 목록 렌더 위치 확인 필요');
 ui=ui.slice(0,quoteStart)+" QuoteListUI.render(visibleQuotes,{total:paging('quotes').total,makeButton:btn,materialSummary,superseded,isConverted:q=>q._converted??state.orders.some(o=>o.quoteId===q.id),onError:t=>message(t,true)});\n"+ui.slice(quoteEnd);
-ui=ui.replace("QuoteInputs.mountDate($('due'));", "QuoteListUI.init({container:$('quotes'),onQuery:()=>load({orders:pageCursors.orders}),isBusy:()=>busy||pending,onError:t=>message(t,true)});$('quoteDate').value=QuoteListUI.today();QuoteInputs.mountDate($('due'));");
+ui=ui.replace("QuoteInputs.mountDate($('due'));", "QuoteListUI.init({container:$('quotes'),onQuery:()=>load({orders:pageCursors.orders}),isBusy:()=>busy||pending,onError:t=>message(t,true)});$('quoteDate').value=QuoteListUI.today();QuoteInputs.mountDate($('quoteDate'),{label:'견적일자'});QuoteInputs.mountDate($('due'));");
 fs.writeFileSync(path.join(out,'ui.js'),ui);
 let html=read('index-material.staged.html');html=html.replace('<p id="metricScope"','<section id="dashboardManager"></section><p id="metricScope"');html=html.replace('<section id="newQuote">','<p class="hint test-data-notice" role="note">독립 시험 저장소입니다. 빈 목록에서 시작하며, 기존 8788 및 실제 업무 데이터와 연결되지 않습니다. 가상 데이터로 확인하세요.</p><section id="newQuote">');html=html.replace('<div id="message"','<div id="saveStatus" role="status" aria-live="polite" hidden></div><div id="message"');
 const dialogs=read('qa/save-feedback/index.html').match(/<dialog id="saveFeedbackDialog"[\s\S]*?<\/dialog>/)[0];html=html.replace('<script src="/material-model.js">',dialogs+'<script src="/material-model.js">');
