@@ -8,6 +8,8 @@ const {resolveDensity}=require('./density-reference');
 const Party=require('./party-model');
 const {findQuoteHistory}=require('./quote-history');
 function createServer(options={}){
+ // 외부 접속용 주소(Cloudflare Tunnel 등). 서버는 계속 127.0.0.1에만 바인딩하며, 이 Host로 온 요청만 https Origin을 허용합니다.
+ const publicHosts=(options.publicHosts||String(process.env.MES_PUBLIC_HOSTS||'').split(',')).map(h=>String(h).trim().toLowerCase()).filter(Boolean);
  const dir=options.dataDir||path.join(__dirname,'data');fs.mkdirSync(dir,{recursive:true});const file=path.join(dir,'state.json');
  let state=fs.existsSync(file)?validateState(JSON.parse(fs.readFileSync(file,'utf8'))):empty();
  const attachments=createAttachmentStore(dir,options);
@@ -28,8 +30,8 @@ function createServer(options={}){
  const decorated=(opts={})=>{const q=page('quotes',opts.quotesCursor||0,opts.limit||25,undefined,opts),o=page('orders',opts.ordersCursor||0,opts.limit||25);return {schema:state.schema,revision:state.revision,quotes:q.items,orders:o.items,audit:state.audit.slice(-25),keys:{},summaries:o.summaries,scope:'page',paging:{quotes:{cursor:q.cursor,nextCursor:q.nextCursor,total:q.total},orders:{cursor:o.cursor,nextCursor:o.nextCursor,total:o.total}}};};
  const server=http.createServer((req,res)=>{
   res.setHeader('Content-Type','application/json; charset=utf-8');res.setHeader('Cache-Control','no-store');res.setHeader('X-Content-Type-Options','nosniff');
-  const host=req.headers.host||'';if(!/^(127\.0\.0\.1|localhost):\d+$/.test(host)){res.writeHead(403);return res.end('{}');}
-  if(req.headers.origin&&req.headers.origin!=='http://'+host){res.writeHead(403);return res.end('{}');}
+  const host=(req.headers.host||'').toLowerCase(),localHost=/^(127\.0\.0\.1|localhost):\d+$/.test(host),publicHost=publicHosts.includes(host);if(!localHost&&!publicHost){res.writeHead(403);return res.end('{}');}
+  if(req.headers.origin&&req.headers.origin!==(publicHost?'https://':'http://')+host){res.writeHead(403);return res.end('{}');}
   try{recoverCatalogRestore();}catch(e){res.writeHead(503);return res.end(JSON.stringify({error:e.message,retryable:true,errorCode:'COMMIT_UNCERTAIN'}));}
   if(req.method==='GET'&&req.url==='/api/catalog')return res.end(JSON.stringify({ok:true,catalog:publicCatalog(catalog.read()),revision:catalog.read().revision}));
   const parsedURL=new URL(req.url,'http://'+host);

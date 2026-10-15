@@ -87,3 +87,18 @@ test('파일 commit 실패는 상태보존, 같은 요청키 재시도 복구',a
  let fail=true;await withServer(async(url,dir)=>{const cmd={key:'retry',revision:0,type:'quote',payload:{customer:'A',due:'2026-11-01',terms:'30일',items:[{name:'A',drawing:'R1',quantity:1,price:100}]}};
  const post=()=>fetch(url+'/api/command',{method:'POST',body:JSON.stringify(cmd)});const failed=await post();assert.equal(failed.status,503);assert.equal((await failed.json()).retryable,true);assert.equal((await fetch(url+'/api/state').then(r=>r.json())).revision,0);fail=false;assert.equal((await post()).status,200);assert.equal(JSON.parse(fs.readFileSync(path.join(dir,'state.json'),'utf8')).revision,1);assert.equal((await post()).status,200);},{beforeCommit(){if(fail)throw Error('모의 디스크 실패');}});
 });
+test('외부 접속 Host는 허용 목록과 https Origin만 통과',async()=>withServer(async(url)=>{
+ const port=new URL(url).port,http=require('node:http');
+ const status=(headers,method='GET',body)=>new Promise((resolve,reject)=>{const req=http.request({host:'127.0.0.1',port,path:method==='GET'?'/api/state':'/api/command',method,headers},res=>{res.resume();resolve(res.statusCode);});req.on('error',reject);req.end(body);});
+ assert.equal(await status({Host:'mes.example.test'}),200);
+ assert.equal(await status({Host:'MES.example.test'}),200);
+ assert.equal(await status({Host:'other.example.test'}),403);
+ assert.equal(await status({Host:'mes.example.test',Origin:'http://mes.example.test'},'POST','{}'),403);
+ assert.equal(await status({Host:'mes.example.test',Origin:'https://evil.invalid'},'POST','{}'),403);
+ assert.notEqual(await status({Host:'mes.example.test',Origin:'https://mes.example.test'},'POST','{}'),403);
+},{publicHosts:['mes.example.test']}));
+test('외부 접속 Host 미설정 시 로컬 주소만 허용',async()=>withServer(async(url)=>{
+ const port=new URL(url).port,http=require('node:http');
+ const code=await new Promise((resolve,reject)=>{const req=http.request({host:'127.0.0.1',port,path:'/api/state',headers:{Host:'mes.example.test'}},res=>{res.resume();resolve(res.statusCode);});req.on('error',reject);req.end();});
+ assert.equal(code,403);
+},{publicHosts:[]}));

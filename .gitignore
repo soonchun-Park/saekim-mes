@@ -25,3 +25,4 @@ qa/*.gif
 qa/live-*.json
 qa/mock-archive-temporary.json
 backups/
+ops/mes.env
