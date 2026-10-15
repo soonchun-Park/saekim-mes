@@ -1,1 +1,4 @@
 span.due-segments{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr);align-items:center;column-gap:.35rem;row-gap:.35rem;min-width:0;max-width:100%}.due-segments>.due-segment{width:100%!important;min-width:0;box-sizing:border-box;padding-inline:.35rem!important}.due-hint{grid-column:1/-1;font-weight:normal;color:#596b7b}.due-segment:invalid:not(:placeholder-shown){border-color:#a96412}
+
+/* 합의 판매 단가 아래 수량 × 단가 금액 */
+.line-amount{display:block;margin-top:4px;font-size:13px;font-weight:600;opacity:.8;font-variant-numeric:tabular-nums}
