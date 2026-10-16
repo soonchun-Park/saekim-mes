@@ -143,7 +143,7 @@ html=html.replace('<link rel="icon"','<link data-light="'+symbol+'" data-dark="'
 html=html.replace('</header><div class="layout">','<button id="themeToggle" type="button" aria-label="화면을 어둡게 전환" aria-pressed="false">어둡게</button></header><div class="layout">');
 const clock='<time id="topClock" class="top-clock" aria-live="off"><span class="top-clock-caption"><strong class="top-clock-date"></strong><small>한국 시간 · KST</small></span><span class="top-clock-tiles" aria-hidden="true">'+[['day','DAY'],['hour','HOURS'],['minute','MINUTES'],['second','SECONDS']].map(([key,label])=>'<span class="top-clock-tile"><b data-clock="'+key+'">--</b><small>'+label+'</small></span>').join('')+'</span></time>';
 html=html.replace('<button id="themeToggle"',clock+'<button id="themeToggle"').replace('</head>','<style id="mes-top-clock">'+read('top-clock.css')+'</style><script>'+read('top-clock.js')+'</script></head>');
-html=html.replace('</head>','<link rel="stylesheet" href="/rfq-ui.css"></head>').replace('<script src="/quote-draft-ui.js">','<script src="/rfq-model.js"></script><script src="/rfq-document.js"></script><script src="/rfq-ui.js"></script><script src="/quote-draft-ui.js">');
+html=html.replace('</head>','<link rel="stylesheet" href="/rfq-ui.css"></head>').replace('<script src="/quote-draft-ui.js">','<script src="/company-info.js"></script><script src="/company-ui.js"></script><script src="/transaction-statement.js"></script><script src="/rfq-model.js"></script><script src="/rfq-document.js"></script><script src="/rfq-ui.js"></script><script src="/quote-draft-ui.js">');
 fs.writeFileSync(path.join(out,'index.html'),html);fs.writeFileSync(path.join(out,'styles.css'),read('qa/save-feedback/styles.css'));
 console.log('독립 통합 UI 생성: '+out+' · 활성 파일 변경 없음');
 
