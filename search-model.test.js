@@ -1,0 +1,11 @@
+'use strict';
+const test=require('node:test'),assert=require('node:assert/strict'),S=require('./search-model'),{fixture}=require('./qa/schedule-fixture');
+test('통합 검색: 견적번호·거래처·품목·도면·거래처 정보로 찾고 공백·하이픈은 무시',()=>{const f=fixture();f.send('quote',{customer:'다른 고객사',quoteDate:'2026-10-10',due:'2026-12-01',terms:'월말',items:[{name:'알루미늄 브래킷',drawing:'BR-77 REV C',quantity:3,price:5000}]});const s=f.get();
+ const catalog={suppliers:[{id:'p1',name:'모델솔루션',businessNumber:'113-81-96403',phone:'02-000-0000'}]};
+ assert.ok(S.search(s,catalog,'브래킷').some(r=>r.kind==='quote'&&r.amount===15000));
+ assert.ok(S.search(s,catalog,'br77').length>=1);
+ assert.ok(S.search(s,catalog,'허구 일정').some(r=>r.kind==='order'));
+ const q=S.search(s,catalog,'허구 일정').find(r=>r.kind==='quote');assert.equal(q.status,'수주 전환');
+ assert.equal(S.search(s,catalog,'1138196403')[0].kind,'party');
+ assert.deepEqual(S.search(s,catalog,'   '),[]);assert.deepEqual(S.search(s,catalog,'없는검색어xyz'),[]);
+ assert.equal(S.search(s,catalog,'고객',1).length,1);});

@@ -1,0 +1,12 @@
+/* 화면 위쪽 통합 검색 */
+.global-search{position:relative;flex:1 1 280px;max-width:420px;margin:0 12px}
+.global-search input{width:100%;padding:8px 12px;border:1px solid #c9d2de;border-radius:8px;font:inherit;background:#fff;color:inherit}
+.global-search-results{position:absolute;z-index:50;top:calc(100% + 4px);left:0;right:0;max-height:60vh;overflow:auto;background:#fff;border:1px solid #c9d2de;border-radius:10px;box-shadow:0 10px 30px #14233633;padding:4px}
+.global-search-results button{display:flex;gap:8px;align-items:flex-start;width:100%;text-align:left;border:0;background:none;padding:8px;border-radius:8px;cursor:pointer;color:inherit;font:inherit}
+.global-search-results button:hover,.global-search-results button:focus{background:#eef3fb}
+.gs-main{display:flex;flex-direction:column;min-width:0}.gs-main small{opacity:.75;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gs-kind{flex:none;font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;background:#e8eefb;color:#0047cc}.gs-order{background:#e7f6ee;color:#067647}.gs-party{background:#f2f4f7;color:#344054}
+.gs-empty{margin:8px;opacity:.7}
+[data-theme=dark] .global-search input,[data-theme=dark] .global-search-results{background:#151d2b;border-color:#2c3a52;color:#e6edf7}
+[data-theme=dark] .global-search-results button:hover{background:#22304a}
+@media (max-width:760px){.global-search{order:3;flex-basis:100%;max-width:none;margin:8px 0 0}}

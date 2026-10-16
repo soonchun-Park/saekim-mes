@@ -120,6 +120,32 @@ ui=ui.replace("esc(ScheduleModel.dateForOrder(o))","esc(ScheduleModel.dateForOrd
  ui=ui.replace("showSaveConfirmation(savedType,result.revision,refreshed);","showSaveConfirmation(savedType,result.revision,refreshed);if(savedType==='quote'){const saved=state?.quotes?.find(q=>q.id===result.quoteId);$('saveFeedbackText').textContent=(saved?.quoteNumber?'견적 '+saved.quoteNumber+' 저장 완료. ':'견적 저장 완료. ')+(refreshed?'견적 목록을 새로 불러왔고, 입력 화면은 새 견적을 쓸 수 있게 비웠습니다.':'목록 갱신에 실패했습니다. 다시 저장하지 말고 목록 새로고침을 눌러 확인하세요.');}");
  ui=ui.replace("function addItem(){","function resetQuoteForm(){for(const el of [...$('items').querySelectorAll('.item')]){globalThis.QuoteHistoryUI?.unregisterItem(el);el.remove();}addItem();$('customer').value='';const ps=document.querySelector('.party-customer-select');if(ps){ps.value='';ps.dispatchEvent(new Event('change',{bubbles:true}));}const pq=document.querySelector('.party-customer-search');if(pq)pq.value='';$('customer').value='';$('due').value='';QuoteInputs.mountTerms($('terms')).set('');$('quoteDate').value=QuoteListUI.today();QuoteDraftUI.reset();}\nfunction addItem(){");
 }
+// 지난 견적을 복사해 새 견적 입력칸을 채웁니다(저장은 사용자가 확인 후). 납기요청일은 새로 정하도록 비웁니다.
+{const need=a=>{if(!ui.includes(a))throw Error('견적 복사 위치 확인 필요: '+a.slice(0,40));};
+ need("QuoteListUI.render(visibleQuotes,{total:paging('quotes').total,makeButton:btn,materialSummary,");need("function resetQuoteForm(){");
+ ui=ui.replace("QuoteListUI.render(visibleQuotes,{total:paging('quotes').total,makeButton:btn,materialSummary,","QuoteListUI.render(visibleQuotes,{total:paging('quotes').total,makeButton:btn,materialSummary,copyToNew:q=>fillQuoteForm(q),");
+ ui=ui.replace("function resetQuoteForm(){",String.raw`function fillQuoteForm(q){if(busy||pending){message('저장 중인 요청을 먼저 확인하세요.',true);return;}
+ const hasInput=[...$('items').querySelectorAll('.item')].some(el=>['name','drawing','price'].some(k=>field(el,k).value.trim()))||$('customer').value.trim();
+ if(hasInput&&!confirm('새 견적 입력칸에 작성 중인 내용이 있습니다. 지우고 선택한 견적 내용으로 채울까요?'))return;
+ const set=(el,v)=>{if(!el)return;el.value=v??'';el.dispatchEvent(new Event('input',{bubbles:true}));el.dispatchEvent(new Event('change',{bubbles:true}));};
+ resetQuoteForm();
+ const ps=document.querySelector('.party-customer-select');if(q.customerPartyId&&ps&&[...ps.options].some(o=>o.value===q.customerPartyId)){ps.value=q.customerPartyId;ps.dispatchEvent(new Event('change',{bubbles:true}));}
+ set($('customer'),q.customer);QuoteInputs.mountTerms($('terms')).set(q.terms||'');
+ q.items.forEach((it,n)=>{if(n>0)addItem();const el=[...$('items').querySelectorAll('.item')].at(-1);
+  set(field(el,'name'),it.name);set(field(el,'drawing'),it.drawing);set(field(el,'quantity'),String(it.quantity));set(field(el,'price'),String(it.price));
+  const m=it.material,cb=field(el,'costEnabled');if(!m){if(cb.checked)cb.click();return;}
+  if(!cb.checked)cb.click();set(field(el,'supply'),m.supply||'contract');
+  const master=field(el,'master');if(m.masterId&&[...master.options].some(o=>o.value===m.masterId)){master.value=m.masterId;master.dispatchEvent(new Event('change',{bubbles:true}));}else{set(field(el,'materialName'),m.name);set(field(el,'density'),m.density);set(field(el,'kgRate'),m.kgRate);}
+  set(field(el,'shape'),m.shape);
+  for(const [k,v] of Object.entries(m.productDimensions||{}))set(el.querySelector('[data-f="product_'+k+'"]'),String(v));
+  for(const [k,v] of Object.entries(m.allowance||{}))set(el.querySelector('[data-f="allowance_'+k+'"]'),String(v));
+  for(const k of ['diameter','innerDiameter'])if(m.dimensions?.[k]!=null)set(el.querySelector('[data-f="stock_'+k+'"]'),String(m.dimensions[k]));
+  const pi=field(el,'processingIncluded');if(pi&&pi.checked!==!!m.processingIncluded)pi.click();if(m.processingIncluded){set(field(el,'hours'),m.hours);set(field(el,'hourRate'),m.hourRate);}
+  estimate(el);});
+ MESNavigation.navigate('quotes').then(()=>document.getElementById('newQuote').scrollIntoView({block:'start'}));
+ message((q.quoteNumber||'선택한 견적')+' 내용을 새 견적 입력칸에 채웠습니다. 납기요청일을 정하고 내용을 확인한 뒤 저장하세요. 소재 단가는 현재 등록 단가로 다시 계산했습니다.');}
+function resetQuoteForm(){`);
+}
 fs.writeFileSync(path.join(out,'ui.js'),ui);
 html=html.replace('</head>','<link rel="stylesheet" href="/workflow-overview-ui.css"></head>').replace('<script src="/dashboard-ui.js">','<script src="/workflow-overview-ui.js"></script><script src="/dashboard-ui.js">');
 html=html.replaceAll('03 · 수주 / 생산 / 정산','03 · 수주 / 생산 / 외주');
@@ -143,7 +169,7 @@ html=html.replace('<link rel="icon"','<link data-light="'+symbol+'" data-dark="'
 html=html.replace('</header><div class="layout">','<button id="themeToggle" type="button" aria-label="화면을 어둡게 전환" aria-pressed="false">어둡게</button></header><div class="layout">');
 const clock='<time id="topClock" class="top-clock" aria-live="off"><span class="top-clock-caption"><strong class="top-clock-date"></strong><small>한국 시간 · KST</small></span><span class="top-clock-tiles" aria-hidden="true">'+[['day','DAY'],['hour','HOURS'],['minute','MINUTES'],['second','SECONDS']].map(([key,label])=>'<span class="top-clock-tile"><b data-clock="'+key+'">--</b><small>'+label+'</small></span>').join('')+'</span></time>';
 html=html.replace('<button id="themeToggle"',clock+'<button id="themeToggle"').replace('</head>','<style id="mes-top-clock">'+read('top-clock.css')+'</style><script>'+read('top-clock.js')+'</script></head>');
-html=html.replace('</head>','<link rel="stylesheet" href="/rfq-ui.css"></head>').replace('<script src="/quote-draft-ui.js">','<script src="/company-info.js"></script><script src="/company-ui.js"></script><script src="/transaction-statement.js"></script><script src="/rfq-model.js"></script><script src="/rfq-document.js"></script><script src="/rfq-ui.js"></script><script src="/quote-draft-ui.js">');
+html=html.replace('</head>','<link rel="stylesheet" href="/rfq-ui.css"><link rel="stylesheet" href="/search-ui.css"></head>').replace('<script src="/quote-draft-ui.js">','<script src="/company-info.js"></script><script src="/company-ui.js"></script><script src="/transaction-statement.js"></script><script src="/search-ui.js"></script><script src="/rfq-model.js"></script><script src="/rfq-document.js"></script><script src="/rfq-ui.js"></script><script src="/quote-draft-ui.js">');
 fs.writeFileSync(path.join(out,'index.html'),html);fs.writeFileSync(path.join(out,'styles.css'),read('qa/save-feedback/styles.css'));
 console.log('독립 통합 UI 생성: '+out+' · 활성 파일 변경 없음');
 
